@@ -1,0 +1,24 @@
+{
+    "name": "craftcms/upgrader",
+    "description": "Rector sets to automate Craft CMS upgrades",
+    "require": {
+        "php": ">=7.2",
+        "rector/rector": "dev-main"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "craftcms/cms": "^4.0.0-alpha"
+    },
+    "autoload": {
+        "psr-4": {
+            "CraftCMS\\Upgrader\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CraftCMS\\Upgrader\\Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
