@@ -7,7 +7,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
-        "craftcms/cms": "^4.0.0-alpha"
+        "craftcms/cms": "^4.0.0-alpha",
+        "phpstan/phpstan": "^1.2"
     },
     "autoload": {
         "psr-4": {
@@ -18,6 +19,9 @@
         "psr-4": {
             "CraftCMS\\Upgrader\\Tests\\": "tests"
         }
+    },
+    "scripts": {
+        "phpstan": "vendor/bin/phpstan --ansi"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
