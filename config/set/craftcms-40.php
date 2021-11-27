@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 use PHPStan\Type\ArrayType;
 use PHPStan\Type\MixedType;
+use PHPStan\Type\NullType;
 use PHPStan\Type\ObjectType;
+use PHPStan\Type\StringType;
+use PHPStan\Type\UnionType;
 use PHPStan\Type\VoidType;
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
@@ -19,6 +22,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/craftcms-40/*');
 
     $arrayType = new ArrayType(new MixedType(), new MixedType());
+    $nullableStringType = new UnionType([new StringType(), new NullType()]);
 
     $services = $containerConfigurator->services();
     $services->set(RenameMethodRector::class)
@@ -41,5 +45,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
                 'getEagerLoadedElements',
                 new ObjectType('Illuminate\Support\Collection')
             ),
+            new AddReturnTypeDeclaration('craft\base\UtilityInterface', 'iconPath', $nullableStringType),
+            new AddReturnTypeDeclaration('craft\base\VolumeInterface', 'getRootUrl', $nullableStringType),
+            new AddReturnTypeDeclaration('craft\console\Controller', 'beforeAction', new VoidType()),
+            new AddReturnTypeDeclaration('craft\queue\BaseJob', 'defaultDescription', $nullableStringType),
         ]);
 };
