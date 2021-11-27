@@ -11,7 +11,7 @@ use Rector\TypeDeclaration\ValueObject\AddPropertyTypeDeclaration;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 /**
- * @status WIP
+ * @status complete list
  * @see https://github.com/craftcms/cms/blob/4.0/CHANGELOG.md#changed
  */
 return static function (ContainerConfigurator $containerConfigurator): void {

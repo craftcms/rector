@@ -14,7 +14,6 @@ use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
 use Rector\Renaming\ValueObject\RenameClassAndConstFetch;
-use Rector\Renaming\ValueObject\RenameClassConstFetch;
 use Rector\TypeDeclaration\Rector\ClassMethod\AddReturnTypeDeclarationRector;
 use Rector\TypeDeclaration\Rector\Property\AddPropertyTypeDeclarationRector;
 use Rector\TypeDeclaration\ValueObject\AddPropertyTypeDeclaration;
@@ -75,6 +74,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     // Removed craft\services\Plugins::CONFIG_PLUGINS_KEY. craft\services\ProjectConfig::PATH_PLUGINS can be used instead.
     $services->set(RenameClassConstFetchRector::class)
         ->configure([
-            new RenameClassAndConstFetch('craft\services\Plugins', 'CONFIG_PLUGINS_KEY', 'craft\services\ProjectConfig', 'PATH_PLUGINS')
+            new RenameClassAndConstFetch('craft\services\Plugins', 'CONFIG_PLUGINS_KEY', 'craft\services\ProjectConfig', 'PATH_PLUGINS'),
         ]);
 };
