@@ -20,13 +20,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             new AddReturnTypeDeclaration('craft\base\SavableComponentInterface', 'afterDelete', new VoidType()),
             new AddReturnTypeDeclaration('craft\base\SavableComponentInterface', 'afterSave', new VoidType()),
             new AddReturnTypeDeclaration('craft\base\SavableComponentInterface', 'beforeApplyDelete', new VoidType()),
+            new AddReturnTypeDeclaration('craft\base\ConfigurableComponentInterface', 'getSettingsHtml', new $nullableStringType()),
         ]);
-
-//    All components’ attributes() methods must now have an array return type declaration.
-//    All components’ behaviors() methods must now have a void return type declaration.
-//    All components’ extraFields() methods must now have an array return type declaration.
-//    All components’ fields() methods must now have an array return type declaration.
-//    All components’ getSettingsHtml() methods must now have a ?string return type declaration.
-//    All components’ init() methods must now have a void return type declaration.
-//    All components’ rules() methods must now have an array return type declaration.
 };

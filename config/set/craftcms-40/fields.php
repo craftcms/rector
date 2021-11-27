@@ -23,7 +23,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $arrayType = new ArrayType(new MixedType(), new MixedType());
     $nullableArrayType = new UnionType([$arrayType, new NullType()]);
 
-    // Relational fields’ $allowLargeThumbsView properties must now have a bool type declaration.
     $services->set(AddPropertyTypeDeclarationRector::class)
         ->configure([
             new AddPropertyTypeDeclaration('craft\fields\BaseRelationField', 'allowLargeThumbsView', new BooleanType()),

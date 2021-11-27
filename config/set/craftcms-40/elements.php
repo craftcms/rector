@@ -24,7 +24,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         new NullType(),
     ]);
 
-    // Element actions’ getConfirmationMessage() methods must now have a ?string return type declaration....
     $services->set(AddReturnTypeDeclarationRector::class)
         ->configure([
             new AddReturnTypeDeclaration('craft\fieldlayoutelements\BaseUiElement', 'selectorIcon', $nullableStringType),
@@ -48,5 +47,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             new AddReturnTypeDeclaration('craft\base\Element', 'getUriFormat', $nullableStringType),
             new AddReturnTypeDeclaration('craft\base\Element', 'prepElementQueryForTableAttribute', new VoidType()),
             new AddReturnTypeDeclaration('craft\base\Element', 'refHandle', $nullableStringType),
+            new AddReturnTypeDeclaration('craft\base\Element', 'attributes', $arrayType),
         ]);
 };

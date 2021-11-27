@@ -25,7 +25,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $nullableStringType = new UnionType([new StringType(), new NullType()]);
 
-    // Plugins’ $changelogUrl properties must now have a ?string type declaration...
     $services->set(AddPropertyTypeDeclarationRector::class)
         ->configure([
             new AddPropertyTypeDeclaration('craft\base\PluginTrait', 'changelogUrl', $nullableStringType),
@@ -65,7 +64,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             new MethodCallRename('craft\services\Plugins', 'doesPluginRequireDatabaseUpdate', 'isPluginUpdatePending'),
         ]);
 
-    // Removed craft\services\Plugins::CONFIG_PLUGINS_KEY. craft\services\ProjectConfig::PATH_PLUGINS can be used instead.
     $services->set(RenameClassConstFetchRector::class)
         ->configure([
             new RenameClassAndConstFetch('craft\services\Plugins', 'CONFIG_PLUGINS_KEY', 'craft\services\ProjectConfig', 'PATH_PLUGINS'),
