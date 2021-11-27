@@ -13,10 +13,6 @@ use Rector\TypeDeclaration\Rector\ClassMethod\AddReturnTypeDeclarationRector;
 use Rector\TypeDeclaration\ValueObject\AddReturnTypeDeclaration;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-/**
- * @status WIP
- * @see https://github.com/craftcms/cms/blob/4.0/CHANGELOG.md#changed
- */
 return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
@@ -31,15 +27,17 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     // Element actions’ getConfirmationMessage() methods must now have a ?string return type declaration....
     $services->set(AddReturnTypeDeclarationRector::class)
         ->configure([
+            new AddReturnTypeDeclaration('craft\fieldlayoutelements\BaseUiElement', 'selectorIcon', $nullableStringType),
+            new AddReturnTypeDeclaration('craft\elements\db\ElementQueryInterface', 'status', new StringType()),
             new AddReturnTypeDeclaration('craft\base\Element', 'getConfirmationMessage', $nullableStringType),
             new AddReturnTypeDeclaration('craft\base\Element', 'getMessage', $nullableStringType),
             new AddReturnTypeDeclaration('craft\base\Element', 'getTriggerHtml', $nullableStringType),
             new AddReturnTypeDeclaration('craft\base\Element', '__toString', new StringType()),
-            new AddReturnTypeDeclaration('craft\base\Element', 'afterDelete', new VoidType()),
-            new AddReturnTypeDeclaration('craft\base\Element', 'afterMoveInStructure', new VoidType()),
-            new AddReturnTypeDeclaration('craft\base\Element', 'afterPropagate', new VoidType()),
-            new AddReturnTypeDeclaration('craft\base\Element', 'afterRestore', new VoidType()),
-            new AddReturnTypeDeclaration('craft\base\Element', 'afterSave', new VoidType()),
+            new AddReturnTypeDeclaration('craft\base\ElementInterface', 'afterDelete', new VoidType()),
+            new AddReturnTypeDeclaration('craft\base\ElementInterface', 'afterMoveInStructure', new VoidType()),
+            new AddReturnTypeDeclaration('craft\base\ElementInterface', 'afterPropagate', new VoidType()),
+            new AddReturnTypeDeclaration('craft\base\ElementInterface', 'afterRestore', new VoidType()),
+            new AddReturnTypeDeclaration('craft\base\ElementInterface', 'afterSave', new VoidType()),
             new AddReturnTypeDeclaration('craft\base\Element', 'attributeLabels', $arrayType),
             new AddReturnTypeDeclaration('craft\base\Element', 'getCpEditUrl', $nullableStringType),
             new AddReturnTypeDeclaration('craft\base\Element', 'getFieldLayout', $fieldLayoutNullableType),

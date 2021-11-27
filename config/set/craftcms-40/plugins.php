@@ -20,10 +20,6 @@ use Rector\TypeDeclaration\ValueObject\AddPropertyTypeDeclaration;
 use Rector\TypeDeclaration\ValueObject\AddReturnTypeDeclaration;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-/**
- * @status complete list!
- * @see https://github.com/craftcms/cms/blob/4.0/CHANGELOG.md#changed
- */
 return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
@@ -56,7 +52,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $arrayType = new ArrayType(new MixedType(), new MixedType());
     $nullableArrayType = new UnionType([$arrayType, new NullType()]);
 
-    // "Plugins’ afterSaveSettings() methods must now have a void return type declaration...
     $services->set(AddReturnTypeDeclarationRector::class)
         ->configure([
             new AddReturnTypeDeclaration('craft\base\Plugin', 'afterSaveSettings', new VoidType()),
@@ -65,7 +60,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             new AddReturnTypeDeclaration('craft\base\Plugin', 'settingsHtml', $nullableStringType),
         ]);
 
-    // craft\services\Plugins::doesPluginRequireDatabaseUpdate() has been renamed to isPluginUpdatePending().
     $services->set(RenameMethodRector::class)
         ->configure([
             new MethodCallRename('craft\services\Plugins', 'doesPluginRequireDatabaseUpdate', 'isPluginUpdatePending'),
