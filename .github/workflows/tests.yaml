@@ -14,6 +14,7 @@ jobs:
                 php_version:
                     - 7.4
                     - 8.0
+                    - 8.1
 
         name: 'Tests on ${{ matrix.php_version }}'
         runs-on: ubuntu-latest
