@@ -10,6 +10,11 @@ use PHPStan\Type\ObjectType;
 use PHPStan\Type\StringType;
 use PHPStan\Type\UnionType;
 use PHPStan\Type\VoidType;
+use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
+use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
+use Rector\Renaming\ValueObject\MethodCallRename;
+use Rector\Renaming\ValueObject\RenameClassAndConstFetch;
+use Rector\Renaming\ValueObject\RenameClassConstFetch;
 use Rector\TypeDeclaration\Rector\ClassMethod\AddReturnTypeDeclarationRector;
 use Rector\TypeDeclaration\Rector\Property\AddPropertyTypeDeclarationRector;
 use Rector\TypeDeclaration\ValueObject\AddPropertyTypeDeclaration;
@@ -17,6 +22,7 @@ use Rector\TypeDeclaration\ValueObject\AddReturnTypeDeclaration;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 /**
+ * @status complete list!
  * @see https://github.com/craftcms/cms/blob/4.0/CHANGELOG.md#changed
  */
 return static function (ContainerConfigurator $containerConfigurator): void {
@@ -24,7 +30,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $nullableStringType = new UnionType([new StringType(), new NullType()]);
 
-    // starts with "Plugins’ $changelogUrl properties must now have a ?string type declaration..."
+    // Plugins’ $changelogUrl properties must now have a ?string type declaration...
     $services->set(AddPropertyTypeDeclarationRector::class)
         ->configure([
             new AddPropertyTypeDeclaration('craft\base\PluginTrait', 'changelogUrl', $nullableStringType),
@@ -51,14 +57,24 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $arrayType = new ArrayType(new MixedType(), new MixedType());
     $nullableArrayType = new UnionType([$arrayType, new NullType()]);
 
-    // Starts with: "Plugins’ afterSaveSettings() methods must now have a void return type declaration...."
+    // "Plugins’ afterSaveSettings() methods must now have a void return type declaration...
     $services->set(AddReturnTypeDeclarationRector::class)
         ->configure([
-            AddReturnTypeDeclarationRector::METHOD_RETURN_TYPES => [
-                new AddReturnTypeDeclaration('craft\base\Plugin', 'afterSaveSettings', new VoidType()),
-                new AddReturnTypeDeclaration('craft\base\Plugin', 'createSettingsModel', $nullableModelType),
-                new AddReturnTypeDeclaration('craft\base\Plugin', 'getCpNavItem', $nullableArrayType),
-                new AddReturnTypeDeclaration('craft\base\Plugin', 'settingsHtml', $nullableStringType),
-            ]
+            new AddReturnTypeDeclaration('craft\base\Plugin', 'afterSaveSettings', new VoidType()),
+            new AddReturnTypeDeclaration('craft\base\Plugin', 'createSettingsModel', $nullableModelType),
+            new AddReturnTypeDeclaration('craft\base\Plugin', 'getCpNavItem', $nullableArrayType),
+            new AddReturnTypeDeclaration('craft\base\Plugin', 'settingsHtml', $nullableStringType),
+        ]);
+
+    // craft\services\Plugins::doesPluginRequireDatabaseUpdate() has been renamed to isPluginUpdatePending().
+    $services->set(RenameMethodRector::class)
+        ->configure([
+            new MethodCallRename('craft\services\Plugins', 'doesPluginRequireDatabaseUpdate', 'isPluginUpdatePending'),
+        ]);
+
+    // Removed craft\services\Plugins::CONFIG_PLUGINS_KEY. craft\services\ProjectConfig::PATH_PLUGINS can be used instead.
+    $services->set(RenameClassConstFetchRector::class)
+        ->configure([
+            new RenameClassAndConstFetch('craft\services\Plugins', 'CONFIG_PLUGINS_KEY', 'craft\services\ProjectConfig', 'PATH_PLUGINS')
         ]);
 };
