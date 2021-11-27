@@ -20,6 +20,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             new AddReturnTypeDeclaration('craft\base\SavableComponentInterface', 'afterDelete', new VoidType()),
             new AddReturnTypeDeclaration('craft\base\SavableComponentInterface', 'afterSave', new VoidType()),
             new AddReturnTypeDeclaration('craft\base\SavableComponentInterface', 'beforeApplyDelete', new VoidType()),
-            new AddReturnTypeDeclaration('craft\base\ConfigurableComponentInterface', 'getSettingsHtml', new $nullableStringType()),
+            new AddReturnTypeDeclaration('craft\base\ConfigurableComponentInterface', 'getSettingsHtml', $nullableStringType),
         ]);
 };
