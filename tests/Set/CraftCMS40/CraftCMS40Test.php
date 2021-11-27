@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace CraftCMS\Upgrader\Tests\Set\CraftCMS40;
 
 use CraftCMS\Upgrader\Set\CraftCMSSetList;
+use Iterator;
 use Rector\Testing\PHPUnit\AbstractRectorTestCase;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
@@ -19,9 +20,9 @@ final class CraftCMS40Test extends AbstractRectorTestCase
     }
 
     /**
-     * @return \Iterator<SmartFileInfo>
+     * @return Iterator<SmartFileInfo>
      */
-    public function provideData(): \Iterator
+    public function provideData(): Iterator
     {
         return $this->yieldFilesFromDirectory(__DIR__ . '/Fixture');
     }
