@@ -1,6 +1,8 @@
 <?php
 
-final class SimplePluginPropertyTypes extends \craft\base\Plugin
+use craft\base\Plugin;
+
+final class SimplePluginPropertyTypes extends Plugin
 {
     public $hasCpSettings = true;
 }
@@ -9,7 +11,9 @@ final class SimplePluginPropertyTypes extends \craft\base\Plugin
 -----
 <?php
 
-final class SimplePluginPropertyTypes extends \craft\base\Plugin
+use craft\base\Plugin;
+
+final class SimplePluginPropertyTypes extends Plugin
 {
     public bool $hasCpSettings = true;
 }
