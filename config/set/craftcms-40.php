@@ -10,11 +10,11 @@ use PHPStan\Type\StringType;
 use PHPStan\Type\UnionType;
 use PHPStan\Type\VoidType;
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
+use Rector\Renaming\Rector\Name\RenameClassRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
 use Rector\TypeDeclaration\Rector\ClassMethod\AddReturnTypeDeclarationRector;
 use Rector\TypeDeclaration\ValueObject\AddReturnTypeDeclaration;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Rector\Renaming\Rector\Name\RenameClassRector;
 
 /**
  * @see https://github.com/craftcms/cms/blob/4.0/CHANGELOG.md#changed
