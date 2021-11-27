@@ -2,5 +2,9 @@ parameters:
     level: max
 
     paths:
+        - config
         - src
         - tests
+
+    bootstrapFiles:
+        - vendor/rector/rector/vendor/scoper-autoload.php
