@@ -46,7 +46,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             new AddPropertyTypeDeclaration('craft\base\PluginTrait', 't9nCategory', $nullableStringType),
         ]);
 
-    $nullableModelType = new UnionType([new ObjectType('\craft\base\Model'), new NullType()]);
+    $nullableModelType = new UnionType([new ObjectType('craft\base\Model'), new NullType()]);
 
     $arrayType = new ArrayType(new MixedType(), new MixedType());
     $nullableArrayType = new UnionType([$arrayType, new NullType()]);

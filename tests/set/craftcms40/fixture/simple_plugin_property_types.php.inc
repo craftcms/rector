@@ -9,6 +9,11 @@ final class SimplePluginPropertyTypes extends Plugin
     public function afterSaveSettings()
     {
     }
+
+    protected function createSettingsModel()
+    {
+        return null;
+    }
 }
 
 ?>
@@ -23,6 +28,11 @@ final class SimplePluginPropertyTypes extends Plugin
 
     public function afterSaveSettings(): void
     {
+    }
+
+    protected function createSettingsModel(): ?\craft\base\Model
+    {
+        return null;
     }
 }
 
