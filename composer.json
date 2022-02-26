@@ -1,8 +1,8 @@
 {
-    "name": "craftcms/upgrader",
+    "name": "craftcms/rector",
     "description": "Rector sets to automate Craft CMS upgrades",
     "require": {
-        "php": ">=7.2",
+        "php": "^8.0.2",
         "rector/rector": "dev-main"
     },
     "require-dev": {
@@ -13,12 +13,12 @@
     },
     "autoload": {
         "psr-4": {
-            "CraftCMS\\Upgrader\\": "src"
+            "craft\\rector\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CraftCMS\\Upgrader\\Tests\\": "tests"
+            "craft\\rector\\tests\\": "tests"
         }
     },
     "scripts": {
@@ -27,5 +27,11 @@
         "fix-cs": "vendor/bin/ecs check --fix --ansi"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    }
 }

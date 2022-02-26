@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CraftCMS\Upgrader\Tests\Set\CraftCMS40;
+namespace craft\rector\tests\set\craftcms40;
 
-use CraftCMS\Upgrader\Set\CraftCMSSetList;
+use craft\rector\set\SetList;
 use Iterator;
 use Rector\Testing\PHPUnit\AbstractRectorTestCase;
 use Symplify\SmartFileSystem\SmartFileInfo;
@@ -29,6 +29,6 @@ final class CraftCMS40Test extends AbstractRectorTestCase
 
     public function provideConfigFilePath(): string
     {
-        return CraftCMSSetList::CRAFT_CMS_40;
+        return SetList::CRAFT_CMS_40;
     }
 }

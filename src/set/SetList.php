@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CraftCMS\Upgrader\Set;
+namespace craft\rector\set;
 
 use Rector\Set\Contract\SetListInterface;
 
-final class CraftCMSSetList implements SetListInterface
+final class SetList implements SetListInterface
 {
     /**
      * @var string
