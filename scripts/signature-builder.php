@@ -157,6 +157,7 @@ final class SignatureBuilder
      */
     public function build(array $classes): array
     {
+        asort($classes);
         foreach ($classes as $class) {
             $this->analyzeClass(new ReflectionClass($class));
         }
