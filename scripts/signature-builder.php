@@ -1,7 +1,6 @@
 <?php
 
 use Composer\Autoload\ClassLoader;
-use PHPStan\Type\UnionType;
 
 @ini_set('memory_limit', '-1');
 
@@ -143,11 +142,16 @@ echo "✓\n";
 
 final class SignatureBuilder
 {
-    private array $signatures = [];
+    private array $signatures;
     private $filterNamespace;
 
     public function __construct(callable $filterNamespaces)
     {
+        $this->signatures = [
+            'propertyTypes' => [],
+            'methodReturnTypes' => [],
+            'methodParamTypes' => [],
+        ];
         $this->filterNamespace = $filterNamespaces;
     }
 
@@ -200,14 +204,21 @@ final class SignatureBuilder
 
         echo "Analyzing $class->name … ";
 
+        $parentClass = $class->getParentClass() ?: null;
+
         foreach ($class->getProperties(ReflectionProperty::IS_PUBLIC | ReflectionProperty::IS_PROTECTED) as $property) {
-            if ($property->getDeclaringClass()->name !== $class->name) {
+            $declaringClass = $property->getDeclaringClass();
+            if ($declaringClass->name !== $class->name) {
                 continue;
             }
 
             $type = $this->serializeType($property->getType());
             if ($type) {
-                $this->signatures['propertyTypes'][] = [$class->name, $property->name, $type];
+                $parentHasProperty = $parentClass?->hasProperty($property->name);
+                $parentProperty = $parentHasProperty ? $parentClass->getProperty($property->name) : null;
+                if (!$parentHasProperty || $type !== $this->serializeType($parentProperty->getType())) {
+                    $this->signatures['propertyTypes'][] = [$class->name, $property->name, $type];
+                }
             }
         }
 
@@ -216,15 +227,26 @@ final class SignatureBuilder
                 continue;
             }
 
+            $parentHasMethod = $parentClass?->hasMethod($method->name);
+            $parentMethod = $parentHasMethod ? $parentClass->getMethod($method->name) : null;
+
             $returnType = $this->serializeType($method->getReturnType());
-            if ($returnType) {
+            if (
+                $returnType &&
+                (!$parentHasMethod || $returnType !== $this->serializeType($parentMethod->getReturnType()))
+            ) {
                 $this->signatures['methodReturnTypes'][] = [$class->name, $method->name, $returnType];
             }
 
-            foreach ($method->getParameters() as $parameter) {
+            $parentParameters = $parentMethod?->getParameters();
+
+            foreach ($method->getParameters() as $pos => $parameter) {
                 $type = $this->serializeType($parameter->getType());
-                if ($type) {
-                    $this->signatures['methodParamTypes'][] = [$class->name, $method->name, $parameter->getPosition(), $type];
+                if (
+                    $type &&
+                    (!isset($parentParameters[$pos]) || $type !== $this->serializeType($parentParameters[$pos]->getType()))
+                ) {
+                    $this->signatures['methodParamTypes'][] = [$class->name, $method->name, $pos, $type];
                 }
             }
         }
