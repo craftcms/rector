@@ -11,6 +11,7 @@ return static function(ContainerConfigurator $containerConfigurator): void {
 
     $services->set(RenameMethodRector::class)
         ->configure([
-            new MethodCallRename('craft\services\Plugins', 'doesPluginRequireDatabaseUpdate', 'isPluginUpdatePending'),
+            new MethodCallRename('craft\base\Element', 'getHasFreshContent', 'getIsFresh'),
+            new MethodCallRename('craft\base\Element', 'getIsUnsavedDraft', 'getIsUnpublishedDraft'),
         ]);
 };
