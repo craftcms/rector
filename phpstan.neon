@@ -3,7 +3,8 @@ parameters:
 
     paths:
         - ecs.php
-        - config
+        - scripts
+        - sets
         - src
         - tests
 

@@ -3,11 +3,6 @@
 declare(strict_types = 1);
 
 use craft\rector\SignatureConfigurator;
-use PHPStan\Type\ArrayType;
-use PHPStan\Type\MixedType;
-use PHPStan\Type\NullType;
-use PHPStan\Type\StringType;
-use PHPStan\Type\UnionType;
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\Rector\Name\RenameClassRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
@@ -17,16 +12,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
  * @see https://github.com/craftcms/cms/blob/4.0/CHANGELOG.md#changed
  */
 return static function(ContainerConfigurator $containerConfigurator): void {
-    // Load BaseYii = Craft as they aren't covered by autoloading
-//    $cmsPath = getcwd() . '/vendor/craftcms/cms';
-//    require $cmsPath . '/lib/yii2/Yii.php';
-//    require $cmsPath . '/src/Craft.php';
-
-    $craft4Dir = __DIR__ . '/craftcms-40';
-    $containerConfigurator->import("$craft4Dir/*");
-
-    $arrayType = new ArrayType(new MixedType(), new MixedType());
-    $nullableStringType = new UnionType([new StringType(), new NullType()]);
+    $containerConfigurator->import(__DIR__ . '/craftcms-40/*');
 
     $services = $containerConfigurator->services();
     $services->set(RenameMethodRector::class)
@@ -41,7 +27,6 @@ return static function(ContainerConfigurator $containerConfigurator): void {
             'craft\web\AssetBundle' => 'yii\web\AssetBundle',
         ]);
 
-    // Load the generated signature info
-    $signatures = require sprintf('%s/signatures/craftcms-40.php', dirname(__DIR__));
-    SignatureConfigurator::configure($containerConfigurator, $signatures);
+    // Property/method signatures
+    SignatureConfigurator::configure($containerConfigurator, 'craftcms-40');
 };

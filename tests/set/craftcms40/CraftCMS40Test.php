@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace craft\rector\tests\set\craftcms40;
 
-use craft\rector\set\SetList;
+use craft\rector\SetList;
 use Iterator;
 use Rector\Testing\PHPUnit\AbstractRectorTestCase;
 use Symplify\SmartFileSystem\SmartFileInfo;

@@ -3,7 +3,6 @@ declare(strict_types = 1);
 
 namespace craft\rector;
 
-use PHPStan\ShouldNotHappenException;
 use PHPStan\Type\ArrayType;
 use PHPStan\Type\BooleanType;
 use PHPStan\Type\CallableType;
@@ -28,64 +27,43 @@ use Rector\TypeDeclaration\ValueObject\AddReturnTypeDeclaration;
 use ReflectionClass;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
-use Throwable;
 
 final class SignatureConfigurator
 {
-    public static function configure(ContainerConfigurator $containerConfigurator, array $signatures): void
+    public static function configure(ContainerConfigurator $containerConfigurator, string $name): void
     {
-        $propertyTypeConfigs = [];
-        $methodReturnTypeConfigs = [];
-        $methodParamTypeConfigs = [];
-
-        $unexpectedTypesPath = __DIR__ . '/unexpected-types.txt';
-        if (file_exists($unexpectedTypesPath)) {
-            unlink($unexpectedTypesPath);
-        }
-
-        foreach ($signatures['propertyTypes'] as [$className, $propertyName, $type]) {
-            if (class_exists($className)) {
-                try {
-                    $propertyTypeConfigs[] = new AddPropertyTypeDeclaration($className, $propertyName, self::type($className, $type));
-                } catch (ShouldNotHappenException) {
-                    file_put_contents($unexpectedTypesPath, sprintf("$className::\$$propertyName (%s)\n", is_array($type) ? implode('|', $type) : $type), FILE_APPEND);
-                } catch (Throwable $e) {
-                    file_put_contents(__DIR__ . '/error.txt', sprintf("property type\n\n%s\n\n%s", print_r([$className, $propertyName, $type], true), print_r($e, true)));
-                    throw $e;
-                }
-            }
-        }
-
-        foreach ($signatures['methodReturnTypes'] as [$className, $method, $returnType]) {
-            if (class_exists($className)) {
-                try {
-                    $methodReturnTypeConfigs[] = new AddReturnTypeDeclaration($className, $method, self::type($className, $returnType));
-                } catch (ShouldNotHappenException) {
-                    file_put_contents($unexpectedTypesPath, sprintf("$className::$method(): %s\n", is_array($returnType) ? implode('|', $returnType) : $returnType), FILE_APPEND);
-                } catch (Throwable $e) {
-                    file_put_contents(__DIR__ . '/error.txt', sprintf("method return type\n\n%s\n\n%s", print_r([$className, $method, $returnType], true), print_r($e, true)));
-                    throw $e;
-                }
-            }
-        }
-
-        foreach ($signatures['methodParamTypes'] as [$className, $method, $position, $paramType]) {
-            if (class_exists($className)) {
-                try {
-                    $methodParamTypeConfigs[] = new AddParamTypeDeclaration($className, $method, $position, self::type($className, $paramType));
-                } catch (ShouldNotHappenException) {
-                    file_put_contents($unexpectedTypesPath, sprintf("$className::$method(%s%s \$x)\n", str_repeat(', ', $position), is_array($paramType) ? implode('|', $paramType) : $paramType), FILE_APPEND);
-                } catch (Throwable $e) {
-                    file_put_contents(__DIR__ . '/error.txt', sprintf("method param type\n\n%s\n\n%s", print_r([$className, $method, $position, $paramType], true), print_r($e, true)));
-                    throw $e;
-                }
-            }
-        }
-
+        $signatures = require dirname(__DIR__) . "/signatures/$name.php";
         $services = $containerConfigurator->services();
-        $services->set(AddPropertyTypeDeclarationRector::class)->configure($propertyTypeConfigs);
-        $services->set(AddReturnTypeDeclarationRector::class)->configure($methodReturnTypeConfigs);
-        $services->set(AddParamTypeDeclarationRector::class)->configure($methodParamTypeConfigs);
+
+        if (isset($signatures['propertyTypes'])) {
+            $propertyTypeConfigs = [];
+            foreach ($signatures['propertyTypes'] as [$className, $propertyName, $type]) {
+                if (class_exists($className)) {
+                    $propertyTypeConfigs[] = new AddPropertyTypeDeclaration($className, $propertyName, self::type($className, $type));
+                }
+            }
+            $services->set(AddPropertyTypeDeclarationRector::class)->configure($propertyTypeConfigs);
+        }
+
+        if ($signatures['methodReturnTypes']) {
+            $methodReturnTypeConfigs = [];
+            foreach ($signatures['methodReturnTypes'] as [$className, $method, $returnType]) {
+                if (class_exists($className)) {
+                    $methodReturnTypeConfigs[] = new AddReturnTypeDeclaration($className, $method, self::type($className, $returnType));
+                }
+            }
+            $services->set(AddReturnTypeDeclarationRector::class)->configure($methodReturnTypeConfigs);
+        }
+
+        if (isset($signatures['methodParamTypes'])) {
+            $methodParamTypeConfigs = [];
+            foreach ($signatures['methodParamTypes'] as [$className, $method, $position, $paramType]) {
+                if (class_exists($className)) {
+                    $methodParamTypeConfigs[] = new AddParamTypeDeclaration($className, $method, $position, self::type($className, $paramType));
+                }
+            }
+            $services->set(AddParamTypeDeclarationRector::class)->configure($methodParamTypeConfigs);
+        }
     }
 
     private static function type(string $className, string|array $type): Type

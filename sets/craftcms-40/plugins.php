@@ -2,12 +2,6 @@
 
 declare(strict_types = 1);
 
-use PHPStan\Type\ArrayType;
-use PHPStan\Type\MixedType;
-use PHPStan\Type\NullType;
-use PHPStan\Type\ObjectType;
-use PHPStan\Type\StringType;
-use PHPStan\Type\UnionType;
 use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
