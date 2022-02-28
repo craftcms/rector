@@ -20,9 +20,9 @@ if (!$basePath) {
 }
 
 if (!isset($_SERVER['argv'][2])) {
-    error('No output directory provided.');
+    error('No signature file name provided.');
 }
-$dest = $_SERVER['argv'][2];
+$name = $_SERVER['argv'][2];
 
 /**
  * @param string $name
@@ -242,6 +242,6 @@ return $export;
 
 PHP;
 
-file_put_contents($dest, $output);
+file_put_contents(dirname(__DIR__) . "/signatures/$name.php", $output);
 
 echo "done\n";

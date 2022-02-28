@@ -3,11 +3,11 @@
 use Symfony\Component\VarExporter\VarExporter;
 
 if (!isset($_SERVER['argv'][1])) {
-    error('No signature path provided.');
+    error('No signature file name specified.');
 }
-$path = realpath($_SERVER['argv'][1]);
+$path = realpath(dirname(__DIR__) . "/signatures/{$_SERVER['argv'][1]}.php");
 if (!$path) {
-    error("Invalid signature path: {$_SERVER['argv'][1]}");
+    error("No signature file found at {$_SERVER['argv'][1]}.");
 }
 
 require dirname(__DIR__) . '/vendor/autoload.php';
