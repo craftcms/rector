@@ -1,6 +1,7 @@
 <?php
 
 use Composer\Autoload\ClassLoader;
+use PHPStan\Type\UnionType;
 
 @ini_set('memory_limit', '-1');
 
@@ -179,6 +180,9 @@ final class SignatureBuilder
 //            return array_merge(['&'], array_map(fn(ReflectionNamedType $type) => $type->getName(), $type->getTypes()));
 //        }
         if ($type instanceof ReflectionNamedType) {
+            if ($type->allowsNull()) {
+                return [$type->getName(), 'null'];
+            }
             return $type->getName();
         }
         throw new UnexpectedValueException(sprintf('Unexpected reflection type: %s', get_class($type)));
