@@ -11,5 +11,5 @@ final class SetList implements SetListInterface
     /**
      * @var string
      */
-    public const CRAFT_CMS_40 = __DIR__ . '/../sets/craftcms-40.php';
+    public const CRAFT_CMS_40 = __DIR__ . '/../sets/craft-cms-40.php';
 }

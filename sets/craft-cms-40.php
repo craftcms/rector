@@ -11,7 +11,7 @@ use Rector\Renaming\ValueObject\RenameClassConstFetch;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function(ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(__DIR__ . '/craftcms-40/*');
+    $containerConfigurator->import(__DIR__ . '/craft-cms-40/*');
 
     $services = $containerConfigurator->services();
     $services->set(RenameMethodRector::class)
@@ -43,5 +43,5 @@ return static function(ContainerConfigurator $containerConfigurator): void {
         ]);
 
     // Property/method signatures
-    SignatureConfigurator::configure($containerConfigurator, 'craftcms-40');
+    SignatureConfigurator::configure($containerConfigurator, 'craft-cms-40');
 };
