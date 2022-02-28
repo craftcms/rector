@@ -11279,6 +11279,16 @@ return [
         ],
         [
             'craft\\base\\Element',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\base\\Element',
+            '__isset',
+            'bool',
+        ],
+        [
+            'craft\\base\\Element',
             'attributes',
             'array',
         ],
@@ -13187,6 +13197,11 @@ return [
         ],
         [
             'craft\\base\\Field',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\base\\Field',
             'getContentColumnType',
             [
                 'array',
@@ -14938,6 +14953,11 @@ return [
             'craft\\cache\\DbCache',
             'addValue',
             'bool',
+        ],
+        [
+            'craft\\cache\\ElementQueryTagDependency',
+            '__sleep',
+            'array',
         ],
         [
             'craft\\cache\\FileCache',
@@ -22249,6 +22269,11 @@ return [
         ],
         [
             'craft\\fields\\data\\ColorData',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\fields\\data\\ColorData',
             'serialize',
             [
                 'mixed',
@@ -22349,6 +22374,11 @@ return [
             'craft\\fields\\data\\MultiOptionsFieldData',
             'contains',
             'bool',
+        ],
+        [
+            'craft\\fields\\data\\OptionData',
+            '__toString',
+            'string',
         ],
         [
             'craft\\fields\\data\\OptionData',
@@ -26378,6 +26408,11 @@ return [
         ],
         [
             'craft\\i18n\\Locale',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\i18n\\Locale',
             'getLanguageID',
             'string',
         ],
@@ -27015,6 +27050,11 @@ return [
             'bool',
         ],
         [
+            'craft\\models\\AssetIndexData',
+            '__toString',
+            'string',
+        ],
+        [
             'craft\\models\\CategoryGroup',
             'attributeLabels',
             'array',
@@ -27028,6 +27068,11 @@ return [
             'craft\\models\\CategoryGroup',
             'validateSiteSettings',
             'void',
+        ],
+        [
+            'craft\\models\\CategoryGroup',
+            '__toString',
+            'string',
         ],
         [
             'craft\\models\\CategoryGroup',
@@ -27091,6 +27136,11 @@ return [
         ],
         [
             'craft\\models\\EntryType',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\models\\EntryType',
             'getCpEditUrl',
             'string',
         ],
@@ -27108,6 +27158,11 @@ return [
             'craft\\models\\FieldGroup',
             'attributeLabels',
             'array',
+        ],
+        [
+            'craft\\models\\FieldGroup',
+            '__toString',
+            'string',
         ],
         [
             'craft\\models\\FieldGroup',
@@ -27360,6 +27415,11 @@ return [
         ],
         [
             'craft\\models\\GqlSchema',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\models\\GqlSchema',
             'has',
             'bool',
         ],
@@ -27377,6 +27437,11 @@ return [
             'craft\\models\\GqlSchema',
             'getConfig',
             'array',
+        ],
+        [
+            'craft\\models\\GqlToken',
+            '__toString',
+            'string',
         ],
         [
             'craft\\models\\GqlToken',
@@ -27421,6 +27486,11 @@ return [
         ],
         [
             'craft\\models\\ImageTransform',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\models\\ImageTransform',
             'getIsNamedTransform',
             'bool',
         ],
@@ -27446,6 +27516,11 @@ return [
         ],
         [
             'craft\\models\\ImageTransformIndex',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\models\\ImageTransformIndex',
             'getTransform',
             'craft\\models\\ImageTransform',
         ],
@@ -27458,6 +27533,11 @@ return [
             'craft\\models\\MailSettings',
             'attributeLabels',
             'array',
+        ],
+        [
+            'craft\\models\\MatrixBlockType',
+            '__toString',
+            'string',
         ],
         [
             'craft\\models\\MatrixBlockType',
@@ -27549,6 +27629,11 @@ return [
             'craft\\models\\Section',
             'validatePreviewTargets',
             'void',
+        ],
+        [
+            'craft\\models\\Section',
+            '__toString',
+            'string',
         ],
         [
             'craft\\models\\Section',
@@ -27645,6 +27730,11 @@ return [
         ],
         [
             'craft\\models\\Site',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\models\\Site',
             'getGroup',
             'craft\\models\\SiteGroup',
         ],
@@ -27680,6 +27770,11 @@ return [
         ],
         [
             'craft\\models\\SiteGroup',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\models\\SiteGroup',
             'getSites',
             'array',
         ],
@@ -27707,6 +27802,11 @@ return [
             'craft\\models\\TagGroup',
             'validateFieldLayout',
             'void',
+        ],
+        [
+            'craft\\models\\TagGroup',
+            '__toString',
+            'string',
         ],
         [
             'craft\\models\\TagGroup',
@@ -27750,6 +27850,11 @@ return [
             'craft\\models\\UserGroup',
             'attributeLabels',
             'array',
+        ],
+        [
+            'craft\\models\\UserGroup',
+            '__toString',
+            'string',
         ],
         [
             'craft\\models\\UserGroup',
@@ -27806,6 +27911,11 @@ return [
             'craft\\models\\Volume',
             'getConfig',
             'array',
+        ],
+        [
+            'craft\\models\\VolumeFolder',
+            '__toString',
+            'string',
         ],
         [
             'craft\\models\\VolumeFolder',
@@ -30327,6 +30437,11 @@ return [
         ],
         [
             'craft\\services\\Fs',
+            '__serialize',
+            'array',
+        ],
+        [
+            'craft\\services\\Fs',
             'createFilesystemConfig',
             'array',
         ],
@@ -32578,6 +32693,11 @@ return [
                 'string',
                 'null',
             ],
+        ],
+        [
+            'craft\\services\\Volumes',
+            '__serialize',
+            'array',
         ],
         [
             'craft\\services\\Volumes',

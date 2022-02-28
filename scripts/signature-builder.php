@@ -223,7 +223,7 @@ final class SignatureBuilder
         }
 
         foreach ($class->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED) as $method) {
-            if (str_starts_with($method->name, '__') || $method->getDeclaringClass()->name !== $class->name) {
+            if ($method->name === '__construct' || $method->getDeclaringClass()->name !== $class->name) {
                 continue;
             }
 
