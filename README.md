@@ -2,22 +2,24 @@
 
 This package provides rules for updating plugins and modules to Craft 4.
 
-To apply them to your plugin or module, follow these steps:
+First, ensure you are running Craft 3.7.35 or later. (Prior versions of Craft weren’t compatible with Rector.)
 
-1. Ensure you are running Craft 3.7.35 or later (but not 4.x).
-2. In `composer.json`, set your `min-stability: "dev"` and `prefer-stable: true`:
-   ```json
-   {
-     "minimum-stability": "dev",
-     "prefer-stable": true,
-     "...": "..."
-   }
-   ```
-3. Run the following commands:
-   ```sh
-   > composer require craftcms/rector:dev-main
-   > vendor/bin/rector process src --config vendor/craftcms/rector/sets/craftcms-40.php
-   ``` 
+Then run the following commands:
+```sh
+composer config minimum-stability dev
+```
+
+```sh
+composer config prefer-stable true
+```
+
+```sh
+composer require craftcms/rector:dev-main --dev
+```
+
+```sh
+vendor/bin/rector process src --config vendor/craftcms/rector/sets/craftcms-40.php
+```
 
 You can add `--dry-run` to the `vendor/bin/rector` command if you’d like to see what will happen without actually
 making any changes yet.
