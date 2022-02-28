@@ -165,10 +165,9 @@ final class SignatureBuilder
     }
 
     /**
-     * @param ReflectionType|null $type
      * @return string|string[]|null
      */
-    private function serializeType(ReflectionClass $class, ?ReflectionType $type): string|array|null
+    private function serializeType(?ReflectionType $type): string|array|null
     {
         if ($type === null) {
             return null;
@@ -206,7 +205,7 @@ final class SignatureBuilder
                 continue;
             }
 
-            $type = $this->serializeType($class, $property->getType());
+            $type = $this->serializeType($property->getType());
             if ($type) {
                 $this->signatures['propertyTypes'][] = [$class->name, $property->name, $type];
             }
@@ -217,13 +216,13 @@ final class SignatureBuilder
                 continue;
             }
 
-            $returnType = $this->serializeType($class, $method->getReturnType());
+            $returnType = $this->serializeType($method->getReturnType());
             if ($returnType) {
                 $this->signatures['methodReturnTypes'][] = [$class->name, $method->name, $returnType];
             }
 
             foreach ($method->getParameters() as $parameter) {
-                $type = $this->serializeType($class, $parameter->getType());
+                $type = $this->serializeType($parameter->getType());
                 if ($type) {
                     $this->signatures['methodParamTypes'][] = [$class->name, $method->name, $parameter->getPosition(), $type];
                 }
