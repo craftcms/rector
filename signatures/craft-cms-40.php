@@ -1100,7 +1100,7 @@ return [
         [
             'craft\\config\\DbConfig',
             'port',
-            'string|int',
+            'int|null',
         ],
         [
             'craft\\config\\DbConfig',
@@ -8917,7 +8917,7 @@ return [
         [
             'craft\\base\\ElementExporterInterface',
             'export',
-            'callable|array|string',
+            'mixed',
         ],
         [
             'craft\\base\\ElementExporterInterface',
@@ -15088,11 +15088,6 @@ return [
             'craft\\fs\\Local',
             'getRootPath',
             'string',
-        ],
-        [
-            'craft\\fs\\Local',
-            'getFileStream',
-            'bool',
         ],
         [
             'craft\\fs\\Local',
