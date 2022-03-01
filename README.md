@@ -18,7 +18,7 @@ composer require craftcms/rector:dev-main --dev
 ```
 
 ```sh
-vendor/bin/rector process src --config vendor/craftcms/rector/sets/craftcms-40.php
+vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-cms-40.php
 ```
 
 You can add `--dry-run` to the `vendor/bin/rector` command if you’d like to see what will happen without actually
