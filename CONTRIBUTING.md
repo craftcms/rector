@@ -11,6 +11,10 @@ php scripts/signature-builder.php ../craft4/craftcms/cms craft-cms-40 -n craft -
 ```
 
 ```sh
+php scripts/signature-diff.php ../craft3/craftcms/cms craft-cms-40 -a lib/yii2/Yii.php,src/Craft.php
+```
+
+```sh
 php scripts/signature-cleanup.php craft-cms-40
 ```
 
