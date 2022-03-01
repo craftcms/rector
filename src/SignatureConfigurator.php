@@ -43,7 +43,7 @@ final class SignatureConfigurator
         if (isset($signatures['propertyTypes'])) {
             $propertyTypeConfigs = [];
             foreach ($signatures['propertyTypes'] as [$className, $propertyName, $type]) {
-                if (class_exists($className)) {
+                if (class_exists($className) || interface_exists($className)) {
                     $propertyTypeConfigs[] = new AddPropertyTypeDeclaration($className, $propertyName, self::type($type));
                 }
             }
@@ -53,7 +53,7 @@ final class SignatureConfigurator
         if ($signatures['methodReturnTypes']) {
             $methodReturnTypeConfigs = [];
             foreach ($signatures['methodReturnTypes'] as [$className, $method, $returnType]) {
-                if (class_exists($className)) {
+                if (class_exists($className) || interface_exists($className)) {
                     $methodReturnTypeConfigs[] = new AddReturnTypeDeclaration($className, $method, self::type($returnType));
                 }
             }
@@ -63,7 +63,7 @@ final class SignatureConfigurator
         if (isset($signatures['methodParamTypes'])) {
             $methodParamTypeConfigs = [];
             foreach ($signatures['methodParamTypes'] as [$className, $method, $position, $paramType]) {
-                if (class_exists($className)) {
+                if (class_exists($className) || interface_exists($className)) {
                     $methodParamTypeConfigs[] = new AddParamTypeDeclaration($className, $method, $position, self::type($paramType));
                 }
             }
