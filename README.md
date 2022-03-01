@@ -30,6 +30,8 @@ composer require craftcms/rector:dev-main --dev
 vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-cms-40.php
 ```
 
+(Replace `src` with the path to your source directory, if not `src/`.)
+
 You can add `--dry-run` to the `vendor/bin/rector` command if you’d like to see what will happen without actually
 making any changes yet.
 
@@ -43,4 +45,31 @@ Once the commands are complete, you’re ready to update `craftcms/cms` to Craft
 
 ```sh
 composer require craftcms/cms:^4.0.0-alpha.1
+```
+
+## Advanced Configuration
+
+If you’d like to include additional Rector rules, or customize which files/directories should be processed,
+you’ll need to give your project a `rector.php` file.
+
+Here’s an example which runs the Craft 4 rule set, but skips over a `src/integrations/` folder:
+
+```php
+<?php
+declare(strict_types = 1);
+
+use craft\rector\SetList as CraftSetList;
+use Rector\Core\Configuration\Option;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function(ContainerConfigurator $containerConfigurator): void {
+    // Skip the integrations folder
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SKIP, [
+        __DIR__ . '/src/integrations',
+    ]);
+
+    // Import the Craft 4 upgrade rule set
+    $containerConfigurator->import(CraftSetList::CRAFT_CMS_40);
+};
 ```
