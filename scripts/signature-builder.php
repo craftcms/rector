@@ -168,16 +168,13 @@ final class SignatureBuilder
         return $this->signatures;
     }
 
-    /**
-     * @return string|string[]|null
-     */
-    private function serializeType(?ReflectionType $type): string|array|null
+    private function serializeType(?ReflectionType $type, string $className): ?string
     {
         if ($type === null) {
             return null;
         }
         if ($type instanceof ReflectionUnionType) {
-            return array_map(fn(ReflectionNamedType $type) => $type->getName(), $type->getTypes());
+            return implode('|', array_map(fn(ReflectionNamedType $type) => $this->serializeType($type, $className), $type->getTypes()));
         }
         // todo:
 //        if ($type instanceof ReflectionIntersectionType) {
@@ -185,8 +182,11 @@ final class SignatureBuilder
 //        }
         if ($type instanceof ReflectionNamedType) {
             $name = $type->getName();
+            if ($name === 'self') {
+                $name = $className;
+            }
             if ($name !== 'mixed' && $type->allowsNull()) {
-                return [$name, 'null'];
+                return "$name|null";
             }
             return $name;
         }
@@ -213,11 +213,11 @@ final class SignatureBuilder
                 continue;
             }
 
-            $type = $this->serializeType($property->getType());
+            $type = $this->serializeType($property->getType(), $class->name);
             if ($type) {
                 $parentHasProperty = $parentClass?->hasProperty($property->name);
                 $parentProperty = $parentHasProperty ? $parentClass->getProperty($property->name) : null;
-                if (!$parentHasProperty || $type !== $this->serializeType($parentProperty->getType())) {
+                if (!$parentHasProperty || $type !== $this->serializeType($parentProperty->getType(), $parentClass->name)) {
                     $this->signatures['propertyTypes'][] = [$class->name, $property->name, $type];
                 }
             }
@@ -231,10 +231,10 @@ final class SignatureBuilder
             $parentHasMethod = $parentClass?->hasMethod($method->name);
             $parentMethod = $parentHasMethod ? $parentClass->getMethod($method->name) : null;
 
-            $returnType = $this->serializeType($method->getReturnType());
+            $returnType = $this->serializeType($method->getReturnType(), $class->name);
             if (
                 $returnType &&
-                (!$parentHasMethod || $returnType !== $this->serializeType($parentMethod->getReturnType()))
+                (!$parentHasMethod || $returnType !== $this->serializeType($parentMethod->getReturnType(), $parentClass->name))
             ) {
                 $this->signatures['methodReturnTypes'][] = [$class->name, $method->name, $returnType];
             }
@@ -242,10 +242,10 @@ final class SignatureBuilder
             $parentParameters = $parentMethod?->getParameters();
 
             foreach ($method->getParameters() as $pos => $parameter) {
-                $type = $this->serializeType($parameter->getType());
+                $type = $this->serializeType($parameter->getType(), $class->name);
                 if (
                     $type &&
-                    (!isset($parentParameters[$pos]) || $type !== $this->serializeType($parentParameters[$pos]->getType()))
+                    (!isset($parentParameters[$pos]) || $type !== $this->serializeType($parentParameters[$pos]->getType(), $parentClass->name))
                 ) {
                     $this->signatures['methodParamTypes'][] = [$class->name, $method->name, $pos, $type];
                 }

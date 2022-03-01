@@ -30,6 +30,11 @@ use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 
 final class SignatureConfigurator
 {
+    /**
+     * @var Type[]
+     */
+    private static array $types = [];
+
     public static function configure(ContainerConfigurator $containerConfigurator, string $name): void
     {
         $signatures = require dirname(__DIR__) . "/signatures/$name.php";
@@ -39,7 +44,7 @@ final class SignatureConfigurator
             $propertyTypeConfigs = [];
             foreach ($signatures['propertyTypes'] as [$className, $propertyName, $type]) {
                 if (class_exists($className)) {
-                    $propertyTypeConfigs[] = new AddPropertyTypeDeclaration($className, $propertyName, self::type($className, $type));
+                    $propertyTypeConfigs[] = new AddPropertyTypeDeclaration($className, $propertyName, self::type($type));
                 }
             }
             $services->set(AddPropertyTypeDeclarationRector::class)->configure($propertyTypeConfigs);
@@ -49,7 +54,7 @@ final class SignatureConfigurator
             $methodReturnTypeConfigs = [];
             foreach ($signatures['methodReturnTypes'] as [$className, $method, $returnType]) {
                 if (class_exists($className)) {
-                    $methodReturnTypeConfigs[] = new AddReturnTypeDeclaration($className, $method, self::type($className, $returnType));
+                    $methodReturnTypeConfigs[] = new AddReturnTypeDeclaration($className, $method, self::type($returnType));
                 }
             }
             $services->set(AddReturnTypeDeclarationRector::class)->configure($methodReturnTypeConfigs);
@@ -59,17 +64,25 @@ final class SignatureConfigurator
             $methodParamTypeConfigs = [];
             foreach ($signatures['methodParamTypes'] as [$className, $method, $position, $paramType]) {
                 if (class_exists($className)) {
-                    $methodParamTypeConfigs[] = new AddParamTypeDeclaration($className, $method, $position, self::type($className, $paramType));
+                    $methodParamTypeConfigs[] = new AddParamTypeDeclaration($className, $method, $position, self::type($paramType));
                 }
             }
             $services->set(AddParamTypeDeclarationRector::class)->configure($methodParamTypeConfigs);
         }
     }
 
-    private static function type(string $className, string|array $type): Type
+    private static function type(string $type): Type
     {
-        if (is_array($type)) {
-            return self::unionType($className, $type);
+        if (!isset(self::$types[$type])) {
+            self::$types[$type] = self::createType($type);
+        }
+        return self::$types[$type];
+    }
+
+    private static function createType(string $type): Type
+    {
+        if (str_contains($type, '|')) {
+            return self::createUnionType(explode('|', $type));
         }
 
         return match ($type) {
@@ -83,15 +96,20 @@ final class SignatureConfigurator
             'mixed' => new MixedType(true),
             'null' => new NullType(),
             'object' => new ObjectWithoutClassType(),
-            'self' => new ObjectType($className),
             'string' => new StringType(),
             'void' => new VoidType(),
             default => new ObjectType($type),
         };
     }
 
-    private static function unionType(string $className, array $types): UnionType
+    private static function createUnionType(array $types): UnionType
     {
+        $normalizedTypes = array_map(fn(string $type) => self::type($type), $types);
+
+        if (count($types) === 2 && in_array('null', $types)) {
+            return new UnionType($normalizedTypes);
+        }
+
         // we can't simply return `new UnionType([...])` here because UnionType ony supports nullable types currently
         // copied from https://github.com/rectorphp/rector-symfony/blob/91fd3f3882171c6f0c7e60c44e689e8d7d8ad0a4/config/sets/symfony/symfony6/symfony-return-types.php#L56-L63
         $unionTypeReflectionClass = new ReflectionClass(UnionType::class);
@@ -100,7 +118,7 @@ final class SignatureConfigurator
         $type = $unionTypeReflectionClass->newInstanceWithoutConstructor();
 
         $privatesAccessor = new PrivatesAccessor();
-        $privatesAccessor->setPrivateProperty($type, 'types', array_map(fn(string $type) => self::type($className, $type), $types));
+        $privatesAccessor->setPrivateProperty($type, 'types', $normalizedTypes);
 
         return $type;
     }
