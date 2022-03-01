@@ -80,7 +80,7 @@ final class SignatureConfigurator
             'float' => new FloatType(),
             'int' => new IntegerType(),
             'iterable' => new IterableType(new MixedType(), new MixedType()),
-            'mixed' => new MixedType(),
+            'mixed' => new MixedType(true),
             'null' => new NullType(),
             'object' => new ObjectWithoutClassType(),
             'self' => new ObjectType($className),
