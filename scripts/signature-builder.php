@@ -184,10 +184,11 @@ final class SignatureBuilder
 //            return array_merge(['&'], array_map(fn(ReflectionNamedType $type) => $type->getName(), $type->getTypes()));
 //        }
         if ($type instanceof ReflectionNamedType) {
-            if ($type->allowsNull()) {
-                return [$type->getName(), 'null'];
+            $name = $type->getName();
+            if ($name !== 'mixed' && $type->allowsNull()) {
+                return [$name, 'null'];
             }
-            return $type->getName();
+            return $name;
         }
         throw new UnexpectedValueException(sprintf('Unexpected reflection type: %s', get_class($type)));
     }

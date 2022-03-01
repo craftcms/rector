@@ -1527,10 +1527,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'activateAccountSuccessPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1627,10 +1624,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'cacheDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1640,10 +1634,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'cooldownDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1687,10 +1678,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'defaultDirMode',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1718,10 +1706,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'defaultTokenDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1780,10 +1765,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'elevatedSessionDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1871,10 +1853,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'imageDriver',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1889,18 +1868,12 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'invalidLoginWindowDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'invalidUserTokenPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1926,18 +1899,12 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'loginPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'logoutPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -2040,26 +2007,17 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'postCpLoginRedirect',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'postLoginRedirect',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'postLogoutRedirect',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -2094,10 +2052,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'previewTokenDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -2107,26 +2062,17 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'purgePendingUsersDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'purgeStaleUserSessionDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'purgeUnsavedDraftsDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -2136,18 +2082,12 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'rememberUsernameDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'rememberedUserSessionDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -2229,26 +2169,17 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'setPasswordPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'setPasswordRequestPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'setPasswordSuccessPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -2279,10 +2210,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'softDeleteDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -2371,10 +2299,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'userSessionDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -2387,26 +2312,17 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'verificationCodeDuration',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'verifyEmailPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'verifyEmailSuccessPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\console\\Application',
@@ -3988,34 +3904,22 @@ return [
         [
             'craft\\elements\\db\\AddressQuery',
             'ownerId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AddressQuery',
             'countryCode',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'volumeId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'folderId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
@@ -4028,18 +3932,12 @@ return [
         [
             'craft\\elements\\db\\AssetQuery',
             'filename',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'kind',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
@@ -4052,34 +3950,22 @@ return [
         [
             'craft\\elements\\db\\AssetQuery',
             'width',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'height',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'size',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'dateModified',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
@@ -4089,10 +3975,7 @@ return [
         [
             'craft\\elements\\db\\AssetQuery',
             'withTransforms',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\CategoryQuery',
@@ -4102,10 +3985,7 @@ return [
         [
             'craft\\elements\\db\\CategoryQuery',
             'groupId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EagerLoadPlan',
@@ -4222,10 +4102,7 @@ return [
         [
             'craft\\elements\\db\\ElementQuery',
             'draftOf',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
@@ -4275,26 +4152,17 @@ return [
         [
             'craft\\elements\\db\\ElementQuery',
             'id',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'uid',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'siteSettingsId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
@@ -4326,26 +4194,17 @@ return [
         [
             'craft\\elements\\db\\ElementQuery',
             'dateCreated',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'dateUpdated',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'siteId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
@@ -4368,50 +4227,32 @@ return [
         [
             'craft\\elements\\db\\ElementQuery',
             'relatedTo',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'title',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'slug',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'uri',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'search',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'ref',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
@@ -4433,18 +4274,12 @@ return [
         [
             'craft\\elements\\db\\ElementQuery',
             'structureId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'level',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
@@ -4554,66 +4389,42 @@ return [
         [
             'craft\\elements\\db\\EntryQuery',
             'sectionId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'typeId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'authorId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'authorGroupId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'postDate',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'before',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'after',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'expiryDate',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\GlobalSetQuery',
@@ -4632,26 +4443,17 @@ return [
         [
             'craft\\elements\\db\\MatrixBlockQuery',
             'fieldId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\MatrixBlockQuery',
             'primaryOwnerId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\MatrixBlockQuery',
             'ownerId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\MatrixBlockQuery',
@@ -4672,18 +4474,12 @@ return [
         [
             'craft\\elements\\db\\MatrixBlockQuery',
             'typeId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\TagQuery',
             'groupId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
@@ -4720,66 +4516,42 @@ return [
         [
             'craft\\elements\\db\\UserQuery',
             'can',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'groupId',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'email',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'username',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'fullName',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'firstName',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'lastName',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'lastLoginDate',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
@@ -5085,18 +4857,12 @@ return [
         [
             'craft\\events\\ConfigEvent',
             'oldValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\events\\ConfigEvent',
             'newValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\events\\ConfigEvent',
@@ -5165,10 +4931,7 @@ return [
         [
             'craft\\events\\DefineAssetUrlEvent',
             'transform',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\events\\DefineAssetUrlEvent',
@@ -5245,10 +5008,7 @@ return [
         [
             'craft\\events\\DefineFieldHtmlEvent',
             'value',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\events\\DefineFieldHtmlEvent',
@@ -5261,10 +5021,7 @@ return [
         [
             'craft\\events\\DefineFieldKeywordsEvent',
             'value',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\events\\DefineFieldKeywordsEvent',
@@ -5377,10 +5134,7 @@ return [
         [
             'craft\\events\\DefineValueEvent',
             'value',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\events\\DeleteElementEvent',
@@ -5574,18 +5328,12 @@ return [
         [
             'craft\\events\\ExecuteGqlQueryEvent',
             'context',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\events\\ExecuteGqlQueryEvent',
             'rootValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\events\\ExecuteGqlQueryEvent',
@@ -6106,10 +5854,7 @@ return [
         [
             'craft\\events\\SetElementRouteEvent',
             'route',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\events\\SetElementTableAttributeHtmlEvent',
@@ -11443,10 +11188,7 @@ return [
         [
             'craft\\base\\Element',
             'getRoute',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
@@ -11888,10 +11630,7 @@ return [
         [
             'craft\\base\\Element',
             'getFieldValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
@@ -12564,10 +12303,7 @@ return [
         [
             'craft\\base\\ElementInterface',
             'getRoute',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
@@ -12966,10 +12702,7 @@ return [
         [
             'craft\\base\\ElementInterface',
             'getFieldValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
@@ -13252,10 +12985,7 @@ return [
         [
             'craft\\base\\Field',
             'normalizeValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -13305,10 +13035,7 @@ return [
         [
             'craft\\base\\Field',
             'serializeValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -13524,18 +13251,12 @@ return [
         [
             'craft\\base\\FieldInterface',
             'normalizeValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldInterface',
             'serializeValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldInterface',
@@ -14019,10 +13740,7 @@ return [
         [
             'craft\\base\\Plugin',
             'getSettingsResponse',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Plugin',
@@ -14145,10 +13863,7 @@ return [
         [
             'craft\\base\\PluginInterface',
             'getSettingsResponse',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\PluginInterface',
@@ -14241,10 +13956,7 @@ return [
         [
             'craft\\base\\Serializable',
             'serialize',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\SortableFieldInterface',
@@ -15002,18 +14714,12 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'getLoginPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
             'getLogoutPath',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -15521,10 +15227,7 @@ return [
         [
             'craft\\console\\CallableAction',
             'runWithParams',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\console\\Controller',
@@ -17320,10 +17023,7 @@ return [
         [
             'craft\\controllers\\LivePreviewController',
             'actionPreview',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\controllers\\NotFoundController',
@@ -17388,10 +17088,7 @@ return [
         [
             'craft\\controllers\\PluginsController',
             'actionEditPluginSettings',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\controllers\\PluginsController',
@@ -18289,10 +17986,7 @@ return [
         [
             'craft\\db\\Connection',
             'usePrimary',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\db\\Migration',
@@ -18615,10 +18309,7 @@ return [
         [
             'craft\\db\\PrimaryReplicaTrait',
             'usePrimary',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\db\\Query',
@@ -19546,10 +19237,7 @@ return [
         [
             'craft\\elements\\User',
             'getPreference',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\User',
@@ -20654,10 +20342,7 @@ return [
         [
             'craft\\elements\\db\\ElementQuery',
             'statusCondition',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
@@ -21401,10 +21086,7 @@ return [
         [
             'craft\\fieldlayoutelements\\BaseField',
             'value',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\fieldlayoutelements\\BaseField',
@@ -22067,10 +21749,7 @@ return [
         [
             'craft\\fields\\conditions\\FieldConditionRuleTrait',
             'elementQueryParam',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\fields\\conditions\\FieldConditionRuleTrait',
@@ -22275,10 +21954,7 @@ return [
         [
             'craft\\fields\\data\\ColorData',
             'serialize',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\fields\\data\\ColorData',
@@ -22383,10 +22059,7 @@ return [
         [
             'craft\\fields\\data\\OptionData',
             'serialize',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\fields\\data\\SingleOptionFieldData',
@@ -22502,18 +22175,12 @@ return [
         [
             'craft\\gql\\GqlEntityRegistry',
             'getEntity',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\GqlEntityRegistry',
             'createEntity',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\GqlEntityRegistry',
@@ -22563,10 +22230,7 @@ return [
         [
             'craft\\gql\\base\\ArgumentHandler',
             'handleArgument',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ArgumentHandler',
@@ -22606,10 +22270,7 @@ return [
         [
             'craft\\gql\\base\\Directive',
             'apply',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ElementArguments',
@@ -22644,18 +22305,12 @@ return [
         [
             'craft\\gql\\base\\ElementResolver',
             'resolveOne',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ElementResolver',
             'resolveCount',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ElementResolver',
@@ -22668,10 +22323,7 @@ return [
         [
             'craft\\gql\\base\\ElementResolver',
             'prepareQuery',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\Generator',
@@ -22751,18 +22403,12 @@ return [
         [
             'craft\\gql\\base\\MutationResolver',
             'getResolutionData',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\MutationResolver',
             'normalizeValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\MutationResolver',
@@ -22772,18 +22418,12 @@ return [
         [
             'craft\\gql\\base\\ObjectType',
             'resolveWithDirectives',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ObjectType',
             'resolve',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\Query',
@@ -22813,18 +22453,12 @@ return [
         [
             'craft\\gql\\base\\Resolver',
             'resolve',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\SingleGeneratorInterface',
             'generateType',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\SingularTypeInterface',
@@ -22964,10 +22598,7 @@ return [
         [
             'craft\\gql\\resolvers\\mutations\\Entry',
             'createDraft',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\resolvers\\mutations\\Entry',
@@ -23197,66 +22828,42 @@ return [
         [
             'craft\\gql\\types\\input\\File',
             'getType',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\input\\Matrix',
             'getType',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\input\\Matrix',
             'normalizeValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\input\\criteria\\Asset',
             'getType',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\input\\criteria\\Category',
             'getType',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\input\\criteria\\Entry',
             'getType',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\input\\criteria\\Tag',
             'getType',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\input\\criteria\\User',
             'getType',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\AdminTable',
@@ -23281,10 +22888,7 @@ return [
         [
             'craft\\helpers\\App',
             'env',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\App',
@@ -23357,10 +22961,7 @@ return [
         [
             'craft\\helpers\\App',
             'normalizeValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\App',
@@ -23567,10 +23168,7 @@ return [
         [
             'craft\\helpers\\ArrayHelper',
             'firstWhere',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -23594,10 +23192,7 @@ return [
         [
             'craft\\helpers\\ArrayHelper',
             'firstValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -23791,10 +23386,7 @@ return [
         [
             'craft\\helpers\\ConfigHelper',
             'localizedValue',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Console',
@@ -24124,10 +23716,7 @@ return [
         [
             'craft\\helpers\\Db',
             'prepareValueForDb',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
@@ -24754,18 +24343,12 @@ return [
         [
             'craft\\helpers\\Gql',
             'getUnionType',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Gql',
             'wrapInNonNull',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Gql',
@@ -24775,10 +24358,7 @@ return [
         [
             'craft\\helpers\\Gql',
             'applyDirectives',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Gql',
@@ -25119,10 +24699,7 @@ return [
         [
             'craft\\helpers\\Json',
             'decodeIfJson',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Localization',
@@ -25132,10 +24709,7 @@ return [
         [
             'craft\\helpers\\Localization',
             'normalizeNumber',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Localization',
@@ -25446,10 +25020,7 @@ return [
         [
             'craft\\helpers\\Session',
             'get',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Session',
@@ -25459,10 +25030,7 @@ return [
         [
             'craft\\helpers\\Session',
             'remove',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Session',
@@ -26108,10 +25676,7 @@ return [
         [
             'craft\\helpers\\Template',
             'attribute',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Template',
@@ -27474,10 +27039,7 @@ return [
         [
             'craft\\models\\GqlToken',
             'getScope',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\models\\ImageTransform',
@@ -27582,10 +27144,7 @@ return [
         [
             'craft\\models\\ProjectConfigData',
             'delete',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\models\\ProjectConfigData',
@@ -27610,10 +27169,7 @@ return [
         [
             'craft\\models\\ReadOnlyProjectConfigData',
             'traverseDataArray',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\models\\Section',
@@ -28229,10 +27785,7 @@ return [
         [
             'craft\\queue\\QueueInterface',
             'run',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\queue\\QueueInterface',
@@ -31416,10 +30969,7 @@ return [
         [
             'craft\\services\\ProjectConfig',
             'get',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\ProjectConfig',
@@ -32516,10 +32066,7 @@ return [
         [
             'craft\\services\\Users',
             'getUserPreference',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Users',
@@ -34037,18 +33584,12 @@ return [
         [
             'craft\\web\\Request',
             'getBodyParam',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\Request',
             'getRequiredBodyParam',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\Request',
@@ -34066,34 +33607,22 @@ return [
         [
             'craft\\web\\Request',
             'getQueryParam',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\Request',
             'getRequiredQueryParam',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\Request',
             'getParam',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\Request',
             'getRequiredParam',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\Request',
@@ -35124,10 +34653,7 @@ return [
         [
             'craft\\web\\twig\\Extension',
             'replaceFilter',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -35217,10 +34743,7 @@ return [
         [
             'craft\\web\\twig\\Extension',
             'cloneFunction',
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -36099,19 +35622,13 @@ return [
             'craft\\base\\Element',
             'findOne',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
             'findAll',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
@@ -36252,28 +35769,19 @@ return [
             'craft\\base\\Element',
             'gqlTypeNameByContext',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
             'gqlMutationNameByContext',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
             'gqlScopesByContext',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
@@ -36402,10 +35910,7 @@ return [
             'craft\\base\\Element',
             'setParentId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
@@ -36552,10 +36057,7 @@ return [
             'craft\\base\\Element',
             'setFieldValue',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
@@ -36747,10 +36249,7 @@ return [
             'craft\\base\\Element',
             'findByCondition',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Element',
@@ -36822,19 +36321,13 @@ return [
             'craft\\base\\ElementInterface',
             'findOne',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
             'findAll',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
@@ -36933,28 +36426,19 @@ return [
             'craft\\base\\ElementInterface',
             'gqlTypeNameByContext',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
             'gqlMutationNameByContext',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
             'gqlScopesByContext',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
@@ -37056,19 +36540,13 @@ return [
             'craft\\base\\ElementInterface',
             'getNext',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
             'getPrev',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
@@ -37239,10 +36717,7 @@ return [
             'craft\\base\\ElementInterface',
             'setFieldValue',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\ElementInterface',
@@ -37443,10 +36918,7 @@ return [
             'craft\\base\\Field',
             'normalizeValue',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37461,10 +36933,7 @@ return [
             'craft\\base\\Field',
             'getInputHtml',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37479,10 +36948,7 @@ return [
             'craft\\base\\Field',
             'inputHtml',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37497,10 +36963,7 @@ return [
             'craft\\base\\Field',
             'getStaticHtml',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37512,10 +36975,7 @@ return [
             'craft\\base\\Field',
             'isValueEmpty',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37527,10 +36987,7 @@ return [
             'craft\\base\\Field',
             'getSearchKeywords',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37542,10 +36999,7 @@ return [
             'craft\\base\\Field',
             'searchKeywords',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37557,10 +37011,7 @@ return [
             'craft\\base\\Field',
             'getTableAttributeHtml',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37572,10 +37023,7 @@ return [
             'craft\\base\\Field',
             'serializeValue',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37608,10 +37056,7 @@ return [
             'craft\\base\\Field',
             'modifyElementsQuery',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\Field',
@@ -37752,10 +37197,7 @@ return [
             'craft\\base\\FieldInterface',
             'getInputHtml',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldInterface',
@@ -37770,10 +37212,7 @@ return [
             'craft\\base\\FieldInterface',
             'getStaticHtml',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldInterface',
@@ -37785,10 +37224,7 @@ return [
             'craft\\base\\FieldInterface',
             'isValueEmpty',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldInterface',
@@ -37800,10 +37236,7 @@ return [
             'craft\\base\\FieldInterface',
             'getSearchKeywords',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldInterface',
@@ -37815,10 +37248,7 @@ return [
             'craft\\base\\FieldInterface',
             'normalizeValue',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldInterface',
@@ -37833,10 +37263,7 @@ return [
             'craft\\base\\FieldInterface',
             'serializeValue',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldInterface',
@@ -37869,10 +37296,7 @@ return [
             'craft\\base\\FieldInterface',
             'modifyElementsQuery',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldInterface',
@@ -37965,19 +37389,13 @@ return [
             'craft\\base\\FieldLayoutComponent',
             'setUserCondition',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldLayoutComponent',
             'setElementCondition',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\FieldLayoutComponent',
@@ -38294,10 +37712,7 @@ return [
             'craft\\base\\MemoizableArray',
             'where',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\MemoizableArray',
@@ -38333,10 +37748,7 @@ return [
             'craft\\base\\MemoizableArray',
             'firstWhere',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\MemoizableArray',
@@ -38390,10 +37802,7 @@ return [
             'craft\\base\\PreviewableFieldInterface',
             'getTableAttributeHtml',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\PreviewableFieldInterface',
@@ -38477,19 +37886,13 @@ return [
             'craft\\base\\conditions\\BaseDateRangeConditionRule',
             'setStartDate',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\conditions\\BaseDateRangeConditionRule',
             'setEndDate',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\conditions\\BaseDateRangeConditionRule',
@@ -38513,10 +37916,7 @@ return [
             'craft\\base\\conditions\\BaseElementSelectConditionRule',
             'matchValue',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\conditions\\BaseLightswitchConditionRule',
@@ -38562,10 +37962,7 @@ return [
             'craft\\base\\conditions\\BaseTextConditionRule',
             'matchValue',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\base\\conditions\\ConditionInterface',
@@ -39052,10 +38449,7 @@ return [
             'craft\\console\\controllers\\BaseSystemStatusController',
             'set',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\console\\controllers\\DbController',
@@ -40102,10 +39496,7 @@ return [
             'craft\\controllers\\UsersController',
             'actionEditUser',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\controllers\\UsersController',
@@ -41043,10 +40434,7 @@ return [
             'craft\\elements\\Asset',
             'getImg',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\Asset',
@@ -41067,10 +40455,7 @@ return [
             'craft\\elements\\Asset',
             'getSrcset',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\Asset',
@@ -41082,10 +40467,7 @@ return [
             'craft\\elements\\Asset',
             'getUrlsBySize',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\Asset',
@@ -41100,19 +40482,13 @@ return [
             'craft\\elements\\Asset',
             'setTransform',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\Asset',
             'getUrl',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\Asset',
@@ -41142,10 +40518,7 @@ return [
             'craft\\elements\\Asset',
             'getHeight',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\Asset',
@@ -41228,10 +40601,7 @@ return [
             'craft\\elements\\Asset',
             'copyWithTransform',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\Entry',
@@ -41365,10 +40735,7 @@ return [
             'craft\\elements\\User',
             'getPreference',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\User',
@@ -41877,28 +41244,19 @@ return [
             'craft\\elements\\db\\AssetQuery',
             'volume',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'volumeId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'folderId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
@@ -41914,19 +41272,13 @@ return [
             'craft\\elements\\db\\AssetQuery',
             'filename',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'kind',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
@@ -41941,37 +41293,25 @@ return [
             'craft\\elements\\db\\AssetQuery',
             'width',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'height',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'size',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
             'dateModified',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
@@ -41999,19 +41339,13 @@ return [
             'craft\\elements\\db\\CategoryQuery',
             'group',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\CategoryQuery',
             'groupId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
@@ -42117,19 +41451,13 @@ return [
             'craft\\elements\\db\\ElementQuery',
             'dateCreated',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
             'dateUpdated',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQuery',
@@ -42396,19 +41724,13 @@ return [
             'craft\\elements\\db\\ElementQueryInterface',
             'draftOf',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'draftCreator',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
@@ -42447,46 +41769,31 @@ return [
             'craft\\elements\\db\\ElementQueryInterface',
             'revisionOf',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'revisionCreator',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'id',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'uid',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'siteSettingsId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
@@ -42523,37 +41830,25 @@ return [
             'craft\\elements\\db\\ElementQueryInterface',
             'dateCreated',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'dateUpdated',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'site',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'siteId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
@@ -42574,64 +41869,43 @@ return [
             'craft\\elements\\db\\ElementQueryInterface',
             'relatedTo',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'andRelatedTo',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'title',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'slug',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'uri',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'search',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'ref',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
@@ -42672,10 +41946,7 @@ return [
             'craft\\elements\\db\\ElementQueryInterface',
             'level',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
@@ -42826,28 +42097,19 @@ return [
             'craft\\elements\\db\\ElementRelationParamParser',
             'normalizeRelatedToParam',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementRelationParamParser',
             'normalizeRelatedToCriteria',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementRelationParamParser',
             'parse',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
@@ -42859,100 +42121,67 @@ return [
             'craft\\elements\\db\\EntryQuery',
             'section',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'sectionId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'type',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'typeId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'authorId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'authorGroup',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'authorGroupId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'postDate',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'before',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'after',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\EntryQuery',
             'expiryDate',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\GlobalSetQuery',
@@ -42964,37 +42193,25 @@ return [
             'craft\\elements\\db\\GlobalSetQuery',
             'handle',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\MatrixBlockQuery',
             'field',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\MatrixBlockQuery',
             'fieldId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\MatrixBlockQuery',
             'primaryOwnerId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\MatrixBlockQuery',
@@ -43006,10 +42223,7 @@ return [
             'craft\\elements\\db\\MatrixBlockQuery',
             'ownerId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\MatrixBlockQuery',
@@ -43039,37 +42253,25 @@ return [
             'craft\\elements\\db\\MatrixBlockQuery',
             'type',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\MatrixBlockQuery',
             'typeId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\TagQuery',
             'group',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\TagQuery',
             'groupId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
@@ -43105,82 +42307,55 @@ return [
             'craft\\elements\\db\\UserQuery',
             'can',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'group',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'groupId',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'email',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'username',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'fullName',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'firstName',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'lastName',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
             'lastLoginDate',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\elements\\db\\UserQuery',
@@ -43517,10 +42692,7 @@ return [
             'craft\\fields\\BaseRelationField',
             'setSelectionCondition',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\fields\\BaseRelationField',
@@ -43727,10 +42899,7 @@ return [
             'craft\\fields\\data\\MultiOptionsFieldData',
             'contains',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\fields\\data\\SingleOptionFieldData',
@@ -43856,10 +43025,7 @@ return [
             'craft\\gql\\GqlEntityRegistry',
             'createEntity',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\TypeLoader',
@@ -43931,19 +43097,13 @@ return [
             'craft\\gql\\base\\Directive',
             'apply',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\Directive',
             'apply',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\Directive',
@@ -44036,10 +43196,7 @@ return [
             'craft\\gql\\base\\ElementResolver',
             'prepareQuery',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ElementResolver',
@@ -44051,19 +43208,13 @@ return [
             'craft\\gql\\base\\Generator',
             'getContentFields',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\GeneratorInterface',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\GqlTypeTrait',
@@ -44138,10 +43289,7 @@ return [
             'craft\\gql\\base\\MutationResolver',
             'normalizeValue',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\MutationResolver',
@@ -44159,10 +43307,7 @@ return [
             'craft\\gql\\base\\ObjectType',
             'resolveWithDirectives',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ObjectType',
@@ -44174,10 +43319,7 @@ return [
             'craft\\gql\\base\\ObjectType',
             'resolveWithDirectives',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ObjectType',
@@ -44189,10 +43331,7 @@ return [
             'craft\\gql\\base\\ObjectType',
             'resolve',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ObjectType',
@@ -44204,10 +43343,7 @@ return [
             'craft\\gql\\base\\ObjectType',
             'resolve',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ObjectType',
@@ -44252,10 +43388,7 @@ return [
             'craft\\gql\\base\\Resolver',
             'resolve',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\Resolver',
@@ -44267,10 +43400,7 @@ return [
             'craft\\gql\\base\\Resolver',
             'resolve',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\Resolver',
@@ -44282,10 +43412,7 @@ return [
             'craft\\gql\\base\\SingleGeneratorInterface',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\base\\StructureMutationTrait',
@@ -44555,163 +43682,109 @@ return [
             'craft\\gql\\types\\generators\\AssetType',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\AssetType',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\CategoryType',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\CategoryType',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\ElementType',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\ElementType',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\EntryType',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\EntryType',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\GlobalSetType',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\GlobalSetType',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\MatrixBlockType',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\MatrixBlockType',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\TableRowType',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\TableRowType',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\TagType',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\TagType',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\UserType',
             'generateTypes',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\generators\\UserType',
             'generateType',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\gql\\types\\input\\Matrix',
@@ -44768,10 +43841,7 @@ return [
             'craft\\helpers\\App',
             'parseBooleanEnv',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\App',
@@ -44807,10 +43877,7 @@ return [
             'craft\\helpers\\App',
             'isValidEdition',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\App',
@@ -44822,10 +43889,7 @@ return [
             'craft\\helpers\\App',
             'normalizeValue',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\App',
@@ -44921,10 +43985,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'prependOrAppend',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -44951,10 +44012,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'where',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -45038,10 +44096,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'firstWhere',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -45068,10 +44123,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'contains',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -45119,10 +44171,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'rename',
             3,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -45146,10 +44195,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'withoutValue',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -45344,10 +44390,7 @@ return [
             'craft\\helpers\\Assets',
             'parseSrcsetSize',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Assets',
@@ -45446,10 +44489,7 @@ return [
             'craft\\helpers\\Component',
             'createComponent',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Component',
@@ -45485,10 +44525,7 @@ return [
             'craft\\helpers\\ConfigHelper',
             'durationInSeconds',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ConfigHelper',
@@ -45503,10 +44540,7 @@ return [
             'craft\\helpers\\ConfigHelper',
             'localizedValue',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ConfigHelper',
@@ -45881,10 +44915,7 @@ return [
             'craft\\helpers\\DateTimeHelper',
             'toDateTime',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
@@ -45920,19 +44951,13 @@ return [
             'craft\\helpers\\DateTimeHelper',
             'isIso8601',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
             'toIso8601',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
@@ -45950,82 +44975,55 @@ return [
             'craft\\helpers\\DateTimeHelper',
             'isValidTimeStamp',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
             'isToday',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
             'isYesterday',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
             'isThisYear',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
             'isThisWeek',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
             'isThisMonth',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
             'isWithinLast',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
             'isWithinLast',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
             'isInThePast',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
@@ -46061,19 +45059,13 @@ return [
             'craft\\helpers\\Db',
             'prepareValuesForDb',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
             'prepareValueForDb',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
@@ -46088,19 +45080,13 @@ return [
             'craft\\helpers\\Db',
             'prepareDateForDb',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
             'prepareMoneyForDb',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
@@ -46229,10 +45215,7 @@ return [
             'craft\\helpers\\Db',
             'parseParam',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
@@ -46265,10 +45248,7 @@ return [
             'craft\\helpers\\Db',
             'parseDateParam',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
@@ -46292,10 +45272,7 @@ return [
             'craft\\helpers\\Db',
             'parseMoneyParam',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
@@ -46313,10 +45290,7 @@ return [
             'craft\\helpers\\Db',
             'parseBooleanParam',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
@@ -46337,10 +45311,7 @@ return [
             'craft\\helpers\\Db',
             'parseNumericParam',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Db',
@@ -46928,19 +45899,13 @@ return [
             'craft\\helpers\\Diff',
             'compare',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Diff',
             'compare',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Diff',
@@ -47846,19 +46811,13 @@ return [
             'craft\\helpers\\Html',
             'explodeClass',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Html',
             'explodeStyle',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Html',
@@ -48157,10 +47116,7 @@ return [
             'craft\\helpers\\ImageTransforms',
             'normalizeTransform',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\ImageTransforms',
@@ -48184,10 +47140,7 @@ return [
             'craft\\helpers\\Json',
             'decodeIfJson',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Json',
@@ -48205,10 +47158,7 @@ return [
             'craft\\helpers\\Localization',
             'normalizeNumber',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Localization',
@@ -48244,10 +47194,7 @@ return [
             'craft\\helpers\\MailerHelper',
             'normalizeEmails',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\MailerHelper',
@@ -48649,19 +47596,13 @@ return [
             'craft\\helpers\\MoneyHelper',
             'toMoney',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\MoneyHelper',
             'toDecimal',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\MoneyHelper',
@@ -48715,10 +47656,7 @@ return [
             'craft\\helpers\\Number',
             'makeNumeric',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Number',
@@ -48930,10 +47868,7 @@ return [
             'craft\\helpers\\Session',
             'set',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Session',
@@ -50310,10 +49245,7 @@ return [
             'craft\\helpers\\StringHelper',
             'toString',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\StringHelper',
@@ -50454,19 +49386,13 @@ return [
             'craft\\helpers\\Template',
             'attribute',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Template',
             'attribute',
             3,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\helpers\\Template',
@@ -50890,10 +49816,7 @@ return [
             'craft\\i18n\\Formatter',
             'willBeMisrepresented',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\i18n\\I18N',
@@ -51310,10 +50233,7 @@ return [
             'craft\\imagetransforms\\ImageTransformer',
             'getTransformIndex',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\imagetransforms\\ImageTransformer',
@@ -51625,10 +50545,7 @@ return [
             'craft\\models\\ReadOnlyProjectConfigData',
             'traverseDataArray',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\models\\ReadOnlyProjectConfigData',
@@ -52249,10 +51166,7 @@ return [
             'craft\\services\\Assets',
             'getTotalAssets',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Assets',
@@ -52357,10 +51271,7 @@ return [
             'craft\\services\\Assets',
             'findFolders',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Assets',
@@ -52378,10 +51289,7 @@ return [
             'craft\\services\\Assets',
             'findFolder',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Assets',
@@ -52393,10 +51301,7 @@ return [
             'craft\\services\\Assets',
             'getTotalFolders',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Assets',
@@ -52408,10 +51313,7 @@ return [
             'craft\\services\\Assets',
             'getAssetUrl',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Assets',
@@ -52624,10 +51526,7 @@ return [
             'craft\\services\\Categories',
             'getCategoryById',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Categories',
@@ -52846,10 +51745,7 @@ return [
             'craft\\services\\Dashboard',
             'createWidget',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Dashboard',
@@ -53194,10 +52090,7 @@ return [
             'craft\\services\\Elements',
             'createElement',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Elements',
@@ -53586,19 +52479,13 @@ return [
             'craft\\services\\Elements',
             'createAction',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Elements',
             'createExporter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Elements',
@@ -53769,19 +52656,13 @@ return [
             'craft\\services\\Fields',
             'createField',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Fields',
             'getAllFields',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Fields',
@@ -53805,10 +52686,7 @@ return [
             'craft\\services\\Fields',
             'getFieldByHandle',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Fields',
@@ -54027,10 +52905,7 @@ return [
             'craft\\services\\Fs',
             'createFilesystem',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Fs',
@@ -55128,10 +54003,7 @@ return [
             'craft\\services\\ProjectConfig',
             'set',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\ProjectConfig',
@@ -55245,10 +54117,7 @@ return [
             'craft\\services\\ProjectConfig',
             'onAdd',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\ProjectConfig',
@@ -55266,10 +54135,7 @@ return [
             'craft\\services\\ProjectConfig',
             'onUpdate',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\ProjectConfig',
@@ -55287,10 +54153,7 @@ return [
             'craft\\services\\ProjectConfig',
             'onRemove',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\ProjectConfig',
@@ -55326,10 +54189,7 @@ return [
             'craft\\services\\ProjectConfig',
             'registerChangeEventHandler',
             3,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\ProjectConfig',
@@ -55353,19 +54213,13 @@ return [
             'craft\\services\\ProjectConfig',
             'rememberAppliedChanges',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\ProjectConfig',
             'rememberAppliedChanges',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\ProjectConfig',
@@ -55677,10 +54531,7 @@ return [
             'craft\\services\\Security',
             'redactIfSensitive',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Sites',
@@ -55758,10 +54609,7 @@ return [
             'craft\\services\\Sites',
             'setCurrentSite',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Sites',
@@ -56274,10 +55122,7 @@ return [
             'craft\\services\\TemplateCaches',
             'endTemplateCache',
             3,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\TemplateCaches',
@@ -56331,10 +55176,7 @@ return [
             'craft\\services\\Tokens',
             'createPreviewToken',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Tokens',
@@ -56646,10 +55488,7 @@ return [
             'craft\\services\\Users',
             'getUserPreference',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\services\\Users',
@@ -57351,19 +56190,13 @@ return [
             'craft\\web\\Controller',
             'asJsonP',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\Controller',
             'asRaw',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\Controller',
@@ -57713,10 +56546,7 @@ return [
             'craft\\web\\Request',
             'getParam',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\Request',
@@ -57951,10 +56781,7 @@ return [
             'craft\\web\\View',
             'renderObjectTemplate',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\View',
@@ -58140,10 +56967,7 @@ return [
             'craft\\web\\View',
             'setInitialDeltaValue',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\View',
@@ -58365,10 +57189,7 @@ return [
             'craft\\web\\twig\\Environment',
             'setDefaultEscaperStrategy',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Environment',
@@ -58398,28 +57219,19 @@ return [
             'craft\\web\\twig\\Extension',
             'translateFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'translateFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'translateFilter',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58458,10 +57270,7 @@ return [
             'craft\\web\\twig\\Extension',
             'ucfirstFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58479,19 +57288,13 @@ return [
             'craft\\web\\twig\\Extension',
             'lcfirstFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'kebabFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58515,37 +57318,25 @@ return [
             'craft\\web\\twig\\Extension',
             'camelFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'pascalFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'snakeFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'currencyFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58578,10 +57369,7 @@ return [
             'craft\\web\\twig\\Extension',
             'filesizeFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58650,10 +57438,7 @@ return [
             'craft\\web\\twig\\Extension',
             'timestampFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58674,10 +57459,7 @@ return [
             'craft\\web\\twig\\Extension',
             'jsonEncodeFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58704,28 +57486,19 @@ return [
             'craft\\web\\twig\\Extension',
             'withoutFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'withoutFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'withoutKeyFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58746,10 +57519,7 @@ return [
             'craft\\web\\twig\\Extension',
             'parseRefsFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58828,28 +57598,19 @@ return [
             'craft\\web\\twig\\Extension',
             'replaceFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'replaceFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'replaceFilter',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58861,10 +57622,7 @@ return [
             'craft\\web\\twig\\Extension',
             'dateFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58879,10 +57637,7 @@ return [
             'craft\\web\\twig\\Extension',
             'dateFilter',
             3,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58924,19 +57679,13 @@ return [
             'craft\\web\\twig\\Extension',
             'atomFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'atomFilter',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58960,19 +57709,13 @@ return [
             'craft\\web\\twig\\Extension',
             'rssFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'rssFilter',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -58984,10 +57727,7 @@ return [
             'craft\\web\\twig\\Extension',
             'timeFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -59002,10 +57742,7 @@ return [
             'craft\\web\\twig\\Extension',
             'timeFilter',
             3,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -59026,10 +57763,7 @@ return [
             'craft\\web\\twig\\Extension',
             'datetimeFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -59044,10 +57778,7 @@ return [
             'craft\\web\\twig\\Extension',
             'datetimeFilter',
             3,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -59062,10 +57793,7 @@ return [
             'craft\\web\\twig\\Extension',
             'encencFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -59113,55 +57841,37 @@ return [
             'craft\\web\\twig\\Extension',
             'httpdateFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'httpdateFilter',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'indexOfFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'indexOfFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'literalFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'markdownFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -59200,19 +57910,13 @@ return [
             'craft\\web\\twig\\Extension',
             'multisortFilter',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'multisortFilter',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -59236,19 +57940,13 @@ return [
             'craft\\web\\twig\\Extension',
             'cloneFunction',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'collectFunction',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -59278,28 +57976,19 @@ return [
             'craft\\web\\twig\\Extension',
             'dateFunction',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'dateFunction',
             2,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
             'expressionFunction',
             0,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -59374,10 +58063,7 @@ return [
             'craft\\web\\twig\\Extension',
             'renderObjectTemplate',
             1,
-            [
-                'mixed',
-                'null',
-            ],
+            'mixed',
         ],
         [
             'craft\\web\\twig\\Extension',
