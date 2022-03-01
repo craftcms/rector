@@ -7133,21 +7133,6 @@ return [
             'array',
         ],
         [
-            'craft\\services\\Addresses',
-            '_countryRepository',
-            'CommerceGuys\\Addressing\\Country\\CountryRepository',
-        ],
-        [
-            'craft\\services\\Addresses',
-            '_subdivisionRepository',
-            'CommerceGuys\\Addressing\\Subdivision\\SubdivisionRepository',
-        ],
-        [
-            'craft\\services\\Addresses',
-            '_addressFormatRepository',
-            'CommerceGuys\\Addressing\\AddressFormat\\AddressFormatRepository',
-        ],
-        [
             'craft\\services\\Api',
             'client',
             'GuzzleHttp\\Client',
