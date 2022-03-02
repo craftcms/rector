@@ -8,6 +8,7 @@ use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\Rector\Name\RenameClassRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
 use Rector\Renaming\ValueObject\RenameClassConstFetch;
+use Rector\Symfony\Set\TwigSetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function(ContainerConfigurator $containerConfigurator): void {
@@ -44,4 +45,7 @@ return static function(ContainerConfigurator $containerConfigurator): void {
 
     // Property/method signatures
     SignatureConfigurator::configure($containerConfigurator, 'craft-cms-40');
+
+    // Twig 3
+    $containerConfigurator->import(TwigSetList::TWIG_UNDERSCORE_TO_NAMESPACE);
 };
