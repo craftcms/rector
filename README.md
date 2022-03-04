@@ -2,7 +2,7 @@
 
 This package provides [Rector](https://github.com/rectorphp/rector) rules for updating plugins and modules to Craft 4.
 
-First, ensure you are running Craft 3.7.35 or later. (Prior versions of Craft weren’t compatible with Rector.)
+First, ensure Craft 3.7.35 or later is Composer-installed. (Prior versions of Craft weren’t compatible with Rector.)
 
 ```sh
 composer update craftcms/cms 
