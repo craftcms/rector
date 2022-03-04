@@ -2973,6 +2973,11 @@ return [
             'mixed',
         ],
         [
+            'craft\\elements\\db\\AddressQuery',
+            'administrativeArea',
+            'mixed',
+        ],
+        [
             'craft\\elements\\db\\AssetQuery',
             'volumeId',
             'mixed',
@@ -6140,27 +6145,27 @@ return [
         [
             'craft\\models\\FolderCriteria',
             'id',
-            'int|null',
+            'mixed',
         ],
         [
             'craft\\models\\FolderCriteria',
             'parentId',
-            'string|int|null|null',
+            'mixed',
         ],
         [
             'craft\\models\\FolderCriteria',
             'volumeId',
-            'string|int|null|null',
+            'mixed',
         ],
         [
             'craft\\models\\FolderCriteria',
             'name',
-            'array|string|null|null',
+            'mixed',
         ],
         [
             'craft\\models\\FolderCriteria',
             'path',
-            'string|null',
+            'mixed',
         ],
         [
             'craft\\models\\FolderCriteria',
@@ -6180,7 +6185,7 @@ return [
         [
             'craft\\models\\FolderCriteria',
             'uid',
-            'array|string|null|null',
+            'mixed',
         ],
         [
             'craft\\models\\GqlSchema',
@@ -10992,7 +10997,7 @@ return [
         [
             'craft\\console\\Application',
             'runAction',
-            'yii\\base\\Response|null',
+            'yii\\base\\Response|int|null|null',
         ],
         [
             'craft\\console\\Application',
@@ -13508,6 +13513,11 @@ return [
             'craft\\elements\\conditions\\users\\UsernameConditionRule',
             'matchElement',
             'bool',
+        ],
+        [
+            'craft\\elements\\db\\AddressQuery',
+            'administrativeArea',
+            'craft\\elements\\db\\AddressQuery',
         ],
         [
             'craft\\elements\\db\\AddressQuery',
@@ -17788,6 +17798,11 @@ return [
             'craft\\services\\Addresses',
             'getAdministrativeAreaTypeLabel',
             'string',
+        ],
+        [
+            'craft\\services\\Addresses',
+            'getLayout',
+            'craft\\models\\FieldLayout',
         ],
         [
             'craft\\services\\Addresses',
@@ -23573,6 +23588,12 @@ return [
             'matchElement',
             0,
             'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\elements\\db\\AddressQuery',
+            'administrativeArea',
+            0,
+            'array|string|null|null',
         ],
         [
             'craft\\elements\\db\\AddressQuery',
