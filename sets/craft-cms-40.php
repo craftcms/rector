@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 use craft\rector\SignatureConfigurator;
 use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
