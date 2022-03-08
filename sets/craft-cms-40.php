@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 use craft\rector\SignatureConfigurator;
+use Rector\Arguments\Rector\MethodCall\RemoveMethodCallParamRector;
+use Rector\Arguments\ValueObject\RemoveMethodCallParam;
 use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\Rector\Name\RenameClassRector;
@@ -37,6 +39,16 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(MethodCallToPropertyFetchRector::class)
         ->configure([
             new MethodCallToPropertyFetch('craft\elements\User', 'getFullName', 'fullName'),
+        ]);
+
+    $services->set(RemoveMethodCallParamRector::class)
+        ->configure([
+            new RemoveMethodCallParam('craft\helpers\Db', 'batchInsert', 3),
+            new RemoveMethodCallParam('craft\helpers\Db', 'insert', 2),
+            new RemoveMethodCallParam('craft\db\Command', 'batchInsert', 3),
+            new RemoveMethodCallParam('craft\db\Command', 'insert', 2),
+            new RemoveMethodCallParam('craft\db\Migration', 'batchInsert', 3),
+            new RemoveMethodCallParam('craft\db\Migration', 'insert', 2),
         ]);
 
     $services->set(RenameClassRector::class)
