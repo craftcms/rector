@@ -9,6 +9,8 @@ use Rector\Renaming\Rector\Name\RenameClassRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
 use Rector\Renaming\ValueObject\RenameClassConstFetch;
 use Rector\Symfony\Set\TwigSetList;
+use Rector\Transform\Rector\MethodCall\MethodCallToPropertyFetchRector;
+use Rector\Transform\ValueObject\MethodCallToPropertyFetch;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function(ContainerConfigurator $containerConfigurator): void {
@@ -30,6 +32,11 @@ return static function(ContainerConfigurator $containerConfigurator): void {
             new MethodCallRename('craft\services\Assets', 'getCurrentUserTemporaryUploadFolder', 'getUserTemporaryUploadFolder'),
             new MethodCallRename('craft\services\Updates', 'getIsCraftDbMigrationNeeded', 'getIsCraftUpdatePending'),
             new MethodCallRename('craft\services\Updates', 'getIsPluginDbUpdateNeeded', 'getIsPluginUpdatePending'),
+        ]);
+
+    $services->set(MethodCallToPropertyFetchRector::class)
+        ->configure([
+            new MethodCallToPropertyFetch('craft\elements\User', 'getFullName', 'fullName'),
         ]);
 
     $services->set(RenameClassRector::class)
