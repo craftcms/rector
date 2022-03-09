@@ -15,6 +15,7 @@ return static function(ContainerConfigurator $containerConfigurator): void {
     $services->set(RenameClassConstFetchRector::class)
         ->configure([
             new RenameClassAndConstFetch('craft\services\Assets', 'EVENT_GET_ASSET_URL', 'craft\elements\Asset', 'EVENT_DEFINE_URL'),
+        ]);
 
     $services->set(RenameMethodRector::class)
         ->configure([
