@@ -174,7 +174,10 @@ final class SignatureBuilder
             return null;
         }
         if ($type instanceof ReflectionUnionType) {
-            return implode('|', array_map(fn(ReflectionNamedType $type) => $this->serializeType($type, $className), $type->getTypes()));
+            return implode('|', array_map(function(ReflectionNamedType $type) use ($className) {
+                $name = $type->getName();
+                return $name === 'self' ? $className : $name;
+            }, $type->getTypes()));
         }
         // todo:
 //        if ($type instanceof ReflectionIntersectionType) {
