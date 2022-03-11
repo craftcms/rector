@@ -209,8 +209,10 @@ final class SignatureBuilder
         echo "Analyzing $class->name … ";
 
         $parentClass = $class->getParentClass() ?: null;
+        $properties = $class->getProperties(ReflectionProperty::IS_PUBLIC | ReflectionProperty::IS_PROTECTED);
+        usort($properties, fn(ReflectionProperty $a, ReflectionProperty$b) => $a->getName() <=> $b->getName());
 
-        foreach ($class->getProperties(ReflectionProperty::IS_PUBLIC | ReflectionProperty::IS_PROTECTED) as $property) {
+        foreach ($properties as $property) {
             $declaringClass = $property->getDeclaringClass();
             if ($declaringClass->name !== $class->name) {
                 continue;
@@ -226,7 +228,10 @@ final class SignatureBuilder
             }
         }
 
-        foreach ($class->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED) as $method) {
+        $methods = $class->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED);
+        usort($methods, fn(ReflectionMethod $a, ReflectionMethod $b) => $a->getName() <=> $b->getName());
+
+        foreach ($methods as $method) {
             if ($method->name === '__construct' || $method->getDeclaringClass()->name !== $class->name) {
                 continue;
             }
