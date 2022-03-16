@@ -1050,12 +1050,12 @@ return [
         [
             'craft\\config\\DbConfig',
             'database',
-            'string',
+            'string|null',
         ],
         [
             'craft\\config\\DbConfig',
             'driver',
-            'string',
+            'string|null',
         ],
         [
             'craft\\config\\DbConfig',
@@ -1090,7 +1090,7 @@ return [
         [
             'craft\\config\\DbConfig',
             'server',
-            'string',
+            'string|null',
         ],
         [
             'craft\\config\\DbConfig',
@@ -3803,6 +3803,26 @@ return [
             'array',
         ],
         [
+            'craft\\events\\DefineAssetThumbUrlEvent',
+            'asset',
+            'craft\\elements\\Asset',
+        ],
+        [
+            'craft\\events\\DefineAssetThumbUrlEvent',
+            'height',
+            'int',
+        ],
+        [
+            'craft\\events\\DefineAssetThumbUrlEvent',
+            'url',
+            'string|null',
+        ],
+        [
+            'craft\\events\\DefineAssetThumbUrlEvent',
+            'width',
+            'int',
+        ],
+        [
             'craft\\events\\DefineAssetUrlEvent',
             'asset',
             'craft\\elements\\Asset',
@@ -4246,6 +4266,26 @@ return [
             'craft\\events\\ImageTransformEvent',
             'isNew',
             'bool',
+        ],
+        [
+            'craft\\events\\ImageTransformerOperationEvent',
+            'asset',
+            'craft\\elements\\Asset',
+        ],
+        [
+            'craft\\events\\ImageTransformerOperationEvent',
+            'image',
+            'craft\\base\\Image|null',
+        ],
+        [
+            'craft\\events\\ImageTransformerOperationEvent',
+            'imageTransformIndex',
+            'craft\\models\\ImageTransformIndex',
+        ],
+        [
+            'craft\\events\\ImageTransformerOperationEvent',
+            'path',
+            'string',
         ],
         [
             'craft\\events\\InvalidUserTokenEvent',
@@ -6155,7 +6195,7 @@ return [
         [
             'craft\\models\\FolderCriteria',
             'order',
-            'string',
+            'array|string',
         ],
         [
             'craft\\models\\FolderCriteria',
@@ -6875,6 +6915,11 @@ return [
         [
             'craft\\models\\Volume',
             'titleTranslationMethod',
+            'string',
+        ],
+        [
+            'craft\\models\\Volume',
+            'transformSubpath',
             'string',
         ],
         [
@@ -8526,7 +8571,7 @@ return [
         ],
         [
             'craft\\base\\Element',
-            'getAddlButtons',
+            'getAdditionalButtons',
             'string',
         ],
         [
@@ -8721,6 +8766,11 @@ return [
         ],
         [
             'craft\\base\\Element',
+            'notesFieldHtml',
+            'string',
+        ],
+        [
+            'craft\\base\\Element',
             'offsetExists',
             'bool',
         ],
@@ -8808,6 +8858,11 @@ return [
             'craft\\base\\Element',
             'setRevisionNotes',
             'void',
+        ],
+        [
+            'craft\\base\\Element',
+            'statusFieldHtml',
+            'string',
         ],
         [
             'craft\\base\\Element',
@@ -9031,7 +9086,7 @@ return [
         ],
         [
             'craft\\base\\ElementInterface',
-            'getAddlButtons',
+            'getAdditionalButtons',
             'string',
         ],
         [
@@ -12011,6 +12066,11 @@ return [
         ],
         [
             'craft\\controllers\\UsersController',
+            'actionDeleteAddress',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\UsersController',
             'actionDeleteUser',
             'yii\\web\\Response|null',
         ],
@@ -12032,6 +12092,11 @@ return [
         [
             'craft\\controllers\\UsersController',
             'actionLogin',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\UsersController',
+            'actionSaveAddress',
             'yii\\web\\Response|null',
         ],
         [
@@ -16581,6 +16646,11 @@ return [
         ],
         [
             'craft\\imagetransforms\\ImageTransformer',
+            'getTransformBasePath',
+            'string',
+        ],
+        [
+            'craft\\imagetransforms\\ImageTransformer',
             'getTransformFilename',
             'string',
         ],
@@ -16905,16 +16975,6 @@ return [
             'bool',
         ],
         [
-            'craft\\migrations\\m220128_055840_field_layout_element_uids',
-            'safeDown',
-            'bool',
-        ],
-        [
-            'craft\\migrations\\m220128_055840_field_layout_element_uids',
-            'safeUp',
-            'bool',
-        ],
-        [
             'craft\\migrations\\m220213_015220_matrixblocks_owners_table',
             'safeDown',
             'bool',
@@ -16956,6 +17016,26 @@ return [
         ],
         [
             'craft\\migrations\\m220309_152006_rename_field_layout_elements',
+            'safeUp',
+            'bool',
+        ],
+        [
+            'craft\\migrations\\m220314_211928_field_layout_element_uids',
+            'safeDown',
+            'bool',
+        ],
+        [
+            'craft\\migrations\\m220314_211928_field_layout_element_uids',
+            'safeUp',
+            'bool',
+        ],
+        [
+            'craft\\migrations\\m220316_123800_transform_fs_subpath',
+            'safeDown',
+            'bool',
+        ],
+        [
+            'craft\\migrations\\m220316_123800_transform_fs_subpath',
             'safeUp',
             'bool',
         ],
@@ -20131,12 +20211,12 @@ return [
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
-            'addlButtons',
+            'additionalButtons',
             'craft\\web\\Response',
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
-            'addlButtonsTemplate',
+            'additionalButtonsTemplate',
             'craft\\web\\Response',
         ],
         [
@@ -20926,6 +21006,11 @@ return [
         ],
         [
             'craft\\web\\twig\\Extension',
+            'addressFilter',
+            'string',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
             'cloneFunction',
             'mixed',
         ],
@@ -21323,6 +21408,11 @@ return [
             'craft\\web\\twig\\variables\\Cp',
             'getFsOptions',
             'array',
+        ],
+        [
+            'craft\\web\\twig\\variables\\CraftVariable',
+            'addresses',
+            'craft\\elements\\db\\AddressQuery',
         ],
         [
             'craft\\web\\twig\\variables\\CraftVariable',
@@ -23314,7 +23404,7 @@ return [
             'craft\\elements\\Entry',
             'setAuthorId',
             0,
-            'array|int|null',
+            'array|string|int|null',
         ],
         [
             'craft\\elements\\Entry',
@@ -25126,7 +25216,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'contains',
             1,
-            'Closure|string',
+            'callable|string',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -25144,7 +25234,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'firstWhere',
             1,
-            'Closure|string',
+            'callable|string',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -25174,7 +25264,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'where',
             1,
-            'Closure|string',
+            'callable|string',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -25198,7 +25288,7 @@ return [
             'craft\\helpers\\ArrayHelper',
             'whereIn',
             1,
-            'Closure|string',
+            'callable|string',
         ],
         [
             'craft\\helpers\\ArrayHelper',
@@ -25282,7 +25372,7 @@ return [
             'craft\\helpers\\Component',
             'createComponent',
             0,
-            'mixed',
+            'array|string',
         ],
         [
             'craft\\helpers\\ConfigHelper',
@@ -26321,6 +26411,12 @@ return [
             'getSimilarTransformIndex',
             1,
             'craft\\models\\ImageTransformIndex',
+        ],
+        [
+            'craft\\imagetransforms\\ImageTransformer',
+            'getTransformBasePath',
+            0,
+            'craft\\elements\\Asset',
         ],
         [
             'craft\\imagetransforms\\ImageTransformer',
@@ -27800,19 +27896,19 @@ return [
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
-            'addlButtons',
+            'additionalButtons',
             0,
             'callable|string|null',
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
-            'addlButtonsTemplate',
+            'additionalButtonsTemplate',
             0,
             'string',
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
-            'addlButtonsTemplate',
+            'additionalButtonsTemplate',
             1,
             'array',
         ],
@@ -28037,6 +28133,24 @@ return [
             'setDefaultEscaperStrategy',
             0,
             'mixed',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
+            'addressFilter',
+            0,
+            'craft\\elements\\Address|null',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
+            'addressFilter',
+            1,
+            'array',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
+            'addressFilter',
+            2,
+            'CommerceGuys\\Addressing\\Formatter\\FormatterInterface|null',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -28462,6 +28576,12 @@ return [
             'craft\\web\\twig\\variables\\Cp',
             'fieldLayoutDesigner',
             1,
+            'array',
+        ],
+        [
+            'craft\\web\\twig\\variables\\CraftVariable',
+            'addresses',
+            0,
             'array',
         ],
         [

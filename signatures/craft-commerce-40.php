@@ -4,8 +4,8 @@ return [
     'propertyTypes' => [
         [
             'craft\\commerce\\base\\Gateway',
-            'name',
-            'string|null',
+            'dateArchived',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\base\\Gateway',
@@ -14,8 +14,8 @@ return [
         ],
         [
             'craft\\commerce\\base\\Gateway',
-            'paymentType',
-            'string',
+            'isArchived',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\Gateway',
@@ -24,13 +24,13 @@ return [
         ],
         [
             'craft\\commerce\\base\\Gateway',
-            'isArchived',
-            'bool',
+            'name',
+            'string|null',
         ],
         [
             'craft\\commerce\\base\\Gateway',
-            'dateArchived',
-            'DateTime|null',
+            'paymentType',
+            'string',
         ],
         [
             'craft\\commerce\\base\\Gateway',
@@ -44,8 +44,8 @@ return [
         ],
         [
             'craft\\commerce\\base\\GatewayTrait',
-            'name',
-            'string|null',
+            'dateArchived',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\base\\GatewayTrait',
@@ -54,8 +54,8 @@ return [
         ],
         [
             'craft\\commerce\\base\\GatewayTrait',
-            'paymentType',
-            'string',
+            'isArchived',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\GatewayTrait',
@@ -64,13 +64,13 @@ return [
         ],
         [
             'craft\\commerce\\base\\GatewayTrait',
-            'isArchived',
-            'bool',
+            'name',
+            'string|null',
         ],
         [
             'craft\\commerce\\base\\GatewayTrait',
-            'dateArchived',
-            'DateTime|null',
+            'paymentType',
+            'string',
         ],
         [
             'craft\\commerce\\base\\GatewayTrait',
@@ -81,6 +81,11 @@ return [
             'craft\\commerce\\base\\GatewayTrait',
             'uid',
             'string|null',
+        ],
+        [
+            'craft\\commerce\\base\\Plan',
+            'dateArchived',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\base\\Plan',
@@ -94,8 +99,8 @@ return [
         ],
         [
             'craft\\commerce\\base\\Plan',
-            'id',
-            'int|null',
+            'enabled',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\Plan',
@@ -104,12 +109,27 @@ return [
         ],
         [
             'craft\\commerce\\base\\Plan',
+            'handle',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\base\\Plan',
+            'id',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\base\\Plan',
+            'isArchived',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\Plan',
             'name',
             'string|null',
         ],
         [
             'craft\\commerce\\base\\Plan',
-            'handle',
+            'planData',
             'string|null',
         ],
         [
@@ -124,23 +144,8 @@ return [
         ],
         [
             'craft\\commerce\\base\\Plan',
-            'enabled',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\Plan',
-            'isArchived',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\Plan',
-            'dateArchived',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\base\\Plan',
-            'planData',
-            'string|null',
+            'sortOrder',
+            'int|null',
         ],
         [
             'craft\\commerce\\base\\Plan',
@@ -148,14 +153,14 @@ return [
             'string|null',
         ],
         [
-            'craft\\commerce\\base\\Plan',
-            'sortOrder',
-            'int|null',
+            'craft\\commerce\\base\\PlanTrait',
+            'dateArchived',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\base\\PlanTrait',
-            'id',
-            'int|null',
+            'enabled',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\PlanTrait',
@@ -164,12 +169,27 @@ return [
         ],
         [
             'craft\\commerce\\base\\PlanTrait',
+            'handle',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\base\\PlanTrait',
+            'id',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\base\\PlanTrait',
+            'isArchived',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\PlanTrait',
             'name',
             'string|null',
         ],
         [
             'craft\\commerce\\base\\PlanTrait',
-            'handle',
+            'planData',
             'string|null',
         ],
         [
@@ -184,53 +204,13 @@ return [
         ],
         [
             'craft\\commerce\\base\\PlanTrait',
-            'enabled',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\PlanTrait',
-            'isArchived',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\PlanTrait',
-            'dateArchived',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\base\\PlanTrait',
-            'planData',
-            'string|null',
+            'sortOrder',
+            'int|null',
         ],
         [
             'craft\\commerce\\base\\PlanTrait',
             'uid',
             'string|null',
-        ],
-        [
-            'craft\\commerce\\base\\PlanTrait',
-            'sortOrder',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingMethod',
-            'id',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingMethod',
-            'name',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingMethod',
-            'handle',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingMethod',
-            'enabled',
-            'bool',
         ],
         [
             'craft\\commerce\\base\\ShippingMethod',
@@ -241,6 +221,21 @@ return [
             'craft\\commerce\\base\\ShippingMethod',
             'dateUpdated',
             'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingMethod',
+            'enabled',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingMethod',
+            'handle',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingMethod',
+            'id',
+            'int|null',
         ],
         [
             'craft\\commerce\\base\\ShippingMethod',
@@ -248,6 +243,16 @@ return [
             'bool',
         ],
         [
+            'craft\\commerce\\base\\ShippingMethod',
+            'name',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\base\\Stat',
+            '_handle',
+            'string',
+        ],
+        [
             'craft\\commerce\\base\\Stat',
             'cache',
             'bool',
@@ -268,7 +273,7 @@ return [
             'int',
         ],
         [
-            'craft\\commerce\\base\\Stat',
+            'craft\\commerce\\base\\StatTrait',
             '_handle',
             'string',
         ],
@@ -293,9 +298,34 @@ return [
             'int',
         ],
         [
-            'craft\\commerce\\base\\StatTrait',
-            '_handle',
-            'string',
+            'craft\\commerce\\base\\Zone',
+            'dateCreated',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\base\\Zone',
+            'dateUpdated',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\base\\Zone',
+            'description',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\base\\Zone',
+            'id',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\base\\Zone',
+            'name',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CurrencyAttributeBehavior',
+            'attributeCurrencyMap',
+            'array',
         ],
         [
             'craft\\commerce\\behaviors\\CurrencyAttributeBehavior',
@@ -308,9 +338,14 @@ return [
             'string',
         ],
         [
-            'craft\\commerce\\behaviors\\CurrencyAttributeBehavior',
-            'attributeCurrencyMap',
-            'array',
+            'craft\\commerce\\console\\controllers\\ExampleTemplatesController',
+            'baseColor',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\console\\controllers\\ExampleTemplatesController',
+            'devBuild',
+            'bool',
         ],
         [
             'craft\\commerce\\console\\controllers\\ExampleTemplatesController',
@@ -328,14 +363,9 @@ return [
             'bool|null',
         ],
         [
-            'craft\\commerce\\console\\controllers\\ExampleTemplatesController',
-            'devBuild',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\console\\controllers\\ExampleTemplatesController',
-            'baseColor',
-            'string|null',
+            'craft\\commerce\\console\\controllers\\UpgradeController',
+            'neededCustomAddressFields',
+            'array',
         ],
         [
             'craft\\commerce\\controllers\\CartController',
@@ -358,18 +388,28 @@ return [
             'array',
         ],
         [
+            'craft\\commerce\\debug\\CommercePanel',
+            'cart',
+            'craft\\commerce\\elements\\Order|null',
+        ],
+        [
             'craft\\commerce\\elements\\Donation',
             'availableForPurchase',
             'bool',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'number',
-            'string|null',
+            'billingAddressId',
+            'int|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'reference',
+            'billingSameAsShipping',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'cancelUrl',
             'string|null',
         ],
         [
@@ -379,8 +419,13 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'isCompleted',
-            'bool',
+            'currency',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'dateAuthorized',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
@@ -394,13 +439,18 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'dateAuthorized',
-            'DateTime|null',
+            'estimatedBillingAddressId',
+            'int|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'currency',
-            'string|null',
+            'estimatedBillingSameAsShipping',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'estimatedShippingAddressId',
+            'int|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
@@ -409,8 +459,23 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
+            'isCompleted',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
             'lastIp',
             'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'makePrimaryBillingAddress',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'makePrimaryShippingAddress',
+            'bool',
         ],
         [
             'craft\\commerce\\elements\\Order',
@@ -419,18 +484,8 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'returnUrl',
+            'number',
             'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'cancelUrl',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'orderStatusId',
-            'int|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
@@ -444,53 +499,38 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
+            'orderStatusId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
             'origin',
             'string|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'billingAddressId',
+            'paymentSourceId',
             'int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'reference',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'registerUserOnOrderComplete',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'returnUrl',
+            'string|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
             'shippingAddressId',
             'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'makePrimaryShippingAddress',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'makePrimaryBillingAddress',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'shippingSameAsBilling',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'billingSameAsShipping',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'estimatedBillingAddressId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'estimatedShippingAddressId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'estimatedBillingSameAsShipping',
-            'bool',
         ],
         [
             'craft\\commerce\\elements\\Order',
@@ -504,27 +544,22 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'customerId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'registerUserOnOrderComplete',
+            'shippingSameAsBilling',
             'bool',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'paymentSourceId',
+            'sourceBillingAddressId',
             'int|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'storedTotalPrice',
-            'float|null',
+            'sourceShippingAddressId',
+            'int|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'storedTotalPaid',
+            'storedItemSubtotal',
             'float|null',
         ],
         [
@@ -534,17 +569,22 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'storedItemSubtotal',
+            'storedTotalDiscount',
+            'float|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'storedTotalPaid',
+            'float|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'storedTotalPrice',
             'float|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
             'storedTotalShippingCost',
-            'float|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'storedTotalDiscount',
             'float|null',
         ],
         [
@@ -558,59 +598,14 @@ return [
             'float|null',
         ],
         [
-            'craft\\commerce\\elements\\Product',
-            'postDate',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'expiryDate',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'typeId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'taxCategoryId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'shippingCategoryId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'promotable',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'freeShipping',
+            'craft\\commerce\\elements\\Order',
+            'suppressEmails',
             'bool',
         ],
         [
             'craft\\commerce\\elements\\Product',
             'availableForPurchase',
             'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'defaultVariantId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'defaultSku',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'defaultPrice',
-            'float|null',
         ],
         [
             'craft\\commerce\\elements\\Product',
@@ -624,8 +619,18 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Product',
-            'defaultWidth',
+            'defaultPrice',
             'float|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'defaultSku',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'defaultVariantId',
+            'int|null',
         ],
         [
             'craft\\commerce\\elements\\Product',
@@ -634,8 +639,18 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Product',
-            'taxCategory',
-            'craft\\commerce\\models\\TaxCategory|null',
+            'defaultWidth',
+            'float|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'expiryDate',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'freeShipping',
+            'bool',
         ],
         [
             'craft\\commerce\\elements\\Product',
@@ -643,14 +658,54 @@ return [
             'string|null',
         ],
         [
-            'craft\\commerce\\elements\\Subscription',
-            'userId',
-            'int',
+            'craft\\commerce\\elements\\Product',
+            'postDate',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'promotable',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'shippingCategoryId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'taxCategory',
+            'craft\\commerce\\models\\TaxCategory|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'taxCategoryId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'typeId',
+            'int|null',
         ],
         [
             'craft\\commerce\\elements\\Subscription',
-            'planId',
-            'int',
+            '_subscriptionData',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'dateCanceled',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'dateExpired',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'dateSuspended',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\elements\\Subscription',
@@ -659,8 +714,38 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Subscription',
+            'hasStarted',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'isCanceled',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'isExpired',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'isSuspended',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'nextPaymentDate',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
             'orderId',
             'int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'planId',
+            'int',
         ],
         [
             'craft\\commerce\\elements\\Subscription',
@@ -674,52 +759,22 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Subscription',
-            'nextPaymentDate',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'isCanceled',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'dateCanceled',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'isExpired',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'dateExpired',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'hasStarted',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'isSuspended',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'dateSuspended',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            '_subscriptionData',
-            'array',
+            'userId',
+            'int',
         ],
         [
             'craft\\commerce\\elements\\Variant',
-            'productId',
+            'deletedWithProduct',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Variant',
+            'hasUnlimitedStock',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Variant',
+            'height',
             'int|null',
         ],
         [
@@ -729,47 +784,7 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Variant',
-            'price',
-            'float|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Variant',
-            'sortOrder',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Variant',
-            'width',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Variant',
-            'height',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Variant',
             'length',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Variant',
-            'weight',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Variant',
-            'stock',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Variant',
-            'hasUnlimitedStock',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Variant',
-            'minQty',
             'int|null',
         ],
         [
@@ -779,12 +794,37 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Variant',
-            'deletedWithProduct',
-            'bool',
+            'minQty',
+            'int|null',
         ],
         [
-            'craft\\commerce\\elements\\actions\\DownloadOrderPdfAction',
-            'pdfId',
+            'craft\\commerce\\elements\\Variant',
+            'price',
+            'float|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Variant',
+            'productId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Variant',
+            'sortOrder',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Variant',
+            'stock',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Variant',
+            'weight',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Variant',
+            'width',
             'int|null',
         ],
         [
@@ -793,9 +833,9 @@ return [
             'string',
         ],
         [
-            'craft\\commerce\\elements\\actions\\UpdateOrderStatus',
-            'orderStatusId',
-            'int',
+            'craft\\commerce\\elements\\actions\\DownloadOrderPdfAction',
+            'pdfId',
+            'int|null',
         ],
         [
             'craft\\commerce\\elements\\actions\\UpdateOrderStatus',
@@ -803,84 +843,124 @@ return [
             'string',
         ],
         [
-            'craft\\commerce\\elements\\db\\DonationQuery',
-            'sku',
-            'string|null',
+            'craft\\commerce\\elements\\actions\\UpdateOrderStatus',
+            'orderStatusId',
+            'int|null',
         ],
         [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'number',
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'shortNumber',
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'reference',
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'email',
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'isCompleted',
+            'craft\\commerce\\elements\\actions\\UpdateOrderStatus',
+            'suppressEmails',
             'bool',
         ],
         [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'orderLanguage',
-            'int',
+            'craft\\commerce\\elements\\conditions\\orders\\OrderValuesAttributeConditionRule',
+            'orderAttribute',
+            'string',
         ],
         [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'orderSiteId',
-            'int',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'origin',
-            'string|null',
+            'craft\\commerce\\elements\\db\\DonationQuery',
+            'sku',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'customerId',
-            'int|null',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'dateAuthorized',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'dateOrdered',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'datePaid',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'email',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'expiryDate',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'gatewayId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'isPaid',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'isUnpaid',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'hasTransactions',
-            'bool',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'hasLineItems',
-            'bool',
+            'bool|null',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'withAll',
-            'bool',
+            'hasPurchasables',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'hasTransactions',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'isCompleted',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'isPaid',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'isUnpaid',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'number',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'orderLanguage',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'orderSiteId',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'orderStatusId',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'origin',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'reference',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'shortNumber',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
@@ -890,6 +970,11 @@ return [
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'withAdjustments',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'withAll',
             'bool',
         ],
         [
@@ -910,82 +995,137 @@ return [
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
             'availableForPurchase',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\ProductQuery',
-            'editable',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\ProductQuery',
-            'defaultPrice',
-            'float',
+            'bool|null',
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
             'defaultHeight',
-            'float',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
             'defaultLength',
-            'float',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
-            'defaultWidth',
-            'float',
+            'defaultPrice',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'defaultSku',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
             'defaultWeight',
-            'float',
+            'mixed',
         ],
         [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'onTrial',
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'defaultWidth',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'editable',
             'bool',
         ],
         [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'nextPaymentDate',
-            'DateTime',
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'expiryDate',
+            'mixed',
         ],
         [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'isCanceled',
-            'bool',
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'hasVariant',
+            'mixed',
         ],
         [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'isSuspended',
-            'bool',
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'postDate',
+            'mixed',
         ],
         [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'dateSuspended',
-            'DateTime',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'hasStarted',
-            'bool',
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'typeId',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
             'dateCanceled',
-            'DateTime',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'isExpired',
-            'bool',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
             'dateExpired',
-            'DateTime',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'dateSuspended',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'gatewayId',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'hasStarted',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'isCanceled',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'isExpired',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'isSuspended',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'nextPaymentDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'onTrial',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'orderId',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'planId',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'reference',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'trialDays',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'userId',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
@@ -994,22 +1134,87 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
-            'hasStock',
-            'bool',
+            'hasProduct',
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
             'hasSales',
-            'bool',
+            'bool|null',
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
-            'isDefault',
-            'bool',
+            'hasStock',
+            'bool|null',
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
             'hasUnlimitedStock',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'height',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'isDefault',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'length',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'maxQty',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'minQty',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'price',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'productId',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'sku',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'stock',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'typeId',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'weight',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'width',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\events\\AddLineItemEvent',
+            'isNew',
             'bool',
         ],
         [
@@ -1018,29 +1223,14 @@ return [
             'craft\\commerce\\models\\LineItem',
         ],
         [
-            'craft\\commerce\\events\\AddLineItemEvent',
-            'isNew',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\events\\AddressEvent',
-            'address',
-            'craft\\commerce\\models\\Address',
-        ],
-        [
-            'craft\\commerce\\events\\AddressEvent',
-            'isNew',
-            'bool',
+            'craft\\commerce\\events\\CancelSubscriptionEvent',
+            'parameters',
+            'craft\\commerce\\models\\subscriptions\\CancelSubscriptionForm',
         ],
         [
             'craft\\commerce\\events\\CancelSubscriptionEvent',
             'subscription',
             'craft\\commerce\\elements\\Subscription',
-        ],
-        [
-            'craft\\commerce\\events\\CancelSubscriptionEvent',
-            'parameters',
-            'craft\\commerce\\models\\subscriptions\\CancelSubscriptionForm',
         ],
         [
             'craft\\commerce\\events\\CartEvent',
@@ -1053,9 +1243,19 @@ return [
             'craft\\commerce\\elements\\Order',
         ],
         [
+            'craft\\commerce\\events\\CommerceDebugPanelDataEvent',
+            'content',
+            'array',
+        ],
+        [
+            'craft\\commerce\\events\\CommerceDebugPanelDataEvent',
+            'nav',
+            'array',
+        ],
+        [
             'craft\\commerce\\events\\CreateSubscriptionEvent',
-            'user',
-            'craft\\elements\\User',
+            'parameters',
+            'craft\\commerce\\models\\subscriptions\\SubscriptionForm',
         ],
         [
             'craft\\commerce\\events\\CreateSubscriptionEvent',
@@ -1064,28 +1264,8 @@ return [
         ],
         [
             'craft\\commerce\\events\\CreateSubscriptionEvent',
-            'parameters',
-            'craft\\commerce\\models\\subscriptions\\SubscriptionForm',
-        ],
-        [
-            'craft\\commerce\\events\\CustomerAddressEvent',
-            'address',
-            'craft\\commerce\\models\\Address',
-        ],
-        [
-            'craft\\commerce\\events\\CustomerAddressEvent',
-            'customer',
-            'craft\\commerce\\models\\Customer',
-        ],
-        [
-            'craft\\commerce\\events\\CustomerEvent',
-            'customer',
-            'craft\\commerce\\models\\Customer',
-        ],
-        [
-            'craft\\commerce\\events\\CustomizeProductSnapshotDataEvent',
-            'product',
-            'craft\\commerce\\elements\\Product',
+            'user',
+            'craft\\elements\\User',
         ],
         [
             'craft\\commerce\\events\\CustomizeProductSnapshotDataEvent',
@@ -1093,7 +1273,7 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\events\\CustomizeProductSnapshotFieldsEvent',
+            'craft\\commerce\\events\\CustomizeProductSnapshotDataEvent',
             'product',
             'craft\\commerce\\elements\\Product',
         ],
@@ -1103,9 +1283,9 @@ return [
             'array|null',
         ],
         [
-            'craft\\commerce\\events\\CustomizeVariantSnapshotDataEvent',
-            'variant',
-            'craft\\commerce\\elements\\Variant',
+            'craft\\commerce\\events\\CustomizeProductSnapshotFieldsEvent',
+            'product',
+            'craft\\commerce\\elements\\Product',
         ],
         [
             'craft\\commerce\\events\\CustomizeVariantSnapshotDataEvent',
@@ -1113,7 +1293,7 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\events\\CustomizeVariantSnapshotFieldsEvent',
+            'craft\\commerce\\events\\CustomizeVariantSnapshotDataEvent',
             'variant',
             'craft\\commerce\\elements\\Variant',
         ],
@@ -1123,9 +1303,9 @@ return [
             'array|null',
         ],
         [
-            'craft\\commerce\\events\\DefaultLineItemStatusEvent',
-            'lineItemStatus',
-            'craft\\commerce\\models\\LineItemStatus|null',
+            'craft\\commerce\\events\\CustomizeVariantSnapshotFieldsEvent',
+            'variant',
+            'craft\\commerce\\elements\\Variant',
         ],
         [
             'craft\\commerce\\events\\DefaultLineItemStatusEvent',
@@ -1133,24 +1313,24 @@ return [
             'craft\\commerce\\models\\LineItem',
         ],
         [
+            'craft\\commerce\\events\\DefaultLineItemStatusEvent',
+            'lineItemStatus',
+            'craft\\commerce\\models\\LineItemStatus|null',
+        ],
+        [
+            'craft\\commerce\\events\\DefaultOrderStatusEvent',
+            'order',
+            'craft\\commerce\\elements\\Order',
+        ],
+        [
             'craft\\commerce\\events\\DefaultOrderStatusEvent',
             'orderStatus',
             'craft\\commerce\\models\\OrderStatus',
         ],
         [
-            'craft\\commerce\\events\\DefaultOrderStatusEvent',
-            'order',
-            'craft\\commerce\\elements\\Order',
-        ],
-        [
-            'craft\\commerce\\events\\DefineAddressLinesEvent',
-            'addressLines',
-            'array',
-        ],
-        [
             'craft\\commerce\\events\\DiscountAdjustmentsEvent',
-            'order',
-            'craft\\commerce\\elements\\Order',
+            'adjustments',
+            'array',
         ],
         [
             'craft\\commerce\\events\\DiscountAdjustmentsEvent',
@@ -1159,8 +1339,8 @@ return [
         ],
         [
             'craft\\commerce\\events\\DiscountAdjustmentsEvent',
-            'adjustments',
-            'array',
+            'order',
+            'craft\\commerce\\elements\\Order',
         ],
         [
             'craft\\commerce\\events\\DiscountEvent',
@@ -1184,18 +1364,13 @@ return [
         ],
         [
             'craft\\commerce\\events\\LineItemEvent',
-            'lineItem',
-            'craft\\commerce\\models\\LineItem',
-        ],
-        [
-            'craft\\commerce\\events\\LineItemEvent',
             'isNew',
             'bool',
         ],
         [
-            'craft\\commerce\\events\\MailEvent',
-            'craftEmail',
-            'craft\\mail\\Message',
+            'craft\\commerce\\events\\LineItemEvent',
+            'lineItem',
+            'craft\\commerce\\models\\LineItem',
         ],
         [
             'craft\\commerce\\events\\MailEvent',
@@ -1204,13 +1379,13 @@ return [
         ],
         [
             'craft\\commerce\\events\\MailEvent',
-            'order',
-            'craft\\commerce\\elements\\Order',
+            'craftEmail',
+            'craft\\mail\\Message',
         ],
         [
             'craft\\commerce\\events\\MailEvent',
-            'orderHistory',
-            'craft\\commerce\\models\\OrderHistory',
+            'order',
+            'craft\\commerce\\elements\\Order',
         ],
         [
             'craft\\commerce\\events\\MailEvent',
@@ -1218,12 +1393,22 @@ return [
             'array',
         ],
         [
+            'craft\\commerce\\events\\MailEvent',
+            'orderHistory',
+            'craft\\commerce\\models\\OrderHistory',
+        ],
+        [
+            'craft\\commerce\\events\\MatchLineItemEvent',
+            'discount',
+            'craft\\commerce\\models\\Discount',
+        ],
+        [
             'craft\\commerce\\events\\MatchLineItemEvent',
             'lineItem',
             'craft\\commerce\\models\\LineItem',
         ],
         [
-            'craft\\commerce\\events\\MatchLineItemEvent',
+            'craft\\commerce\\events\\MatchOrderEvent',
             'discount',
             'craft\\commerce\\models\\Discount',
         ],
@@ -1231,16 +1416,6 @@ return [
             'craft\\commerce\\events\\MatchOrderEvent',
             'order',
             'craft\\commerce\\elements\\Order',
-        ],
-        [
-            'craft\\commerce\\events\\MatchOrderEvent',
-            'discount',
-            'craft\\commerce\\models\\Discount',
-        ],
-        [
-            'craft\\commerce\\events\\ModifyCartInfoEvent',
-            'cartInfo',
-            'array',
         ],
         [
             'craft\\commerce\\events\\ModifyCartInfoEvent',
@@ -1248,7 +1423,22 @@ return [
             'craft\\commerce\\elements\\Order|null',
         ],
         [
-            'craft\\commerce\\events\\OrderStatusEvent',
+            'craft\\commerce\\events\\ModifyCartInfoEvent',
+            'cartInfo',
+            'array',
+        ],
+        [
+            'craft\\commerce\\events\\OrderStatusEmailsEvent',
+            'emails',
+            'array',
+        ],
+        [
+            'craft\\commerce\\events\\OrderStatusEmailsEvent',
+            'order',
+            'craft\\commerce\\elements\\Order',
+        ],
+        [
+            'craft\\commerce\\events\\OrderStatusEmailsEvent',
             'orderHistory',
             'craft\\commerce\\models\\OrderHistory',
         ],
@@ -1256,6 +1446,11 @@ return [
             'craft\\commerce\\events\\OrderStatusEvent',
             'order',
             'craft\\commerce\\elements\\Order',
+        ],
+        [
+            'craft\\commerce\\events\\OrderStatusEvent',
+            'orderHistory',
+            'craft\\commerce\\models\\OrderHistory',
         ],
         [
             'craft\\commerce\\events\\PaymentSourceEvent',
@@ -1264,13 +1459,18 @@ return [
         ],
         [
             'craft\\commerce\\events\\PdfEvent',
+            'option',
+            'string',
+        ],
+        [
+            'craft\\commerce\\events\\PdfEvent',
             'order',
             'craft\\commerce\\elements\\Order',
         ],
         [
             'craft\\commerce\\events\\PdfEvent',
-            'option',
-            'string',
+            'pdf',
+            'string|null',
         ],
         [
             'craft\\commerce\\events\\PdfEvent',
@@ -1283,24 +1483,19 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\events\\PdfEvent',
-            'pdf',
-            'string|null',
-        ],
-        [
             'craft\\commerce\\events\\PdfRenderOptionsEvent',
             'options',
             'Dompdf\\Options',
         ],
         [
             'craft\\commerce\\events\\PdfSaveEvent',
-            'pdf',
-            'craft\\commerce\\models\\Pdf',
+            'isNew',
+            'bool',
         ],
         [
             'craft\\commerce\\events\\PdfSaveEvent',
-            'isNew',
-            'bool',
+            'pdf',
+            'craft\\commerce\\models\\Pdf',
         ],
         [
             'craft\\commerce\\events\\PlanEvent',
@@ -1309,18 +1504,13 @@ return [
         ],
         [
             'craft\\commerce\\events\\ProcessPaymentEvent',
-            'order',
-            'craft\\commerce\\elements\\Order',
-        ],
-        [
-            'craft\\commerce\\events\\ProcessPaymentEvent',
             'form',
             'craft\\commerce\\models\\payments\\BasePaymentForm',
         ],
         [
             'craft\\commerce\\events\\ProcessPaymentEvent',
-            'transaction',
-            'craft\\commerce\\models\\Transaction',
+            'order',
+            'craft\\commerce\\elements\\Order',
         ],
         [
             'craft\\commerce\\events\\ProcessPaymentEvent',
@@ -1328,12 +1518,22 @@ return [
             'craft\\commerce\\base\\RequestResponseInterface',
         ],
         [
+            'craft\\commerce\\events\\ProcessPaymentEvent',
+            'transaction',
+            'craft\\commerce\\models\\Transaction',
+        ],
+        [
+            'craft\\commerce\\events\\ProductEvent',
+            'isNew',
+            'bool',
+        ],
+        [
             'craft\\commerce\\events\\ProductEvent',
             'product',
             'craft\\commerce\\elements\\Product',
         ],
         [
-            'craft\\commerce\\events\\ProductEvent',
+            'craft\\commerce\\events\\ProductTypeEvent',
             'isNew',
             'bool',
         ],
@@ -1341,21 +1541,6 @@ return [
             'craft\\commerce\\events\\ProductTypeEvent',
             'productType',
             'craft\\commerce\\models\\ProductType|null',
-        ],
-        [
-            'craft\\commerce\\events\\ProductTypeEvent',
-            'isNew',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\events\\PurchasableAvailableEvent',
-            'order',
-            'craft\\commerce\\elements\\Order|null',
-        ],
-        [
-            'craft\\commerce\\events\\PurchasableAvailableEvent',
-            'purchasable',
-            'craft\\commerce\\base\\PurchasableInterface',
         ],
         [
             'craft\\commerce\\events\\PurchasableAvailableEvent',
@@ -1368,12 +1553,12 @@ return [
             'bool',
         ],
         [
-            'craft\\commerce\\events\\PurchasableShippableEvent',
+            'craft\\commerce\\events\\PurchasableAvailableEvent',
             'order',
             'craft\\commerce\\elements\\Order|null',
         ],
         [
-            'craft\\commerce\\events\\PurchasableShippableEvent',
+            'craft\\commerce\\events\\PurchasableAvailableEvent',
             'purchasable',
             'craft\\commerce\\base\\PurchasableInterface',
         ],
@@ -1386,6 +1571,16 @@ return [
             'craft\\commerce\\events\\PurchasableShippableEvent',
             'isShippable',
             'bool',
+        ],
+        [
+            'craft\\commerce\\events\\PurchasableShippableEvent',
+            'order',
+            'craft\\commerce\\elements\\Order|null',
+        ],
+        [
+            'craft\\commerce\\events\\PurchasableShippableEvent',
+            'purchasable',
+            'craft\\commerce\\base\\PurchasableInterface',
         ],
         [
             'craft\\commerce\\events\\PurchaseVariantEvent',
@@ -1418,9 +1613,39 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\events\\SaleEvent',
-            'sale',
-            'craft\\commerce\\models\\Sale',
+            'craft\\commerce\\events\\ReportEvent',
+            'columns',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\events\\ReportEvent',
+            'endDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\events\\ReportEvent',
+            'format',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\events\\ReportEvent',
+            'orderQuery',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\events\\ReportEvent',
+            'orders',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\events\\ReportEvent',
+            'startDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\events\\ReportEvent',
+            'status',
+            'mixed',
         ],
         [
             'craft\\commerce\\events\\SaleEvent',
@@ -1428,9 +1653,14 @@ return [
             'bool',
         ],
         [
-            'craft\\commerce\\events\\SaleMatchEvent',
+            'craft\\commerce\\events\\SaleEvent',
             'sale',
             'craft\\commerce\\models\\Sale',
+        ],
+        [
+            'craft\\commerce\\events\\SaleMatchEvent',
+            'isNew',
+            'bool',
         ],
         [
             'craft\\commerce\\events\\SaleMatchEvent',
@@ -1439,8 +1669,8 @@ return [
         ],
         [
             'craft\\commerce\\events\\SaleMatchEvent',
-            'isNew',
-            'bool',
+            'sale',
+            'craft\\commerce\\models\\Sale',
         ],
         [
             'craft\\commerce\\events\\SubscriptionEvent',
@@ -1449,8 +1679,8 @@ return [
         ],
         [
             'craft\\commerce\\events\\SubscriptionPaymentEvent',
-            'subscription',
-            'craft\\commerce\\elements\\Subscription',
+            'paidUntil',
+            'DateTime',
         ],
         [
             'craft\\commerce\\events\\SubscriptionPaymentEvent',
@@ -1459,16 +1689,6 @@ return [
         ],
         [
             'craft\\commerce\\events\\SubscriptionPaymentEvent',
-            'paidUntil',
-            'DateTime',
-        ],
-        [
-            'craft\\commerce\\events\\SubscriptionSwitchPlansEvent',
-            'oldPlan',
-            'craft\\commerce\\base\\Plan',
-        ],
-        [
-            'craft\\commerce\\events\\SubscriptionSwitchPlansEvent',
             'subscription',
             'craft\\commerce\\elements\\Subscription',
         ],
@@ -1479,8 +1699,18 @@ return [
         ],
         [
             'craft\\commerce\\events\\SubscriptionSwitchPlansEvent',
+            'oldPlan',
+            'craft\\commerce\\base\\Plan',
+        ],
+        [
+            'craft\\commerce\\events\\SubscriptionSwitchPlansEvent',
             'parameters',
             'craft\\commerce\\models\\subscriptions\\SwitchPlansForm',
+        ],
+        [
+            'craft\\commerce\\events\\SubscriptionSwitchPlansEvent',
+            'subscription',
+            'craft\\commerce\\elements\\Subscription',
         ],
         [
             'craft\\commerce\\events\\TaxEngineEvent',
@@ -1495,7 +1725,7 @@ return [
         [
             'craft\\commerce\\events\\WebhookEvent',
             'gateway',
-            'craft\\commerce\\base\\Gateway',
+            'craft\\commerce\\base\\GatewayInterface',
         ],
         [
             'craft\\commerce\\events\\WebhookEvent',
@@ -1513,184 +1743,29 @@ return [
             'string|null',
         ],
         [
-            'craft\\commerce\\models\\Address',
+            'craft\\commerce\\models\\Coupon',
+            'code',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\Coupon',
+            'discountId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\Coupon',
             'id',
             'int|null',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'isStoreLocation',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'attention',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'title',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'firstName',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'lastName',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'fullName',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'address1',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'address2',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'address3',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'city',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'zipCode',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'phone',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'alternativePhone',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'label',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'businessName',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'businessTaxId',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'businessId',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'stateName',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'countryId',
+            'craft\\commerce\\models\\Coupon',
+            'maxUses',
             'int|null',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'stateId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'notes',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'custom1',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'custom2',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'custom3',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'custom4',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'isEstimated',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\Address',
-            'dateUpdated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\Country',
-            'id',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Country',
-            'name',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Country',
-            'iso',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Country',
-            'isStateRequired',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\Country',
-            'enabled',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\Country',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\Country',
-            'dateUpdated',
-            'DateTime|null',
+            'craft\\commerce\\models\\Coupon',
+            'uses',
+            'int',
         ],
         [
             'craft\\commerce\\models\\Currency',
@@ -1718,74 +1793,64 @@ return [
             'int',
         ],
         [
-            'craft\\commerce\\models\\Customer',
-            'id',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'userId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'primaryBillingAddressId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'primaryShippingAddressId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'dateUpdated',
-            'DateTime|null',
+            'craft\\commerce\\models\\Discount',
+            '_billingAddressCondition',
+            'craft\\elements\\conditions\\ElementConditionInterface|null',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'id',
-            'int|null',
+            '_customerCondition',
+            'craft\\elements\\conditions\\ElementConditionInterface|null',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'name',
+            '_orderCondition',
+            'craft\\elements\\conditions\\ElementConditionInterface|null',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            '_shippingAddressCondition',
+            'craft\\elements\\conditions\\ElementConditionInterface|null',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'allCategories',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'allPurchasables',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'appliedTo',
             'string',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'description',
-            'string|null',
+            'baseDiscount',
+            'float',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'code',
-            'string|null',
+            'baseDiscountType',
+            'string',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'perUserLimit',
-            'int',
+            'categoryRelationshipType',
+            'string',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'perEmailLimit',
-            'int',
+            'couponFormat',
+            'string',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'totalDiscountUseLimit',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\Discount',
-            'totalDiscountUses',
-            'int',
+            'dateCreated',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\Discount',
@@ -1799,43 +1864,18 @@ return [
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'purchaseTotal',
-            'float',
+            'dateUpdated',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'orderConditionFormula',
+            'description',
             'string|null',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'purchaseQty',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\Discount',
-            'maxPurchaseQty',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\Discount',
-            'baseDiscountType',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\Discount',
-            'perItemDiscount',
-            'float',
-        ],
-        [
-            'craft\\commerce\\models\\Discount',
-            'percentDiscount',
-            'float',
-        ],
-        [
-            'craft\\commerce\\models\\Discount',
-            'percentageOffSubject',
-            'string',
+            'enabled',
+            'bool',
         ],
         [
             'craft\\commerce\\models\\Discount',
@@ -1854,33 +1894,63 @@ return [
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'userGroupsCondition',
-            'string|null',
+            'id',
+            'int|null',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'allPurchasables',
+            'ignoreSales',
             'bool',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'allCategories',
-            'bool',
+            'maxPurchaseQty',
+            'int',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'categoryRelationshipType',
+            'name',
             'string',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'enabled',
-            'bool',
+            'orderConditionFormula',
+            'string|null',
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'stopProcessing',
-            'bool',
+            'perEmailLimit',
+            'int',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'perItemDiscount',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'perUserLimit',
+            'int',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'percentDiscount',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'percentageOffSubject',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'purchaseQty',
+            'int',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'purchaseTotal',
+            'float',
         ],
         [
             'craft\\commerce\\models\\Discount',
@@ -1889,43 +1959,18 @@ return [
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\Discount',
-            'dateUpdated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\Discount',
-            'ignoreSales',
+            'stopProcessing',
             'bool',
         ],
         [
-            'craft\\commerce\\models\\Email',
-            'id',
-            'int|null',
+            'craft\\commerce\\models\\Discount',
+            'totalDiscountUseLimit',
+            'int',
         ],
         [
-            'craft\\commerce\\models\\Email',
-            'name',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Email',
-            'subject',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Email',
-            'recipientType',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\Email',
-            'to',
-            'string|null',
+            'craft\\commerce\\models\\Discount',
+            'totalDiscountUses',
+            'int',
         ],
         [
             'craft\\commerce\\models\\Email',
@@ -1939,27 +1984,12 @@ return [
         ],
         [
             'craft\\commerce\\models\\Email',
-            'replyTo',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Email',
             'enabled',
             'bool',
         ],
         [
             'craft\\commerce\\models\\Email',
-            'templatePath',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Email',
-            'plainTextTemplatePath',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Email',
-            'pdfId',
+            'id',
             'int|null',
         ],
         [
@@ -1969,53 +1999,48 @@ return [
         ],
         [
             'craft\\commerce\\models\\Email',
-            'uid',
+            'name',
             'string|null',
         ],
         [
-            'craft\\commerce\\models\\LineItem',
-            'id',
+            'craft\\commerce\\models\\Email',
+            'pdfId',
             'int|null',
         ],
         [
-            'craft\\commerce\\models\\LineItem',
-            'qty',
-            'int',
+            'craft\\commerce\\models\\Email',
+            'plainTextTemplatePath',
+            'string|null',
         ],
         [
-            'craft\\commerce\\models\\LineItem',
-            'note',
+            'craft\\commerce\\models\\Email',
+            'recipientType',
             'string',
         ],
         [
-            'craft\\commerce\\models\\LineItem',
-            'privateNote',
-            'string',
+            'craft\\commerce\\models\\Email',
+            'replyTo',
+            'string|null',
         ],
         [
-            'craft\\commerce\\models\\LineItem',
-            'purchasableId',
-            'int|null',
+            'craft\\commerce\\models\\Email',
+            'subject',
+            'string|null',
         ],
         [
-            'craft\\commerce\\models\\LineItem',
-            'orderId',
-            'int|null',
+            'craft\\commerce\\models\\Email',
+            'templatePath',
+            'string|null',
         ],
         [
-            'craft\\commerce\\models\\LineItem',
-            'lineItemStatusId',
-            'int|null',
+            'craft\\commerce\\models\\Email',
+            'to',
+            'string|null',
         ],
         [
-            'craft\\commerce\\models\\LineItem',
-            'taxCategoryId',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'shippingCategoryId',
-            'int',
+            'craft\\commerce\\models\\Email',
+            'uid',
+            'string|null',
         ],
         [
             'craft\\commerce\\models\\LineItem',
@@ -2029,23 +2054,78 @@ return [
         ],
         [
             'craft\\commerce\\models\\LineItem',
-            'uid',
-            'string',
+            'height',
+            'float',
         ],
         [
-            'craft\\commerce\\models\\LineItemStatus',
+            'craft\\commerce\\models\\LineItem',
             'id',
             'int|null',
         ],
         [
-            'craft\\commerce\\models\\LineItemStatus',
-            'name',
-            'string|null',
+            'craft\\commerce\\models\\LineItem',
+            'length',
+            'float',
         ],
         [
-            'craft\\commerce\\models\\LineItemStatus',
-            'handle',
-            'string|null',
+            'craft\\commerce\\models\\LineItem',
+            'lineItemStatusId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'note',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'orderId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'privateNote',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'purchasableId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'qty',
+            'int',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'shippingCategoryId',
+            'int',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'snapshot',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'taxCategoryId',
+            'int',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'uid',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'weight',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'width',
+            'float',
         ],
         [
             'craft\\commerce\\models\\LineItemStatus',
@@ -2054,8 +2134,8 @@ return [
         ],
         [
             'craft\\commerce\\models\\LineItemStatus',
-            'sortOrder',
-            'int|null',
+            'dateArchived',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\LineItemStatus',
@@ -2064,13 +2144,28 @@ return [
         ],
         [
             'craft\\commerce\\models\\LineItemStatus',
+            'handle',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\LineItemStatus',
+            'id',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\LineItemStatus',
             'isArchived',
             'bool',
         ],
         [
             'craft\\commerce\\models\\LineItemStatus',
-            'dateArchived',
-            'DateTime|null',
+            'name',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\LineItemStatus',
+            'sortOrder',
+            'int|null',
         ],
         [
             'craft\\commerce\\models\\LineItemStatus',
@@ -2089,8 +2184,8 @@ return [
         ],
         [
             'craft\\commerce\\models\\LiteTaxSettings',
-            'taxRate',
-            'float',
+            'taxInclude',
+            'string',
         ],
         [
             'craft\\commerce\\models\\LiteTaxSettings',
@@ -2099,12 +2194,37 @@ return [
         ],
         [
             'craft\\commerce\\models\\LiteTaxSettings',
-            'taxInclude',
-            'string',
+            'taxRate',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\OrderAdjustment',
+            'amount',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\OrderAdjustment',
+            'description',
+            'string|null',
         ],
         [
             'craft\\commerce\\models\\OrderAdjustment',
             'id',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\OrderAdjustment',
+            'included',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\OrderAdjustment',
+            'isEstimated',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\OrderAdjustment',
+            'lineItemId',
             'int|null',
         ],
         [
@@ -2114,8 +2234,8 @@ return [
         ],
         [
             'craft\\commerce\\models\\OrderAdjustment',
-            'description',
-            'string|null',
+            'orderId',
+            'int|null',
         ],
         [
             'craft\\commerce\\models\\OrderAdjustment',
@@ -2123,29 +2243,9 @@ return [
             'string',
         ],
         [
-            'craft\\commerce\\models\\OrderAdjustment',
-            'amount',
-            'float',
-        ],
-        [
-            'craft\\commerce\\models\\OrderAdjustment',
-            'included',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\OrderAdjustment',
-            'orderId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\OrderAdjustment',
-            'lineItemId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\OrderAdjustment',
-            'isEstimated',
-            'bool',
+            'craft\\commerce\\models\\OrderHistory',
+            'dateCreated',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\OrderHistory',
@@ -2156,6 +2256,11 @@ return [
             'craft\\commerce\\models\\OrderHistory',
             'message',
             'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\OrderHistory',
+            'newStatusId',
+            'int|null',
         ],
         [
             'craft\\commerce\\models\\OrderHistory',
@@ -2169,33 +2274,23 @@ return [
         ],
         [
             'craft\\commerce\\models\\OrderHistory',
-            'newStatusId',
+            'userId',
             'int|null',
         ],
         [
             'craft\\commerce\\models\\OrderHistory',
-            'customerId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\OrderHistory',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\OrderNotice',
-            'id',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\OrderNotice',
-            'type',
-            'string',
+            'userName',
+            'string|null',
         ],
         [
             'craft\\commerce\\models\\OrderNotice',
             'attribute',
             'string',
+        ],
+        [
+            'craft\\commerce\\models\\OrderNotice',
+            'id',
+            'int|null',
         ],
         [
             'craft\\commerce\\models\\OrderNotice',
@@ -2206,6 +2301,36 @@ return [
             'craft\\commerce\\models\\OrderNotice',
             'orderId',
             'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\OrderNotice',
+            'type',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\OrderStatus',
+            'color',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\OrderStatus',
+            'dateDeleted',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\models\\OrderStatus',
+            'default',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\OrderStatus',
+            'description',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\OrderStatus',
+            'handle',
+            'string|null',
         ],
         [
             'craft\\commerce\\models\\OrderStatus',
@@ -2219,38 +2344,23 @@ return [
         ],
         [
             'craft\\commerce\\models\\OrderStatus',
-            'handle',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\OrderStatus',
-            'color',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\OrderStatus',
-            'description',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\OrderStatus',
             'sortOrder',
             'int|null',
         ],
         [
             'craft\\commerce\\models\\OrderStatus',
-            'default',
-            'bool',
+            'uid',
+            'string|null',
         ],
         [
-            'craft\\commerce\\models\\OrderStatus',
-            'dateDeleted',
+            'craft\\commerce\\models\\PaymentCurrency',
+            'dateCreated',
             'DateTime|null',
         ],
         [
-            'craft\\commerce\\models\\OrderStatus',
-            'uid',
-            'string|null',
+            'craft\\commerce\\models\\PaymentCurrency',
+            'dateUpdated',
+            'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\PaymentCurrency',
@@ -2273,34 +2383,9 @@ return [
             'float',
         ],
         [
-            'craft\\commerce\\models\\PaymentCurrency',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\PaymentCurrency',
-            'dateUpdated',
-            'DateTime|null',
-        ],
-        [
             'craft\\commerce\\models\\PaymentSource',
-            'id',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\PaymentSource',
-            'userId',
+            'customerId',
             'int',
-        ],
-        [
-            'craft\\commerce\\models\\PaymentSource',
-            'gatewayId',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\PaymentSource',
-            'token',
-            'string',
         ],
         [
             'craft\\commerce\\models\\PaymentSource',
@@ -2309,23 +2394,23 @@ return [
         ],
         [
             'craft\\commerce\\models\\PaymentSource',
-            'response',
-            'string',
+            'gatewayId',
+            'int',
         ],
         [
-            'craft\\commerce\\models\\Pdf',
+            'craft\\commerce\\models\\PaymentSource',
             'id',
             'int|null',
         ],
         [
-            'craft\\commerce\\models\\Pdf',
-            'name',
-            'string|null',
+            'craft\\commerce\\models\\PaymentSource',
+            'response',
+            'string',
         ],
         [
-            'craft\\commerce\\models\\Pdf',
-            'handle',
-            'string|null',
+            'craft\\commerce\\models\\PaymentSource',
+            'token',
+            'string',
         ],
         [
             'craft\\commerce\\models\\Pdf',
@@ -2339,17 +2424,32 @@ return [
         ],
         [
             'craft\\commerce\\models\\Pdf',
+            'fileNameFormat',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\Pdf',
+            'handle',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\Pdf',
+            'id',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\Pdf',
             'isDefault',
             'bool',
         ],
         [
             'craft\\commerce\\models\\Pdf',
-            'templatePath',
-            'string|null',
+            'language',
+            'string',
         ],
         [
             'craft\\commerce\\models\\Pdf',
-            'fileNameFormat',
+            'name',
             'string|null',
         ],
         [
@@ -2359,23 +2459,23 @@ return [
         ],
         [
             'craft\\commerce\\models\\Pdf',
-            'uid',
+            'templatePath',
             'string|null',
         ],
         [
             'craft\\commerce\\models\\Pdf',
-            'language',
+            'uid',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\ProductType',
+            'descriptionFormat',
             'string',
         ],
         [
             'craft\\commerce\\models\\ProductType',
-            'id',
+            'fieldLayoutId',
             'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\ProductType',
-            'name',
-            'string|null',
         ],
         [
             'craft\\commerce\\models\\ProductType',
@@ -2389,7 +2489,7 @@ return [
         ],
         [
             'craft\\commerce\\models\\ProductType',
-            'hasVariants',
+            'hasProductTitleField',
             'bool',
         ],
         [
@@ -2399,13 +2499,18 @@ return [
         ],
         [
             'craft\\commerce\\models\\ProductType',
-            'variantTitleFormat',
-            'string',
+            'hasVariants',
+            'bool',
         ],
         [
             'craft\\commerce\\models\\ProductType',
-            'hasProductTitleField',
-            'bool',
+            'id',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\ProductType',
+            'name',
+            'string|null',
         ],
         [
             'craft\\commerce\\models\\ProductType',
@@ -2419,18 +2524,13 @@ return [
         ],
         [
             'craft\\commerce\\models\\ProductType',
-            'descriptionFormat',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\ProductType',
             'template',
             'string|null',
         ],
         [
             'craft\\commerce\\models\\ProductType',
-            'fieldLayoutId',
-            'int|null',
+            'uid',
+            'string|null',
         ],
         [
             'craft\\commerce\\models\\ProductType',
@@ -2439,8 +2539,13 @@ return [
         ],
         [
             'craft\\commerce\\models\\ProductType',
-            'uid',
-            'string|null',
+            'variantTitleFormat',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\ProductTypeSite',
+            'hasUrls',
+            'bool',
         ],
         [
             'craft\\commerce\\models\\ProductTypeSite',
@@ -2459,17 +2564,12 @@ return [
         ],
         [
             'craft\\commerce\\models\\ProductTypeSite',
-            'hasUrls',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\ProductTypeSite',
-            'uriFormat',
+            'template',
             'string',
         ],
         [
             'craft\\commerce\\models\\ProductTypeSite',
-            'template',
+            'uriFormat',
             'string',
         ],
         [
@@ -2479,47 +2579,7 @@ return [
         ],
         [
             'craft\\commerce\\models\\Sale',
-            'id',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
-            'name',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
-            'description',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
-            'dateFrom',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
-            'dateTo',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
-            'apply',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
-            'applyAmount',
-            'float|null',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
-            'ignorePrevious',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
-            'stopProcessing',
+            'allCategories',
             'bool',
         ],
         [
@@ -2534,8 +2594,13 @@ return [
         ],
         [
             'craft\\commerce\\models\\Sale',
-            'allCategories',
-            'bool',
+            'apply',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\Sale',
+            'applyAmount',
+            'float|null',
         ],
         [
             'craft\\commerce\\models\\Sale',
@@ -2544,17 +2609,17 @@ return [
         ],
         [
             'craft\\commerce\\models\\Sale',
-            'enabled',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
-            'sortOrder',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Sale',
             'dateCreated',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\models\\Sale',
+            'dateFrom',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\models\\Sale',
+            'dateTo',
             'DateTime|null',
         ],
         [
@@ -2563,8 +2628,48 @@ return [
             'DateTime|null',
         ],
         [
+            'craft\\commerce\\models\\Sale',
+            'description',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\Sale',
+            'enabled',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\Sale',
+            'id',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\Sale',
+            'ignorePrevious',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\Sale',
+            'name',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\Sale',
+            'sortOrder',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\Sale',
+            'stopProcessing',
+            'bool',
+        ],
+        [
             'craft\\commerce\\models\\Settings',
-            'autoSetNewCartAddresses',
+            'activeCartDuration',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\models\\Settings',
+            'allowCheckoutWithoutPayment',
             'bool',
         ],
         [
@@ -2574,12 +2679,17 @@ return [
         ],
         [
             'craft\\commerce\\models\\Settings',
-            'allowCheckoutWithoutPayment',
+            'allowPartialPaymentOnCheckout',
             'bool',
         ],
         [
             'craft\\commerce\\models\\Settings',
-            'allowPartialPaymentOnCheckout',
+            'autoSetCartShippingMethodOption',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\Settings',
+            'autoSetNewCartAddresses',
             'bool',
         ],
         [
@@ -2649,6 +2759,11 @@ return [
         ],
         [
             'craft\\commerce\\models\\Settings',
+            'pdfAllowRemoteImages',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\Settings',
             'pdfPaperOrientation',
             'string',
         ],
@@ -2659,12 +2774,17 @@ return [
         ],
         [
             'craft\\commerce\\models\\Settings',
-            'pdfAllowRemoteImages',
+            'purgeInactiveCarts',
             'bool',
         ],
         [
             'craft\\commerce\\models\\Settings',
-            'purgeInactiveCarts',
+            'purgeInactiveCartsDuration',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\models\\Settings',
+            'requireBillingAddressAtCheckout',
             'bool',
         ],
         [
@@ -2674,17 +2794,12 @@ return [
         ],
         [
             'craft\\commerce\\models\\Settings',
-            'requireBillingAddressAtCheckout',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\Settings',
             'requireShippingMethodSelectionAtCheckout',
             'bool',
         ],
         [
             'craft\\commerce\\models\\Settings',
-            'showCustomerInfoTab',
+            'showEditUserCommerceTab',
             'bool',
         ],
         [
@@ -2709,62 +2824,32 @@ return [
         ],
         [
             'craft\\commerce\\models\\Settings',
-            'weightUnits',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\Settings',
             'validateCartCustomFieldsOnSubmission',
             'bool',
         ],
         [
             'craft\\commerce\\models\\Settings',
-            '_orderPdfPath',
-            'string|null',
+            'weightUnits',
+            'string',
         ],
         [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'id',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'name',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'description',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'default',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'zipCodeConditionFormula',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
+            'craft\\commerce\\models\\ShippingCategory',
             'dateCreated',
             'DateTime|null',
         ],
         [
-            'craft\\commerce\\models\\ShippingAddressZone',
+            'craft\\commerce\\models\\ShippingCategory',
             'dateUpdated',
             'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\ShippingCategory',
-            'id',
-            'int|null',
+            'default',
+            'bool',
         ],
         [
             'craft\\commerce\\models\\ShippingCategory',
-            'name',
+            'description',
             'string|null',
         ],
         [
@@ -2774,23 +2859,18 @@ return [
         ],
         [
             'craft\\commerce\\models\\ShippingCategory',
-            'description',
+            'id',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingCategory',
+            'name',
             'string|null',
         ],
         [
-            'craft\\commerce\\models\\ShippingCategory',
-            'default',
+            'craft\\commerce\\models\\ShippingMethodOption',
+            'matchesOrder',
             'bool',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingCategory',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingCategory',
-            'dateUpdated',
-            'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\ShippingMethodOption',
@@ -2798,8 +2878,28 @@ return [
             'float',
         ],
         [
-            'craft\\commerce\\models\\ShippingMethodOption',
-            'matchesOrder',
+            'craft\\commerce\\models\\ShippingRule',
+            'baseRate',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'dateCreated',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'dateUpdated',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'description',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'enabled',
             'bool',
         ],
         [
@@ -2809,47 +2909,32 @@ return [
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'name',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingRule',
-            'description',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingRule',
-            'shippingZoneId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingRule',
-            'methodId',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingRule',
-            'priority',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingRule',
-            'enabled',
+            'isLite',
             'bool',
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'orderConditionFormula',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingRule',
-            'minQty',
+            'maxQty',
             'int',
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'maxQty',
+            'maxRate',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'maxTotal',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'maxWeight',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'methodId',
             'int',
         ],
         [
@@ -2859,18 +2944,63 @@ return [
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'isLite',
-            'bool',
+            'minQty',
+            'int',
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'dateCreated',
-            'DateTime|null',
+            'minRate',
+            'float',
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'dateUpdated',
-            'DateTime|null',
+            'minTotal',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'minWeight',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'name',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'orderConditionFormula',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'perItemRate',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'percentageRate',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'priority',
+            'int',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'shippingZoneId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRule',
+            'weightRate',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRuleCategory',
+            'condition',
+            'string',
         ],
         [
             'craft\\commerce\\models\\ShippingRuleCategory',
@@ -2879,22 +3009,7 @@ return [
         ],
         [
             'craft\\commerce\\models\\ShippingRuleCategory',
-            'shippingRuleId',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingRuleCategory',
-            'shippingCategoryId',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingRuleCategory',
             'perItemRate',
-            'float|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingRuleCategory',
-            'weightRate',
             'float|null',
         ],
         [
@@ -2904,63 +3019,23 @@ return [
         ],
         [
             'craft\\commerce\\models\\ShippingRuleCategory',
-            'condition',
-            'string',
+            'shippingCategoryId',
+            'int',
         ],
         [
-            'craft\\commerce\\models\\State',
+            'craft\\commerce\\models\\ShippingRuleCategory',
+            'shippingRuleId',
+            'int',
+        ],
+        [
+            'craft\\commerce\\models\\ShippingRuleCategory',
+            'weightRate',
+            'float|null',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
             'id',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\State',
-            'name',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\State',
-            'abbreviation',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\State',
-            'countryId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\State',
-            'enabled',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\State',
-            'sortOrder',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\State',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\State',
-            'dateUpdated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\TaxAddressZone',
-            'id',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\TaxAddressZone',
-            'name',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\TaxAddressZone',
-            'description',
-            'string|null',
+            'int',
         ],
         [
             'craft\\commerce\\models\\TaxAddressZone',
@@ -2968,28 +3043,23 @@ return [
             'bool',
         ],
         [
-            'craft\\commerce\\models\\TaxAddressZone',
-            'zipCodeConditionFormula',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\TaxAddressZone',
+            'craft\\commerce\\models\\TaxCategory',
             'dateCreated',
             'DateTime|null',
         ],
         [
-            'craft\\commerce\\models\\TaxAddressZone',
+            'craft\\commerce\\models\\TaxCategory',
             'dateUpdated',
             'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\TaxCategory',
-            'id',
-            'int|null',
+            'default',
+            'bool',
         ],
         [
             'craft\\commerce\\models\\TaxCategory',
-            'name',
+            'description',
             'string|null',
         ],
         [
@@ -2999,31 +3069,11 @@ return [
         ],
         [
             'craft\\commerce\\models\\TaxCategory',
-            'description',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\TaxCategory',
-            'default',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\TaxCategory',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\TaxCategory',
-            'dateUpdated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\TaxRate',
             'id',
             'int|null',
         ],
         [
-            'craft\\commerce\\models\\TaxRate',
+            'craft\\commerce\\models\\TaxCategory',
             'name',
             'string|null',
         ],
@@ -3034,13 +3084,43 @@ return [
         ],
         [
             'craft\\commerce\\models\\TaxRate',
-            'rate',
-            'float',
+            'dateCreated',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\models\\TaxRate',
+            'dateUpdated',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\models\\TaxRate',
+            'id',
+            'int|null',
         ],
         [
             'craft\\commerce\\models\\TaxRate',
             'include',
             'bool',
+        ],
+        [
+            'craft\\commerce\\models\\TaxRate',
+            'isLite',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\TaxRate',
+            'isVat',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\TaxRate',
+            'name',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\TaxRate',
+            'rate',
+            'float',
         ],
         [
             'craft\\commerce\\models\\TaxRate',
@@ -3054,23 +3134,8 @@ return [
         ],
         [
             'craft\\commerce\\models\\TaxRate',
-            'isVat',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\TaxRate',
-            'taxable',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\TaxRate',
             'taxCategoryId',
             'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\TaxRate',
-            'isLite',
-            'bool',
         ],
         [
             'craft\\commerce\\models\\TaxRate',
@@ -3079,18 +3144,58 @@ return [
         ],
         [
             'craft\\commerce\\models\\TaxRate',
+            'taxable',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'amount',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'code',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'currency',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
             'dateCreated',
             'DateTime|null',
         ],
         [
-            'craft\\commerce\\models\\TaxRate',
+            'craft\\commerce\\models\\Transaction',
             'dateUpdated',
             'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\Transaction',
+            'gatewayId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'hash',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
             'id',
             'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'message',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'note',
+            'string',
         ],
         [
             'craft\\commerce\\models\\Transaction',
@@ -3101,26 +3206,6 @@ return [
             'craft\\commerce\\models\\Transaction',
             'parentId',
             'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'userId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'hash',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'gatewayId',
-            'int',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'currency',
-            'string|null',
         ],
         [
             'craft\\commerce\\models\\Transaction',
@@ -3139,13 +3224,13 @@ return [
         ],
         [
             'craft\\commerce\\models\\Transaction',
-            'type',
+            'reference',
             'string|null',
         ],
         [
             'craft\\commerce\\models\\Transaction',
-            'amount',
-            'float',
+            'response',
+            'mixed',
         ],
         [
             'craft\\commerce\\models\\Transaction',
@@ -3154,33 +3239,23 @@ return [
         ],
         [
             'craft\\commerce\\models\\Transaction',
-            'reference',
+            'type',
             'string|null',
         ],
         [
             'craft\\commerce\\models\\Transaction',
-            'code',
+            'userId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
+            'cvv',
             'string|null',
         ],
         [
-            'craft\\commerce\\models\\Transaction',
-            'message',
+            'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
+            'expiry',
             'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'note',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'dateCreated',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'dateUpdated',
-            'DateTime|null',
         ],
         [
             'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
@@ -3194,32 +3269,12 @@ return [
         ],
         [
             'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
-            'number',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
             'month',
             'int|null',
         ],
         [
             'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
-            'year',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
-            'cvv',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
-            'token',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
-            'expiry',
+            'number',
             'string|null',
         ],
         [
@@ -3228,9 +3283,24 @@ return [
             'bool',
         ],
         [
+            'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
+            'token',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\models\\payments\\CreditCardPaymentForm',
+            'year',
+            'int|null',
+        ],
+        [
             'craft\\commerce\\models\\subscriptions\\SubscriptionForm',
             'trialDays',
             'int',
+        ],
+        [
+            'craft\\commerce\\models\\subscriptions\\SubscriptionPayment',
+            'paid',
+            'bool',
         ],
         [
             'craft\\commerce\\models\\subscriptions\\SubscriptionPayment',
@@ -3254,22 +3324,12 @@ return [
         ],
         [
             'craft\\commerce\\models\\subscriptions\\SubscriptionPayment',
-            'paid',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\models\\subscriptions\\SubscriptionPayment',
             'response',
             'string',
         ],
         [
-            'craft\\commerce\\queue\\jobs\\ConsolidateGuestOrders',
-            'emails',
-            'array',
-        ],
-        [
             'craft\\commerce\\queue\\jobs\\SendEmail',
-            'orderId',
+            'commerceEmailId',
             'int',
         ],
         [
@@ -3279,12 +3339,12 @@ return [
         ],
         [
             'craft\\commerce\\queue\\jobs\\SendEmail',
-            'commerceEmailId',
+            'orderHistoryId',
             'int',
         ],
         [
             'craft\\commerce\\queue\\jobs\\SendEmail',
-            'orderHistoryId',
+            'orderId',
             'int',
         ],
         [
@@ -3299,16 +3359,11 @@ return [
         ],
         [
             'craft\\commerce\\stats\\TopCustomers',
-            'type',
-            'string',
+            'limit',
+            'int',
         ],
         [
             'craft\\commerce\\stats\\TopCustomers',
-            'limit',
-            'int',
-        ],
-        [
-            'craft\\commerce\\stats\\TopProductTypes',
             'type',
             'string',
         ],
@@ -3318,7 +3373,7 @@ return [
             'int',
         ],
         [
-            'craft\\commerce\\stats\\TopProducts',
+            'craft\\commerce\\stats\\TopProductTypes',
             'type',
             'string',
         ],
@@ -3333,7 +3388,7 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\stats\\TopPurchasables',
+            'craft\\commerce\\stats\\TopProducts',
             'type',
             'string',
         ],
@@ -3343,7 +3398,7 @@ return [
             'int',
         ],
         [
-            'craft\\commerce\\stats\\TotalOrdersByCountry',
+            'craft\\commerce\\stats\\TopPurchasables',
             'type',
             'string',
         ],
@@ -3351,6 +3406,11 @@ return [
             'craft\\commerce\\stats\\TotalOrdersByCountry',
             'limit',
             'int',
+        ],
+        [
+            'craft\\commerce\\stats\\TotalOrdersByCountry',
+            'type',
+            'string',
         ],
         [
             'craft\\commerce\\web\\twig\\CraftVariableBehavior',
@@ -3363,9 +3423,29 @@ return [
             'string',
         ],
         [
+            'craft\\commerce\\widgets\\AverageOrderTotal',
+            'endDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\AverageOrderTotal',
+            'startDate',
+            'mixed',
+        ],
+        [
             'craft\\commerce\\widgets\\NewCustomers',
             'dateRange',
             'string',
+        ],
+        [
+            'craft\\commerce\\widgets\\NewCustomers',
+            'endDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\NewCustomers',
+            'startDate',
+            'mixed',
         ],
         [
             'craft\\commerce\\widgets\\Orders',
@@ -3373,14 +3453,39 @@ return [
             'int',
         ],
         [
+            'craft\\commerce\\widgets\\Orders',
+            'orderStatusId',
+            'mixed',
+        ],
+        [
             'craft\\commerce\\widgets\\RepeatCustomers',
             'dateRange',
             'string|null',
         ],
         [
+            'craft\\commerce\\widgets\\RepeatCustomers',
+            'endDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\RepeatCustomers',
+            'startDate',
+            'mixed',
+        ],
+        [
             'craft\\commerce\\widgets\\TopCustomers',
             'dateRange',
             'string|null',
+        ],
+        [
+            'craft\\commerce\\widgets\\TopCustomers',
+            'endDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\TopCustomers',
+            'startDate',
+            'mixed',
         ],
         [
             'craft\\commerce\\widgets\\TopCustomers',
@@ -3394,6 +3499,16 @@ return [
         ],
         [
             'craft\\commerce\\widgets\\TopProductTypes',
+            'endDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\TopProductTypes',
+            'startDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\TopProductTypes',
             'type',
             'string|null',
         ],
@@ -3404,8 +3519,8 @@ return [
         ],
         [
             'craft\\commerce\\widgets\\TopProducts',
-            'type',
-            'string|null',
+            'endDate',
+            'mixed',
         ],
         [
             'craft\\commerce\\widgets\\TopProducts',
@@ -3413,14 +3528,24 @@ return [
             'array|null',
         ],
         [
+            'craft\\commerce\\widgets\\TopProducts',
+            'startDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\TopProducts',
+            'type',
+            'string|null',
+        ],
+        [
             'craft\\commerce\\widgets\\TopPurchasables',
             'dateRange',
             'string|null',
         ],
         [
             'craft\\commerce\\widgets\\TopPurchasables',
-            'type',
-            'string|null',
+            'endDate',
+            'mixed',
         ],
         [
             'craft\\commerce\\widgets\\TopPurchasables',
@@ -3428,14 +3553,49 @@ return [
             'string',
         ],
         [
+            'craft\\commerce\\widgets\\TopPurchasables',
+            'startDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\TopPurchasables',
+            'type',
+            'string|null',
+        ],
+        [
             'craft\\commerce\\widgets\\TotalOrders',
             'dateRange',
             'string|null',
         ],
         [
+            'craft\\commerce\\widgets\\TotalOrders',
+            'endDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\TotalOrders',
+            'showChart',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\TotalOrders',
+            'startDate',
+            'mixed',
+        ],
+        [
             'craft\\commerce\\widgets\\TotalOrdersByCountry',
             'dateRange',
             'string|null',
+        ],
+        [
+            'craft\\commerce\\widgets\\TotalOrdersByCountry',
+            'endDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\TotalOrdersByCountry',
+            'startDate',
+            'mixed',
         ],
         [
             'craft\\commerce\\widgets\\TotalOrdersByCountry',
@@ -3449,11 +3609,31 @@ return [
         ],
         [
             'craft\\commerce\\widgets\\TotalRevenue',
+            'endDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\widgets\\TotalRevenue',
             'showOrderCount',
             'bool',
         ],
+        [
+            'craft\\commerce\\widgets\\TotalRevenue',
+            'startDate',
+            'mixed',
+        ],
     ],
     'methodReturnTypes' => [
+        [
+            'craft\\commerce\\Plugin',
+            'getCoupons',
+            'craft\\commerce\\services\\Coupons',
+        ],
+        [
+            'craft\\commerce\\Plugin',
+            'getStore',
+            'craft\\commerce\\services\\Store',
+        ],
         [
             'craft\\commerce\\Plugin',
             'init',
@@ -3463,36 +3643,6 @@ return [
             'craft\\commerce\\adjusters\\Tax',
             'getTaxRates',
             'array',
-        ],
-        [
-            'craft\\commerce\\base\\AddressZoneInterface',
-            'getIsCountryBased',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\AddressZoneInterface',
-            'getCountryIds',
-            'array',
-        ],
-        [
-            'craft\\commerce\\base\\AddressZoneInterface',
-            'getStateIds',
-            'array',
-        ],
-        [
-            'craft\\commerce\\base\\AddressZoneInterface',
-            'getStates',
-            'array',
-        ],
-        [
-            'craft\\commerce\\base\\AddressZoneInterface',
-            'getCountries',
-            'array',
-        ],
-        [
-            'craft\\commerce\\base\\AddressZoneInterface',
-            'getZipCodeConditionFormula',
-            'string|null',
         ],
         [
             'craft\\commerce\\base\\AdjusterInterface',
@@ -3513,6 +3663,11 @@ return [
             'craft\\commerce\\base\\GatewayInterface',
             'authorize',
             'craft\\commerce\\base\\RequestResponseInterface',
+        ],
+        [
+            'craft\\commerce\\base\\GatewayInterface',
+            'availableForUseWithOrder',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\GatewayInterface',
@@ -3546,6 +3701,16 @@ return [
         ],
         [
             'craft\\commerce\\base\\GatewayInterface',
+            'getTransactionHashFromWebhook',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\base\\GatewayInterface',
+            'processWebHook',
+            'craft\\web\\Response',
+        ],
+        [
+            'craft\\commerce\\base\\GatewayInterface',
             'purchase',
             'craft\\commerce\\base\\RequestResponseInterface',
         ],
@@ -3553,11 +3718,6 @@ return [
             'craft\\commerce\\base\\GatewayInterface',
             'refund',
             'craft\\commerce\\base\\RequestResponseInterface',
-        ],
-        [
-            'craft\\commerce\\base\\GatewayInterface',
-            'processWebHook',
-            'craft\\web\\Response',
         ],
         [
             'craft\\commerce\\base\\GatewayInterface',
@@ -3581,6 +3741,16 @@ return [
         ],
         [
             'craft\\commerce\\base\\GatewayInterface',
+            'supportsPartialPayment',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\GatewayInterface',
+            'supportsPartialRefund',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\GatewayInterface',
             'supportsPaymentSources',
             'bool',
         ],
@@ -3596,22 +3766,7 @@ return [
         ],
         [
             'craft\\commerce\\base\\GatewayInterface',
-            'supportsPartialRefund',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\GatewayInterface',
-            'supportsPartialPayment',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\GatewayInterface',
             'supportsWebhooks',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\GatewayInterface',
-            'availableForUseWithOrder',
             'bool',
         ],
         [
@@ -3625,9 +3780,24 @@ return [
             'craft\\elements\\Entry|null',
         ],
         [
+            'craft\\commerce\\base\\Plan',
+            'getPlanData',
+            'mixed',
+        ],
+        [
             'craft\\commerce\\base\\PlanInterface',
             'canSwitchFrom',
             'bool',
+        ],
+        [
+            'craft\\commerce\\base\\Purchasable',
+            'afterOrderComplete',
+            'void',
+        ],
+        [
+            'craft\\commerce\\base\\Purchasable',
+            'getPromotionRelationSource',
+            'mixed',
         ],
         [
             'craft\\commerce\\base\\Purchasable',
@@ -3640,29 +3810,9 @@ return [
             'void',
         ],
         [
-            'craft\\commerce\\base\\Purchasable',
+            'craft\\commerce\\base\\PurchasableInterface',
             'afterOrderComplete',
             'void',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'getId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'getPrice',
-            'float',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'getSalePrice',
-            'float',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'getSku',
-            'string',
         ],
         [
             'craft\\commerce\\base\\PurchasableInterface',
@@ -3671,13 +3821,8 @@ return [
         ],
         [
             'craft\\commerce\\base\\PurchasableInterface',
-            'getTaxCategoryId',
-            'int',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'getShippingCategoryId',
-            'int',
+            'getId',
+            'int|null',
         ],
         [
             'craft\\commerce\\base\\PurchasableInterface',
@@ -3686,27 +3831,7 @@ return [
         ],
         [
             'craft\\commerce\\base\\PurchasableInterface',
-            'populateLineItem',
-            'void',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'getSnapshot',
-            'array',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'getLineItemRules',
-            'array',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'afterOrderComplete',
-            'void',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'hasFreeShipping',
+            'getIsPromotable',
             'bool',
         ],
         [
@@ -3721,33 +3846,78 @@ return [
         ],
         [
             'craft\\commerce\\base\\PurchasableInterface',
-            'getIsPromotable',
+            'getLineItemRules',
+            'array',
+        ],
+        [
+            'craft\\commerce\\base\\PurchasableInterface',
+            'getPrice',
+            'float',
+        ],
+        [
+            'craft\\commerce\\base\\PurchasableInterface',
+            'getPromotionRelationSource',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\base\\PurchasableInterface',
+            'getSalePrice',
+            'float',
+        ],
+        [
+            'craft\\commerce\\base\\PurchasableInterface',
+            'getShippingCategoryId',
+            'int',
+        ],
+        [
+            'craft\\commerce\\base\\PurchasableInterface',
+            'getSku',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\PurchasableInterface',
+            'getSnapshot',
+            'array',
+        ],
+        [
+            'craft\\commerce\\base\\PurchasableInterface',
+            'getTaxCategoryId',
+            'int',
+        ],
+        [
+            'craft\\commerce\\base\\PurchasableInterface',
+            'hasFreeShipping',
             'bool',
         ],
         [
-            'craft\\commerce\\base\\RequestResponseInterface',
-            'isSuccessful',
-            'bool',
+            'craft\\commerce\\base\\PurchasableInterface',
+            'populateLineItem',
+            'void',
         ],
         [
             'craft\\commerce\\base\\RequestResponseInterface',
-            'isProcessing',
-            'bool',
+            'getCode',
+            'string',
         ],
         [
             'craft\\commerce\\base\\RequestResponseInterface',
-            'isRedirect',
-            'bool',
+            'getData',
+            'mixed',
         ],
         [
             'craft\\commerce\\base\\RequestResponseInterface',
-            'getRedirectMethod',
+            'getMessage',
             'string',
         ],
         [
             'craft\\commerce\\base\\RequestResponseInterface',
             'getRedirectData',
             'array',
+        ],
+        [
+            'craft\\commerce\\base\\RequestResponseInterface',
+            'getRedirectMethod',
+            'string',
         ],
         [
             'craft\\commerce\\base\\RequestResponseInterface',
@@ -3761,13 +3931,23 @@ return [
         ],
         [
             'craft\\commerce\\base\\RequestResponseInterface',
-            'getCode',
-            'string',
+            'isProcessing',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\RequestResponseInterface',
-            'getMessage',
-            'string',
+            'isRedirect',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\RequestResponseInterface',
+            'isSuccessful',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\RequestResponseInterface',
+            'redirect',
+            'void',
         ],
         [
             'craft\\commerce\\base\\ShippingMethod',
@@ -3786,17 +3966,7 @@ return [
         ],
         [
             'craft\\commerce\\base\\ShippingMethodInterface',
-            'getType',
-            'string',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingMethodInterface',
-            'getId',
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingMethodInterface',
-            'getName',
+            'getCpEditUrl',
             'string',
         ],
         [
@@ -3806,23 +3976,13 @@ return [
         ],
         [
             'craft\\commerce\\base\\ShippingMethodInterface',
-            'getCpEditUrl',
-            'string',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingMethodInterface',
-            'getShippingRules',
-            'array',
+            'getId',
+            'int|null',
         ],
         [
             'craft\\commerce\\base\\ShippingMethodInterface',
             'getIsEnabled',
             'bool',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingMethodInterface',
-            'getPriceForOrder',
-            'float',
         ],
         [
             'craft\\commerce\\base\\ShippingMethodInterface',
@@ -3831,38 +3991,43 @@ return [
         ],
         [
             'craft\\commerce\\base\\ShippingMethodInterface',
+            'getName',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingMethodInterface',
+            'getPriceForOrder',
+            'float',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingMethodInterface',
+            'getShippingRules',
+            'array',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingMethodInterface',
+            'getType',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingMethodInterface',
             'matchOrder',
             'bool',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingRuleInterface',
-            'matchOrder',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingRuleInterface',
-            'getIsEnabled',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingRuleInterface',
-            'getPercentageRate',
-            'float',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingRuleInterface',
-            'getPerItemRate',
-            'float',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingRuleInterface',
-            'getWeightRate',
-            'float',
         ],
         [
             'craft\\commerce\\base\\ShippingRuleInterface',
             'getBaseRate',
             'float',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingRuleInterface',
+            'getDescription',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingRuleInterface',
+            'getIsEnabled',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\ShippingRuleInterface',
@@ -3876,18 +4041,43 @@ return [
         ],
         [
             'craft\\commerce\\base\\ShippingRuleInterface',
-            'getDescription',
-            'string',
+            'getOptions',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingRuleInterface',
+            'getPerItemRate',
+            'float',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingRuleInterface',
+            'getPercentageRate',
+            'float',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingRuleInterface',
+            'getWeightRate',
+            'float',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingRuleInterface',
+            'matchOrder',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\Stat',
-            'setStartDate',
-            'void',
+            '_createChartQuery',
+            'array|null',
         ],
         [
             'craft\\commerce\\base\\Stat',
-            'setEndDate',
-            'void',
+            '_createStatQuery',
+            'yii\\db\\Query',
+        ],
+        [
+            'craft\\commerce\\base\\Stat',
+            'get',
+            'mixed',
         ],
         [
             'craft\\commerce\\base\\Stat',
@@ -3901,13 +4091,48 @@ return [
         ],
         [
             'craft\\commerce\\base\\Stat',
-            '_createStatQuery',
-            'yii\\db\\Query',
+            'getEndDate',
+            'mixed',
         ],
         [
             'craft\\commerce\\base\\Stat',
-            '_createChartQuery',
-            'array|null',
+            'getStartDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\base\\Stat',
+            'prepareData',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\base\\Stat',
+            'setEndDate',
+            'void',
+        ],
+        [
+            'craft\\commerce\\base\\Stat',
+            'setStartDate',
+            'void',
+        ],
+        [
+            'craft\\commerce\\base\\StatInterface',
+            'get',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\base\\StatInterface',
+            'getData',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\base\\StatInterface',
+            'getDateRangeWording',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\StatInterface',
+            'getEndDate',
+            'mixed',
         ],
         [
             'craft\\commerce\\base\\StatInterface',
@@ -3916,8 +4141,13 @@ return [
         ],
         [
             'craft\\commerce\\base\\StatInterface',
-            'setStartDate',
-            'void',
+            'getStartDate',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\base\\StatInterface',
+            'prepareData',
+            'mixed',
         ],
         [
             'craft\\commerce\\base\\StatInterface',
@@ -3926,8 +4156,13 @@ return [
         ],
         [
             'craft\\commerce\\base\\StatInterface',
-            'getDateRangeWording',
-            'string',
+            'setStartDate',
+            'void',
+        ],
+        [
+            'craft\\commerce\\base\\SubscriptionGateway',
+            'getPlanSettingsHtml',
+            'string|null',
         ],
         [
             'craft\\commerce\\base\\SubscriptionGateway',
@@ -3938,6 +4173,21 @@ return [
             'craft\\commerce\\base\\SubscriptionGatewayInterface',
             'cancelSubscription',
             'craft\\commerce\\base\\SubscriptionResponseInterface',
+        ],
+        [
+            'craft\\commerce\\base\\SubscriptionGatewayInterface',
+            'getBillingIssueDescription',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\SubscriptionGatewayInterface',
+            'getBillingIssueResolveFormHtml',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\SubscriptionGatewayInterface',
+            'getHasBillingIssues',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\SubscriptionGatewayInterface',
@@ -3971,8 +4221,8 @@ return [
         ],
         [
             'craft\\commerce\\base\\SubscriptionGatewayInterface',
-            'switchSubscriptionPlan',
-            'craft\\commerce\\base\\SubscriptionResponseInterface',
+            'supportsPlanSwitch',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\SubscriptionGatewayInterface',
@@ -3981,23 +4231,18 @@ return [
         ],
         [
             'craft\\commerce\\base\\SubscriptionGatewayInterface',
-            'supportsPlanSwitch',
-            'bool',
+            'switchSubscriptionPlan',
+            'craft\\commerce\\base\\SubscriptionResponseInterface',
         ],
         [
-            'craft\\commerce\\base\\SubscriptionGatewayInterface',
-            'getHasBillingIssues',
-            'bool',
+            'craft\\commerce\\base\\SubscriptionResponseInterface',
+            'getData',
+            'mixed',
         ],
         [
-            'craft\\commerce\\base\\SubscriptionGatewayInterface',
-            'getBillingIssueDescription',
-            'string',
-        ],
-        [
-            'craft\\commerce\\base\\SubscriptionGatewayInterface',
-            'getBillingIssueResolveFormHtml',
-            'string',
+            'craft\\commerce\\base\\SubscriptionResponseInterface',
+            'getNextPaymentDate',
+            'DateTime',
         ],
         [
             'craft\\commerce\\base\\SubscriptionResponseInterface',
@@ -4011,17 +4256,7 @@ return [
         ],
         [
             'craft\\commerce\\base\\SubscriptionResponseInterface',
-            'getNextPaymentDate',
-            'DateTime',
-        ],
-        [
-            'craft\\commerce\\base\\SubscriptionResponseInterface',
             'isCanceled',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\SubscriptionResponseInterface',
-            'isScheduledForCancellation',
             'bool',
         ],
         [
@@ -4030,63 +4265,18 @@ return [
             'bool',
         ],
         [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'taxAdjusterClass',
-            'string',
+            'craft\\commerce\\base\\SubscriptionResponseInterface',
+            'isScheduledForCancellation',
+            'bool',
         ],
         [
             'craft\\commerce\\base\\TaxEngineInterface',
-            'viewTaxCategories',
-            'bool',
+            'cpTaxNavSubItems',
+            'array',
         ],
         [
             'craft\\commerce\\base\\TaxEngineInterface',
             'createTaxCategories',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'editTaxCategories',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'deleteTaxCategories',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'taxCategoryActionHtml',
-            'string',
-        ],
-        [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'viewTaxZones',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'createTaxZones',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'editTaxZones',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'deleteTaxZones',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'taxZoneActionHtml',
-            'string',
-        ],
-        [
-            'craft\\commerce\\base\\TaxEngineInterface',
-            'viewTaxRates',
             'bool',
         ],
         [
@@ -4096,7 +4286,12 @@ return [
         ],
         [
             'craft\\commerce\\base\\TaxEngineInterface',
-            'editTaxRates',
+            'createTaxZones',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\TaxEngineInterface',
+            'deleteTaxCategories',
             'bool',
         ],
         [
@@ -4106,18 +4301,88 @@ return [
         ],
         [
             'craft\\commerce\\base\\TaxEngineInterface',
+            'deleteTaxZones',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\TaxEngineInterface',
+            'editTaxCategories',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\TaxEngineInterface',
+            'editTaxRates',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\TaxEngineInterface',
+            'editTaxZones',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\TaxEngineInterface',
+            'taxAdjusterClass',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\TaxEngineInterface',
+            'taxCategoryActionHtml',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\TaxEngineInterface',
             'taxRateActionHtml',
             'string',
         ],
         [
             'craft\\commerce\\base\\TaxEngineInterface',
-            'cpTaxNavSubItems',
-            'array',
+            'taxZoneActionHtml',
+            'string',
         ],
         [
-            'craft\\commerce\\behaviors\\CurrencyAttributeBehavior',
-            'hasMethod',
+            'craft\\commerce\\base\\TaxEngineInterface',
+            'viewTaxCategories',
             'bool',
+        ],
+        [
+            'craft\\commerce\\base\\TaxEngineInterface',
+            'viewTaxRates',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\TaxEngineInterface',
+            'viewTaxZones',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\base\\Zone',
+            'getCondition',
+            'craft\\commerce\\elements\\conditions\\addresses\\ZoneAddressCondition',
+        ],
+        [
+            'craft\\commerce\\base\\Zone',
+            'getCpEditUrl',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\Zone',
+            'setCondition',
+            'void',
+        ],
+        [
+            'craft\\commerce\\base\\ZoneInterface',
+            'getCondition',
+            'craft\\commerce\\elements\\conditions\\addresses\\ZoneAddressCondition',
+        ],
+        [
+            'craft\\commerce\\base\\ZoneInterface',
+            'getCpEditUrl',
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\ZoneInterface',
+            'setCondition',
+            'void',
         ],
         [
             'craft\\commerce\\behaviors\\CurrencyAttributeBehavior',
@@ -4130,19 +4395,149 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\controllers\\AddressesController',
-            'actionSave',
-            'yii\\web\\Response|null',
+            'craft\\commerce\\behaviors\\CurrencyAttributeBehavior',
+            'defineFields',
+            'void',
         ],
         [
-            'craft\\commerce\\controllers\\AddressesController',
-            'actionSetPrimaryAddress',
-            'yii\\web\\Response|null',
+            'craft\\commerce\\behaviors\\CurrencyAttributeBehavior',
+            'events',
+            'array',
         ],
         [
-            'craft\\commerce\\controllers\\AddressesController',
-            'actionGetCustomerAddresses',
-            'yii\\web\\Response',
+            'craft\\commerce\\behaviors\\CurrencyAttributeBehavior',
+            'hasMethod',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'afterPropagate',
+            'void',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'defineRules',
+            'void',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'events',
+            'array',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'getIsPrimaryBilling',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'getIsPrimaryShipping',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'setIsPrimaryBilling',
+            'void',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'setIsPrimaryShipping',
+            'void',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'events',
+            'array',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'getActiveCarts',
+            'array',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'getInactiveCarts',
+            'array',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'getOrders',
+            'array',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'getPrimaryBillingAddress',
+            'craft\\elements\\Address|null',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'getPrimaryBillingAddressId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'getPrimaryShippingAddress',
+            'craft\\elements\\Address|null',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'getPrimaryShippingAddressId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'getSubscriptions',
+            'array',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'setPrimaryBillingAddressId',
+            'void',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'setPrimaryShippingAddressId',
+            'void',
+        ],
+        [
+            'craft\\commerce\\behaviors\\StoreLocationBehavior',
+            'events',
+            'array',
+        ],
+        [
+            'craft\\commerce\\behaviors\\StoreLocationBehavior',
+            'saveStoreLocation',
+            'void',
+        ],
+        [
+            'craft\\commerce\\behaviors\\ValidateOrganizationTaxIdBehavior',
+            'defineRules',
+            'void',
+        ],
+        [
+            'craft\\commerce\\behaviors\\ValidateOrganizationTaxIdBehavior',
+            'events',
+            'array',
+        ],
+        [
+            'craft\\commerce\\behaviors\\ValidateOrganizationTaxIdBehavior',
+            'validateOrganizationTaxId',
+            'void',
+        ],
+        [
+            'craft\\commerce\\console\\controllers\\UpgradeController',
+            '_migrateCustomers',
+            'void',
+        ],
+        [
+            'craft\\commerce\\console\\controllers\\UpgradeController',
+            'actionRun',
+            'int',
+        ],
+        [
+            'craft\\commerce\\controllers\\CartController',
+            'actionComplete',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\CartController',
@@ -4151,38 +4546,18 @@ return [
         ],
         [
             'craft\\commerce\\controllers\\CartController',
-            'actionUpdateCart',
-            'yii\\web\\Response|null',
-        ],
-        [
-            'craft\\commerce\\controllers\\CartController',
             'actionLoadCart',
             'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\CartController',
-            'actionComplete',
+            'actionUpdateCart',
             'yii\\web\\Response|null',
         ],
         [
-            'craft\\commerce\\controllers\\CountriesController',
-            'actionSave',
-            'void',
-        ],
-        [
-            'craft\\commerce\\controllers\\CustomerAddressesController',
-            'actionSave',
-            'yii\\web\\Response|null',
-        ],
-        [
-            'craft\\commerce\\controllers\\CustomerAddressesController',
-            'actionDelete',
-            'yii\\web\\Response|null',
-        ],
-        [
-            'craft\\commerce\\controllers\\CustomersController',
-            'actionSave',
-            'yii\\web\\Response|null',
+            'craft\\commerce\\controllers\\DiscountsController',
+            'actionGenerateCoupons',
+            'yii\\web\\Response',
         ],
         [
             'craft\\commerce\\controllers\\DiscountsController',
@@ -4221,13 +4596,13 @@ return [
         ],
         [
             'craft\\commerce\\controllers\\LineItemStatusesController',
-            'actionSave',
-            'void',
+            'actionArchive',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\LineItemStatusesController',
-            'actionArchive',
-            'yii\\web\\Response|null',
+            'actionSave',
+            'void',
         ],
         [
             'craft\\commerce\\controllers\\LiteShippingController',
@@ -4246,32 +4621,22 @@ return [
         ],
         [
             'craft\\commerce\\controllers\\OrderStatusesController',
-            'actionSave',
-            'void',
-        ],
-        [
-            'craft\\commerce\\controllers\\OrderStatusesController',
             'actionDelete',
             'yii\\web\\Response|null',
         ],
         [
-            'craft\\commerce\\controllers\\OrdersController',
+            'craft\\commerce\\controllers\\OrderStatusesController',
             'actionSave',
-            'yii\\web\\Response|null',
+            'void',
         ],
         [
             'craft\\commerce\\controllers\\OrdersController',
-            'actionDeleteOrder',
-            'yii\\web\\Response|null',
-        ],
-        [
-            'craft\\commerce\\controllers\\OrdersController',
-            'actionRefresh',
+            'actionCreate',
             'yii\\web\\Response',
         ],
         [
             'craft\\commerce\\controllers\\OrdersController',
-            'actionPurchasablesTable',
+            'actionCreateCustomer',
             'yii\\web\\Response',
         ],
         [
@@ -4281,12 +4646,42 @@ return [
         ],
         [
             'craft\\commerce\\controllers\\OrdersController',
-            'actionSendEmail',
+            'actionDeleteOrder',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\commerce\\controllers\\OrdersController',
+            'actionGetCustomerAddresses',
             'yii\\web\\Response',
         ],
         [
             'craft\\commerce\\controllers\\OrdersController',
-            'actionUpdateOrderAddress',
+            'actionGetOrderAddress',
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\commerce\\controllers\\OrdersController',
+            'actionPaymentAmountData',
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\commerce\\controllers\\OrdersController',
+            'actionPurchasablesTable',
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\commerce\\controllers\\OrdersController',
+            'actionRefresh',
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\commerce\\controllers\\OrdersController',
+            'actionSave',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\commerce\\controllers\\OrdersController',
+            'actionSendEmail',
             'yii\\web\\Response',
         ],
         [
@@ -4296,7 +4691,12 @@ return [
         ],
         [
             'craft\\commerce\\controllers\\OrdersController',
-            'actionPaymentAmountData',
+            'actionUpdateOrderAddress',
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\commerce\\controllers\\OrdersController',
+            'actionValidateAddress',
             'yii\\web\\Response',
         ],
         [
@@ -4341,33 +4741,18 @@ return [
         ],
         [
             'craft\\commerce\\controllers\\ProductsController',
-            'actionSaveProduct',
-            'yii\\web\\Response|null',
-        ],
-        [
-            'craft\\commerce\\controllers\\ProductsController',
             'actionDuplicateProduct',
             'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\ProductsController',
-            'enforceProductPermissions',
-            'void',
-        ],
-        [
-            'craft\\commerce\\controllers\\ProductsPreviewController',
-            'actionViewSharedProduct',
-            'yii\\web\\Response|null',
-        ],
-        [
-            'craft\\commerce\\controllers\\ProductsPreviewController',
             'actionSaveProduct',
             'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\ProductsPreviewController',
-            'enforceProductPermissions',
-            'void',
+            'actionViewSharedProduct',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\PromotionsController',
@@ -4377,7 +4762,7 @@ return [
         [
             'craft\\commerce\\controllers\\SalesController',
             'actionSave',
-            'yii\\web\\Response',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\SalesController',
@@ -4387,6 +4772,11 @@ return [
         [
             'craft\\commerce\\controllers\\SettingsController',
             'actionSaveSettings',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\commerce\\controllers\\SettingsController',
+            'actionSaveSubscriptionFieldLayout',
             'yii\\web\\Response|null',
         ],
         [
@@ -4430,38 +4820,18 @@ return [
             'yii\\web\\Response',
         ],
         [
-            'craft\\commerce\\controllers\\StatesController',
-            'actionSave',
-            'void',
-        ],
-        [
-            'craft\\commerce\\controllers\\StatesController',
-            'actionUpdateStatus',
-            'void',
-        ],
-        [
-            'craft\\commerce\\controllers\\StoreLocationController',
-            'actionEditLocation',
+            'craft\\commerce\\controllers\\StoreController',
+            'actionEdit',
             'yii\\web\\Response',
         ],
         [
-            'craft\\commerce\\controllers\\StoreLocationController',
-            'actionSaveStoreLocation',
-            'yii\\web\\Response',
-        ],
-        [
-            'craft\\commerce\\controllers\\SubscriptionsController',
+            'craft\\commerce\\controllers\\StoreController',
             'actionSave',
             'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\SubscriptionsController',
-            'actionRefreshPayments',
-            'yii\\web\\Response',
-        ],
-        [
-            'craft\\commerce\\controllers\\SubscriptionsController',
-            'actionSubscribe',
+            'actionCancel',
             'yii\\web\\Response|null',
         ],
         [
@@ -4471,23 +4841,33 @@ return [
         ],
         [
             'craft\\commerce\\controllers\\SubscriptionsController',
-            'actionSwitch',
+            'actionRefreshPayments',
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\commerce\\controllers\\SubscriptionsController',
+            'actionSave',
             'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\SubscriptionsController',
-            'actionCancel',
+            'actionSubscribe',
             'yii\\web\\Response|null',
         ],
         [
-            'craft\\commerce\\controllers\\TaxCategoriesController',
-            'actionSave',
+            'craft\\commerce\\controllers\\SubscriptionsController',
+            'actionSwitch',
             'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\TaxCategoriesController',
             'actionDelete',
             'yii\\web\\Response',
+        ],
+        [
+            'craft\\commerce\\controllers\\TaxCategoriesController',
+            'actionSave',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\commerce\\controllers\\TaxCategoriesController',
@@ -4496,13 +4876,13 @@ return [
         ],
         [
             'craft\\commerce\\controllers\\TaxRatesController',
-            'actionSave',
-            'void',
+            'actionDelete',
+            'yii\\web\\Response',
         ],
         [
             'craft\\commerce\\controllers\\TaxRatesController',
-            'actionDelete',
-            'yii\\web\\Response',
+            'actionSave',
+            'void',
         ],
         [
             'craft\\commerce\\controllers\\TaxZonesController',
@@ -4515,83 +4895,28 @@ return [
             'yii\\web\\Response',
         ],
         [
+            'craft\\commerce\\controllers\\UserOrdersController',
+            'actionGetOrders',
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\commerce\\debug\\CommercePanel',
+            'getDetail',
+            'string',
+        ],
+        [
+            'craft\\commerce\\debug\\CommercePanel',
+            'getName',
+            'string',
+        ],
+        [
+            'craft\\commerce\\debug\\CommercePanel',
+            'getSummary',
+            'string',
+        ],
+        [
             'craft\\commerce\\elements\\Donation',
             'setSku',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'updateOrderPaidInformation',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'afterOrderComplete',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'removeLineItem',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'addLineItem',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setRecalculationMode',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'recalculate',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getPdfUrl',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getLoadCartUrl',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getCustomer',
-            'craft\\commerce\\models\\Customer|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setCustomer',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getUser',
-            'craft\\elements\\User|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getEmail',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setEmail',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setPaymentAmount',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setLineItems',
             'void',
         ],
         [
@@ -4601,52 +4926,137 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
+            'addLineItem',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'addNotice',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'addNotices',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'afterOrderComplete',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'clearNotices',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
             'getAdjustments',
             'array|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'setAdjustments',
-            'void',
+            'getBillingAddress',
+            'craft\\elements\\Address|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'getShippingAddress',
-            'craft\\commerce\\models\\Address|null',
+            'getCustomer',
+            'craft\\elements\\User|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'setShippingAddress',
-            'void',
+            'getCustomerId',
+            'int|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'removeShippingAddress',
-            'void',
+            'getEmail',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getEstimatedBillingAddress',
+            'craft\\elements\\Address|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
             'getEstimatedShippingAddress',
-            'craft\\commerce\\models\\Address|null',
+            'craft\\elements\\Address|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'setEstimatedShippingAddress',
-            'void',
+            'getFieldLayout',
+            'craft\\models\\FieldLayout',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'removeEstimatedShippingAddress',
-            'void',
+            'getFirstNotice',
+            'craft\\commerce\\models\\OrderNotice|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'getBillingAddress',
-            'craft\\commerce\\models\\Address|null',
+            'getGateway',
+            'craft\\commerce\\base\\GatewayInterface|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'setBillingAddress',
+            'getLastTransaction',
+            'craft\\commerce\\models\\Transaction|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getLoadCartUrl',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getNotices',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getOrderSite',
+            'craft\\models\\Site|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getOrderStatus',
+            'craft\\commerce\\models\\OrderStatus|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getPaymentSource',
+            'craft\\commerce\\models\\PaymentSource|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getPdfUrl',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getShippingAddress',
+            'craft\\elements\\Address|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getShippingMethod',
+            'craft\\commerce\\models\\ShippingMethod|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getTotalAuthorized',
+            'float',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getUser',
+            'craft\\elements\\User|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'recalculate',
             'void',
         ],
         [
@@ -4656,8 +5066,38 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'getEstimatedBillingAddress',
-            'craft\\commerce\\models\\Address|null',
+            'removeLineItem',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'removeShippingAddress',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setAdjustments',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setBillingAddress',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setCustomer',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setCustomerId',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setEmail',
+            'void',
         ],
         [
             'craft\\commerce\\elements\\Order',
@@ -4666,32 +5106,7 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'removeEstimatedBillingAddress',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getShippingMethod',
-            'craft\\commerce\\models\\ShippingMethod|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getGateway',
-            'craft\\commerce\\base\\GatewayInterface|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setPaymentCurrency',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getPaymentSource',
-            'craft\\commerce\\models\\PaymentSource|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setPaymentSource',
+            'setEstimatedShippingAddress',
             'void',
         ],
         [
@@ -4701,42 +5116,42 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
+            'setLineItems',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setPaymentAmount',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setPaymentCurrency',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setPaymentSource',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setRecalculationMode',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setShippingAddress',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
             'setTransactions',
             'void',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'getLastTransaction',
-            'craft\\commerce\\models\\Transaction|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getOrderStatus',
-            'craft\\commerce\\models\\OrderStatus|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getOrderSite',
-            'craft\\models\\Site|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getFieldLayout',
-            'craft\\models\\FieldLayout',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'validateGatewayId',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'validatePaymentSourceId',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'validatePaymentCurrency',
+            'updateOrderPaidInformation',
             'void',
         ],
         [
@@ -4746,17 +5161,7 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'validateAddressCanBeUsed',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
             'validateAddressReuse',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'validateLineItems',
             'void',
         ],
         [
@@ -4766,33 +5171,33 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'getNotices',
-            'array',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'addNotice',
+            'validateGatewayId',
             'void',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'getFirstNotice',
-            'craft\\commerce\\models\\OrderNotice|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'addNotices',
+            'validateLineItems',
             'void',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'clearNotices',
+            'validatePaymentCurrency',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'validatePaymentSourceId',
             'void',
         ],
         [
             'craft\\commerce\\elements\\Product',
-            'getName',
-            'string|null',
+            'beforeValidate',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'getCheapestVariant',
+            'craft\\commerce\\elements\\Variant|null',
         ],
         [
             'craft\\commerce\\elements\\Product',
@@ -4801,8 +5206,13 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Product',
-            'getCheapestVariant',
-            'craft\\commerce\\elements\\Variant|null',
+            'getName',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'setScenario',
+            'void',
         ],
         [
             'craft\\commerce\\elements\\Product',
@@ -4815,44 +5225,9 @@ return [
             'void',
         ],
         [
-            'craft\\commerce\\elements\\Product',
-            'beforeValidate',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'setScenario',
-            'void',
-        ],
-        [
             'craft\\commerce\\elements\\Subscription',
             'canReactivate',
             'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'getIsOnTrial',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'setSubscriptionData',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'getTrialExpires',
-            'DateTime|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'getOrder',
-            'craft\\commerce\\elements\\Order|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Subscription',
-            'getName',
-            'string|null',
         ],
         [
             'craft\\commerce\\elements\\Subscription',
@@ -4870,6 +5245,36 @@ return [
             'bool',
         ],
         [
+            'craft\\commerce\\elements\\Subscription',
+            'getIsOnTrial',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'getName',
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'getOrder',
+            'craft\\commerce\\elements\\Order|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'getTrialExpires',
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Subscription',
+            'setSubscriptionData',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\Variant',
+            'beforeValidate',
+            'bool',
+        ],
+        [
             'craft\\commerce\\elements\\Variant',
             'getProduct',
             'craft\\commerce\\elements\\Product|null',
@@ -4881,7 +5286,7 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Variant',
-            'updateTitle',
+            'setSku',
             'void',
         ],
         [
@@ -4891,13 +5296,38 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Variant',
-            'setSku',
+            'updateTitle',
             'void',
         ],
         [
-            'craft\\commerce\\elements\\Variant',
-            'beforeValidate',
+            'craft\\commerce\\elements\\conditions\\addresses\\PostalCodeFormulaConditionRule',
+            'getExclusiveQueryParams',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\conditions\\addresses\\PostalCodeFormulaConditionRule',
+            'matchElement',
             'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\conditions\\addresses\\PostalCodeFormulaConditionRule',
+            'modifyQuery',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\conditions\\orders\\OrderValuesAttributeConditionRule',
+            'getExclusiveQueryParams',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\conditions\\orders\\OrderValuesAttributeConditionRule',
+            'matchElement',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\conditions\\orders\\OrderValuesAttributeConditionRule',
+            'modifyQuery',
+            'void',
         ],
         [
             'craft\\commerce\\elements\\db\\DonationQuery',
@@ -4906,27 +5336,17 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'number',
+            'customer',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'shortNumber',
+            'customerId',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'reference',
-            'craft\\commerce\\elements\\db\\OrderQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'email',
-            'craft\\commerce\\elements\\db\\OrderQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'isCompleted',
+            'dateAuthorized',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
@@ -4941,47 +5361,12 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'dateAuthorized',
+            'email',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'expiryDate',
-            'craft\\commerce\\elements\\db\\OrderQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'orderStatus',
-            'craft\\commerce\\elements\\db\\OrderQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'orderStatusId',
-            'craft\\commerce\\elements\\db\\OrderQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'orderLanguage',
-            'craft\\commerce\\elements\\db\\OrderQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'orderSiteId',
-            'craft\\commerce\\elements\\db\\OrderQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'origin',
-            'craft\\commerce\\elements\\db\\OrderQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'customer',
-            'craft\\commerce\\elements\\db\\OrderQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'customerId',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
@@ -4996,7 +5381,22 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'user',
+            'hasLineItems',
+            'craft\\commerce\\elements\\db\\OrderQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'hasPurchasables',
+            'craft\\commerce\\elements\\db\\OrderQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'hasTransactions',
+            'craft\\commerce\\elements\\db\\OrderQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'isCompleted',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
@@ -5011,22 +5411,47 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'hasLineItems',
+            'number',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'hasTransactions',
+            'orderLanguage',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'hasPurchasables',
+            'orderSiteId',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'withAll',
+            'orderStatus',
+            'craft\\commerce\\elements\\db\\OrderQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'orderStatusId',
+            'craft\\commerce\\elements\\db\\OrderQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'origin',
+            'craft\\commerce\\elements\\db\\OrderQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'reference',
+            'craft\\commerce\\elements\\db\\OrderQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'shortNumber',
+            'craft\\commerce\\elements\\db\\OrderQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'user',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
@@ -5037,6 +5462,11 @@ return [
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'withAdjustments',
+            'craft\\commerce\\elements\\db\\OrderQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'withAll',
             'craft\\commerce\\elements\\db\\OrderQuery',
         ],
         [
@@ -5056,7 +5486,17 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
-            'defaultPrice',
+            'after',
+            'craft\\commerce\\elements\\db\\ProductQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'availableForPurchase',
+            'craft\\commerce\\elements\\db\\ProductQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'before',
             'craft\\commerce\\elements\\db\\ProductQuery',
         ],
         [
@@ -5071,12 +5511,7 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
-            'defaultWidth',
-            'craft\\commerce\\elements\\db\\ProductQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\ProductQuery',
-            'defaultWeight',
+            'defaultPrice',
             'craft\\commerce\\elements\\db\\ProductQuery',
         ],
         [
@@ -5086,17 +5521,12 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
-            'type',
+            'defaultWeight',
             'craft\\commerce\\elements\\db\\ProductQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
-            'before',
-            'craft\\commerce\\elements\\db\\ProductQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\ProductQuery',
-            'after',
+            'defaultWidth',
             'craft\\commerce\\elements\\db\\ProductQuery',
         ],
         [
@@ -5106,7 +5536,7 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
-            'typeId',
+            'expiryDate',
             'craft\\commerce\\elements\\db\\ProductQuery',
         ],
         [
@@ -5121,32 +5551,27 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
-            'expiryDate',
+            'type',
             'craft\\commerce\\elements\\db\\ProductQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
-            'availableForPurchase',
+            'typeId',
             'craft\\commerce\\elements\\db\\ProductQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'user',
+            'dateCanceled',
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'plan',
+            'dateExpired',
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'userId',
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'planId',
+            'dateSuspended',
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
         ],
         [
@@ -5156,7 +5581,47 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'hasStarted',
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'isCanceled',
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'isExpired',
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'isSuspended',
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'nextPaymentDate',
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'onTrial',
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
             'orderId',
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'plan',
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'planId',
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
         ],
         [
@@ -5171,82 +5636,22 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'onTrial',
+            'user',
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'nextPaymentDate',
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'isCanceled',
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'dateCanceled',
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'hasStarted',
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'isSuspended',
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'dateSuspended',
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'isExpired',
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\SubscriptionQuery',
-            'dateExpired',
+            'userId',
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
-            'sku',
+            'hasProduct',
             'craft\\commerce\\elements\\db\\VariantQuery',
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
-            'product',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
-            'productId',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
-            'typeId',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
-            'isDefault',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
-            'stock',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
-            'price',
+            'hasSales',
             'craft\\commerce\\elements\\db\\VariantQuery',
         ],
         [
@@ -5261,32 +5666,12 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
-            'hasSales',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
-            'hasProduct',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
-            'minQty',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
-            'maxQty',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
-            'width',
-            'craft\\commerce\\elements\\db\\VariantQuery',
-        ],
-        [
-            'craft\\commerce\\elements\\db\\VariantQuery',
             'height',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'isDefault',
             'craft\\commerce\\elements\\db\\VariantQuery',
         ],
         [
@@ -5296,13 +5681,93 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
+            'maxQty',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'minQty',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'price',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'product',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'productId',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'sku',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'stock',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'typeId',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
             'weight',
             'craft\\commerce\\elements\\db\\VariantQuery',
         ],
         [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'width',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+        ],
+        [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'hasContent',
-            'bool',
+            'createCondition',
+            'craft\\elements\\conditions\\ElementConditionInterface',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'defineActions',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'defineDefaultTableAttributes',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'defineExporters',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'defineSearchableAttributes',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'defineSortOptions',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'defineSources',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'defineTableAttributes',
+            'array',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
@@ -5316,47 +5781,17 @@ return [
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'htmlAttributes',
-            'array',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'tableAttributeHtml',
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineSearchableAttributes',
-            'array',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderElementTrait',
             'getSearchKeywords',
             'string',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineSources',
-            'array',
+            'hasContent',
+            'bool',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineActions',
-            'array',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineExporters',
-            'array',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineTableAttributes',
-            'array',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineDefaultTableAttributes',
+            'htmlAttributes',
             'array',
         ],
         [
@@ -5366,23 +5801,13 @@ return [
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineSortOptions',
-            'array',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
-            'getNotices',
-            'array',
+            'tableAttributeHtml',
+            'string',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
             'addNotice',
             'void',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
-            'getFirstNotice',
-            'craft\\commerce\\models\\OrderNotice|null',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
@@ -5396,32 +5821,22 @@ return [
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
+            'getFirstNotice',
+            'craft\\commerce\\models\\OrderNotice|null',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
+            'getNotices',
+            'array',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
             'hasNotices',
             'bool',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validateGatewayId',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validatePaymentSourceId',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validatePaymentCurrency',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
             'validateAddress',
-            'void',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validateAddressCanBeUsed',
             'void',
         ],
         [
@@ -5431,13 +5846,48 @@ return [
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
+            'validateCouponCode',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
+            'validateGatewayId',
+            'void',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
             'validateLineItems',
             'void',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validateCouponCode',
+            'validatePaymentCurrency',
             'void',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
+            'validatePaymentSourceId',
+            'void',
+        ],
+        [
+            'craft\\commerce\\gql\\types\\input\\Product',
+            'getType',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\gql\\types\\input\\Variant',
+            'getType',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\helpers\\DebugPanel',
+            'prependOrAppendModelTab',
+            'void',
+        ],
+        [
+            'craft\\commerce\\helpers\\DebugPanel',
+            'renderModelAttributeRow',
+            'string',
         ],
         [
             'craft\\commerce\\helpers\\LineItem',
@@ -5446,42 +5896,27 @@ return [
         ],
         [
             'craft\\commerce\\helpers\\Locale',
-            'switchAppLanguage',
-            'void',
-        ],
-        [
-            'craft\\commerce\\helpers\\Locale',
             'getSiteAndOtherLanguages',
             'array',
         ],
         [
-            'craft\\commerce\\migrations\\Install',
-            'safeUp',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\migrations\\Install',
-            'safeDown',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\migrations\\Install',
-            'createTables',
+            'craft\\commerce\\helpers\\Locale',
+            'switchAppLanguage',
             'void',
         ],
         [
-            'craft\\commerce\\migrations\\Install',
-            'dropTables',
-            'void',
+            'craft\\commerce\\helpers\\PaymentForm',
+            'getPaymentFormNamespace',
+            'string',
+        ],
+        [
+            'craft\\commerce\\helpers\\PaymentForm',
+            'getPaymentFormParamName',
+            'string',
         ],
         [
             'craft\\commerce\\migrations\\Install',
-            'dropProjectConfig',
-            'void',
-        ],
-        [
-            'craft\\commerce\\migrations\\Install',
-            'createIndexes',
+            '_defaultDonationPurchasable',
             'void',
         ],
         [
@@ -5491,7 +5926,27 @@ return [
         ],
         [
             'craft\\commerce\\migrations\\Install',
+            'createIndexes',
+            'void',
+        ],
+        [
+            'craft\\commerce\\migrations\\Install',
+            'createTables',
+            'void',
+        ],
+        [
+            'craft\\commerce\\migrations\\Install',
             'dropForeignKeys',
+            'void',
+        ],
+        [
+            'craft\\commerce\\migrations\\Install',
+            'dropProjectConfig',
+            'void',
+        ],
+        [
+            'craft\\commerce\\migrations\\Install',
+            'dropTables',
             'void',
         ],
         [
@@ -5501,8 +5956,13 @@ return [
         ],
         [
             'craft\\commerce\\migrations\\Install',
-            '_defaultDonationPurchasable',
-            'void',
+            'safeDown',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\migrations\\Install',
+            'safeUp',
+            'bool',
         ],
         [
             'craft\\commerce\\migrations\\m210901_211323_not_null_booleans',
@@ -5510,79 +5970,74 @@ return [
             'bool',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'validateState',
-            'void',
+            'craft\\commerce\\migrations\\m210922_133729_add_discount_order_condition_builder',
+            'safeDown',
+            'bool',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'validateBusinessTaxId',
-            'void',
+            'craft\\commerce\\migrations\\m210922_133729_add_discount_order_condition_builder',
+            'safeUp',
+            'bool',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'getCountryName',
-            'string',
+            'craft\\commerce\\migrations\\m211118_101920_split_coupon_codes',
+            'safeDown',
+            'bool',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'getCountry',
-            'craft\\commerce\\models\\Country|null',
+            'craft\\commerce\\migrations\\m211118_101920_split_coupon_codes',
+            'safeUp',
+            'bool',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'getStateName',
-            'string',
+            'craft\\commerce\\migrations\\m220301_022054_user_addresses',
+            'safeDown',
+            'bool',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'getStateAbbreviation',
-            'string',
+            'craft\\commerce\\migrations\\m220301_022054_user_addresses',
+            'safeUp',
+            'bool',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'getState',
-            'craft\\commerce\\models\\State|null',
+            'craft\\commerce\\migrations\\m220302_133730_add_discount_user_addresses_condition_builders',
+            'safeDown',
+            'bool',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'getStateValue',
-            'string|int',
+            'craft\\commerce\\migrations\\m220302_133730_add_discount_user_addresses_condition_builders',
+            'safeUp',
+            'bool',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'setStateValue',
-            'void',
+            'craft\\commerce\\migrations\\m220304_094835_discount_conditions',
+            'safeDown',
+            'bool',
         ],
         [
-            'craft\\commerce\\models\\Country',
-            'getStates',
+            'craft\\commerce\\migrations\\m220304_094835_discount_conditions',
+            'safeUp',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\migrations\\m220308_221717_orderhistory_name',
+            'safeDown',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\migrations\\m220308_221717_orderhistory_name',
+            'safeUp',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'getBillingAddressCondition',
+            'craft\\elements\\conditions\\ElementConditionInterface',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'getCoupons',
             'array',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'getUser',
-            'craft\\elements\\User|null',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'setUser',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'getAddressById',
-            'craft\\commerce\\models\\Address|null',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'getPrimaryBillingAddress',
-            'craft\\commerce\\models\\Address|null',
-        ],
-        [
-            'craft\\commerce\\models\\Customer',
-            'getPrimaryShippingAddress',
-            'craft\\commerce\\models\\Address|null',
         ],
         [
             'craft\\commerce\\models\\Discount',
@@ -5591,7 +6046,47 @@ return [
         ],
         [
             'craft\\commerce\\models\\Discount',
+            'getCustomerCondition',
+            'craft\\elements\\conditions\\ElementConditionInterface',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'getOrderCondition',
+            'craft\\elements\\conditions\\ElementConditionInterface',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'getShippingAddressCondition',
+            'craft\\elements\\conditions\\ElementConditionInterface',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'setBillingAddressCondition',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
             'setCategoryIds',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'setCoupons',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'setCustomerCondition',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'setHasFreeShippingForMatchingItems',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'setOrderCondition',
             'void',
         ],
         [
@@ -5601,12 +6096,7 @@ return [
         ],
         [
             'craft\\commerce\\models\\Discount',
-            'setUserGroupIds',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\Discount',
-            'setHasFreeShippingForMatchingItems',
+            'setShippingAddressCondition',
             'void',
         ],
         [
@@ -5616,18 +6106,63 @@ return [
         ],
         [
             'craft\\commerce\\models\\LineItem',
-            'getOrder',
-            'craft\\commerce\\elements\\Order|null',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'setOrder',
-            'void',
+            'getDescription',
+            'string',
         ],
         [
             'craft\\commerce\\models\\LineItem',
             'getLineItemStatus',
             'craft\\commerce\\models\\LineItemStatus|null',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getOptionsSignature',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getOrder',
+            'craft\\commerce\\elements\\Order|null',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getPrice',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getPurchasable',
+            'craft\\commerce\\base\\PurchasableInterface|null',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getSaleAmount',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getSalePrice',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getSku',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getTaxableSubtotal',
+            'float',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'populateFromPurchasable',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'setDescription',
+            'void',
         ],
         [
             'craft\\commerce\\models\\LineItem',
@@ -5641,33 +6176,8 @@ return [
         ],
         [
             'craft\\commerce\\models\\LineItem',
-            'getDescription',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'setDescription',
+            'setOrder',
             'void',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'getSku',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'setSku',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'getOptionsSignature',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'getPrice',
-            'float',
         ],
         [
             'craft\\commerce\\models\\LineItem',
@@ -5676,8 +6186,8 @@ return [
         ],
         [
             'craft\\commerce\\models\\LineItem',
-            'getSalePrice',
-            'float',
+            'setPurchasable',
+            'void',
         ],
         [
             'craft\\commerce\\models\\LineItem',
@@ -5686,32 +6196,7 @@ return [
         ],
         [
             'craft\\commerce\\models\\LineItem',
-            'getSaleAmount',
-            'float',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'getTaxableSubtotal',
-            'float',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'getPurchasable',
-            'craft\\commerce\\base\\PurchasableInterface|null',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'setPurchasable',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'populateFromPurchasable',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\OrderAdjustment',
-            'setSourceSnapshot',
+            'setSku',
             'void',
         ],
         [
@@ -5721,18 +6206,28 @@ return [
         ],
         [
             'craft\\commerce\\models\\OrderAdjustment',
-            'setLineItem',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\OrderAdjustment',
             'getOrder',
             'craft\\commerce\\elements\\Order|null',
         ],
         [
             'craft\\commerce\\models\\OrderAdjustment',
+            'setLineItem',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\OrderAdjustment',
             'setOrder',
             'void',
+        ],
+        [
+            'craft\\commerce\\models\\OrderAdjustment',
+            'setSourceSnapshot',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\OrderHistory',
+            'getNewStatus',
+            'craft\\commerce\\models\\OrderStatus|null',
         ],
         [
             'craft\\commerce\\models\\OrderHistory',
@@ -5746,23 +6241,18 @@ return [
         ],
         [
             'craft\\commerce\\models\\OrderHistory',
-            'getNewStatus',
-            'craft\\commerce\\models\\OrderStatus|null',
-        ],
-        [
-            'craft\\commerce\\models\\OrderHistory',
-            'getCustomer',
-            'craft\\commerce\\models\\Customer|null',
-        ],
-        [
-            'craft\\commerce\\models\\OrderNotice',
-            'setOrder',
-            'void',
+            'getUser',
+            'craft\\elements\\User|null',
         ],
         [
             'craft\\commerce\\models\\OrderNotice',
             'getOrder',
             'craft\\commerce\\elements\\Order|null',
+        ],
+        [
+            'craft\\commerce\\models\\OrderNotice',
+            'setOrder',
+            'void',
         ],
         [
             'craft\\commerce\\models\\OrderStatus',
@@ -5771,12 +6261,12 @@ return [
         ],
         [
             'craft\\commerce\\models\\OrderStatus',
-            'findWithTrashed',
+            'findTrashed',
             'craft\\db\\ActiveQuery',
         ],
         [
             'craft\\commerce\\models\\OrderStatus',
-            'findTrashed',
+            'findWithTrashed',
             'craft\\db\\ActiveQuery',
         ],
         [
@@ -5791,8 +6281,8 @@ return [
         ],
         [
             'craft\\commerce\\models\\PaymentCurrency',
-            'getNumericCode',
-            'int|null',
+            'getCurrency',
+            'string|null',
         ],
         [
             'craft\\commerce\\models\\PaymentCurrency',
@@ -5811,12 +6301,37 @@ return [
         ],
         [
             'craft\\commerce\\models\\PaymentCurrency',
-            'getCurrency',
-            'string|null',
+            'getNumericCode',
+            'int|null',
         ],
         [
             'craft\\commerce\\models\\PaymentCurrency',
             'setCurrency',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\PaymentSource',
+            'getCustomer',
+            'craft\\elements\\User|null',
+        ],
+        [
+            'craft\\commerce\\models\\PaymentSource',
+            'getGateway',
+            'craft\\commerce\\base\\GatewayInterface|null',
+        ],
+        [
+            'craft\\commerce\\models\\PaymentSource',
+            'getUser',
+            'craft\\elements\\User|null',
+        ],
+        [
+            'craft\\commerce\\models\\ProductType',
+            'getTitleFormat',
+            'string',
+        ],
+        [
+            'craft\\commerce\\models\\ProductType',
+            'setShippingCategories',
             'void',
         ],
         [
@@ -5826,12 +6341,12 @@ return [
         ],
         [
             'craft\\commerce\\models\\ProductType',
-            'setShippingCategories',
+            'setTaxCategories',
             'void',
         ],
         [
             'craft\\commerce\\models\\ProductType',
-            'setTaxCategories',
+            'setTitleFormat',
             'void',
         ],
         [
@@ -5870,46 +6385,6 @@ return [
             'string|null',
         ],
         [
-            'craft\\commerce\\models\\Settings',
-            'setOrderPdfFilenameFormat',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\Settings',
-            'setOrderPdfPath',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\Settings',
-            'getOrderPdfFilenameFormat',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\Settings',
-            'getOrderPdfPath',
-            'string',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'setCountries',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'getZipCodeConditionFormula',
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'setStates',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'getStatesLabels',
-            'array',
-        ],
-        [
             'craft\\commerce\\models\\ShippingCategory',
             'setProductTypes',
             'void',
@@ -5926,13 +6401,13 @@ return [
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'setShippingRuleCategories',
-            'void',
+            'getShippingZone',
+            'craft\\commerce\\models\\ShippingAddressZone|null',
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'getShippingZone',
-            'craft\\commerce\\models\\ShippingAddressZone|null',
+            'setShippingRuleCategories',
+            'void',
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
@@ -5940,24 +6415,64 @@ return [
             'void',
         ],
         [
-            'craft\\commerce\\models\\TaxAddressZone',
-            'setIsCountryBased',
-            'void',
+            'craft\\commerce\\models\\Store',
+            'attributes',
+            'array',
         ],
         [
-            'craft\\commerce\\models\\TaxAddressZone',
+            'craft\\commerce\\models\\Store',
+            'getAdministrativeAreasListByCountryCode',
+            'array',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
+            'getCountries',
+            'array',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
+            'getCountriesList',
+            'array',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
+            'getLocationAddress',
+            'craft\\elements\\Address|null',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
+            'getLocationAddressId',
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
+            'getMarketAddressCondition',
+            'craft\\commerce\\elements\\conditions\\addresses\\ZoneAddressCondition',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
+            'safeAttributes',
+            'array',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
             'setCountries',
             'void',
         ],
         [
-            'craft\\commerce\\models\\TaxAddressZone',
-            'setStates',
+            'craft\\commerce\\models\\Store',
+            'setLocationAddress',
             'void',
         ],
         [
-            'craft\\commerce\\models\\TaxAddressZone',
-            'getZipCodeConditionFormula',
-            'string|null',
+            'craft\\commerce\\models\\Store',
+            'setLocationAddressId',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
+            'setMarketAddressCondition',
+            'void',
         ],
         [
             'craft\\commerce\\models\\TaxCategory',
@@ -5966,43 +6481,13 @@ return [
         ],
         [
             'craft\\commerce\\models\\TaxRate',
-            'getTaxZone',
-            'craft\\commerce\\models\\TaxAddressZone|null',
-        ],
-        [
-            'craft\\commerce\\models\\TaxRate',
             'getTaxCategory',
             'craft\\commerce\\models\\TaxCategory|null',
         ],
         [
-            'craft\\commerce\\models\\Transaction',
-            'attributes',
-            'array',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'getParent',
-            'craft\\commerce\\models\\Transaction|null',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'getOrder',
-            'craft\\commerce\\elements\\Order|null',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'setOrder',
-            'void',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'getGateway',
-            'craft\\commerce\\base\\Gateway|null',
-        ],
-        [
-            'craft\\commerce\\models\\Transaction',
-            'setGateway',
-            'void',
+            'craft\\commerce\\models\\TaxRate',
+            'getTaxZone',
+            'craft\\commerce\\models\\TaxAddressZone|null',
         ],
         [
             'craft\\commerce\\models\\Transaction',
@@ -6011,7 +6496,37 @@ return [
         ],
         [
             'craft\\commerce\\models\\Transaction',
+            'attributes',
+            'array',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'getGateway',
+            'craft\\commerce\\base\\Gateway|null',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'getOrder',
+            'craft\\commerce\\elements\\Order|null',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'getParent',
+            'craft\\commerce\\models\\Transaction|null',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
             'setChildTransactions',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'setGateway',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\Transaction',
+            'setOrder',
             'void',
         ],
         [
@@ -6025,6 +6540,21 @@ return [
             'void',
         ],
         [
+            'craft\\commerce\\models\\responses\\Dummy',
+            'getData',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\models\\responses\\Dummy',
+            'redirect',
+            'void',
+        ],
+        [
+            'craft\\commerce\\models\\responses\\DummySubscriptionResponse',
+            'getData',
+            'mixed',
+        ],
+        [
             'craft\\commerce\\models\\responses\\DummySubscriptionResponse',
             'setIsCanceled',
             'void',
@@ -6035,9 +6565,14 @@ return [
             'void',
         ],
         [
-            'craft\\commerce\\plugin\\Services',
-            'getAddresses',
-            'craft\\commerce\\services\\Addresses',
+            'craft\\commerce\\models\\responses\\Manual',
+            'getData',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\models\\responses\\Manual',
+            'redirect',
+            'void',
         ],
         [
             'craft\\commerce\\plugin\\Services',
@@ -6046,8 +6581,8 @@ return [
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getCountries',
-            'craft\\commerce\\services\\Countries',
+            'getCoupons',
+            'craft\\commerce\\services\\Coupons',
         ],
         [
             'craft\\commerce\\plugin\\Services',
@@ -6081,13 +6616,13 @@ return [
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getLineItems',
-            'craft\\commerce\\services\\LineItems',
+            'getLineItemStatuses',
+            'craft\\commerce\\services\\LineItemStatuses',
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getLineItemStatuses',
-            'craft\\commerce\\services\\LineItemStatuses',
+            'getLineItems',
+            'craft\\commerce\\services\\LineItems',
         ],
         [
             'craft\\commerce\\plugin\\Services',
@@ -6101,11 +6636,6 @@ return [
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getOrders',
-            'craft\\commerce\\services\\Orders',
-        ],
-        [
-            'craft\\commerce\\plugin\\Services',
             'getOrderNotices',
             'craft\\commerce\\services\\OrderNotices',
         ],
@@ -6116,18 +6646,23 @@ return [
         ],
         [
             'craft\\commerce\\plugin\\Services',
+            'getOrders',
+            'craft\\commerce\\services\\Orders',
+        ],
+        [
+            'craft\\commerce\\plugin\\Services',
             'getPaymentCurrencies',
             'craft\\commerce\\services\\PaymentCurrencies',
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getPayments',
-            'craft\\commerce\\services\\Payments',
+            'getPaymentSources',
+            'craft\\commerce\\services\\PaymentSources',
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getPaymentSources',
-            'craft\\commerce\\services\\PaymentSources',
+            'getPayments',
+            'craft\\commerce\\services\\Payments',
         ],
         [
             'craft\\commerce\\plugin\\Services',
@@ -6141,13 +6676,13 @@ return [
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getProducts',
-            'craft\\commerce\\services\\Products',
+            'getProductTypes',
+            'craft\\commerce\\services\\ProductTypes',
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getProductTypes',
-            'craft\\commerce\\services\\ProductTypes',
+            'getProducts',
+            'craft\\commerce\\services\\Products',
         ],
         [
             'craft\\commerce\\plugin\\Services',
@@ -6161,13 +6696,13 @@ return [
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getShippingMethods',
-            'craft\\commerce\\services\\ShippingMethods',
+            'getShippingCategories',
+            'craft\\commerce\\services\\ShippingCategories',
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getShippingRules',
-            'craft\\commerce\\services\\ShippingRules',
+            'getShippingMethods',
+            'craft\\commerce\\services\\ShippingMethods',
         ],
         [
             'craft\\commerce\\plugin\\Services',
@@ -6176,8 +6711,8 @@ return [
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getShippingCategories',
-            'craft\\commerce\\services\\ShippingCategories',
+            'getShippingRules',
+            'craft\\commerce\\services\\ShippingRules',
         ],
         [
             'craft\\commerce\\plugin\\Services',
@@ -6186,18 +6721,13 @@ return [
         ],
         [
             'craft\\commerce\\plugin\\Services',
-            'getStates',
-            'craft\\commerce\\services\\States',
+            'getStore',
+            'craft\\commerce\\services\\Store',
         ],
         [
             'craft\\commerce\\plugin\\Services',
             'getSubscriptions',
             'craft\\commerce\\services\\Subscriptions',
-        ],
-        [
-            'craft\\commerce\\plugin\\Services',
-            'getTaxes',
-            'craft\\commerce\\services\\Taxes',
         ],
         [
             'craft\\commerce\\plugin\\Services',
@@ -6213,6 +6743,11 @@ return [
             'craft\\commerce\\plugin\\Services',
             'getTaxZones',
             'craft\\commerce\\services\\TaxZones',
+        ],
+        [
+            'craft\\commerce\\plugin\\Services',
+            'getTaxes',
+            'craft\\commerce\\services\\Taxes',
         ],
         [
             'craft\\commerce\\plugin\\Services',
@@ -6235,6 +6770,11 @@ return [
             'craft\\commerce\\elements\\Donation',
         ],
         [
+            'craft\\commerce\\records\\Coupon',
+            'tableName',
+            'string',
+        ],
+        [
             'craft\\commerce\\records\\Customer',
             'rules',
             'array',
@@ -6245,13 +6785,18 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\records\\OrderStatus',
-            'findWithTrashed',
-            'craft\\db\\ActiveQuery',
+            'craft\\commerce\\records\\OrderHistory',
+            'getUser',
+            'yii\\db\\ActiveQueryInterface',
         ],
         [
             'craft\\commerce\\records\\OrderStatus',
             'findTrashed',
+            'craft\\db\\ActiveQuery',
+        ],
+        [
+            'craft\\commerce\\records\\OrderStatus',
+            'findWithTrashed',
             'craft\\db\\ActiveQuery',
         ],
         [
@@ -6275,14 +6820,14 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\records\\ShippingZoneCountry',
-            'rules',
-            'array',
+            'craft\\commerce\\records\\Store',
+            'getStoreLocation',
+            'yii\\db\\ActiveQueryInterface',
         ],
         [
-            'craft\\commerce\\records\\ShippingZoneState',
-            'rules',
-            'array',
+            'craft\\commerce\\records\\Store',
+            'tableName',
+            'string',
         ],
         [
             'craft\\commerce\\records\\TaxCategory',
@@ -6290,29 +6835,9 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\records\\TaxZoneCountry',
-            'rules',
-            'array',
-        ],
-        [
             'craft\\commerce\\records\\Variant',
             'rules',
             'array',
-        ],
-        [
-            'craft\\commerce\\services\\Addresses',
-            'getAddressById',
-            'craft\\commerce\\models\\Address|null',
-        ],
-        [
-            'craft\\commerce\\services\\Addresses',
-            'getAddressByIdAndCustomerId',
-            'craft\\commerce\\models\\Address|null',
-        ],
-        [
-            'craft\\commerce\\services\\Addresses',
-            'purgeOrphanedAddresses',
-            'void',
         ],
         [
             'craft\\commerce\\services\\Carts',
@@ -6325,53 +6850,68 @@ return [
             'void',
         ],
         [
-            'craft\\commerce\\services\\Countries',
-            'getCountryById',
-            'craft\\commerce\\models\\Country|null',
+            'craft\\commerce\\services\\Coupons',
+            'clearCache',
+            'void',
         ],
         [
-            'craft\\commerce\\services\\Countries',
-            'getCountryByIso',
-            'craft\\commerce\\models\\Country|null',
-        ],
-        [
-            'craft\\commerce\\services\\Customers',
-            'getCustomerById',
-            'craft\\commerce\\models\\Customer|null',
-        ],
-        [
-            'craft\\commerce\\services\\Customers',
-            'getAddressIdsByCustomerId',
-            'array',
-        ],
-        [
-            'craft\\commerce\\services\\Customers',
-            'deleteCustomerById',
+            'craft\\commerce\\services\\Coupons',
+            'deleteCouponById',
             'bool',
         ],
         [
+            'craft\\commerce\\services\\Coupons',
+            'generateCouponCodes',
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'getAllCodes',
+            'array|null',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'getCouponByCode',
+            'craft\\commerce\\models\\Coupon|null',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'getCouponsByDiscountId',
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'saveCoupon',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'saveDiscountCoupons',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\services\\Currencies',
+            'getCurrencyByIso',
+            'craft\\commerce\\models\\Currency|null',
+        ],
+        [
             'craft\\commerce\\services\\Customers',
-            'purgeOrphanedCustomers',
+            'addEditUserCommerceTab',
             'void',
+        ],
+        [
+            'craft\\commerce\\services\\Customers',
+            'addEditUserCommerceTabContent',
+            'string',
+        ],
+        [
+            'craft\\commerce\\services\\Customers',
+            'ensureCustomer',
+            'craft\\commerce\\records\\Customer',
         ],
         [
             'craft\\commerce\\services\\Customers',
             'loginHandler',
-            'void',
-        ],
-        [
-            'craft\\commerce\\services\\Customers',
-            'forgetCustomer',
-            'void',
-        ],
-        [
-            'craft\\commerce\\services\\Customers',
-            'getCustomerByUserId',
-            'craft\\commerce\\models\\Customer|null',
-        ],
-        [
-            'craft\\commerce\\services\\Customers',
-            'logoutHandler',
             'void',
         ],
         [
@@ -6381,23 +6921,28 @@ return [
         ],
         [
             'craft\\commerce\\services\\Customers',
-            'consolidateGuestOrdersByEmail',
-            'void',
+            'savePrimaryBillingAddressId',
+            'bool',
         ],
         [
             'craft\\commerce\\services\\Customers',
-            'addEditUserCustomerInfoTab',
-            'void',
+            'savePrimaryShippingAddressId',
+            'bool',
         ],
         [
-            'craft\\commerce\\services\\Customers',
-            'afterSaveUserHandler',
+            'craft\\commerce\\services\\Discounts',
+            'clearCustomerUsageHistoryById',
             'void',
         ],
         [
             'craft\\commerce\\services\\Discounts',
-            'getDiscountById',
-            'craft\\commerce\\models\\Discount|null',
+            'clearDiscountUsesById',
+            'void',
+        ],
+        [
+            'craft\\commerce\\services\\Discounts',
+            'clearEmailUsageHistoryById',
+            'void',
         ],
         [
             'craft\\commerce\\services\\Discounts',
@@ -6411,18 +6956,8 @@ return [
         ],
         [
             'craft\\commerce\\services\\Discounts',
-            'clearCustomerUsageHistoryById',
-            'void',
-        ],
-        [
-            'craft\\commerce\\services\\Discounts',
-            'clearEmailUsageHistoryById',
-            'void',
-        ],
-        [
-            'craft\\commerce\\services\\Discounts',
-            'clearDiscountUsesById',
-            'void',
+            'getDiscountById',
+            'craft\\commerce\\models\\Discount|null',
         ],
         [
             'craft\\commerce\\services\\Discounts',
@@ -6446,13 +6981,18 @@ return [
         ],
         [
             'craft\\commerce\\services\\Gateways',
+            'getGatewayByHandle',
+            'craft\\commerce\\base\\GatewayInterface|null',
+        ],
+        [
+            'craft\\commerce\\services\\Gateways',
             'getGatewayById',
             'craft\\commerce\\base\\GatewayInterface|null',
         ],
         [
             'craft\\commerce\\services\\Gateways',
-            'handleChangedGateway',
-            'void',
+            'getGatewayOverrides',
+            'array|null',
         ],
         [
             'craft\\commerce\\services\\Gateways',
@@ -6461,18 +7001,13 @@ return [
         ],
         [
             'craft\\commerce\\services\\Gateways',
-            'getGatewayOverrides',
-            'array|null',
+            'handleChangedGateway',
+            'void',
         ],
         [
             'craft\\commerce\\services\\LineItemStatuses',
-            'getLineItemStatusByHandle',
-            'craft\\commerce\\models\\LineItemStatus|null',
-        ],
-        [
-            'craft\\commerce\\services\\LineItemStatuses',
-            'getDefaultLineItemStatusId',
-            'int|null',
+            '_clearCaches',
+            'void',
         ],
         [
             'craft\\commerce\\services\\LineItemStatuses',
@@ -6486,13 +7021,13 @@ return [
         ],
         [
             'craft\\commerce\\services\\LineItemStatuses',
-            'handleChangedLineItemStatus',
-            'void',
+            'getDefaultLineItemStatusId',
+            'int|null',
         ],
         [
             'craft\\commerce\\services\\LineItemStatuses',
-            'handleArchivedLineItemStatus',
-            'void',
+            'getLineItemStatusByHandle',
+            'craft\\commerce\\models\\LineItemStatus|null',
         ],
         [
             'craft\\commerce\\services\\LineItemStatuses',
@@ -6501,7 +7036,12 @@ return [
         ],
         [
             'craft\\commerce\\services\\LineItemStatuses',
-            '_clearCaches',
+            'handleArchivedLineItemStatus',
+            'void',
+        ],
+        [
+            'craft\\commerce\\services\\LineItemStatuses',
+            'handleChangedLineItemStatus',
             'void',
         ],
         [
@@ -6526,17 +7066,12 @@ return [
         ],
         [
             'craft\\commerce\\services\\OrderStatuses',
-            'getOrderStatusById',
-            'craft\\commerce\\models\\OrderStatus|null',
-        ],
-        [
-            'craft\\commerce\\services\\OrderStatuses',
-            'getOrderStatusByHandle',
-            'craft\\commerce\\models\\OrderStatus|null',
-        ],
-        [
-            'craft\\commerce\\services\\OrderStatuses',
             'getDefaultOrderStatus',
+            'craft\\commerce\\models\\OrderStatus|null',
+        ],
+        [
+            'craft\\commerce\\services\\OrderStatuses',
+            'getDefaultOrderStatusForOrder',
             'craft\\commerce\\models\\OrderStatus|null',
         ],
         [
@@ -6546,28 +7081,33 @@ return [
         ],
         [
             'craft\\commerce\\services\\OrderStatuses',
-            'getDefaultOrderStatusForOrder',
-            'craft\\commerce\\models\\OrderStatus|null',
-        ],
-        [
-            'craft\\commerce\\services\\OrderStatuses',
             'getOrderCountByStatus',
             'array',
         ],
         [
-            'craft\\commerce\\services\\Orders',
-            'handleChangedFieldLayout',
+            'craft\\commerce\\services\\OrderStatuses',
+            'getOrderStatusByHandle',
+            'craft\\commerce\\models\\OrderStatus|null',
+        ],
+        [
+            'craft\\commerce\\services\\OrderStatuses',
+            'getOrderStatusById',
+            'craft\\commerce\\models\\OrderStatus|null',
+        ],
+        [
+            'craft\\commerce\\services\\OrderStatuses',
+            'statusChangeHandler',
             'void',
         ],
         [
             'craft\\commerce\\services\\Orders',
-            'pruneDeletedField',
+            'beforeDeleteUserHandler',
             'void',
         ],
         [
             'craft\\commerce\\services\\Orders',
-            'handleDeletedFieldLayout',
-            'void',
+            'eagerLoadAddressesForOrders',
+            'array',
         ],
         [
             'craft\\commerce\\services\\Orders',
@@ -6590,6 +7130,26 @@ return [
             'array|null',
         ],
         [
+            'craft\\commerce\\services\\Orders',
+            'handleChangedFieldLayout',
+            'void',
+        ],
+        [
+            'craft\\commerce\\services\\Orders',
+            'handleDeletedFieldLayout',
+            'void',
+        ],
+        [
+            'craft\\commerce\\services\\Orders',
+            'pruneDeletedField',
+            'void',
+        ],
+        [
+            'craft\\commerce\\services\\PaymentCurrencies',
+            'getNonPrimaryPaymentCurrencies',
+            'array',
+        ],
+        [
             'craft\\commerce\\services\\PaymentCurrencies',
             'getPaymentCurrencyById',
             'craft\\commerce\\models\\PaymentCurrency|null',
@@ -6605,8 +7165,13 @@ return [
             'craft\\commerce\\models\\PaymentCurrency|null',
         ],
         [
-            'craft\\commerce\\services\\PaymentCurrencies',
-            'getNonPrimaryPaymentCurrencies',
+            'craft\\commerce\\services\\PaymentSources',
+            'getAllGatewayPaymentSourcesByCustomerId',
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\PaymentSources',
+            'getAllPaymentSourcesByCustomerId',
             'array',
         ],
         [
@@ -6617,6 +7182,11 @@ return [
         [
             'craft\\commerce\\services\\PaymentSources',
             'getPaymentSourceByIdAndUserId',
+            'craft\\commerce\\models\\PaymentSource|null',
+        ],
+        [
+            'craft\\commerce\\services\\PaymentSources',
+            'getPaymentSourceByTokenAndGatewayId',
             'craft\\commerce\\models\\PaymentSource|null',
         ],
         [
@@ -6656,12 +7226,17 @@ return [
         ],
         [
             'craft\\commerce\\services\\Plans',
-            'getPlansByGatewayId',
-            'array',
+            'getPlanByHandle',
+            'craft\\commerce\\base\\Plan|null',
         ],
         [
             'craft\\commerce\\services\\Plans',
             'getPlanById',
+            'craft\\commerce\\base\\Plan|null',
+        ],
+        [
+            'craft\\commerce\\services\\Plans',
+            'getPlanByReference',
             'craft\\commerce\\base\\Plan|null',
         ],
         [
@@ -6671,17 +7246,37 @@ return [
         ],
         [
             'craft\\commerce\\services\\Plans',
-            'getPlanByHandle',
-            'craft\\commerce\\base\\Plan|null',
+            'getPlansByGatewayId',
+            'array',
         ],
         [
-            'craft\\commerce\\services\\Plans',
-            'getPlanByReference',
-            'craft\\commerce\\base\\Plan|null',
+            'craft\\commerce\\services\\ProductTypes',
+            'afterSaveSiteHandler',
+            'void',
+        ],
+        [
+            'craft\\commerce\\services\\ProductTypes',
+            'getCreatableProductTypeIds',
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\ProductTypes',
+            'getCreatableProductTypes',
+            'array',
         ],
         [
             'craft\\commerce\\services\\ProductTypes',
             'getProductTypeByHandle',
+            'craft\\commerce\\models\\ProductType|null',
+        ],
+        [
+            'craft\\commerce\\services\\ProductTypes',
+            'getProductTypeById',
+            'craft\\commerce\\models\\ProductType|null',
+        ],
+        [
+            'craft\\commerce\\services\\ProductTypes',
+            'getProductTypeByUid',
             'craft\\commerce\\models\\ProductType|null',
         ],
         [
@@ -6696,8 +7291,8 @@ return [
         ],
         [
             'craft\\commerce\\services\\ProductTypes',
-            'pruneDeletedSite',
-            'void',
+            'hasPermission',
+            'bool',
         ],
         [
             'craft\\commerce\\services\\ProductTypes',
@@ -6706,16 +7301,11 @@ return [
         ],
         [
             'craft\\commerce\\services\\ProductTypes',
-            'getProductTypeById',
-            'craft\\commerce\\models\\ProductType|null',
+            'pruneDeletedSite',
+            'void',
         ],
         [
-            'craft\\commerce\\services\\ProductTypes',
-            'getProductTypeByUid',
-            'craft\\commerce\\models\\ProductType|null',
-        ],
-        [
-            'craft\\commerce\\services\\ProductTypes',
+            'craft\\commerce\\services\\Products',
             'afterSaveSiteHandler',
             'void',
         ],
@@ -6725,14 +7315,9 @@ return [
             'craft\\commerce\\elements\\Product|null',
         ],
         [
-            'craft\\commerce\\services\\Products',
-            'afterSaveSiteHandler',
-            'void',
-        ],
-        [
             'craft\\commerce\\services\\Purchasables',
             'getPurchasableById',
-            'craft\\base\\ElementInterface|null',
+            'craft\\commerce\\base\\PurchasableInterface|null',
         ],
         [
             'craft\\commerce\\services\\Sales',
@@ -6741,23 +7326,13 @@ return [
         ],
         [
             'craft\\commerce\\services\\ShippingCategories',
-            'getShippingCategoryById',
-            'craft\\commerce\\models\\ShippingCategory|null',
-        ],
-        [
-            'craft\\commerce\\services\\ShippingCategories',
             'getShippingCategoryByHandle',
             'craft\\commerce\\models\\ShippingCategory|null',
         ],
         [
-            'craft\\commerce\\services\\ShippingMethods',
-            'getShippingMethodByHandle',
-            'craft\\commerce\\models\\ShippingMethod|null',
-        ],
-        [
-            'craft\\commerce\\services\\ShippingMethods',
-            'getShippingMethodById',
-            'craft\\commerce\\models\\ShippingMethod|null',
+            'craft\\commerce\\services\\ShippingCategories',
+            'getShippingCategoryById',
+            'craft\\commerce\\models\\ShippingCategory|null',
         ],
         [
             'craft\\commerce\\services\\ShippingMethods',
@@ -6770,6 +7345,16 @@ return [
             'craft\\commerce\\base\\ShippingRuleInterface|null',
         ],
         [
+            'craft\\commerce\\services\\ShippingMethods',
+            'getShippingMethodByHandle',
+            'craft\\commerce\\models\\ShippingMethod|null',
+        ],
+        [
+            'craft\\commerce\\services\\ShippingMethods',
+            'getShippingMethodById',
+            'craft\\commerce\\models\\ShippingMethod|null',
+        ],
+        [
             'craft\\commerce\\services\\ShippingRules',
             'getShippingRuleById',
             'craft\\commerce\\models\\ShippingRule|null',
@@ -6780,23 +7365,38 @@ return [
             'craft\\commerce\\models\\ShippingAddressZone|null',
         ],
         [
-            'craft\\commerce\\services\\States',
-            'getStateById',
-            'craft\\commerce\\models\\State|null',
+            'craft\\commerce\\services\\Store',
+            'getStore',
+            'craft\\commerce\\models\\Store',
         ],
         [
-            'craft\\commerce\\services\\States',
-            'getStateByAbbreviation',
-            'craft\\commerce\\models\\State|null',
+            'craft\\commerce\\services\\Store',
+            'init',
+            'void',
+        ],
+        [
+            'craft\\commerce\\services\\Store',
+            'saveStore',
+            'bool',
         ],
         [
             'craft\\commerce\\services\\Subscriptions',
-            'handleChangedFieldLayout',
+            'beforeDeleteUserHandler',
             'void',
         ],
         [
             'craft\\commerce\\services\\Subscriptions',
-            'pruneDeletedField',
+            'doesUserHaveSubscriptions',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\services\\Subscriptions',
+            'getSubscriptionCountByPlanId',
+            'int',
+        ],
+        [
+            'craft\\commerce\\services\\Subscriptions',
+            'handleChangedFieldLayout',
             'void',
         ],
         [
@@ -6806,28 +7406,18 @@ return [
         ],
         [
             'craft\\commerce\\services\\Subscriptions',
-            'beforeDeleteUserHandler',
+            'pruneDeletedField',
             'void',
-        ],
-        [
-            'craft\\commerce\\services\\Subscriptions',
-            'getSubscriptionCountByPlanId',
-            'int',
-        ],
-        [
-            'craft\\commerce\\services\\Subscriptions',
-            'doesUserHaveSubscriptions',
-            'bool',
-        ],
-        [
-            'craft\\commerce\\services\\TaxRates',
-            'getTaxRatesByTaxZoneId',
-            'array',
         ],
         [
             'craft\\commerce\\services\\TaxRates',
             'getTaxRateById',
             'craft\\commerce\\models\\TaxRate|null',
+        ],
+        [
+            'craft\\commerce\\services\\TaxRates',
+            'getTaxRatesByTaxZoneId',
+            'array',
         ],
         [
             'craft\\commerce\\services\\TaxZones',
@@ -6851,12 +7441,17 @@ return [
         ],
         [
             'craft\\commerce\\services\\Transactions',
-            'getTransactionByReferenceAndStatus',
+            'getTransactionById',
             'craft\\commerce\\models\\Transaction|null',
         ],
         [
             'craft\\commerce\\services\\Transactions',
-            'getTransactionById',
+            'getTransactionByReference',
+            'craft\\commerce\\models\\Transaction|null',
+        ],
+        [
+            'craft\\commerce\\services\\Transactions',
+            'getTransactionByReferenceAndStatus',
             'craft\\commerce\\models\\Transaction|null',
         ],
         [
@@ -6865,9 +7460,44 @@ return [
             'craft\\commerce\\elements\\Variant|null',
         ],
         [
+            'craft\\commerce\\stats\\AverageOrderTotal',
+            'getData',
+            'string|int|bool|null',
+        ],
+        [
+            'craft\\commerce\\stats\\NewCustomers',
+            'getData',
+            'string|int|bool|null',
+        ],
+        [
+            'craft\\commerce\\stats\\RepeatCustomers',
+            'getData',
+            'array',
+        ],
+        [
+            'craft\\commerce\\stats\\TopCustomers',
+            'getData',
+            'array',
+        ],
+        [
+            'craft\\commerce\\stats\\TopProductTypes',
+            'getData',
+            'array',
+        ],
+        [
             'craft\\commerce\\stats\\TopProducts',
             'getAdjustmentsSelect',
             'yii\\db\\Expression',
+        ],
+        [
+            'craft\\commerce\\stats\\TopProducts',
+            'getData',
+            'array',
+        ],
+        [
+            'craft\\commerce\\stats\\TopProducts',
+            'getGroupBy',
+            'string',
         ],
         [
             'craft\\commerce\\stats\\TopProducts',
@@ -6875,9 +7505,34 @@ return [
             'yii\\db\\Expression',
         ],
         [
-            'craft\\commerce\\stats\\TopProducts',
-            'getGroupBy',
-            'string',
+            'craft\\commerce\\stats\\TopPurchasables',
+            'getData',
+            'array',
+        ],
+        [
+            'craft\\commerce\\stats\\TotalOrders',
+            'getData',
+            'array',
+        ],
+        [
+            'craft\\commerce\\stats\\TotalOrdersByCountry',
+            'getData',
+            'array',
+        ],
+        [
+            'craft\\commerce\\stats\\TotalRevenue',
+            'getData',
+            'array|null',
+        ],
+        [
+            'craft\\commerce\\validators\\CouponsValidator',
+            'validateAttribute',
+            'void',
+        ],
+        [
+            'craft\\commerce\\validators\\StoreCountryValidator',
+            'validateAttribute',
+            'void',
         ],
         [
             'craft\\commerce\\web\\assets\\chartjs\\ChartJsAsset',
@@ -6891,6 +7546,16 @@ return [
         ],
         [
             'craft\\commerce\\web\\assets\\commercecp\\CommerceCpAsset',
+            'registerAssetFiles',
+            'void',
+        ],
+        [
+            'craft\\commerce\\web\\assets\\coupons\\CouponsAsset',
+            'init',
+            'void',
+        ],
+        [
+            'craft\\commerce\\web\\assets\\coupons\\CouponsAsset',
             'registerAssetFiles',
             'void',
         ],
@@ -6930,21 +7595,6 @@ return [
             'void',
         ],
         [
-            'craft\\commerce\\web\\panel\\CommercePanel',
-            'getName',
-            'string',
-        ],
-        [
-            'craft\\commerce\\web\\panel\\CommercePanel',
-            'getSummary',
-            'string',
-        ],
-        [
-            'craft\\commerce\\web\\panel\\CommercePanel',
-            'getDetail',
-            'string',
-        ],
-        [
             'craft\\commerce\\web\\twig\\CraftVariableBehavior',
             'init',
             'void',
@@ -6974,6 +7624,12 @@ return [
             'authorize',
             1,
             'craft\\commerce\\models\\payments\\BasePaymentForm',
+        ],
+        [
+            'craft\\commerce\\base\\GatewayInterface',
+            'availableForUseWithOrder',
+            0,
+            'craft\\commerce\\elements\\Order',
         ],
         [
             'craft\\commerce\\base\\GatewayInterface',
@@ -7013,6 +7669,12 @@ return [
         ],
         [
             'craft\\commerce\\base\\GatewayInterface',
+            'deletePaymentSource',
+            0,
+            'string',
+        ],
+        [
+            'craft\\commerce\\base\\GatewayInterface',
             'purchase',
             0,
             'craft\\commerce\\models\\Transaction',
@@ -7030,28 +7692,10 @@ return [
             'craft\\commerce\\models\\Transaction',
         ],
         [
-            'craft\\commerce\\base\\GatewayInterface',
-            'availableForUseWithOrder',
-            0,
-            'craft\\commerce\\elements\\Order',
-        ],
-        [
             'craft\\commerce\\base\\PlanInterface',
             'canSwitchFrom',
             0,
             'craft\\commerce\\base\\PlanInterface',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'populateLineItem',
-            0,
-            'craft\\commerce\\models\\LineItem',
-        ],
-        [
-            'craft\\commerce\\base\\PurchasableInterface',
-            'getLineItemRules',
-            0,
-            'craft\\commerce\\models\\LineItem',
         ],
         [
             'craft\\commerce\\base\\PurchasableInterface',
@@ -7066,10 +7710,16 @@ return [
             'craft\\commerce\\models\\LineItem',
         ],
         [
-            'craft\\commerce\\base\\ShippingMethodInterface',
-            'getPriceForOrder',
+            'craft\\commerce\\base\\PurchasableInterface',
+            'getLineItemRules',
             0,
-            'craft\\commerce\\elements\\Order',
+            'craft\\commerce\\models\\LineItem',
+        ],
+        [
+            'craft\\commerce\\base\\PurchasableInterface',
+            'populateLineItem',
+            0,
+            'craft\\commerce\\models\\LineItem',
         ],
         [
             'craft\\commerce\\base\\ShippingMethodInterface',
@@ -7079,25 +7729,25 @@ return [
         ],
         [
             'craft\\commerce\\base\\ShippingMethodInterface',
+            'getPriceForOrder',
+            0,
+            'craft\\commerce\\elements\\Order',
+        ],
+        [
+            'craft\\commerce\\base\\ShippingMethodInterface',
             'matchOrder',
             0,
             'craft\\commerce\\elements\\Order',
         ],
         [
             'craft\\commerce\\base\\ShippingRuleInterface',
-            'matchOrder',
-            0,
-            'craft\\commerce\\elements\\Order',
-        ],
-        [
-            'craft\\commerce\\base\\ShippingRuleInterface',
-            'getPercentageRate',
+            'getPerItemRate',
             0,
             'int|null',
         ],
         [
             'craft\\commerce\\base\\ShippingRuleInterface',
-            'getPerItemRate',
+            'getPercentageRate',
             0,
             'int|null',
         ],
@@ -7108,10 +7758,16 @@ return [
             'int|null',
         ],
         [
-            'craft\\commerce\\base\\Stat',
-            'setStartDate',
+            'craft\\commerce\\base\\ShippingRuleInterface',
+            'matchOrder',
             0,
-            'DateTime|null',
+            'craft\\commerce\\elements\\Order',
+        ],
+        [
+            'craft\\commerce\\base\\Stat',
+            '_createChartQuery',
+            2,
+            'craft\\db\\Query|null',
         ],
         [
             'craft\\commerce\\base\\Stat',
@@ -7120,7 +7776,7 @@ return [
             'DateTime|null',
         ],
         [
-            'craft\\commerce\\base\\StatInterface',
+            'craft\\commerce\\base\\Stat',
             'setStartDate',
             0,
             'DateTime|null',
@@ -7128,6 +7784,12 @@ return [
         [
             'craft\\commerce\\base\\StatInterface',
             'setEndDate',
+            0,
+            'DateTime|null',
+        ],
+        [
+            'craft\\commerce\\base\\StatInterface',
+            'setStartDate',
             0,
             'DateTime|null',
         ],
@@ -7145,6 +7807,24 @@ return [
         ],
         [
             'craft\\commerce\\base\\SubscriptionGatewayInterface',
+            'getBillingIssueDescription',
+            0,
+            'craft\\commerce\\elements\\Subscription',
+        ],
+        [
+            'craft\\commerce\\base\\SubscriptionGatewayInterface',
+            'getBillingIssueResolveFormHtml',
+            0,
+            'craft\\commerce\\elements\\Subscription',
+        ],
+        [
+            'craft\\commerce\\base\\SubscriptionGatewayInterface',
+            'getHasBillingIssues',
+            0,
+            'craft\\commerce\\elements\\Subscription',
+        ],
+        [
+            'craft\\commerce\\base\\SubscriptionGatewayInterface',
             'getNextPaymentAmount',
             0,
             'craft\\commerce\\elements\\Subscription',
@@ -7157,12 +7837,6 @@ return [
         ],
         [
             'craft\\commerce\\base\\SubscriptionGatewayInterface',
-            'refreshPaymentHistory',
-            0,
-            'craft\\commerce\\elements\\Subscription',
-        ],
-        [
-            'craft\\commerce\\base\\SubscriptionGatewayInterface',
             'getSubscriptionPlanByReference',
             0,
             'string',
@@ -7170,6 +7844,12 @@ return [
         [
             'craft\\commerce\\base\\SubscriptionGatewayInterface',
             'reactivateSubscription',
+            0,
+            'craft\\commerce\\elements\\Subscription',
+        ],
+        [
+            'craft\\commerce\\base\\SubscriptionGatewayInterface',
+            'refreshPaymentHistory',
             0,
             'craft\\commerce\\elements\\Subscription',
         ],
@@ -7210,22 +7890,76 @@ return [
             'craft\\commerce\\models\\subscriptions\\SwitchPlansForm',
         ],
         [
-            'craft\\commerce\\base\\SubscriptionGatewayInterface',
-            'getHasBillingIssues',
+            'craft\\commerce\\base\\Zone',
+            'setCondition',
             0,
-            'craft\\commerce\\elements\\Subscription',
+            'craft\\commerce\\elements\\conditions\\addresses\\ZoneAddressCondition|array|string|null',
         ],
         [
-            'craft\\commerce\\base\\SubscriptionGatewayInterface',
-            'getBillingIssueDescription',
+            'craft\\commerce\\base\\ZoneInterface',
+            'setCondition',
             0,
-            'craft\\commerce\\elements\\Subscription',
+            'craft\\commerce\\elements\\conditions\\addresses\\ZoneAddressCondition|array|string|null',
         ],
         [
-            'craft\\commerce\\base\\SubscriptionGatewayInterface',
-            'getBillingIssueResolveFormHtml',
+            'craft\\commerce\\behaviors\\CurrencyAttributeBehavior',
+            'defineFields',
             0,
-            'craft\\commerce\\elements\\Subscription',
+            'craft\\events\\DefineFieldsEvent',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'defineRules',
+            0,
+            'craft\\events\\DefineRulesEvent',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'setIsPrimaryBilling',
+            0,
+            'string|bool',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerAddressBehavior',
+            'setIsPrimaryShipping',
+            0,
+            'string|bool',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'afterSaveUserHandler',
+            0,
+            'craft\\events\\ModelEvent',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'setPrimaryBillingAddressId',
+            0,
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\behaviors\\CustomerBehavior',
+            'setPrimaryShippingAddressId',
+            0,
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\behaviors\\StoreLocationBehavior',
+            'authorize',
+            0,
+            'craft\\events\\AuthorizationCheckEvent',
+        ],
+        [
+            'craft\\commerce\\behaviors\\StoreLocationBehavior',
+            'saveStoreLocation',
+            0,
+            'craft\\events\\ModelEvent',
+        ],
+        [
+            'craft\\commerce\\behaviors\\ValidateOrganizationTaxIdBehavior',
+            'defineRules',
+            0,
+            'craft\\events\\DefineRulesEvent',
         ],
         [
             'craft\\commerce\\controllers\\OrdersController',
@@ -7234,58 +7968,52 @@ return [
             'int',
         ],
         [
+            'craft\\commerce\\controllers\\OrdersController',
+            'enforceManageOrderPermissions',
+            0,
+            'craft\\commerce\\elements\\Order',
+        ],
+        [
+            'craft\\commerce\\controllers\\ProductsPreviewController',
+            'actionShareProduct',
+            0,
+            'int',
+        ],
+        [
+            'craft\\commerce\\controllers\\ProductsPreviewController',
+            'actionShareProduct',
+            1,
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\controllers\\ProductsPreviewController',
+            'actionViewSharedProduct',
+            0,
+            'int',
+        ],
+        [
+            'craft\\commerce\\controllers\\ProductsPreviewController',
+            'actionViewSharedProduct',
+            1,
+            'int|null',
+        ],
+        [
             'craft\\commerce\\controllers\\ShippingRulesController',
             'actionSave',
             0,
             'bool',
         ],
         [
+            'craft\\commerce\\controllers\\SubscriptionsController',
+            'enforceManageSubscriptionPermissions',
+            0,
+            'craft\\commerce\\elements\\Subscription',
+        ],
+        [
             'craft\\commerce\\elements\\Donation',
             'setSku',
             0,
             'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'addLineItem',
-            0,
-            'craft\\commerce\\models\\LineItem',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setRecalculationMode',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getPdfUrl',
-            0,
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'getPdfUrl',
-            1,
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setCustomer',
-            0,
-            'craft\\commerce\\models\\Customer|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setEmail',
-            0,
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'setPaymentAmount',
-            0,
-            'float',
         ],
         [
             'craft\\commerce\\elements\\Order',
@@ -7301,15 +8029,99 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'setEstimatedShippingAddress',
+            'addLineItem',
             0,
-            'craft\\commerce\\models\\Address|array',
+            'craft\\commerce\\models\\LineItem',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'clearNotices',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'clearNotices',
+            1,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getNotices',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getNotices',
+            1,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getPdfUrl',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'getPdfUrl',
+            1,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'hasNotices',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'hasNotices',
+            1,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setBillingAddress',
+            0,
+            'craft\\elements\\Address|array|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setCustomer',
+            0,
+            'craft\\elements\\User|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setCustomerId',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setEmail',
+            0,
+            'string|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
             'setEstimatedBillingAddress',
             0,
-            'craft\\commerce\\models\\Address|array',
+            'craft\\elements\\Address|array|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setEstimatedShippingAddress',
+            0,
+            'craft\\elements\\Address|array|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setPaymentAmount',
+            0,
+            'float',
         ],
         [
             'craft\\commerce\\elements\\Order',
@@ -7325,37 +8137,25 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
+            'setRecalculationMode',
+            0,
+            'string',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
+            'setShippingAddress',
+            0,
+            'craft\\elements\\Address|array|null',
+        ],
+        [
+            'craft\\commerce\\elements\\Order',
             'setTransactions',
             0,
             'array|null',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'validateGatewayId',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'validatePaymentSourceId',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'validatePaymentCurrency',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
             'validateAddress',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'validateAddressCanBeUsed',
             0,
             'string',
         ],
@@ -7367,45 +8167,27 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'validateLineItems',
+            'validateGatewayId',
             0,
             'string',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'getNotices',
+            'validatePaymentCurrency',
             0,
-            'string|null',
+            'string',
         ],
         [
             'craft\\commerce\\elements\\Order',
-            'getNotices',
-            1,
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'clearNotices',
+            'validatePaymentSourceId',
             0,
-            'string|null',
+            'string',
         ],
         [
-            'craft\\commerce\\elements\\Order',
-            'clearNotices',
-            1,
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'hasNotices',
+            'craft\\commerce\\elements\\Product',
+            'getCheapestVariant',
             0,
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\Order',
-            'hasNotices',
-            1,
-            'string|null',
+            'bool',
         ],
         [
             'craft\\commerce\\elements\\Product',
@@ -7415,7 +8197,13 @@ return [
         ],
         [
             'craft\\commerce\\elements\\Product',
-            'getCheapestVariant',
+            'getHasUnlimitedStock',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\Product',
+            'getTotalStock',
             0,
             'bool',
         ],
@@ -7432,62 +8220,224 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\elements\\Product',
-            'getTotalStock',
-            0,
-            'bool',
-        ],
-        [
-            'craft\\commerce\\elements\\Product',
-            'getHasUnlimitedStock',
-            0,
-            'bool',
-        ],
-        [
             'craft\\commerce\\elements\\Subscription',
             'setSubscriptionData',
             0,
             'array|string',
         ],
         [
-            'craft\\commerce\\elements\\db\\OrderQuery',
-            'user',
+            'craft\\commerce\\elements\\conditions\\addresses\\PostalCodeFormulaConditionRule',
+            'matchElement',
             0,
-            'craft\\elements\\User|int',
+            'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\commerce\\elements\\conditions\\addresses\\PostalCodeFormulaConditionRule',
+            'modifyQuery',
+            0,
+            'craft\\elements\\db\\ElementQueryInterface',
+        ],
+        [
+            'craft\\commerce\\elements\\conditions\\orders\\OrderValuesAttributeConditionRule',
+            'matchElement',
+            0,
+            'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\commerce\\elements\\conditions\\orders\\OrderValuesAttributeConditionRule',
+            'modifyQuery',
+            0,
+            'craft\\elements\\db\\ElementQueryInterface',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\DonationQuery',
+            'sku',
+            0,
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
-            'withAll',
+            'customer',
+            0,
+            'craft\\elements\\User|int|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'customerId',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'dateAuthorized',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'dateOrdered',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'datePaid',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'email',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'expiryDate',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'gatewayId',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'hasLineItems',
             0,
             'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'hasPurchasables',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'hasTransactions',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'isCompleted',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'isPaid',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'isUnpaid',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'number',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'orderLanguage',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'orderSiteId',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'orderStatus',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'orderStatusId',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'origin',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'reference',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'shortNumber',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'user',
+            0,
+            'craft\\elements\\User|int|null',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'withAddresses',
             0,
-            'bool|null',
+            'bool',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'withAdjustments',
             0,
-            'bool|null',
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\OrderQuery',
+            'withAll',
+            0,
+            'bool',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'withCustomer',
             0,
-            'bool|null',
+            'bool',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'withLineItems',
             0,
-            'bool|null',
+            'bool',
         ],
         [
             'craft\\commerce\\elements\\db\\OrderQuery',
             'withTransactions',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'after',
+            0,
+            'DateTime|string',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'availableForPurchase',
             0,
             'bool|null',
         ],
@@ -7499,67 +8449,283 @@ return [
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
-            'after',
+            'defaultHeight',
             0,
-            'DateTime|string',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'defaultLength',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'defaultPrice',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'defaultSku',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'defaultWeight',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'defaultWidth',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'expiryDate',
+            0,
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\ProductQuery',
             'hasVariant',
             0,
-            'craft\\commerce\\elements\\db\\VariantQuery|array',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'postDate',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'type',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\ProductQuery',
+            'typeId',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'dateCanceled',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'dateExpired',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'dateSuspended',
+            0,
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
             'gatewayId',
             0,
-            'array|int',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'hasStarted',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'isCanceled',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'isExpired',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'isSuspended',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'nextPaymentDate',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'onTrial',
+            0,
+            'bool|null',
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
             'orderId',
             0,
-            'array|int',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'plan',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'planId',
+            0,
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\SubscriptionQuery',
             'reference',
             0,
-            'array|string',
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'trialDays',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'user',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\SubscriptionQuery',
+            'userId',
+            0,
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\db\\VariantQuery',
             'hasProduct',
             0,
-            'craft\\commerce\\elements\\db\\ProductQuery|array',
+            'mixed',
         ],
         [
-            'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'htmlAttributes',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'hasSales',
             0,
-            'string',
+            'bool|null',
         ],
         [
-            'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'tableAttributeHtml',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'hasStock',
             0,
-            'string',
+            'bool|null',
         ],
         [
-            'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'getSearchKeywords',
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'hasUnlimitedStock',
             0,
-            'string',
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'height',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'isDefault',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'length',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'maxQty',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'minQty',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'price',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'product',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'productId',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'sku',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'stock',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'typeId',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'weight',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\elements\\db\\VariantQuery',
+            'width',
+            0,
+            'mixed',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineSources',
+            'defineActions',
             0,
             'string|null',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineActions',
+            'defineDefaultTableAttributes',
             0,
             'string|null',
         ],
@@ -7571,9 +8737,21 @@ return [
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
-            'defineDefaultTableAttributes',
+            'defineSources',
             0,
             'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'getSearchKeywords',
+            0,
+            'string',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'htmlAttributes',
+            0,
+            'string',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderElementTrait',
@@ -7588,16 +8766,10 @@ return [
             'string',
         ],
         [
-            'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
-            'getNotices',
+            'craft\\commerce\\elements\\traits\\OrderElementTrait',
+            'tableAttributeHtml',
             0,
-            'string|null',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
-            'getNotices',
-            1,
-            'string|null',
+            'string',
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
@@ -7625,6 +8797,18 @@ return [
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
+            'getNotices',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
+            'getNotices',
+            1,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderNoticesTrait',
             'hasNotices',
             0,
             'string|null',
@@ -7637,49 +8821,7 @@ return [
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validateGatewayId',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validateGatewayId',
-            2,
-            'yii\\validators\\Validator',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validatePaymentSourceId',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validatePaymentSourceId',
-            2,
-            'yii\\validators\\Validator',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validatePaymentCurrency',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validatePaymentCurrency',
-            2,
-            'yii\\validators\\Validator',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
             'validateAddress',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validateAddressCanBeUsed',
             0,
             'string',
         ],
@@ -7691,15 +8833,51 @@ return [
         ],
         [
             'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
-            'validateLineItems',
+            'validateGatewayId',
             0,
             'string',
         ],
         [
-            'craft\\commerce\\helpers\\Currency',
-            'round',
+            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
+            'validateGatewayId',
+            2,
+            'yii\\validators\\Validator',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
+            'validatePaymentCurrency',
             0,
-            'float',
+            'string',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
+            'validatePaymentCurrency',
+            2,
+            'yii\\validators\\Validator',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
+            'validatePaymentSourceId',
+            0,
+            'string',
+        ],
+        [
+            'craft\\commerce\\elements\\traits\\OrderValidatorsTrait',
+            'validatePaymentSourceId',
+            2,
+            'yii\\validators\\Validator',
+        ],
+        [
+            'craft\\commerce\\gql\\types\\generators\\ProductType',
+            'generateTypes',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\gql\\types\\generators\\VariantType',
+            'generateTypes',
+            0,
+            'mixed',
         ],
         [
             'craft\\commerce\\helpers\\Currency',
@@ -7720,22 +8898,94 @@ return [
             'bool',
         ],
         [
+            'craft\\commerce\\helpers\\Currency',
+            'round',
+            0,
+            'float',
+        ],
+        [
+            'craft\\commerce\\helpers\\Currency',
+            'round',
+            1,
+            'craft\\commerce\\models\\PaymentCurrency|craft\\commerce\\models\\Currency|null',
+        ],
+        [
+            'craft\\commerce\\helpers\\DebugPanel',
+            'prependOrAppendModelTab',
+            0,
+            'object',
+        ],
+        [
+            'craft\\commerce\\helpers\\DebugPanel',
+            'prependOrAppendModelTab',
+            1,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\helpers\\DebugPanel',
+            'prependOrAppendModelTab',
+            2,
+            'bool',
+        ],
+        [
+            'craft\\commerce\\helpers\\DebugPanel',
+            'renderModelAttributeRow',
+            0,
+            'string',
+        ],
+        [
+            'craft\\commerce\\helpers\\DebugPanel',
+            'renderModelAttributeRow',
+            1,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\helpers\\DebugPanel',
+            'renderModelAttributeRow',
+            2,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\helpers\\Localization',
+            'normalizePercentage',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\commerce\\helpers\\PaymentForm',
+            'getPaymentFormNamespace',
+            0,
+            'string',
+        ],
+        [
+            'craft\\commerce\\helpers\\PaymentForm',
+            'getPaymentFormParamName',
+            0,
+            'string',
+        ],
+        [
             'craft\\commerce\\helpers\\VariantMatrix',
             'getVariantMatrixHtml',
             1,
             'string',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'getAddressLines',
+            'craft\\commerce\\models\\Discount',
+            'setBillingAddressCondition',
             0,
-            'bool',
+            'craft\\elements\\conditions\\ElementConditionInterface|array|string',
         ],
         [
-            'craft\\commerce\\models\\Address',
-            'sameAs',
+            'craft\\commerce\\models\\Discount',
+            'setCoupons',
             0,
-            'craft\\commerce\\models\\Address|null',
+            'array',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'setCustomerCondition',
+            0,
+            'craft\\elements\\conditions\\ElementConditionInterface|array|string',
         ],
         [
             'craft\\commerce\\models\\Discount',
@@ -7744,10 +8994,28 @@ return [
             'bool',
         ],
         [
-            'craft\\commerce\\models\\LineItem',
-            'setOptions',
+            'craft\\commerce\\models\\Discount',
+            'setOrderCondition',
             0,
-            'array|string',
+            'craft\\elements\\conditions\\ElementConditionInterface|array|string',
+        ],
+        [
+            'craft\\commerce\\models\\Discount',
+            'setShippingAddressCondition',
+            0,
+            'craft\\elements\\conditions\\ElementConditionInterface|array|string',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getAdjustmentsTotal',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\commerce\\models\\LineItem',
+            'getTaxableSubtotal',
+            0,
+            'string',
         ],
         [
             'craft\\commerce\\models\\LineItem',
@@ -7757,9 +9025,9 @@ return [
         ],
         [
             'craft\\commerce\\models\\LineItem',
-            'setSku',
+            'setOptions',
             0,
-            'string',
+            'array|string',
         ],
         [
             'craft\\commerce\\models\\LineItem',
@@ -7775,15 +9043,9 @@ return [
         ],
         [
             'craft\\commerce\\models\\LineItem',
-            'getTaxableSubtotal',
+            'setSku',
             0,
             'string',
-        ],
-        [
-            'craft\\commerce\\models\\LineItem',
-            'getAdjustmentsTotal',
-            0,
-            'bool',
         ],
         [
             'craft\\commerce\\models\\OrderAdjustment',
@@ -7804,16 +9066,10 @@ return [
             'array',
         ],
         [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'setCountries',
+            'craft\\commerce\\models\\ProductType',
+            'setTitleFormat',
             0,
-            'array',
-        ],
-        [
-            'craft\\commerce\\models\\ShippingAddressZone',
-            'setStates',
-            0,
-            'array',
+            'string',
         ],
         [
             'craft\\commerce\\models\\ShippingCategory',
@@ -7829,13 +9085,13 @@ return [
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'getPercentageRate',
+            'getPerItemRate',
             0,
             'int|null',
         ],
         [
             'craft\\commerce\\models\\ShippingRule',
-            'getPerItemRate',
+            'getPercentageRate',
             0,
             'int|null',
         ],
@@ -7852,16 +9108,28 @@ return [
             'string',
         ],
         [
-            'craft\\commerce\\models\\TaxAddressZone',
+            'craft\\commerce\\models\\Store',
             'setCountries',
             0,
-            'array',
+            'mixed',
         ],
         [
-            'craft\\commerce\\models\\TaxAddressZone',
-            'setStates',
+            'craft\\commerce\\models\\Store',
+            'setLocationAddress',
             0,
-            'array',
+            'craft\\elements\\Address|null',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
+            'setLocationAddressId',
+            0,
+            'array|int',
+        ],
+        [
+            'craft\\commerce\\models\\Store',
+            'setMarketAddressCondition',
+            0,
+            'craft\\commerce\\elements\\conditions\\addresses\\ZoneAddressCondition|array|string|null',
         ],
         [
             'craft\\commerce\\models\\TaxCategory',
@@ -7876,40 +9144,82 @@ return [
             'string',
         ],
         [
-            'craft\\commerce\\services\\Addresses',
-            'getAddressByIdAndCustomerId',
-            1,
-            'int|null',
-        ],
-        [
-            'craft\\commerce\\services\\Addresses',
-            'addressWithinZone',
-            0,
-            'craft\\commerce\\models\\Address',
-        ],
-        [
             'craft\\commerce\\services\\Carts',
             'getCart',
             0,
             'bool',
         ],
         [
-            'craft\\commerce\\services\\Customers',
-            'getAddressIdsByCustomerId',
+            'craft\\commerce\\services\\Coupons',
+            'deleteCouponById',
             0,
             'int',
         ],
         [
-            'craft\\commerce\\services\\Customers',
-            'deleteCustomer',
+            'craft\\commerce\\services\\Coupons',
+            'generateCouponCodes',
             0,
-            'craft\\commerce\\models\\Customer',
+            'int',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'generateCouponCodes',
+            1,
+            'string',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'generateCouponCodes',
+            2,
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'getCouponByCode',
+            0,
+            'string',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'getCouponsByDiscountId',
+            0,
+            'int',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'saveCoupon',
+            0,
+            'craft\\commerce\\models\\Coupon',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'saveCoupon',
+            1,
+            'bool',
+        ],
+        [
+            'craft\\commerce\\services\\Coupons',
+            'saveDiscountCoupons',
+            0,
+            'craft\\commerce\\models\\Discount',
         ],
         [
             'craft\\commerce\\services\\Customers',
-            'deleteCustomerById',
+            'addEditUserCommerceTab',
             0,
-            'int',
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\Customers',
+            'addEditUserCommerceTabContent',
+            0,
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\Customers',
+            'ensureCustomer',
+            0,
+            'craft\\elements\\User',
         ],
         [
             'craft\\commerce\\services\\Customers',
@@ -7919,13 +9229,31 @@ return [
         ],
         [
             'craft\\commerce\\services\\Customers',
-            'getCustomersQuery',
+            'savePrimaryBillingAddressId',
             0,
-            'string|null',
+            'craft\\elements\\User',
+        ],
+        [
+            'craft\\commerce\\services\\Customers',
+            'savePrimaryBillingAddressId',
+            1,
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\services\\Customers',
+            'savePrimaryShippingAddressId',
+            0,
+            'craft\\elements\\User',
+        ],
+        [
+            'craft\\commerce\\services\\Customers',
+            'savePrimaryShippingAddressId',
+            1,
+            'int|null',
         ],
         [
             'craft\\commerce\\services\\Discounts',
-            'getDiscountById',
+            'deleteDiscountById',
             0,
             'int',
         ],
@@ -7943,7 +9271,7 @@ return [
         ],
         [
             'craft\\commerce\\services\\Discounts',
-            'deleteDiscountById',
+            'getDiscountById',
             0,
             'int',
         ],
@@ -7955,13 +9283,13 @@ return [
         ],
         [
             'craft\\commerce\\services\\Emails',
-            'getEmailById',
+            'deleteEmailById',
             0,
             'int',
         ],
         [
             'craft\\commerce\\services\\Emails',
-            'deleteEmailById',
+            'getEmailById',
             0,
             'int',
         ],
@@ -7997,30 +9325,6 @@ return [
         ],
         [
             'craft\\commerce\\services\\Formulas',
-            'validateConditionSyntax',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\services\\Formulas',
-            'validateConditionSyntax',
-            1,
-            'array',
-        ],
-        [
-            'craft\\commerce\\services\\Formulas',
-            'validateFormulaSyntax',
-            0,
-            'string',
-        ],
-        [
-            'craft\\commerce\\services\\Formulas',
-            'validateFormulaSyntax',
-            1,
-            'array',
-        ],
-        [
-            'craft\\commerce\\services\\Formulas',
             'evaluateCondition',
             1,
             'array',
@@ -8030,6 +9334,54 @@ return [
             'evaluateCondition',
             2,
             'string',
+        ],
+        [
+            'craft\\commerce\\services\\Formulas',
+            'evaluateFormula',
+            1,
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\Formulas',
+            'evaluateFormula',
+            2,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\services\\Formulas',
+            'evaluateFormula',
+            3,
+            'string|null',
+        ],
+        [
+            'craft\\commerce\\services\\Formulas',
+            'validateConditionSyntax',
+            0,
+            'string',
+        ],
+        [
+            'craft\\commerce\\services\\Formulas',
+            'validateConditionSyntax',
+            1,
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\Formulas',
+            'validateFormulaSyntax',
+            0,
+            'string',
+        ],
+        [
+            'craft\\commerce\\services\\Formulas',
+            'validateFormulaSyntax',
+            1,
+            'array',
+        ],
+        [
+            'craft\\commerce\\services\\Gateways',
+            'createGateway',
+            0,
+            'array|string',
         ],
         [
             'craft\\commerce\\services\\LineItemStatuses',
@@ -8045,12 +9397,6 @@ return [
         ],
         [
             'craft\\commerce\\services\\LineItems',
-            'resolveLineItem',
-            0,
-            'craft\\commerce\\elements\\Order',
-        ],
-        [
-            'craft\\commerce\\services\\LineItems',
             'createLineItem',
             0,
             'craft\\commerce\\elements\\Order',
@@ -8062,10 +9408,16 @@ return [
             'string|null',
         ],
         [
-            'craft\\commerce\\services\\OrderAdjustments',
-            'getAllOrderAdjustmentsByOrderId',
+            'craft\\commerce\\services\\LineItems',
+            'getLineItemById',
             0,
             'int',
+        ],
+        [
+            'craft\\commerce\\services\\LineItems',
+            'resolveLineItem',
+            0,
+            'craft\\commerce\\elements\\Order',
         ],
         [
             'craft\\commerce\\services\\OrderAdjustments',
@@ -8080,14 +9432,8 @@ return [
             'int',
         ],
         [
-            'craft\\commerce\\services\\OrderHistories',
-            'getOrderHistoryById',
-            0,
-            'int',
-        ],
-        [
-            'craft\\commerce\\services\\OrderHistories',
-            'getAllOrderHistoriesByOrderId',
+            'craft\\commerce\\services\\OrderAdjustments',
+            'getAllOrderAdjustmentsByOrderId',
             0,
             'int',
         ],
@@ -8104,10 +9450,28 @@ return [
             'int',
         ],
         [
+            'craft\\commerce\\services\\OrderHistories',
+            'getAllOrderHistoriesByOrderId',
+            0,
+            'int',
+        ],
+        [
+            'craft\\commerce\\services\\OrderHistories',
+            'getOrderHistoryById',
+            0,
+            'int',
+        ],
+        [
             'craft\\commerce\\services\\OrderStatuses',
             'getAllOrderStatuses',
             0,
             'bool',
+        ],
+        [
+            'craft\\commerce\\services\\OrderStatuses',
+            'getOrderStatusByHandle',
+            0,
+            'string',
         ],
         [
             'craft\\commerce\\services\\OrderStatuses',
@@ -8117,15 +9481,39 @@ return [
         ],
         [
             'craft\\commerce\\services\\OrderStatuses',
-            'getOrderStatusByHandle',
+            'statusChangeHandler',
             0,
-            'string',
+            'craft\\commerce\\elements\\Order',
+        ],
+        [
+            'craft\\commerce\\services\\OrderStatuses',
+            'statusChangeHandler',
+            1,
+            'craft\\commerce\\models\\OrderHistory',
+        ],
+        [
+            'craft\\commerce\\services\\Orders',
+            'beforeDeleteUserHandler',
+            0,
+            'craft\\events\\ModelEvent',
+        ],
+        [
+            'craft\\commerce\\services\\Orders',
+            'eagerLoadAddressesForOrders',
+            0,
+            'array',
         ],
         [
             'craft\\commerce\\services\\Orders',
             'getOrdersByCustomer',
             0,
-            'craft\\commerce\\models\\Customer|int',
+            'craft\\elements\\User|int',
+        ],
+        [
+            'craft\\commerce\\services\\PaymentCurrencies',
+            'convertCurrency',
+            3,
+            'bool',
         ],
         [
             'craft\\commerce\\services\\PaymentCurrencies',
@@ -8146,6 +9534,30 @@ return [
             'int',
         ],
         [
+            'craft\\commerce\\services\\PaymentSources',
+            'getAllGatewayPaymentSourcesByCustomerId',
+            0,
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\services\\PaymentSources',
+            'getAllGatewayPaymentSourcesByCustomerId',
+            1,
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\services\\PaymentSources',
+            'getAllPaymentSourcesByCustomerId',
+            0,
+            'int|null',
+        ],
+        [
+            'craft\\commerce\\services\\Payments',
+            'completePayment',
+            1,
+            'string|null',
+        ],
+        [
             'craft\\commerce\\services\\Payments',
             'processPayment',
             2,
@@ -8158,6 +9570,24 @@ return [
             'craft\\commerce\\models\\Transaction|null',
         ],
         [
+            'craft\\commerce\\services\\Payments',
+            'refundTransaction',
+            1,
+            'float|null',
+        ],
+        [
+            'craft\\commerce\\services\\Payments',
+            'refundTransaction',
+            2,
+            'string',
+        ],
+        [
+            'craft\\commerce\\services\\Pdfs',
+            'deletePdfById',
+            0,
+            'int',
+        ],
+        [
             'craft\\commerce\\services\\Pdfs',
             'getPdfByHandle',
             0,
@@ -8166,12 +9596,6 @@ return [
         [
             'craft\\commerce\\services\\Pdfs',
             'getPdfById',
-            0,
-            'int',
-        ],
-        [
-            'craft\\commerce\\services\\Pdfs',
-            'deletePdfById',
             0,
             'int',
         ],
@@ -8219,15 +9643,27 @@ return [
         ],
         [
             'craft\\commerce\\services\\ProductTypes',
+            'getProductTypesByShippingCategoryId',
+            0,
+            'int',
+        ],
+        [
+            'craft\\commerce\\services\\ProductTypes',
             'getProductTypesByTaxCategoryId',
             0,
             'int',
         ],
         [
             'craft\\commerce\\services\\ProductTypes',
-            'getProductTypesByShippingCategoryId',
+            'hasPermission',
             0,
-            'int',
+            'craft\\elements\\User',
+        ],
+        [
+            'craft\\commerce\\services\\ProductTypes',
+            'hasPermission',
+            1,
+            'craft\\commerce\\models\\ProductType',
         ],
         [
             'craft\\commerce\\services\\Products',
@@ -8249,6 +9685,12 @@ return [
         ],
         [
             'craft\\commerce\\services\\ShippingMethods',
+            'deleteShippingMethodById',
+            0,
+            'int',
+        ],
+        [
+            'craft\\commerce\\services\\ShippingMethods',
             'getMatchingShippingMethods',
             0,
             'craft\\commerce\\elements\\Order',
@@ -8260,8 +9702,8 @@ return [
             'craft\\commerce\\base\\ShippingMethodInterface',
         ],
         [
-            'craft\\commerce\\services\\ShippingMethods',
-            'deleteShippingMethodById',
+            'craft\\commerce\\services\\ShippingRules',
+            'deleteShippingRuleById',
             0,
             'int',
         ],
@@ -8278,8 +9720,8 @@ return [
             'int',
         ],
         [
-            'craft\\commerce\\services\\ShippingRules',
-            'deleteShippingRuleById',
+            'craft\\commerce\\services\\ShippingZones',
+            'deleteShippingZoneById',
             0,
             'int',
         ],
@@ -8290,14 +9732,14 @@ return [
             'int',
         ],
         [
-            'craft\\commerce\\services\\ShippingZones',
-            'deleteShippingZoneById',
+            'craft\\commerce\\services\\Store',
+            'saveStore',
             0,
-            'int',
+            'craft\\commerce\\models\\Store',
         ],
         [
-            'craft\\commerce\\services\\States',
-            'getStatesByShippingZoneId',
+            'craft\\commerce\\services\\Subscriptions',
+            'doesUserHaveSubscriptions',
             0,
             'int',
         ],
@@ -8308,14 +9750,8 @@ return [
             'int',
         ],
         [
-            'craft\\commerce\\services\\Subscriptions',
-            'doesUserHaveSubscriptions',
-            0,
-            'int',
-        ],
-        [
             'craft\\commerce\\services\\TaxCategories',
-            'getTaxCategoryById',
+            'deleteTaxCategoryById',
             0,
             'int',
         ],
@@ -8326,8 +9762,14 @@ return [
             'string',
         ],
         [
+            'craft\\commerce\\services\\TaxCategories',
+            'getTaxCategoryById',
+            0,
+            'int',
+        ],
+        [
             'craft\\commerce\\services\\TaxRates',
-            'getTaxRatesByTaxZoneId',
+            'deleteTaxRateById',
             0,
             'int',
         ],
@@ -8339,19 +9781,19 @@ return [
         ],
         [
             'craft\\commerce\\services\\TaxRates',
-            'deleteTaxRateById',
-            0,
-            'int',
-        ],
-        [
-            'craft\\commerce\\services\\TaxZones',
-            'getTaxZoneById',
+            'getTaxRatesByTaxZoneId',
             0,
             'int',
         ],
         [
             'craft\\commerce\\services\\TaxZones',
             'deleteTaxZoneById',
+            0,
+            'int',
+        ],
+        [
+            'craft\\commerce\\services\\TaxZones',
+            'getTaxZoneById',
             0,
             'int',
         ],
@@ -8372,6 +9814,36 @@ return [
             'getAllVariantsByProductId',
             2,
             'bool',
+        ],
+        [
+            'craft\\commerce\\services\\Webhooks',
+            'processWebhook',
+            0,
+            'craft\\commerce\\base\\GatewayInterface',
+        ],
+        [
+            'craft\\commerce\\web\\twig\\CraftVariableBehavior',
+            'orders',
+            0,
+            'array',
+        ],
+        [
+            'craft\\commerce\\web\\twig\\CraftVariableBehavior',
+            'products',
+            0,
+            'array',
+        ],
+        [
+            'craft\\commerce\\web\\twig\\CraftVariableBehavior',
+            'subscriptions',
+            0,
+            'array',
+        ],
+        [
+            'craft\\commerce\\web\\twig\\CraftVariableBehavior',
+            'variants',
+            0,
+            'array',
         ],
     ],
 ];
