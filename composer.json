@@ -3,7 +3,7 @@
     "description": "Rector sets to automate Craft CMS upgrades",
     "require": {
         "php": "^8.0.2",
-        "rector/rector": "dev-main",
+        "rector/rector": "^0.12.21",
         "symplify/package-builder": "^10.1"
     },
     "require-dev": {
