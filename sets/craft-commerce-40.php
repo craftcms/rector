@@ -7,21 +7,18 @@ use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\Rector\PropertyFetch\RenamePropertyRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
 use Rector\Renaming\ValueObject\RenameProperty;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function(ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-
-    $services->set(RenamePropertyRector::class)
-        ->configure([
+return static function(\Rector\Config\RectorConfig $rectorConfig): void {
+    $rectorConfig
+        ->ruleWithConfiguration(RenamePropertyRector::class, [
             new RenameProperty('craft\commerce\model\ProductType', 'titleFormat', 'variantTitleFormat'),
         ]);
 
-    $services->set(RenameMethodRector::class)
-        ->configure([
+    $rectorConfig
+        ->ruleWithConfiguration(RenameMethodRector::class, [
             new MethodCallRename('craft\commerce\services\ShippingMethods', 'getAvailableShippingMethods', 'getMatchingShippingMethods'),
         ]);
 
     // Property/method signatures
-    SignatureConfigurator::configure($containerConfigurator, 'craft-commerce-40');
+    SignatureConfigurator::configure($rectorConfig, 'craft-commerce-40');
 };
