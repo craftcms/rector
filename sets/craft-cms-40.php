@@ -5,6 +5,7 @@ declare(strict_types=1);
 use craft\rector\SignatureConfigurator;
 use Rector\Arguments\Rector\MethodCall\RemoveMethodCallParamRector;
 use Rector\Arguments\ValueObject\RemoveMethodCallParam;
+use Rector\Config\RectorConfig;
 use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\Rector\Name\RenameClassRector;
@@ -14,7 +15,7 @@ use Rector\Symfony\Set\TwigSetList;
 use Rector\Transform\Rector\MethodCall\MethodCallToPropertyFetchRector;
 use Rector\Transform\ValueObject\MethodCallToPropertyFetch;
 
-return static function(\Rector\Config\RectorConfig $rectorConfig): void {
+return static function(RectorConfig $rectorConfig): void {
     $rectorConfig->import(__DIR__ . '/craft-cms-40/*');
     $rectorConfig
         ->ruleWithConfiguration(RenameMethodRector::class, [

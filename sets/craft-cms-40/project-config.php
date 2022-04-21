@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
+use Rector\Config\RectorConfig;
 use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
 use Rector\Renaming\ValueObject\RenameClassAndConstFetch;
 
-return static function(\Rector\Config\RectorConfig $rectorConfig): void {
+return static function(RectorConfig $rectorConfig): void {
     $rectorConfig
         ->ruleWithConfiguration(RenameMethodRector::class, [
             new MethodCallRename('craft\services\ProjectConfig', 'applyYamlChanges', 'applyExternalChanges'),

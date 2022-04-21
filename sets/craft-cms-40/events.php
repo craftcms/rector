@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
+use Rector\Config\RectorConfig;
 use Rector\Renaming\Rector\Name\RenameClassRector;
 use Rector\Renaming\Rector\PropertyFetch\RenamePropertyRector;
 use Rector\Renaming\ValueObject\RenameProperty;
 
-return static function(\Rector\Config\RectorConfig $rectorConfig): void {
+return static function(RectorConfig $rectorConfig): void {
     $rectorConfig
         ->ruleWithConfiguration(RenameClassRector::class, [
             'craft\events\GetAssetThumbUrlEvent' => 'craft\events\DefineAssetThumbUrlEvent',
