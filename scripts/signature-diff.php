@@ -31,9 +31,7 @@ if (!is_file($signatureFile)) {
 $oldSignatures = require $signatureFile;
 
 /**
- * @param string $name
- * @param string $alias
- * @return string|array|null
+ * @return string|string[]|null
  */
 function getCliOption(string $name, ?string $alias = null): string|array|null
 {

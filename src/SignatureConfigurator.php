@@ -103,6 +103,9 @@ final class SignatureConfigurator
         };
     }
 
+    /**
+     * @param string[] $types
+     */
     private static function createUnionType(array $types): UnionType
     {
         $normalizedTypes = array_map(fn(string $type) => self::type($type), $types);
