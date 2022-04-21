@@ -63,8 +63,8 @@ if ($autoload) {
 final class SignatureDiffer
 {
     /**
-     * @param string[] $classes
-     * @return array
+     * @param array{propertyTypes: mixed[], methodReturnTypes: mixed[], methodParamTypes: mixed[]} $oldSignatures
+     * @return array{propertyTypes: mixed[], methodReturnTypes: mixed[], methodParamTypes: mixed[]}
      */
     public function diff(array $oldSignatures): array
     {
