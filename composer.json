@@ -2,7 +2,7 @@
     "name": "craftcms/rector",
     "description": "Rector sets to automate Craft CMS upgrades",
     "require": {
-        "php": "^8.0",
+        "php": "^8.0.2",
         "rector/rector": "dev-main",
         "symplify/package-builder": "^10.1"
     },
