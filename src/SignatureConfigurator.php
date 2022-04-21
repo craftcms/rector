@@ -38,7 +38,7 @@ final class SignatureConfigurator
 
     public static function configure(RectorConfig $rectorConfig, string $name): void
     {
-        $signatures = require dirname(__DIR__) . "/signatures/$name.php";
+        $signatures = require dirname(__DIR__) . sprintf('/signatures/%s.php', $name);
 
         if (isset($signatures['propertyTypes'])) {
             $propertyTypeConfigs = [];
@@ -47,6 +47,7 @@ final class SignatureConfigurator
                     $propertyTypeConfigs[] = new AddPropertyTypeDeclaration($className, $propertyName, self::type($type));
                 }
             }
+
             $rectorConfig->ruleWithConfiguration(AddPropertyTypeDeclarationRector::class, $propertyTypeConfigs);
         }
 
@@ -57,6 +58,7 @@ final class SignatureConfigurator
                     $methodReturnTypeConfigs[] = new AddReturnTypeDeclaration($className, $method, self::type($returnType));
                 }
             }
+
             $rectorConfig->ruleWithConfiguration(AddReturnTypeDeclarationRector::class, $methodReturnTypeConfigs);
         }
 
@@ -77,6 +79,7 @@ final class SignatureConfigurator
         if (!isset(self::$types[$type])) {
             self::$types[$type] = self::createType($type);
         }
+
         return self::$types[$type];
     }
 
