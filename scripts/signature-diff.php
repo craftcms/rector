@@ -31,9 +31,7 @@ if (!is_file($signatureFile)) {
 $oldSignatures = require $signatureFile;
 
 /**
- * @param string $name
- * @param string $alias
- * @return string|array|null
+ * @return string|string[]|null
  */
 function getCliOption(string $name, ?string $alias = null): string|array|null
 {
@@ -63,8 +61,8 @@ if ($autoload) {
 final class SignatureDiffer
 {
     /**
-     * @param string[] $classes
-     * @return array
+     * @param array{propertyTypes: mixed[], methodReturnTypes: mixed[], methodParamTypes: mixed[]} $oldSignatures
+     * @return array{propertyTypes: mixed[], methodReturnTypes: mixed[], methodParamTypes: mixed[]}
      */
     public function diff(array $oldSignatures): array
     {

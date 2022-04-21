@@ -24,9 +24,7 @@ if (!isset($_SERVER['argv'][2])) {
 $name = $_SERVER['argv'][2];
 
 /**
- * @param string $name
- * @param string $alias
- * @return string|array|null
+ * @return string|string[]|null
  */
 function getCliOption(string $name, ?string $alias = null): string|array|null
 {
@@ -142,7 +140,14 @@ echo "✓\n";
 
 final class SignatureBuilder
 {
+    /**
+     * @var array{propertyTypes: mixed[], methodReturnTypes: mixed[], methodParamTypes: mixed[]}
+     */
     private array $signatures;
+
+    /**
+     * @var callable
+     */
     private $filterNamespace;
 
     public function __construct(callable $filterNamespaces)
@@ -157,7 +162,7 @@ final class SignatureBuilder
 
     /**
      * @param string[] $classes
-     * @return array
+     * @return array{propertyTypes: mixed[], methodReturnTypes: mixed[], methodParamTypes: mixed[]}
      */
     public function build(array $classes): array
     {
@@ -196,9 +201,6 @@ final class SignatureBuilder
         throw new UnexpectedValueException(sprintf('Unexpected reflection type: %s', get_class($type)));
     }
 
-    /**
-     * @param ReflectionClass $class
-     */
     private function analyzeClass(ReflectionClass $class): void
     {
         if ($class->isFinal() || !call_user_func($this->filterNamespace, $class->name)) {

@@ -19,6 +19,7 @@ use PHPStan\Type\StringType;
 use PHPStan\Type\Type;
 use PHPStan\Type\UnionType;
 use PHPStan\Type\VoidType;
+use Rector\Config\RectorConfig;
 use Rector\TypeDeclaration\Rector\ClassMethod\AddParamTypeDeclarationRector;
 use Rector\TypeDeclaration\Rector\ClassMethod\AddReturnTypeDeclarationRector;
 use Rector\TypeDeclaration\Rector\Property\AddPropertyTypeDeclarationRector;
@@ -26,7 +27,6 @@ use Rector\TypeDeclaration\ValueObject\AddParamTypeDeclaration;
 use Rector\TypeDeclaration\ValueObject\AddPropertyTypeDeclaration;
 use Rector\TypeDeclaration\ValueObject\AddReturnTypeDeclaration;
 use ReflectionClass;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 
 final class SignatureConfigurator
@@ -36,10 +36,9 @@ final class SignatureConfigurator
      */
     private static array $types = [];
 
-    public static function configure(ContainerConfigurator $containerConfigurator, string $name): void
+    public static function configure(RectorConfig $rectorConfig, string $name): void
     {
-        $signatures = require dirname(__DIR__) . "/signatures/$name.php";
-        $services = $containerConfigurator->services();
+        $signatures = require dirname(__DIR__) . sprintf('/signatures/%s.php', $name);
 
         if (isset($signatures['propertyTypes'])) {
             $propertyTypeConfigs = [];
@@ -48,7 +47,8 @@ final class SignatureConfigurator
                     $propertyTypeConfigs[] = new AddPropertyTypeDeclaration($className, $propertyName, self::type($type));
                 }
             }
-            $services->set(AddPropertyTypeDeclarationRector::class)->configure($propertyTypeConfigs);
+
+            $rectorConfig->ruleWithConfiguration(AddPropertyTypeDeclarationRector::class, $propertyTypeConfigs);
         }
 
         if ($signatures['methodReturnTypes']) {
@@ -58,7 +58,8 @@ final class SignatureConfigurator
                     $methodReturnTypeConfigs[] = new AddReturnTypeDeclaration($className, $method, self::type($returnType));
                 }
             }
-            $services->set(AddReturnTypeDeclarationRector::class)->configure($methodReturnTypeConfigs);
+
+            $rectorConfig->ruleWithConfiguration(AddReturnTypeDeclarationRector::class, $methodReturnTypeConfigs);
         }
 
         if (isset($signatures['methodParamTypes'])) {
@@ -68,7 +69,8 @@ final class SignatureConfigurator
                     $methodParamTypeConfigs[] = new AddParamTypeDeclaration($className, $method, $position, self::type($paramType));
                 }
             }
-            $services->set(AddParamTypeDeclarationRector::class)->configure($methodParamTypeConfigs);
+
+            $rectorConfig->ruleWithConfiguration(AddParamTypeDeclarationRector::class, $methodParamTypeConfigs);
         }
     }
 
@@ -77,6 +79,7 @@ final class SignatureConfigurator
         if (!isset(self::$types[$type])) {
             self::$types[$type] = self::createType($type);
         }
+
         return self::$types[$type];
     }
 
@@ -103,6 +106,9 @@ final class SignatureConfigurator
         };
     }
 
+    /**
+     * @param string[] $types
+     */
     private static function createUnionType(array $types): UnionType
     {
         $normalizedTypes = array_map(fn(string $type) => self::type($type), $types);

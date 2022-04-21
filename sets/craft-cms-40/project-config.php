@@ -2,25 +2,23 @@
 
 declare(strict_types=1);
 
+use Rector\Config\RectorConfig;
 use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Rector\Renaming\ValueObject\MethodCallRename;
 use Rector\Renaming\ValueObject\RenameClassAndConstFetch;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function(ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-
-    $services->set(RenameMethodRector::class)
-        ->configure([
+return static function(RectorConfig $rectorConfig): void {
+    $rectorConfig
+        ->ruleWithConfiguration(RenameMethodRector::class, [
             new MethodCallRename('craft\services\ProjectConfig', 'applyYamlChanges', 'applyExternalChanges'),
             new MethodCallRename('craft\services\ProjectConfig', 'getDoesYamlExist', 'getDoesExternalConfigExist'),
             new MethodCallRename('craft\services\ProjectConfig', 'getIsApplyingYamlChanges', 'getIsApplyingExternalChanges'),
             new MethodCallRename('craft\services\ProjectConfig', 'regenerateYamlFromConfig', 'regenerateExternalConfig'),
         ]);
 
-    $services->set(RenameClassConstFetchRector::class)
-        ->configure([
+    $rectorConfig
+        ->ruleWithConfiguration(RenameClassConstFetchRector::class, [
             new RenameClassAndConstFetch('craft\services\AssetTransforms', 'CONFIG_TRANSFORM_KEY', 'craft\services\ProjectConfig', 'PATH_IMAGE_TRANSFORM'),
             new RenameClassAndConstFetch('craft\services\Categories', 'CONFIG_CATEGORYROUP_KEY', 'craft\services\ProjectConfig', 'PATH_CATEGORY_GROUPS'),
             new RenameClassAndConstFetch('craft\services\Fields', 'CONFIG_FIELDGROUP_KEY', 'craft\services\ProjectConfig', 'PATH_FIELD_GROUPS'),
