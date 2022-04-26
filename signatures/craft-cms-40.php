@@ -155,7 +155,7 @@ return [
         [
             'craft\\base\\Element',
             'revisionCreatorId',
-            'string|null',
+            'int|null',
         ],
         [
             'craft\\base\\Element',
@@ -449,6 +449,11 @@ return [
         ],
         [
             'craft\\base\\Field',
+            'describedBy',
+            'string|null',
+        ],
+        [
+            'craft\\base\\Field',
             'groupId',
             'int|null',
         ],
@@ -544,6 +549,11 @@ return [
         ],
         [
             'craft\\base\\FieldTrait',
+            'describedBy',
+            'string|null',
+        ],
+        [
+            'craft\\base\\FieldTrait',
             'groupId',
             'int|null',
         ],
@@ -629,6 +639,11 @@ return [
         ],
         [
             'craft\\base\\Fs',
+            'oldHandle',
+            'string|null',
+        ],
+        [
+            'craft\\base\\Fs',
             'uid',
             'string|null',
         ],
@@ -654,6 +669,11 @@ return [
         ],
         [
             'craft\\base\\FsTrait',
+            'oldHandle',
+            'string|null',
+        ],
+        [
+            'craft\\base\\FsTrait',
             'uid',
             'string|null',
         ],
@@ -671,6 +691,16 @@ return [
             'craft\\base\\MissingComponentTrait',
             'errorMessage',
             'string|null',
+        ],
+        [
+            'craft\\base\\MissingComponentTrait',
+            'expectedType',
+            'string',
+        ],
+        [
+            'craft\\base\\MissingComponentTrait',
+            'settings',
+            'array|null',
         ],
         [
             'craft\\base\\NameTrait',
@@ -878,6 +908,11 @@ return [
             'DateTime|null',
         ],
         [
+            'craft\\base\\SavableComponent',
+            'id',
+            'string|int|null',
+        ],
+        [
             'craft\\base\\SavableComponentTrait',
             'dateCreated',
             'DateTime|null',
@@ -886,6 +921,11 @@ return [
             'craft\\base\\SavableComponentTrait',
             'dateUpdated',
             'DateTime|null',
+        ],
+        [
+            'craft\\base\\SavableComponentTrait',
+            'id',
+            'string|int|null',
         ],
         [
             'craft\\base\\Widget',
@@ -900,7 +940,7 @@ return [
         [
             'craft\\base\\conditions\\BaseCondition',
             'addRuleLabel',
-            'string',
+            'string|null',
         ],
         [
             'craft\\base\\conditions\\BaseCondition',
@@ -910,7 +950,7 @@ return [
         [
             'craft\\base\\conditions\\BaseCondition',
             'id',
-            'string',
+            'string|null',
         ],
         [
             'craft\\base\\conditions\\BaseCondition',
@@ -940,7 +980,7 @@ return [
         [
             'craft\\base\\conditions\\BaseConditionRule',
             'uid',
-            'string',
+            'string|null',
         ],
         [
             'craft\\base\\conditions\\BaseLightswitchConditionRule',
@@ -1064,16 +1104,6 @@ return [
         ],
         [
             'craft\\config\\DbConfig',
-            'enableLogging',
-            'bool',
-        ],
-        [
-            'craft\\config\\DbConfig',
-            'enableProfiling',
-            'bool',
-        ],
-        [
-            'craft\\config\\DbConfig',
             'password',
             'string',
         ],
@@ -1170,7 +1200,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'allowedFileExtensions',
-            'array|string',
+            'array',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1210,6 +1240,11 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'brokenImagePath',
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'buildId',
             'string|null',
         ],
         [
@@ -1365,7 +1400,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'extraAllowedFileExtensions',
-            'array|string|null',
+            'array|null',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -1485,7 +1520,7 @@ return [
         [
             'craft\\config\\GeneralConfig',
             'maxInvalidLogins',
-            'int',
+            'int|false',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -2094,6 +2129,11 @@ return [
         ],
         [
             'craft\\console\\controllers\\ResaveController',
+            'revisions',
+            'bool',
+        ],
+        [
+            'craft\\console\\controllers\\ResaveController',
             'section',
             'string|null',
         ],
@@ -2365,7 +2405,7 @@ return [
         [
             'craft\\db\\Paginator',
             'db',
-            'yii\\db\\Connection|null',
+            'yii\\db\\Connection|array|string|null',
         ],
         [
             'craft\\db\\Paginator',
@@ -2401,6 +2441,11 @@ return [
             'craft\\db\\pgsql\\Schema',
             'maxObjectNameLength',
             'int',
+        ],
+        [
+            'craft\\debug\\Module',
+            'fs',
+            'craft\\base\\FsInterface|null',
         ],
         [
             'craft\\elements\\Address',
@@ -2850,7 +2895,7 @@ return [
         [
             'craft\\elements\\actions\\DeleteUsers',
             'transferContentTo',
-            'int|null',
+            'array|int|null',
         ],
         [
             'craft\\elements\\actions\\Duplicate',
@@ -3006,6 +3051,11 @@ return [
             'craft\\elements\\db\\AssetQuery',
             'folderId',
             'mixed',
+        ],
+        [
+            'craft\\elements\\db\\AssetQuery',
+            'folderPath',
+            'string|null',
         ],
         [
             'craft\\elements\\db\\AssetQuery',
@@ -3655,32 +3705,7 @@ return [
         [
             'craft\\events\\AssetPreviewEvent',
             'previewHandler',
-            'craft\\base\\AssetPreviewHandlerInterface',
-        ],
-        [
-            'craft\\events\\AssetThumbEvent',
-            'asset',
-            'craft\\elements\\Asset',
-        ],
-        [
-            'craft\\events\\AssetThumbEvent',
-            'generate',
-            'bool',
-        ],
-        [
-            'craft\\events\\AssetThumbEvent',
-            'height',
-            'int',
-        ],
-        [
-            'craft\\events\\AssetThumbEvent',
-            'path',
-            'string|false|null',
-        ],
-        [
-            'craft\\events\\AssetThumbEvent',
-            'width',
-            'int',
+            'craft\\base\\AssetPreviewHandlerInterface|null',
         ],
         [
             'craft\\events\\AuthenticateUserEvent',
@@ -3881,6 +3906,11 @@ return [
             'craft\\events\\DefineEagerLoadingMapEvent',
             'sourceElements',
             'array',
+        ],
+        [
+            'craft\\events\\DefineElementEditorHtmlEvent',
+            'element',
+            'craft\\base\\ElementInterface',
         ],
         [
             'craft\\events\\DefineEntryTypesEvent',
@@ -4231,6 +4261,11 @@ return [
             'craft\\events\\FormActionsEvent',
             'formActions',
             'array',
+        ],
+        [
+            'craft\\events\\FsEvent',
+            'fs',
+            'craft\\base\\FsInterface',
         ],
         [
             'craft\\events\\GenerateTransformEvent',
@@ -5293,6 +5328,16 @@ return [
             'string|null',
         ],
         [
+            'craft\\fields\\MissingField',
+            'expectedType',
+            'string',
+        ],
+        [
+            'craft\\fields\\MissingField',
+            'settings',
+            'array|null',
+        ],
+        [
             'craft\\fields\\Money',
             'currency',
             'string',
@@ -5498,6 +5543,16 @@ return [
             'string|null',
         ],
         [
+            'craft\\fs\\MissingFs',
+            'expectedType',
+            'string',
+        ],
+        [
+            'craft\\fs\\MissingFs',
+            'settings',
+            'array|null',
+        ],
+        [
             'craft\\gql\\base\\ArgumentHandler',
             'argumentManager',
             'craft\\gql\\ArgumentManager',
@@ -5578,24 +5633,19 @@ return [
             'array',
         ],
         [
+            'craft\\log\\ContextProcessor',
+            'key',
+            'string',
+        ],
+        [
+            'craft\\log\\ContextProcessor',
+            'vars',
+            'array',
+        ],
+        [
             'craft\\log\\Dispatcher',
             'monologTargetConfig',
             'array',
-        ],
-        [
-            'craft\\log\\LogProcessor',
-            'contextVars',
-            'array',
-        ],
-        [
-            'craft\\log\\LogProcessor',
-            'includeUserIp',
-            'bool',
-        ],
-        [
-            'craft\\log\\MonologTarget',
-            'addTimestampToMessage',
-            'bool|null',
         ],
         [
             'craft\\log\\MonologTarget',
@@ -5610,7 +5660,12 @@ return [
         [
             'craft\\log\\MonologTarget',
             'level',
-            'string|null',
+            'string',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'logContext',
+            'bool',
         ],
         [
             'craft\\log\\MonologTarget',
@@ -5626,6 +5681,11 @@ return [
             'craft\\log\\MonologTarget',
             'processor',
             'Monolog\\Processor\\ProcessorInterface|null',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'useMicrosecondTimestamps',
+            'bool',
         ],
         [
             'craft\\mail\\Mailer',
@@ -6654,11 +6714,6 @@ return [
         ],
         [
             'craft\\models\\Site',
-            'enabled',
-            'bool',
-        ],
-        [
-            'craft\\models\\Site',
             'groupId',
             'int|null',
         ],
@@ -6959,6 +7014,11 @@ return [
         ],
         [
             'craft\\mutex\\Mutex',
+            'mutex',
+            'yii\\mutex\\Mutex|array|string',
+        ],
+        [
+            'craft\\mutex\\Mutex',
             'namePrefix',
             'string',
         ],
@@ -6975,7 +7035,7 @@ return [
         [
             'craft\\queue\\Queue',
             'channel',
-            'string',
+            'string|null',
         ],
         [
             'craft\\queue\\Queue',
@@ -6991,6 +7051,11 @@ return [
             'craft\\queue\\Queue',
             'mutexTimeout',
             'int',
+        ],
+        [
+            'craft\\queue\\Queue',
+            'proxyQueue',
+            'yii\\queue\\Queue|array|string|null',
         ],
         [
             'craft\\queue\\Queue',
@@ -7051,6 +7116,16 @@ return [
             'craft\\queue\\jobs\\PropagateElements',
             'siteId',
             'array|int|null',
+        ],
+        [
+            'craft\\queue\\jobs\\Proxy',
+            'jobId',
+            'string',
+        ],
+        [
+            'craft\\queue\\jobs\\Proxy',
+            'queue',
+            'string',
         ],
         [
             'craft\\queue\\jobs\\PruneRevisions',
@@ -7140,12 +7215,12 @@ return [
         [
             'craft\\search\\SearchQueryTerm',
             'exact',
-            'bool',
+            'bool|null',
         ],
         [
             'craft\\search\\SearchQueryTerm',
             'exclude',
-            'bool',
+            'bool|null',
         ],
         [
             'craft\\search\\SearchQueryTerm',
@@ -7155,17 +7230,17 @@ return [
         [
             'craft\\search\\SearchQueryTerm',
             'subLeft',
-            'bool',
+            'bool|null',
         ],
         [
             'craft\\search\\SearchQueryTerm',
             'subRight',
-            'bool',
+            'bool|null',
         ],
         [
             'craft\\search\\SearchQueryTerm',
             'term',
-            'string',
+            'string|null',
         ],
         [
             'craft\\search\\SearchQueryTermGroup',
@@ -7684,12 +7759,27 @@ return [
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
+            'formAttributes',
+            'array',
+        ],
+        [
+            'craft\\web\\CpScreenResponseBehavior',
+            'mainAttributes',
+            'array',
+        ],
+        [
+            'craft\\web\\CpScreenResponseBehavior',
             'redirectUrl',
             'string|null',
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
             'saveShortcutRedirectUrl',
+            'string|null',
+        ],
+        [
+            'craft\\web\\CpScreenResponseBehavior',
+            'selectedSubnavItem',
             'string|null',
         ],
         [
@@ -7956,6 +8046,16 @@ return [
             'craft\\widgets\\MissingWidget',
             'errorMessage',
             'string|null',
+        ],
+        [
+            'craft\\widgets\\MissingWidget',
+            'expectedType',
+            'string',
+        ],
+        [
+            'craft\\widgets\\MissingWidget',
+            'settings',
+            'array|null',
         ],
         [
             'craft\\widgets\\MyDrafts',
@@ -8562,12 +8662,12 @@ return [
         [
             'craft\\base\\Element',
             'findByCondition',
-            'craft\\base\\Element|array|null',
+            'static|array|null',
         ],
         [
             'craft\\base\\Element',
             'findOne',
-            'craft\\base\\ElementInterface|null',
+            'static|null',
         ],
         [
             'craft\\base\\Element',
@@ -8598,11 +8698,6 @@ return [
             'craft\\base\\Element',
             'getCpEditUrl',
             'string|null',
-        ],
-        [
-            'craft\\base\\Element',
-            'getCrumbs',
-            'array',
         ],
         [
             'craft\\base\\Element',
@@ -8777,6 +8872,11 @@ return [
         [
             'craft\\base\\Element',
             'prepElementQueryForTableAttribute',
+            'void',
+        ],
+        [
+            'craft\\base\\Element',
+            'prepareEditScreen',
             'void',
         ],
         [
@@ -8961,6 +9061,11 @@ return [
         ],
         [
             'craft\\base\\ElementInterface',
+            '__toString',
+            'string',
+        ],
+        [
+            'craft\\base\\ElementInterface',
             'actions',
             'array',
         ],
@@ -9082,7 +9187,7 @@ return [
         [
             'craft\\base\\ElementInterface',
             'findOne',
-            'craft\\base\\ElementInterface|null',
+            'static|null',
         ],
         [
             'craft\\base\\ElementInterface',
@@ -9133,11 +9238,6 @@ return [
             'craft\\base\\ElementInterface',
             'getCpEditUrl',
             'string|null',
-        ],
-        [
-            'craft\\base\\ElementInterface',
-            'getCrumbs',
-            'array',
         ],
         [
             'craft\\base\\ElementInterface',
@@ -9606,6 +9706,11 @@ return [
         ],
         [
             'craft\\base\\ElementInterface',
+            'prepareEditScreen',
+            'void',
+        ],
+        [
+            'craft\\base\\ElementInterface',
             'refHandle',
             'string|null',
         ],
@@ -9786,6 +9891,11 @@ return [
         ],
         [
             'craft\\base\\Field',
+            'isRequirable',
+            'bool',
+        ],
+        [
+            'craft\\base\\Field',
             'modifyElementIndexQuery',
             'void',
         ],
@@ -9946,6 +10056,11 @@ return [
         ],
         [
             'craft\\base\\FieldInterface',
+            'isRequirable',
+            'bool',
+        ],
+        [
+            'craft\\base\\FieldInterface',
             'isValueEmpty',
             'bool',
         ],
@@ -10101,12 +10216,22 @@ return [
         ],
         [
             'craft\\base\\FsInterface',
+            'read',
+            'string',
+        ],
+        [
+            'craft\\base\\FsInterface',
             'renameDirectory',
             'void',
         ],
         [
             'craft\\base\\FsInterface',
             'renameFile',
+            'void',
+        ],
+        [
+            'craft\\base\\FsInterface',
+            'write',
             'void',
         ],
         [
@@ -10697,7 +10822,7 @@ return [
         [
             'craft\\base\\conditions\\BaseElementSelectConditionRule',
             'getElementId',
-            'int|null',
+            'string|int|null',
         ],
         [
             'craft\\base\\conditions\\BaseElementSelectConditionRule',
@@ -11007,6 +11132,11 @@ return [
         [
             'craft\\behaviors\\SessionBehavior',
             'authorize',
+            'void',
+        ],
+        [
+            'craft\\behaviors\\SessionBehavior',
+            'broadcastToJs',
             'void',
         ],
         [
@@ -11487,7 +11617,7 @@ return [
         [
             'craft\\console\\User',
             'getIdentity',
-            'craft\\elements\\User|yii\\web\\IdentityInterface|bool|null',
+            'craft\\elements\\User|null',
         ],
         [
             'craft\\console\\User',
@@ -11640,6 +11770,11 @@ return [
             'yii\\web\\Response',
         ],
         [
+            'craft\\controllers\\AppController',
+            'actionRenderElement',
+            'yii\\web\\Response',
+        ],
+        [
             'craft\\controllers\\AssetIndexesController',
             'actionFinishIndexingSession',
             'yii\\web\\Response',
@@ -11673,6 +11808,11 @@ return [
             'craft\\controllers\\AssetsController',
             'actionDeleteAsset',
             'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\AssetsController',
+            'actionIcon',
+            'yii\\web\\Response',
         ],
         [
             'craft\\controllers\\AssetsController',
@@ -11737,7 +11877,7 @@ return [
         [
             'craft\\controllers\\CategoriesController',
             'actionCreate',
-            'yii\\web\\Response',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\controllers\\CategoriesController',
@@ -11776,8 +11916,18 @@ return [
         ],
         [
             'craft\\controllers\\ElementIndexesController',
+            'actionElementTableHtml',
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\controllers\\ElementIndexesController',
             'actionFilterHud',
             'yii\\web\\Response',
+        ],
+        [
+            'craft\\controllers\\ElementIndexesController',
+            'actionPerformAction',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\controllers\\ElementIndexesController',
@@ -11867,7 +12017,7 @@ return [
         [
             'craft\\controllers\\EntriesController',
             'actionCreate',
-            'yii\\web\\Response',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\controllers\\EntriesController',
@@ -11883,6 +12033,11 @@ return [
             'craft\\controllers\\FieldsController',
             'actionApplyLayoutTabSettings',
             'yii\\web\\Response',
+        ],
+        [
+            'craft\\controllers\\FieldsController',
+            'actionDeleteField',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\controllers\\FieldsController',
@@ -12001,12 +12156,37 @@ return [
         ],
         [
             'craft\\controllers\\PluginsController',
+            'actionDisablePlugin',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\PluginsController',
             'actionEditPluginSettings',
             'mixed',
         ],
         [
             'craft\\controllers\\PluginsController',
+            'actionEnablePlugin',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\PluginsController',
+            'actionInstallPlugin',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\PluginsController',
             'actionSavePluginSettings',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\PluginsController',
+            'actionUninstallPlugin',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\RebrandController',
+            'actionDeleteSiteImage',
             'yii\\web\\Response|null',
         ],
         [
@@ -12022,6 +12202,11 @@ return [
         [
             'craft\\controllers\\SitesController',
             'actionSaveSite',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\StructuresController',
+            'actionMoveElement',
             'yii\\web\\Response|null',
         ],
         [
@@ -12111,13 +12296,18 @@ return [
         ],
         [
             'craft\\controllers\\UsersController',
+            'actionSendActivationEmail',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\UsersController',
             'actionSendPasswordResetEmail',
             'yii\\web\\Response|null',
         ],
         [
             'craft\\controllers\\UsersController',
             'actionStartElevatedSession',
-            'yii\\web\\Response',
+            'yii\\web\\Response|null',
         ],
         [
             'craft\\controllers\\UsersController',
@@ -12132,6 +12322,11 @@ return [
         [
             'craft\\controllers\\UsersController',
             'actionUploadUserPhoto',
+            'yii\\web\\Response|null',
+        ],
+        [
+            'craft\\controllers\\UsersController',
+            'actionVerifyPassword',
             'yii\\web\\Response|null',
         ],
         [
@@ -12207,12 +12402,12 @@ return [
         [
             'craft\\db\\Connection',
             'getPrimary',
-            'craft\\db\\Connection|null',
+            'yii\\db\\Connection|null',
         ],
         [
             'craft\\db\\Connection',
             'getReplica',
-            'craft\\db\\Connection|null',
+            'yii\\db\\Connection|null',
         ],
         [
             'craft\\db\\Connection',
@@ -12277,6 +12472,11 @@ return [
         [
             'craft\\db\\Migration',
             'addPrimaryKey',
+            'void',
+        ],
+        [
+            'craft\\db\\Migration',
+            'archiveTableIfExists',
             'void',
         ],
         [
@@ -12437,7 +12637,7 @@ return [
         [
             'craft\\db\\PrimaryReplicaTrait',
             'getPrimary',
-            'craft\\db\\Connection|null',
+            'yii\\db\\Connection|null',
         ],
         [
             'craft\\db\\PrimaryReplicaTrait',
@@ -12452,7 +12652,7 @@ return [
         [
             'craft\\db\\PrimaryReplicaTrait',
             'getReplica',
-            'craft\\db\\Connection|null',
+            'yii\\db\\Connection|null',
         ],
         [
             'craft\\db\\PrimaryReplicaTrait',
@@ -12517,7 +12717,7 @@ return [
         [
             'craft\\db\\Query',
             'andWhere',
-            'craft\\db\\Query',
+            'static',
         ],
         [
             'craft\\db\\Query',
@@ -12547,17 +12747,17 @@ return [
         [
             'craft\\db\\Query',
             'nth',
-            'yii\\base\\Model|array|null',
+            'mixed',
         ],
         [
             'craft\\db\\Query',
             'one',
-            'yii\\base\\Model|array|null',
+            'mixed',
         ],
         [
             'craft\\db\\Query',
             'orWhere',
-            'craft\\db\\Query',
+            'static',
         ],
         [
             'craft\\db\\Query',
@@ -12572,7 +12772,7 @@ return [
         [
             'craft\\db\\Query',
             'where',
-            'craft\\db\\Query',
+            'static',
         ],
         [
             'craft\\db\\SoftDeleteTrait',
@@ -12695,6 +12895,51 @@ return [
             'string',
         ],
         [
+            'craft\\debug\\LogTarget',
+            'export',
+            'void',
+        ],
+        [
+            'craft\\debug\\LogTarget',
+            'gc',
+            'void',
+        ],
+        [
+            'craft\\debug\\LogTarget',
+            'loadManifest',
+            'array',
+        ],
+        [
+            'craft\\debug\\LogTarget',
+            'loadTagToPanels',
+            'array',
+        ],
+        [
+            'craft\\debug\\LogTarget',
+            'removeStaleDataFiles',
+            'void',
+        ],
+        [
+            'craft\\debug\\MailPanel',
+            'getMessagesFileName',
+            'array',
+        ],
+        [
+            'craft\\debug\\MailPanel',
+            'init',
+            'void',
+        ],
+        [
+            'craft\\debug\\MailPanel',
+            'save',
+            'array',
+        ],
+        [
+            'craft\\debug\\Module',
+            'bootstrap',
+            'void',
+        ],
+        [
             'craft\\debug\\Module',
             'renderToolbar',
             'void',
@@ -12708,6 +12953,11 @@ return [
             'craft\\elements\\Address',
             'addressAttributeLabel',
             'string|null',
+        ],
+        [
+            'craft\\elements\\Address',
+            'beforeValidate',
+            'bool',
         ],
         [
             'craft\\elements\\Address',
@@ -12791,6 +13041,11 @@ return [
         ],
         [
             'craft\\elements\\Asset',
+            'find',
+            'craft\\elements\\db\\AssetQuery',
+        ],
+        [
+            'craft\\elements\\Asset',
             'getDimensions',
             'string|null',
         ],
@@ -12817,7 +13072,7 @@ return [
         [
             'craft\\elements\\Asset',
             'getHeight',
-            'int|float|null',
+            'int|null',
         ],
         [
             'craft\\elements\\Asset',
@@ -12852,7 +13107,7 @@ return [
         [
             'craft\\elements\\Asset',
             'getWidth',
-            'int|float|null',
+            'int|null',
         ],
         [
             'craft\\elements\\Asset',
@@ -12890,9 +13145,29 @@ return [
             'void',
         ],
         [
+            'craft\\elements\\Category',
+            'createAnother',
+            'craft\\elements\\Category|null',
+        ],
+        [
+            'craft\\elements\\Category',
+            'find',
+            'craft\\elements\\db\\CategoryQuery',
+        ],
+        [
             'craft\\elements\\Entry',
             'beforeValidate',
             'bool',
+        ],
+        [
+            'craft\\elements\\Entry',
+            'createAnother',
+            'craft\\elements\\Entry|null',
+        ],
+        [
+            'craft\\elements\\Entry',
+            'find',
+            'craft\\elements\\db\\EntryQuery',
         ],
         [
             'craft\\elements\\Entry',
@@ -12930,9 +13205,24 @@ return [
             'void',
         ],
         [
+            'craft\\elements\\GlobalSet',
+            'find',
+            'craft\\elements\\db\\GlobalSetQuery',
+        ],
+        [
+            'craft\\elements\\MatrixBlock',
+            'find',
+            'craft\\elements\\db\\MatrixBlockQuery',
+        ],
+        [
             'craft\\elements\\MatrixBlock',
             'setOwner',
             'void',
+        ],
+        [
+            'craft\\elements\\Tag',
+            'find',
+            'craft\\elements\\db\\TagQuery',
         ],
         [
             'craft\\elements\\Tag',
@@ -12943,6 +13233,11 @@ return [
             'craft\\elements\\User',
             'canAssignUserGroups',
             'bool',
+        ],
+        [
+            'craft\\elements\\User',
+            'find',
+            'craft\\elements\\db\\UserQuery',
         ],
         [
             'craft\\elements\\User',
@@ -13216,6 +13511,21 @@ return [
         ],
         [
             'craft\\elements\\conditions\\StatusConditionRule',
+            'modifyQuery',
+            'void',
+        ],
+        [
+            'craft\\elements\\conditions\\TitleConditionRule',
+            'getExclusiveQueryParams',
+            'array',
+        ],
+        [
+            'craft\\elements\\conditions\\TitleConditionRule',
+            'matchElement',
+            'bool',
+        ],
+        [
+            'craft\\elements\\conditions\\TitleConditionRule',
             'modifyQuery',
             'void',
         ],
@@ -14192,12 +14502,12 @@ return [
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'nth',
-            'yii\\base\\Model|array|null',
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
             'one',
-            'yii\\base\\Model|array|null',
+            'mixed',
         ],
         [
             'craft\\elements\\db\\ElementQueryInterface',
@@ -14555,6 +14865,11 @@ return [
             'string',
         ],
         [
+            'craft\\errors\\BusyResourceException',
+            'getName',
+            'string',
+        ],
+        [
             'craft\\errors\\CategoryGroupNotFoundException',
             'getName',
             'string',
@@ -14656,6 +14971,11 @@ return [
         ],
         [
             'craft\\errors\\SiteNotFoundException',
+            'getName',
+            'string',
+        ],
+        [
+            'craft\\errors\\StaleResourceException',
             'getName',
             'string',
         ],
@@ -14842,11 +15162,6 @@ return [
         [
             'craft\\fields\\BaseRelationField',
             'validateRelatedElements',
-            'void',
-        ],
-        [
-            'craft\\fields\\BaseRelationField',
-            'validateRelationCount',
             'void',
         ],
         [
@@ -15450,6 +15765,11 @@ return [
             'string',
         ],
         [
+            'craft\\gql\\interfaces\\elements\\Address',
+            'getConditionalFields',
+            'array',
+        ],
+        [
             'craft\\gql\\queries\\Entry',
             'getSectionLevelFields',
             'array',
@@ -15540,6 +15860,16 @@ return [
             'craft\\gql\\types\\Money',
         ],
         [
+            'craft\\gql\\types\\generators\\AddressType',
+            'generateType',
+            'craft\\gql\\base\\ObjectType',
+        ],
+        [
+            'craft\\gql\\types\\generators\\AddressType',
+            'generateTypes',
+            'array',
+        ],
+        [
             'craft\\gql\\types\\input\\File',
             'getType',
             'mixed',
@@ -15591,8 +15921,18 @@ return [
         ],
         [
             'craft\\helpers\\App',
+            'devMode',
+            'bool',
+        ],
+        [
+            'craft\\helpers\\App',
             'env',
             'mixed',
+        ],
+        [
+            'craft\\helpers\\App',
+            'envConfig',
+            'array',
         ],
         [
             'craft\\helpers\\App',
@@ -15856,6 +16196,11 @@ return [
         ],
         [
             'craft\\helpers\\Db',
+            'escapeCommas',
+            'string',
+        ],
+        [
+            'craft\\helpers\\Db',
             'findForeignKey',
             'string|null',
         ],
@@ -16048,6 +16393,11 @@ return [
             'craft\\helpers\\Gql',
             'applyDirectives',
             'mixed',
+        ],
+        [
+            'craft\\helpers\\Gql',
+            'getAllowedSites',
+            'array',
         ],
         [
             'craft\\helpers\\Gql',
@@ -16586,7 +16936,7 @@ return [
         ],
         [
             'craft\\imagetransforms\\ImageTransformer',
-            'deleteImageTransform',
+            'deleteImageTransformFile',
             'void',
         ],
         [
@@ -16720,6 +17070,16 @@ return [
             'bool',
         ],
         [
+            'craft\\log\\ContextProcessor',
+            '__invoke',
+            'array',
+        ],
+        [
+            'craft\\log\\ContextProcessor',
+            'filterVars',
+            'array',
+        ],
+        [
             'craft\\log\\Dispatcher',
             'getTargets',
             'array',
@@ -16730,18 +17090,13 @@ return [
             'void',
         ],
         [
-            'craft\\log\\LogProcessor',
+            'craft\\log\\MessageProcessor',
             '__invoke',
             'array',
         ],
         [
-            'craft\\log\\LogProcessor',
-            'filterVars',
-            'array',
-        ],
-        [
             'craft\\log\\MonologTarget',
-            '__set',
+            'export',
             'void',
         ],
         [
@@ -16751,12 +17106,52 @@ return [
         ],
         [
             'craft\\log\\MonologTarget',
+            'getLogger',
+            'Monolog\\Logger',
+        ],
+        [
+            'craft\\log\\MonologTarget',
             'init',
             'void',
         ],
         [
             'craft\\log\\MonologTarget',
+            'setAllowLineBreaks',
+            'void',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setFormatter',
+            'void',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setLevel',
+            'void',
+        ],
+        [
+            'craft\\log\\MonologTarget',
             'setLogger',
+            'void',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setMaxFiles',
+            'void',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setName',
+            'void',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setProcessor',
+            'void',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setUseMicrosecondTimestamps',
             'void',
         ],
         [
@@ -17040,6 +17435,26 @@ return [
             'bool',
         ],
         [
+            'craft\\migrations\\m220317_174250_release_all_jobs',
+            'safeDown',
+            'bool',
+        ],
+        [
+            'craft\\migrations\\m220317_174250_release_all_jobs',
+            'safeUp',
+            'bool',
+        ],
+        [
+            'craft\\migrations\\m220413_024536_site_enabled_string',
+            'safeDown',
+            'bool',
+        ],
+        [
+            'craft\\migrations\\m220413_024536_site_enabled_string',
+            'safeUp',
+            'bool',
+        ],
+        [
             'craft\\models\\CategoryGroup',
             'attributeLabels',
             'array',
@@ -17172,7 +17587,7 @@ return [
         [
             'craft\\models\\FieldLayoutTab',
             'getConfig',
-            'array|null',
+            'array',
         ],
         [
             'craft\\models\\FieldLayoutTab',
@@ -17335,6 +17750,11 @@ return [
             'array',
         ],
         [
+            'craft\\models\\ReadOnlyProjectConfigData',
+            'get',
+            'mixed',
+        ],
+        [
             'craft\\models\\Section',
             'addSiteSettingsErrors',
             'void',
@@ -17388,6 +17808,16 @@ return [
             'craft\\models\\Site',
             'getBaseUrl',
             'string|null',
+        ],
+        [
+            'craft\\models\\Site',
+            'getEnabled',
+            'string|bool',
+        ],
+        [
+            'craft\\models\\Site',
+            'setEnabled',
+            'void',
         ],
         [
             'craft\\models\\SiteGroup',
@@ -17588,6 +18018,11 @@ return [
             'craft\\queue\\JobInterface',
             'getDescription',
             'string|null',
+        ],
+        [
+            'craft\\queue\\Queue',
+            'executeJob',
+            'bool',
         ],
         [
             'craft\\queue\\Queue',
@@ -18181,6 +18616,11 @@ return [
         ],
         [
             'craft\\services\\Assets',
+            'getImagePreviewUrl',
+            'string',
+        ],
+        [
+            'craft\\services\\Assets',
             'getRootFolderByVolumeId',
             'craft\\models\\VolumeFolder|null',
         ],
@@ -18646,6 +19086,11 @@ return [
         ],
         [
             'craft\\services\\Gc',
+            'removeEmptyTempFolders',
+            'void',
+        ],
+        [
+            'craft\\services\\Gc',
             'run',
             'void',
         ],
@@ -18783,11 +19228,6 @@ return [
             'craft\\services\\ImageTransforms',
             'eagerLoadTransforms',
             'void',
-        ],
-        [
-            'craft\\services\\ImageTransforms',
-            'getAllImageTransformerTypes',
-            'array',
         ],
         [
             'craft\\services\\ImageTransforms',
@@ -19222,7 +19662,7 @@ return [
         [
             'craft\\services\\Security',
             'redactIfSensitive',
-            'array|string',
+            'mixed',
         ],
         [
             'craft\\services\\Security',
@@ -19513,6 +19953,11 @@ return [
             'craft\\services\\Volumes',
             'getTemporaryVolume',
             'craft\\models\\Volume',
+        ],
+        [
+            'craft\\services\\Volumes',
+            'getUserPhotoVolume',
+            'craft\\models\\Volume|null',
         ],
         [
             'craft\\services\\Volumes',
@@ -20071,6 +20516,16 @@ return [
         ],
         [
             'craft\\web\\AssetManager',
+            'getAssetUrl',
+            'string',
+        ],
+        [
+            'craft\\web\\AssetManager',
+            'getCacheKeyForPathHash',
+            'string',
+        ],
+        [
+            'craft\\web\\AssetManager',
             'getPublishedUrl',
             'string|false',
         ],
@@ -20261,6 +20716,16 @@ return [
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
+            'formAttributes',
+            'craft\\web\\Response',
+        ],
+        [
+            'craft\\web\\CpScreenResponseBehavior',
+            'mainAttributes',
+            'craft\\web\\Response',
+        ],
+        [
+            'craft\\web\\CpScreenResponseBehavior',
             'notice',
             'craft\\web\\Response',
         ],
@@ -20282,6 +20747,11 @@ return [
         [
             'craft\\web\\CpScreenResponseBehavior',
             'saveShortcutRedirectUrl',
+            'craft\\web\\Response',
+        ],
+        [
+            'craft\\web\\CpScreenResponseBehavior',
+            'selectedSubnavItem',
             'craft\\web\\Response',
         ],
         [
@@ -20327,7 +20797,7 @@ return [
         [
             'craft\\web\\ErrorHandler',
             'handleError',
-            'bool|null',
+            'bool',
         ],
         [
             'craft\\web\\ErrorHandler',
@@ -21410,6 +21880,11 @@ return [
             'array',
         ],
         [
+            'craft\\web\\twig\\variables\\Cp',
+            'getVolumeOptions',
+            'array',
+        ],
+        [
             'craft\\web\\twig\\variables\\CraftVariable',
             'addresses',
             'craft\\elements\\db\\AddressQuery',
@@ -21671,6 +22146,18 @@ return [
             'metaFieldsHtml',
             0,
             'bool',
+        ],
+        [
+            'craft\\base\\Element',
+            'prepareEditScreen',
+            0,
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\base\\Element',
+            'prepareEditScreen',
+            1,
+            'string',
         ],
         [
             'craft\\base\\Element',
@@ -22103,6 +22590,18 @@ return [
             'isSiblingOf',
             0,
             'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\base\\ElementInterface',
+            'prepareEditScreen',
+            0,
+            'yii\\web\\Response',
+        ],
+        [
+            'craft\\base\\ElementInterface',
+            'prepareEditScreen',
+            1,
+            'string',
         ],
         [
             'craft\\base\\ElementInterface',
@@ -22604,6 +23103,12 @@ return [
         ],
         [
             'craft\\base\\FsInterface',
+            'read',
+            0,
+            'string',
+        ],
+        [
+            'craft\\base\\FsInterface',
             'renameDirectory',
             0,
             'string',
@@ -22625,6 +23130,24 @@ return [
             'renameFile',
             1,
             'string',
+        ],
+        [
+            'craft\\base\\FsInterface',
+            'write',
+            0,
+            'string',
+        ],
+        [
+            'craft\\base\\FsInterface',
+            'write',
+            1,
+            'string',
+        ],
+        [
+            'craft\\base\\FsInterface',
+            'write',
+            2,
+            'array',
         ],
         [
             'craft\\base\\FsInterface',
@@ -22784,6 +23307,12 @@ return [
         ],
         [
             'craft\\base\\conditions\\BaseElementSelectConditionRule',
+            'getElementId',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\base\\conditions\\BaseElementSelectConditionRule',
             'matchValue',
             0,
             'mixed',
@@ -22792,7 +23321,7 @@ return [
             'craft\\base\\conditions\\BaseElementSelectConditionRule',
             'setElementId',
             0,
-            'string|int',
+            'array|string|int|null',
         ],
         [
             'craft\\base\\conditions\\BaseLightswitchConditionRule',
@@ -22963,6 +23492,12 @@ return [
             'callable|string|int',
         ],
         [
+            'craft\\behaviors\\SessionBehavior',
+            'broadcastToJs',
+            0,
+            'array|string',
+        ],
+        [
             'craft\\console\\Application',
             'setIsInstalled',
             0,
@@ -22997,6 +23532,12 @@ return [
             'getIdentity',
             0,
             'bool',
+        ],
+        [
+            'craft\\console\\User',
+            'setIdentity',
+            0,
+            'craft\\elements\\User|null',
         ],
         [
             'craft\\console\\controllers\\BackupTrait',
@@ -23092,7 +23633,7 @@ return [
             'craft\\controllers\\EntriesController',
             'actionCreate',
             0,
-            'string',
+            'string|null',
         ],
         [
             'craft\\controllers\\FsController',
@@ -23165,6 +23706,12 @@ return [
             'getReplica',
             0,
             'bool',
+        ],
+        [
+            'craft\\db\\Migration',
+            'archiveTableIfExists',
+            0,
+            'string',
         ],
         [
             'craft\\db\\Migration',
@@ -23386,7 +23933,7 @@ return [
             'craft\\elements\\Asset',
             'setHeight',
             0,
-            'int|float|null',
+            'int|null',
         ],
         [
             'craft\\elements\\Asset',
@@ -23398,7 +23945,7 @@ return [
             'craft\\elements\\Asset',
             'setWidth',
             0,
-            'int|float|null',
+            'int|null',
         ],
         [
             'craft\\elements\\Entry',
@@ -23573,6 +24120,18 @@ return [
             'modifyQuery',
             0,
             'yii\\db\\QueryInterface',
+        ],
+        [
+            'craft\\elements\\conditions\\TitleConditionRule',
+            'matchElement',
+            0,
+            'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\elements\\conditions\\TitleConditionRule',
+            'modifyQuery',
+            0,
+            'craft\\elements\\db\\ElementQueryInterface',
         ],
         [
             'craft\\elements\\conditions\\UriConditionRule',
@@ -23949,6 +24508,12 @@ return [
         [
             'craft\\elements\\db\\AssetQuery',
             'folderId',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\elements\\db\\AssetQuery',
+            'folderPath',
             0,
             'mixed',
         ],
@@ -24685,12 +25250,6 @@ return [
             'Illuminate\\Support\\Collection',
         ],
         [
-            'craft\\fields\\BaseRelationField',
-            'validateRelationCount',
-            0,
-            'craft\\base\\ElementInterface',
-        ],
-        [
             'craft\\fields\\Matrix',
             'setBlockTypes',
             0,
@@ -24878,6 +25437,12 @@ return [
         ],
         [
             'craft\\gql\\ArgumentManager',
+            'prepareArguments',
+            0,
+            'array',
+        ],
+        [
+            'craft\\gql\\ArgumentManager',
             'setHandler',
             1,
             'craft\\gql\\base\\ArgumentHandlerInterface|string',
@@ -24899,6 +25464,12 @@ return [
             'registerFieldDefinitions',
             1,
             'string',
+        ],
+        [
+            'craft\\gql\\base\\ArgumentHandler',
+            'handleArgument',
+            0,
+            'mixed',
         ],
         [
             'craft\\gql\\base\\ArgumentHandlerInterface',
@@ -24932,8 +25503,50 @@ return [
         ],
         [
             'craft\\gql\\base\\ElementResolver',
+            'prepareElementQuery',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\base\\ElementResolver',
+            'prepareElementQuery',
+            2,
+            'array|null',
+        ],
+        [
+            'craft\\gql\\base\\ElementResolver',
             'prepareQuery',
             0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\base\\ElementResolver',
+            'prepareQuery',
+            2,
+            'string|null',
+        ],
+        [
+            'craft\\gql\\base\\ElementResolver',
+            'resolveCount',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\base\\ElementResolver',
+            'resolveCount',
+            2,
+            'array|null',
+        ],
+        [
+            'craft\\gql\\base\\ElementResolver',
+            'resolveOne',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\base\\ElementResolver',
+            'resolveOne',
+            2,
             'mixed',
         ],
         [
@@ -24963,6 +25576,12 @@ return [
         [
             'craft\\gql\\base\\MutationResolver',
             'normalizeValue',
+            1,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\base\\MutationResolver',
+            'setResolutionData',
             1,
             'mixed',
         ],
@@ -25034,6 +25653,12 @@ return [
         ],
         [
             'craft\\gql\\base\\StructureMutationTrait',
+            'getRelatedElement',
+            0,
+            'int',
+        ],
+        [
+            'craft\\gql\\base\\StructureMutationTrait',
             'performStructureOperations',
             0,
             'craft\\base\\ElementInterface',
@@ -25049,6 +25674,150 @@ return [
             'createSaveMutation',
             0,
             'craft\\models\\Volume',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Asset',
+            'deleteAsset',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Asset',
+            'deleteAsset',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Asset',
+            'saveAsset',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Asset',
+            'saveAsset',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Category',
+            'deleteCategory',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Category',
+            'deleteCategory',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Category',
+            'getRelatedElement',
+            0,
+            'int',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Category',
+            'saveCategory',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Category',
+            'saveCategory',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Entry',
+            'createDraft',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Entry',
+            'createDraft',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Entry',
+            'deleteEntry',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Entry',
+            'deleteEntry',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Entry',
+            'getRelatedElement',
+            0,
+            'int',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Entry',
+            'publishDraft',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Entry',
+            'publishDraft',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Entry',
+            'saveEntry',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Entry',
+            'saveEntry',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\GlobalSet',
+            'saveGlobalSet',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\GlobalSet',
+            'saveGlobalSet',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Tag',
+            'deleteTag',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Tag',
+            'deleteTag',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Tag',
+            'saveTag',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\resolvers\\mutations\\Tag',
+            'saveTag',
+            2,
+            'mixed',
         ],
         [
             'craft\\gql\\types\\Mutation',
@@ -25069,6 +25838,18 @@ return [
             'bool',
         ],
         [
+            'craft\\gql\\types\\generators\\AddressType',
+            'generateType',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\types\\generators\\AddressType',
+            'generateTypes',
+            0,
+            'mixed',
+        ],
+        [
             'craft\\gql\\types\\generators\\AssetType',
             'generateType',
             0,
@@ -25173,6 +25954,12 @@ return [
         [
             'craft\\gql\\types\\generators\\UserType',
             'generateTypes',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\gql\\types\\input\\Matrix',
+            'normalizeValue',
             0,
             'mixed',
         ],
@@ -25187,6 +25974,18 @@ return [
             'cliOption',
             1,
             'bool',
+        ],
+        [
+            'craft\\helpers\\App',
+            'envConfig',
+            0,
+            'string',
+        ],
+        [
+            'craft\\helpers\\App',
+            'envConfig',
+            1,
+            'string|null',
         ],
         [
             'craft\\helpers\\App',
@@ -25239,6 +26038,24 @@ return [
         [
             'craft\\helpers\\ArrayHelper',
             'firstWhere',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\helpers\\ArrayHelper',
+            'onlyContains',
+            0,
+            'iterable',
+        ],
+        [
+            'craft\\helpers\\ArrayHelper',
+            'onlyContains',
+            1,
+            'callable|string',
+        ],
+        [
+            'craft\\helpers\\ArrayHelper',
+            'onlyContains',
             2,
             'mixed',
         ],
@@ -25436,6 +26253,12 @@ return [
         ],
         [
             'craft\\helpers\\Cp',
+            'elementHtml',
+            9,
+            'bool',
+        ],
+        [
+            'craft\\helpers\\Cp',
             'elementSelectHtml',
             0,
             'array',
@@ -25580,6 +26403,12 @@ return [
         ],
         [
             'craft\\helpers\\Db',
+            'batch',
+            0,
+            'yii\\db\\QueryInterface',
+        ],
+        [
+            'craft\\helpers\\Db',
             'batchInsert',
             3,
             'craft\\db\\Connection|null',
@@ -25649,6 +26478,18 @@ return [
             'dropIndexIfExists',
             3,
             'craft\\db\\Connection|null',
+        ],
+        [
+            'craft\\helpers\\Db',
+            'each',
+            0,
+            'yii\\db\\QueryInterface',
+        ],
+        [
+            'craft\\helpers\\Db',
+            'escapeCommas',
+            0,
+            'string',
         ],
         [
             'craft\\helpers\\Db',
@@ -25849,6 +26690,18 @@ return [
             'mixed',
         ],
         [
+            'craft\\helpers\\Diff',
+            'diff',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\helpers\\Diff',
+            'diff',
+            1,
+            'mixed',
+        ],
+        [
             'craft\\helpers\\ElementHelper',
             'findSource',
             2,
@@ -25880,15 +26733,51 @@ return [
         ],
         [
             'craft\\helpers\\FileHelper',
+            'getExtensionByMimeType',
+            0,
+            'string',
+        ],
+        [
+            'craft\\helpers\\FileHelper',
             'lastModifiedTime',
             0,
             'string',
         ],
         [
             'craft\\helpers\\Gql',
+            'applyDirectives',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\helpers\\Gql',
+            'applyDirectives',
+            2,
+            'mixed',
+        ],
+        [
+            'craft\\helpers\\Gql',
             'canSchema',
             1,
             'string',
+        ],
+        [
+            'craft\\helpers\\Gql',
+            'getAllowedSites',
+            0,
+            'craft\\models\\GqlSchema|null',
+        ],
+        [
+            'craft\\helpers\\Gql',
+            'getFieldNameWithAlias',
+            1,
+            'mixed',
+        ],
+        [
+            'craft\\helpers\\Gql',
+            'getFieldNameWithAlias',
+            2,
+            'array|null',
         ],
         [
             'craft\\helpers\\Gql',
@@ -25907,6 +26796,12 @@ return [
             'isSchemaAwareOf',
             0,
             'array|string',
+        ],
+        [
+            'craft\\helpers\\Gql',
+            'wrapInNonNull',
+            0,
+            'mixed',
         ],
         [
             'craft\\helpers\\Html',
@@ -26121,8 +27016,20 @@ return [
         [
             'craft\\helpers\\MoneyHelper',
             'toNumber',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\helpers\\MoneyHelper',
+            'toNumber',
             1,
             'string|null',
+        ],
+        [
+            'craft\\helpers\\MoneyHelper',
+            'toString',
+            0,
+            'mixed',
         ],
         [
             'craft\\helpers\\MoneyHelper',
@@ -26150,6 +27057,30 @@ return [
         ],
         [
             'craft\\helpers\\ProjectConfig',
+            'encodeValueAsString',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\helpers\\ProjectConfig',
+            'flattenConfigArray',
+            0,
+            'array',
+        ],
+        [
+            'craft\\helpers\\ProjectConfig',
+            'flattenConfigArray',
+            1,
+            'string',
+        ],
+        [
+            'craft\\helpers\\ProjectConfig',
+            'flattenConfigArray',
+            2,
+            'array',
+        ],
+        [
+            'craft\\helpers\\ProjectConfig',
             'traverseDataArray',
             0,
             'array',
@@ -26171,6 +27102,12 @@ return [
             'traverseDataArray',
             3,
             'bool',
+        ],
+        [
+            'craft\\helpers\\Queue',
+            'push',
+            4,
+            'yii\\queue\\Queue|null',
         ],
         [
             'craft\\helpers\\Search',
@@ -26330,13 +27267,13 @@ return [
         ],
         [
             'craft\\imagetransforms\\ImageTransformer',
-            'deleteImageTransform',
+            'deleteImageTransformFile',
             0,
             'craft\\elements\\Asset',
         ],
         [
             'craft\\imagetransforms\\ImageTransformer',
-            'deleteImageTransform',
+            'deleteImageTransformFile',
             1,
             'craft\\models\\ImageTransformIndex',
         ],
@@ -26563,16 +27500,70 @@ return [
             'craft\\elements\\Asset|array',
         ],
         [
-            'craft\\log\\LogProcessor',
+            'craft\\log\\ContextProcessor',
             '__invoke',
             0,
             'array',
         ],
         [
-            'craft\\log\\LogProcessor',
+            'craft\\log\\ContextProcessor',
             'filterVars',
             0,
             'array',
+        ],
+        [
+            'craft\\log\\MessageProcessor',
+            '__invoke',
+            0,
+            'array',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setAllowLineBreaks',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setFormatter',
+            0,
+            'Monolog\\Formatter\\FormatterInterface|null',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setLevel',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setLogger',
+            0,
+            'Monolog\\Logger|Psr\\Log\\LoggerInterface',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setMaxFiles',
+            0,
+            'int',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setName',
+            0,
+            'string',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setProcessor',
+            0,
+            'Monolog\\Processor\\ProcessorInterface|null',
+        ],
+        [
+            'craft\\log\\MonologTarget',
+            'setUseMicrosecondTimestamps',
+            0,
+            'bool',
         ],
         [
             'craft\\models\\FieldLayout',
@@ -26637,6 +27628,18 @@ return [
         [
             'craft\\models\\ProjectConfigData',
             'commitChanges',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\models\\ProjectConfigData',
+            'commitChanges',
+            1,
+            'mixed',
+        ],
+        [
+            'craft\\models\\ProjectConfigData',
+            'commitChanges',
             2,
             'string',
         ],
@@ -26657,6 +27660,12 @@ return [
             'commitChanges',
             5,
             'bool',
+        ],
+        [
+            'craft\\models\\ProjectConfigData',
+            'delete',
+            0,
+            'array|string',
         ],
         [
             'craft\\models\\ProjectConfigData',
@@ -26687,6 +27696,36 @@ return [
             'setContainedProjectConfigNames',
             1,
             'array',
+        ],
+        [
+            'craft\\models\\ProjectConfigData',
+            'setInternal',
+            0,
+            'array|string',
+        ],
+        [
+            'craft\\models\\ProjectConfigData',
+            'setInternal',
+            1,
+            'mixed',
+        ],
+        [
+            'craft\\models\\ReadOnlyProjectConfigData',
+            'get',
+            0,
+            'array|string',
+        ],
+        [
+            'craft\\models\\Site',
+            'getEnabled',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\models\\Site',
+            'setEnabled',
+            0,
+            'string|bool',
         ],
         [
             'craft\\models\\Volume',
@@ -26722,7 +27761,7 @@ return [
             'craft\\models\\Volume',
             'setTransformFsHandle',
             0,
-            'string',
+            'string|null',
         ],
         [
             'craft\\queue\\BaseJob',
@@ -26741,6 +27780,18 @@ return [
             'actionRetry',
             0,
             'string|int',
+        ],
+        [
+            'craft\\queue\\Queue',
+            'executeJob',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\queue\\Queue',
+            'reserve',
+            0,
+            'string|null',
         ],
         [
             'craft\\queue\\QueueInterface',
@@ -26795,6 +27846,30 @@ return [
             'formatAddress',
             2,
             'CommerceGuys\\Addressing\\Formatter\\FormatterInterface|null',
+        ],
+        [
+            'craft\\services\\Addresses',
+            'getAdministrativeAreaTypeLabel',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\services\\Addresses',
+            'getDependentLocalityTypeLabel',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\services\\Addresses',
+            'getLocalityTypeLabel',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\services\\Addresses',
+            'getPostalCodeTypeLabel',
+            0,
+            'string|null',
         ],
         [
             'craft\\services\\Addresses',
@@ -27038,6 +28113,24 @@ return [
         ],
         [
             'craft\\services\\Assets',
+            'getImagePreviewUrl',
+            0,
+            'craft\\elements\\Asset',
+        ],
+        [
+            'craft\\services\\Assets',
+            'getImagePreviewUrl',
+            1,
+            'int',
+        ],
+        [
+            'craft\\services\\Assets',
+            'getImagePreviewUrl',
+            2,
+            'int',
+        ],
+        [
+            'craft\\services\\Assets',
             'getTotalAssets',
             0,
             'mixed',
@@ -27158,6 +28251,12 @@ return [
         ],
         [
             'craft\\services\\ElementSources',
+            'getSources',
+            2,
+            'bool',
+        ],
+        [
+            'craft\\services\\ElementSources',
             'getTableAttributes',
             0,
             'string',
@@ -27173,6 +28272,12 @@ return [
             'createAction',
             0,
             'mixed',
+        ],
+        [
+            'craft\\services\\Elements',
+            'createEagerLoadingPlans',
+            0,
+            'array|string',
         ],
         [
             'craft\\services\\Elements',
@@ -27263,6 +28368,12 @@ return [
             'getFieldByHandle',
             1,
             'mixed',
+        ],
+        [
+            'craft\\services\\Fields',
+            'getLayoutTabsById',
+            0,
+            'array|int',
         ],
         [
             'craft\\services\\Fs',
@@ -27479,6 +28590,12 @@ return [
             'duplicateOwnership',
             2,
             'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\services\\PluginStore',
+            'getTokenByUserId',
+            0,
+            'int',
         ],
         [
             'craft\\services\\Plugins',
@@ -27710,6 +28827,12 @@ return [
         ],
         [
             'craft\\web\\AssetManager',
+            'getCacheKeyForPathHash',
+            0,
+            'string',
+        ],
+        [
+            'craft\\web\\AssetManager',
             'getPublishedUrl',
             2,
             'string|null',
@@ -27742,7 +28865,7 @@ return [
             'craft\\web\\Controller',
             'asModelFailure',
             0,
-            'yii\\base\\Model',
+            'yii\\base\\Model|craft\\base\\ModelInterface',
         ],
         [
             'craft\\web\\Controller',
@@ -27772,7 +28895,7 @@ return [
             'craft\\web\\Controller',
             'asModelSuccess',
             0,
-            'yii\\base\\Model',
+            'yii\\base\\Model|craft\\base\\ModelInterface',
         ],
         [
             'craft\\web\\Controller',
@@ -27974,6 +29097,18 @@ return [
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
+            'formAttributes',
+            0,
+            'array',
+        ],
+        [
+            'craft\\web\\CpScreenResponseBehavior',
+            'mainAttributes',
+            0,
+            'array',
+        ],
+        [
+            'craft\\web\\CpScreenResponseBehavior',
             'notice',
             0,
             'callable|string|null',
@@ -28005,6 +29140,12 @@ return [
         [
             'craft\\web\\CpScreenResponseBehavior',
             'saveShortcutRedirectUrl',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\web\\CpScreenResponseBehavior',
+            'selectedSubnavItem',
             0,
             'string|null',
         ],
@@ -28388,6 +29529,12 @@ return [
         ],
         [
             'craft\\web\\twig\\Extension',
+            'numberFilter',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
             'parseRefsFilter',
             0,
             'mixed',
@@ -28395,6 +29542,12 @@ return [
         [
             'craft\\web\\twig\\Extension',
             'pascalFilter',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
+            'percentageFilter',
             0,
             'mixed',
         ],
@@ -28577,6 +29730,12 @@ return [
             'fieldLayoutDesigner',
             1,
             'array',
+        ],
+        [
+            'craft\\web\\twig\\variables\\Cp',
+            'getEnvSuggestions',
+            1,
+            'callable|null',
         ],
         [
             'craft\\web\\twig\\variables\\CraftVariable',
