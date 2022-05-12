@@ -4,13 +4,13 @@
     "require": {
         "php": "^8.0.2",
         "rector/rector": "dev-main",
-        "symplify/package-builder": "^10.1"
+        "symplify/package-builder": "^10.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "craftcms/cms": "^4.0.0-alpha",
         "craftcms/ecs": "dev-main",
-        "phpstan/phpstan": "^1.2",
+        "phpstan/phpstan": "^1.6.8",
         "symfony/var-exporter": "^6.0"
     },
     "autoload": {
