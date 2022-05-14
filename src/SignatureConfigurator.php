@@ -27,7 +27,7 @@ use Rector\TypeDeclaration\ValueObject\AddParamTypeDeclaration;
 use Rector\TypeDeclaration\ValueObject\AddPropertyTypeDeclaration;
 use Rector\TypeDeclaration\ValueObject\AddReturnTypeDeclaration;
 use ReflectionClass;
-use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
+use ReflectionProperty;
 
 final class SignatureConfigurator
 {
@@ -124,8 +124,10 @@ final class SignatureConfigurator
         /** @var UnionType $type */
         $type = $unionTypeReflectionClass->newInstanceWithoutConstructor();
 
-        $privatesAccessor = new PrivatesAccessor();
-        $privatesAccessor->setPrivateProperty($type, 'types', $normalizedTypes);
+        // write private property
+        $typesReflectionProperty = new ReflectionProperty($type, 'types');
+        $typesReflectionProperty->setAccessible(true);
+        $typesReflectionProperty->setValue($type, $normalizedTypes);
 
         return $type;
     }
