@@ -18,5 +18,5 @@ jobs:
                     php-version: 8.0
                     coverage: none
 
-            -   run: git clone https://github.com/craftcms/cms.git --depth 1 --ansi
+            -   run: git clone https://github.com/craftcms/cms.git --depth 1
             -   run: cd cms && composer require craftcms/rector:dev-main --dev --ansi
