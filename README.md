@@ -44,7 +44,7 @@ vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-commerc
 Once the commands are complete, you’re ready to update `craftcms/cms` to Craft 4.
 
 ```sh
-composer require craftcms/cms:^4.0.0-alpha.1
+composer require craftcms/cms:^4.0.0-alpha.1 -W
 ```
 
 ## Advanced Configuration
