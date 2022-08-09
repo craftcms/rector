@@ -1073,6 +1073,16 @@ return [
             'craft\\elements\\db\\ElementQuery|null',
         ],
         [
+            'craft\\config\\BaseConfig',
+            'filename',
+            'string|null',
+        ],
+        [
+            'craft\\config\\BaseConfig',
+            'renamedSettings',
+            'array',
+        ],
+        [
             'craft\\config\\DbConfig',
             'attributes',
             'array',
@@ -1939,12 +1949,22 @@ return [
         ],
         [
             'craft\\console\\controllers\\DbController',
+            'dropAllTables',
+            'bool',
+        ],
+        [
+            'craft\\console\\controllers\\DbController',
             'overwrite',
             'bool',
         ],
         [
             'craft\\console\\controllers\\DbController',
             'zip',
+            'bool',
+        ],
+        [
+            'craft\\console\\controllers\\ElementsController',
+            'hard',
             'bool',
         ],
         [
@@ -2069,12 +2089,32 @@ return [
         ],
         [
             'craft\\console\\controllers\\ProjectConfigController',
+            'external',
+            'bool',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
             'force',
             'bool',
         ],
         [
             'craft\\console\\controllers\\ProjectConfigController',
             'invert',
+            'bool',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'message',
+            'string|null',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'overwrite',
+            'bool',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'updateTimestamp',
             'bool',
         ],
         [
@@ -2111,11 +2151,6 @@ return [
             'craft\\console\\controllers\\ResaveController',
             'offset',
             'int|null',
-        ],
-        [
-            'craft\\console\\controllers\\ResaveController',
-            'propagate',
-            'bool',
         ],
         [
             'craft\\console\\controllers\\ResaveController',
@@ -2244,6 +2279,11 @@ return [
         ],
         [
             'craft\\console\\controllers\\UsersController',
+            'activate',
+            'bool|null',
+        ],
+        [
+            'craft\\console\\controllers\\UsersController',
             'admin',
             'bool|null',
         ],
@@ -2301,6 +2341,11 @@ return [
             'craft\\console\\controllers\\utils\\PruneRevisionsController',
             'maxRevisions',
             'int|null',
+        ],
+        [
+            'craft\\console\\controllers\\utils\\PruneRevisionsController',
+            'section',
+            'string|null',
         ],
         [
             'craft\\console\\controllers\\utils\\RepairController',
@@ -2998,6 +3043,11 @@ return [
             'array',
         ],
         [
+            'craft\\elements\\conditions\\ElementCondition',
+            'sourceKey',
+            'string|null',
+        ],
+        [
             'craft\\elements\\conditions\\RelatedToConditionRule',
             'elementType',
             'string',
@@ -3011,16 +3061,6 @@ return [
             'craft\\elements\\conditions\\assets\\FileSizeConditionRule',
             'unit',
             'string',
-        ],
-        [
-            'craft\\elements\\conditions\\entries\\TypeConditionRule',
-            'entryTypeUid',
-            'string|null',
-        ],
-        [
-            'craft\\elements\\conditions\\entries\\TypeConditionRule',
-            'sectionUid',
-            'string|null',
         ],
         [
             'craft\\elements\\db\\AddressQuery',
@@ -3568,6 +3608,11 @@ return [
             'craft\\base\\ElementInterface',
         ],
         [
+            'craft\\errors\\FieldNotFoundException',
+            'fieldUid',
+            'string',
+        ],
+        [
             'craft\\errors\\InvalidFieldException',
             'handle',
             'string',
@@ -3913,6 +3958,46 @@ return [
             'craft\\base\\ElementInterface',
         ],
         [
+            'craft\\events\\DefineElementInnerHtmlEvent',
+            'context',
+            'string',
+        ],
+        [
+            'craft\\events\\DefineElementInnerHtmlEvent',
+            'element',
+            'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\events\\DefineElementInnerHtmlEvent',
+            'innerHtml',
+            'string',
+        ],
+        [
+            'craft\\events\\DefineElementInnerHtmlEvent',
+            'showDraftName',
+            'bool',
+        ],
+        [
+            'craft\\events\\DefineElementInnerHtmlEvent',
+            'showLabel',
+            'bool',
+        ],
+        [
+            'craft\\events\\DefineElementInnerHtmlEvent',
+            'showStatus',
+            'bool',
+        ],
+        [
+            'craft\\events\\DefineElementInnerHtmlEvent',
+            'showThumb',
+            'bool',
+        ],
+        [
+            'craft\\events\\DefineElementInnerHtmlEvent',
+            'size',
+            'string',
+        ],
+        [
             'craft\\events\\DefineEntryTypesEvent',
             'entryTypes',
             'array',
@@ -3941,6 +4026,11 @@ return [
             'craft\\events\\DefineFieldKeywordsEvent',
             'value',
             'mixed',
+        ],
+        [
+            'craft\\events\\DefineFieldLayoutCustomFieldsEvent',
+            'fields',
+            'array',
         ],
         [
             'craft\\events\\DefineFieldLayoutElementsEvent',
@@ -4258,6 +4348,16 @@ return [
             'craft\\models\\FieldLayout',
         ],
         [
+            'craft\\events\\FindLoginUserEvent',
+            'loginName',
+            'string',
+        ],
+        [
+            'craft\\events\\FindLoginUserEvent',
+            'user',
+            'craft\\elements\\User|null',
+        ],
+        [
             'craft\\events\\FormActionsEvent',
             'formActions',
             'array',
@@ -4323,9 +4423,44 @@ return [
             'string',
         ],
         [
+            'craft\\events\\IndexKeywordsEvent',
+            'attribute',
+            'string|null',
+        ],
+        [
+            'craft\\events\\IndexKeywordsEvent',
+            'element',
+            'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\events\\IndexKeywordsEvent',
+            'fieldId',
+            'int|null',
+        ],
+        [
+            'craft\\events\\IndexKeywordsEvent',
+            'keywords',
+            'string',
+        ],
+        [
             'craft\\events\\InvalidUserTokenEvent',
             'user',
             'craft\\elements\\User|null',
+        ],
+        [
+            'craft\\events\\InvalidateElementCachesEvent',
+            'tags',
+            'array',
+        ],
+        [
+            'craft\\events\\LocateUploadedFilesEvent',
+            'element',
+            'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\events\\LocateUploadedFilesEvent',
+            'files',
+            'array',
         ],
         [
             'craft\\events\\LoginFailureEvent',
@@ -4375,6 +4510,16 @@ return [
         [
             'craft\\events\\PopulateElementEvent',
             'row',
+            'array',
+        ],
+        [
+            'craft\\events\\PopulateElementsEvent',
+            'elements',
+            'array',
+        ],
+        [
+            'craft\\events\\PopulateElementsEvent',
+            'rows',
             'array',
         ],
         [
@@ -5631,6 +5776,11 @@ return [
             'craft\\imagetransforms\\ImageTransformer',
             'imageEditorData',
             'array',
+        ],
+        [
+            'craft\\log\\ContextProcessor',
+            'dumpVars',
+            'bool',
         ],
         [
             'craft\\log\\ContextProcessor',
@@ -7555,22 +7705,22 @@ return [
         [
             'craft\\validators\\DateTimeValidator',
             'max',
-            'string|null',
+            'mixed',
         ],
         [
             'craft\\validators\\DateTimeValidator',
             'min',
-            'string|null',
+            'mixed',
         ],
         [
             'craft\\validators\\DateTimeValidator',
             'tooEarly',
-            'string',
+            'string|null',
         ],
         [
             'craft\\validators\\DateTimeValidator',
             'tooLate',
-            'string',
+            'string|null',
         ],
         [
             'craft\\validators\\HandleValidator',
@@ -7590,7 +7740,7 @@ return [
         [
             'craft\\validators\\LanguageValidator',
             'notAllowed',
-            'string',
+            'string|null',
         ],
         [
             'craft\\validators\\LanguageValidator',
@@ -7630,7 +7780,7 @@ return [
         [
             'craft\\validators\\StringValidator',
             'containsMb4',
-            'string',
+            'string|null',
         ],
         [
             'craft\\validators\\StringValidator',
@@ -7655,12 +7805,12 @@ return [
         [
             'craft\\validators\\TimeValidator',
             'tooEarly',
-            'string',
+            'string|null',
         ],
         [
             'craft\\validators\\TimeValidator',
             'tooLate',
-            'string',
+            'string|null',
         ],
         [
             'craft\\validators\\UniqueValidator',
@@ -8607,6 +8757,11 @@ return [
         [
             'craft\\base\\Element',
             'attributes',
+            'array',
+        ],
+        [
+            'craft\\base\\Element',
+            'cacheTags',
             'array',
         ],
         [
@@ -9851,6 +10006,11 @@ return [
         ],
         [
             'craft\\base\\Field',
+            'attributeLabels',
+            'array',
+        ],
+        [
+            'craft\\base\\Field',
             'getContentColumnType',
             'array|string',
         ],
@@ -9883,6 +10043,11 @@ return [
             'craft\\base\\Field',
             'getGroup',
             'craft\\models\\FieldGroup|null',
+        ],
+        [
+            'craft\\base\\Field',
+            'getLabelId',
+            'string',
         ],
         [
             'craft\\base\\Field',
@@ -10013,6 +10178,11 @@ return [
             'craft\\base\\FieldInterface',
             'getIsTranslatable',
             'bool',
+        ],
+        [
+            'craft\\base\\FieldInterface',
+            'getLabelId',
+            'string',
         ],
         [
             'craft\\base\\FieldInterface',
@@ -10163,6 +10333,11 @@ return [
             'craft\\base\\FieldLayoutElement',
             'formHtml',
             'string|null',
+        ],
+        [
+            'craft\\base\\Fs',
+            'attributeLabels',
+            'array',
         ],
         [
             'craft\\base\\Fs',
@@ -10411,6 +10586,11 @@ return [
         ],
         [
             'craft\\base\\Plugin',
+            'config',
+            'array',
+        ],
+        [
+            'craft\\base\\Plugin',
             'cpNavIconPath',
             'string|null',
         ],
@@ -10468,6 +10648,11 @@ return [
             'craft\\base\\PluginInterface',
             'beforeSaveSettings',
             'bool',
+        ],
+        [
+            'craft\\base\\PluginInterface',
+            'config',
+            'array',
         ],
         [
             'craft\\base\\PluginInterface',
@@ -10741,6 +10926,11 @@ return [
         ],
         [
             'craft\\base\\conditions\\BaseConditionRule',
+            'getGroupLabel',
+            'string|null',
+        ],
+        [
+            'craft\\base\\conditions\\BaseConditionRule',
             'getHtml',
             'string',
         ],
@@ -10961,6 +11151,11 @@ return [
         ],
         [
             'craft\\base\\conditions\\ConditionRuleInterface',
+            'getGroupLabel',
+            'string|null',
+        ],
+        [
+            'craft\\base\\conditions\\ConditionRuleInterface',
             'getHtml',
             'string',
         ],
@@ -11156,12 +11351,22 @@ return [
         ],
         [
             'craft\\behaviors\\SessionBehavior',
+            'getSuccess',
+            'string|null',
+        ],
+        [
+            'craft\\behaviors\\SessionBehavior',
             'setError',
             'void',
         ],
         [
             'craft\\behaviors\\SessionBehavior',
             'setNotice',
+            'void',
+        ],
+        [
+            'craft\\behaviors\\SessionBehavior',
+            'setSuccess',
             'void',
         ],
         [
@@ -11185,9 +11390,354 @@ return [
             'string',
         ],
         [
+            'craft\\config\\BaseConfig',
+            'create',
+            'static',
+        ],
+        [
             'craft\\config\\DbConfig',
-            'init',
-            'void',
+            'charset',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'collation',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'database',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'driver',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'dsn',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'password',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'pdoAttributes',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'port',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'schema',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'server',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'setSchemaOnConnect',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'tablePrefix',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'unixSocket',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'url',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'useUnbufferedConnections',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'user',
+            'craft\\config\\DbConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'accessibilityDefaults',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'actionTrigger',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'activateAccountSuccessPath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'addTrailingSlashesToUrls',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'aliases',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowAdminChanges',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowSimilarTags',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowUpdates',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowUppercaseInSlug',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowedFileExtensions',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowedGraphqlOrigins',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'autoLoginAfterAccountActivation',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'backupCommand',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'backupOnUpdate',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'baseCpUrl',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'blowfishHashCost',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'brokenImagePath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'buildId',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'cacheDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'convertFilenamesToAscii',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'cooldownDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'cpHeadTags',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'cpTrigger',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'csrfTokenName',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultCookieDomain',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultCpLanguage',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultCpLocale',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultDirMode',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultFileMode',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultImageQuality',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultSearchTermOptions',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultTemplateExtensions',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultTokenDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultWeekStartDay',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'deferPublicRegistrationPassword',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'devMode',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'disableGraphqlTransformDirective',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'disabledPlugins',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'disallowRobots',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'elevatedSessionDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableBasicHttpAuth',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableCsrfCookie',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableCsrfProtection',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableGql',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableGraphqlCaching',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableGraphqlIntrospection',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableTemplateCaching',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'errorTemplatePrefix',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'extraAllowedFileExtensions',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'extraAppLocales',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'extraFileKinds',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'filenameWordSeparator',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'generateTransformsBeforePageLoad',
+            'craft\\config\\GeneralConfig',
         ],
         [
             'craft\\config\\GeneralConfig',
@@ -11201,13 +11751,458 @@ return [
         ],
         [
             'craft\\config\\GeneralConfig',
+            'getRememberedUserSessionDuration',
+            'DateInterval|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
             'getSetPasswordRequestPath',
             'string|null',
         ],
         [
             'craft\\config\\GeneralConfig',
-            'init',
-            'void',
+            'gqlTypePrefix',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'handleCasing',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'headlessMode',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'httpProxy',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'imageDriver',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'imageEditorRatios',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'indexTemplateFilenames',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'invalidLoginWindowDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'invalidUserTokenPath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'ipHeaders',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'isSystemLive',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'limitAutoSlugsToAscii',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'loginPath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'logoutPath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxBackups',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxCachedCloudImageSize',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxGraphqlComplexity',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxGraphqlDepth',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxGraphqlResults',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxInvalidLogins',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxRevisions',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxSlugIncrement',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxUploadFileSize',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'omitScriptNameInUrls',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'optimizeImageFilesize',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'pageTrigger',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'pathParam',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'permissionsPolicyHeader',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'phpMaxMemoryLimit',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'phpSessionName',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'postCpLoginRedirect',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'postLoginRedirect',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'postLogoutRedirect',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'prefixGqlRootTypes',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'preserveCmykColorspace',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'preserveExifData',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'preserveImageColorProfiles',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'preventUserEnumeration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'previewIframeResizerOptions',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'previewTokenDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'privateTemplateTrigger',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'purgePendingUsersDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'purgeStaleUserSessionDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'purgeUnsavedDraftsDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'rasterizeSvgThumbs',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'rememberUsernameDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'rememberedUserSessionDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'requireMatchingUserAgentForSession',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'requireUserAgentAndIpForSession',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'resourceBasePath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'resourceBaseUrl',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'restoreCommand',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'revAssetUrls',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'rotateImagesOnUploadByExifData',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'runQueueAutomatically',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sameSiteCookieValue',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sanitizeCpImageUploads',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sanitizeSvgUploads',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'secureHeaders',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'secureProtocolHeaders',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'securityKey',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sendContentLengthHeader',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sendPoweredByHeader',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'setGraphqlDatesToSystemTimeZone',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'setPasswordPath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'setPasswordRequestPath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'setPasswordSuccessPath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'siteToken',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'slugWordSeparator',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'softDeleteDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'storeUserIps',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'testToEmailAddress',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'timezone',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'tokenParam',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'transformGifs',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'transformSvgs',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'translationDebugOutput',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'trustedHosts',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'upscaleImages',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useEmailAsUsername',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useFileLocks',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useIframeResizer',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'usePathInfo',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useSecureCookies',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useSslOnTokenizedUrls',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'userSessionDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'verificationCodeDuration',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'verifyEmailPath',
+            'craft\\config\\GeneralConfig',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'verifyEmailSuccessPath',
+            'craft\\config\\GeneralConfig',
         ],
         [
             'craft\\console\\Application',
@@ -11552,7 +12547,7 @@ return [
         [
             'craft\\console\\Controller',
             'getActionMethodReflection',
-            'ReflectionMethod',
+            'ReflectionFunctionAbstract',
         ],
         [
             'craft\\console\\Controller',
@@ -11628,6 +12623,21 @@ return [
             'craft\\console\\controllers\\BackupTrait',
             'backup',
             'bool',
+        ],
+        [
+            'craft\\console\\controllers\\DbController',
+            'actionDropAllTables',
+            'int',
+        ],
+        [
+            'craft\\console\\controllers\\ElementsController',
+            'actionDelete',
+            'int',
+        ],
+        [
+            'craft\\console\\controllers\\ElementsController',
+            'actionRestore',
+            'int',
         ],
         [
             'craft\\console\\controllers\\FixtureController',
@@ -11723,6 +12733,21 @@ return [
             'craft\\console\\controllers\\MigrateController',
             'truncateDatabase',
             'void',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'actionGet',
+            'int',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'actionRemove',
+            'int',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'actionSet',
+            'int',
         ],
         [
             'craft\\console\\controllers\\ServeController',
@@ -12741,6 +13766,11 @@ return [
         ],
         [
             'craft\\db\\Query',
+            'getIterator',
+            'ArrayIterator',
+        ],
+        [
+            'craft\\db\\Query',
             'init',
             'void',
         ],
@@ -12748,6 +13778,26 @@ return [
             'craft\\db\\Query',
             'nth',
             'mixed',
+        ],
+        [
+            'craft\\db\\Query',
+            'offsetExists',
+            'bool',
+        ],
+        [
+            'craft\\db\\Query',
+            'offsetGet',
+            'mixed',
+        ],
+        [
+            'craft\\db\\Query',
+            'offsetSet',
+            'void',
+        ],
+        [
+            'craft\\db\\Query',
+            'offsetUnset',
+            'void',
         ],
         [
             'craft\\db\\Query',
@@ -12958,6 +14008,11 @@ return [
             'craft\\elements\\Address',
             'beforeValidate',
             'bool',
+        ],
+        [
+            'craft\\elements\\Address',
+            'find',
+            'craft\\elements\\db\\AddressQuery',
         ],
         [
             'craft\\elements\\Address',
@@ -14236,6 +15291,11 @@ return [
         ],
         [
             'craft\\elements\\db\\ElementQuery',
+            'prepareSubquery',
+            'craft\\db\\Query',
+        ],
+        [
+            'craft\\elements\\db\\ElementQuery',
             'prevSiblingOf',
             'craft\\elements\\db\\ElementQuery',
         ],
@@ -14905,6 +15965,11 @@ return [
             'string',
         ],
         [
+            'craft\\errors\\FieldNotFoundException',
+            'getName',
+            'string',
+        ],
+        [
             'craft\\errors\\FileException',
             'getName',
             'string',
@@ -15041,6 +16106,11 @@ return [
         ],
         [
             'craft\\fieldlayoutelements\\BaseField',
+            'labelId',
+            'string',
+        ],
+        [
+            'craft\\fieldlayoutelements\\BaseField',
             'selectorLabel',
             'string|null',
         ],
@@ -15116,6 +16186,11 @@ return [
         ],
         [
             'craft\\fields\\BaseOptionsField',
+            'encodeValue',
+            'array|string|null',
+        ],
+        [
+            'craft\\fields\\BaseOptionsField',
             'validateOptions',
             'void',
         ],
@@ -15163,11 +16238,6 @@ return [
             'craft\\fields\\BaseRelationField',
             'validateRelatedElements',
             'void',
-        ],
-        [
-            'craft\\fields\\Date',
-            'attributeLabels',
-            'array',
         ],
         [
             'craft\\fields\\Entries',
@@ -15220,11 +16290,6 @@ return [
             'void',
         ],
         [
-            'craft\\fields\\Time',
-            'attributeLabels',
-            'array',
-        ],
-        [
             'craft\\fields\\Users',
             'createSelectionCondition',
             'craft\\elements\\conditions\\ElementCondition|null',
@@ -15265,6 +16330,41 @@ return [
             'void',
         ],
         [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
+            'elementQueryParam',
+            'string|int|null',
+        ],
+        [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
+            'field',
+            'craft\\base\\FieldInterface',
+        ],
+        [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
+            'getExclusiveQueryParams',
+            'array',
+        ],
+        [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
+            'matchElement',
+            'bool',
+        ],
+        [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
+            'matchFieldValue',
+            'bool',
+        ],
+        [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
+            'modifyQuery',
+            'void',
+        ],
+        [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
+            'setFieldUid',
+            'void',
+        ],
+        [
             'craft\\fields\\conditions\\FieldConditionRuleInterface',
             'setFieldUid',
             'void',
@@ -15293,6 +16393,11 @@ return [
             'craft\\fields\\conditions\\FieldConditionRuleTrait',
             'getExclusiveQueryParams',
             'array',
+        ],
+        [
+            'craft\\fields\\conditions\\FieldConditionRuleTrait',
+            'getGroupLabel',
+            'string|null',
         ],
         [
             'craft\\fields\\conditions\\FieldConditionRuleTrait',
@@ -16046,6 +17151,11 @@ return [
         ],
         [
             'craft\\helpers\\Assets',
+            'revParams',
+            'array',
+        ],
+        [
+            'craft\\helpers\\Assets',
             'sortFolderTree',
             'void',
         ],
@@ -16166,8 +17276,33 @@ return [
         ],
         [
             'craft\\helpers\\DateTimeHelper',
+            'humanDuration',
+            'string',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
             'normalizeTimeZone',
             'string|false',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
+            'now',
+            'DateTime',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
+            'pause',
+            'void',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
+            'resume',
+            'void',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
+            'toDateInterval',
+            'DateInterval|false',
         ],
         [
             'craft\\helpers\\DateTimeHelper',
@@ -16431,8 +17566,23 @@ return [
         ],
         [
             'craft\\helpers\\Html',
+            'encodeSpaces',
+            'string',
+        ],
+        [
+            'craft\\helpers\\Html',
             'hiddenLabel',
             'string',
+        ],
+        [
+            'craft\\helpers\\Html',
+            'unwrapCondition',
+            'array',
+        ],
+        [
+            'craft\\helpers\\Html',
+            'unwrapNoscript',
+            'array',
         ],
         [
             'craft\\helpers\\HtmlPurifier',
@@ -16493,6 +17643,11 @@ return [
             'craft\\helpers\\ImageTransforms',
             'storeLocalSource',
             'void',
+        ],
+        [
+            'craft\\helpers\\Install',
+            'defaultSiteLanguage',
+            'string|null',
         ],
         [
             'craft\\helpers\\Install',
@@ -16616,6 +17771,11 @@ return [
         ],
         [
             'craft\\helpers\\Number',
+            'isIntOrFloat',
+            'bool',
+        ],
+        [
+            'craft\\helpers\\Number',
             'makeNumeric',
             'string|int|float',
         ],
@@ -16632,6 +17792,11 @@ return [
         [
             'craft\\helpers\\ProjectConfig',
             'ensureAllFieldsProcessed',
+            'void',
+        ],
+        [
+            'craft\\helpers\\ProjectConfig',
+            'ensureAllFilesystemsProcessed',
             'void',
         ],
         [
@@ -17073,6 +18238,11 @@ return [
             'craft\\log\\ContextProcessor',
             '__invoke',
             'array',
+        ],
+        [
+            'craft\\log\\ContextProcessor',
+            'dumpVars',
+            'string',
         ],
         [
             'craft\\log\\ContextProcessor',
@@ -17538,6 +18708,11 @@ return [
             'craft\\models\\FieldLayout',
             'getFirstVisibleElementByType',
             'craft\\base\\FieldLayoutElement|null',
+        ],
+        [
+            'craft\\models\\FieldLayout',
+            'getVisibleCustomFieldElements',
+            'array',
         ],
         [
             'craft\\models\\FieldLayout',
@@ -18741,6 +19916,11 @@ return [
         ],
         [
             'craft\\services\\Config',
+            'getConfigFromFile',
+            'craft\\config\\BaseConfig|array',
+        ],
+        [
+            'craft\\services\\Config',
             'getConfigSettings',
             'object',
         ],
@@ -18748,6 +19928,11 @@ return [
             'craft\\services\\Config',
             'getCustom',
             'object',
+        ],
+        [
+            'craft\\services\\Config',
+            'getLoadingConfigFile',
+            'string|null',
         ],
         [
             'craft\\services\\Config',
@@ -21151,8 +22336,18 @@ return [
         ],
         [
             'craft\\web\\View',
+            'clearCssFileBuffer',
+            'array|false',
+        ],
+        [
+            'craft\\web\\View',
             'clearJsBuffer',
             'array|string|false',
+        ],
+        [
+            'craft\\web\\View',
+            'clearJsFileBuffer',
+            'array|false',
         ],
         [
             'craft\\web\\View',
@@ -21291,7 +22486,17 @@ return [
         ],
         [
             'craft\\web\\View',
+            'startCssFileBuffer',
+            'void',
+        ],
+        [
+            'craft\\web\\View',
             'startJsBuffer',
+            'void',
+        ],
+        [
+            'craft\\web\\View',
+            'startJsFileBuffer',
             'void',
         ],
         [
@@ -21518,6 +22723,11 @@ return [
             'craft\\web\\twig\\Extension',
             'jsonEncodeFilter',
             'string|false',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
+            'lengthFilter',
+            'int',
         ],
         [
             'craft\\web\\twig\\Extension',
@@ -21878,6 +23088,11 @@ return [
             'craft\\web\\twig\\variables\\Cp',
             'getFsOptions',
             'array',
+        ],
+        [
+            'craft\\web\\twig\\variables\\Cp',
+            'getRequestedSite',
+            'craft\\models\\Site|null',
         ],
         [
             'craft\\web\\twig\\variables\\Cp',
@@ -23498,6 +24713,984 @@ return [
             'array|string',
         ],
         [
+            'craft\\behaviors\\SessionBehavior',
+            'setError',
+            1,
+            'array',
+        ],
+        [
+            'craft\\behaviors\\SessionBehavior',
+            'setNotice',
+            1,
+            'array',
+        ],
+        [
+            'craft\\behaviors\\SessionBehavior',
+            'setSuccess',
+            0,
+            'string',
+        ],
+        [
+            'craft\\behaviors\\SessionBehavior',
+            'setSuccess',
+            1,
+            'array',
+        ],
+        [
+            'craft\\config\\BaseConfig',
+            'create',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'charset',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'collation',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'database',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'driver',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'dsn',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'password',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'pdoAttributes',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'port',
+            0,
+            'int|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'schema',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'server',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'setSchemaOnConnect',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'tablePrefix',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'unixSocket',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'url',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'useUnbufferedConnections',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\DbConfig',
+            'user',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'accessibilityDefaults',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'actionTrigger',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'activateAccountSuccessPath',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'addTrailingSlashesToUrls',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'aliases',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowAdminChanges',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowSimilarTags',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowUpdates',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowUppercaseInSlug',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowedFileExtensions',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'allowedGraphqlOrigins',
+            0,
+            'array|false|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'autoLoginAfterAccountActivation',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'backupCommand',
+            0,
+            'string|false|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'backupOnUpdate',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'baseCpUrl',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'blowfishHashCost',
+            0,
+            'int',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'brokenImagePath',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'buildId',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'cacheDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'convertFilenamesToAscii',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'cooldownDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'cpHeadTags',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'cpTrigger',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'csrfTokenName',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultCookieDomain',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultCpLanguage',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultCpLocale',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultDirMode',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultFileMode',
+            0,
+            'int|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultImageQuality',
+            0,
+            'int',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultSearchTermOptions',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultTemplateExtensions',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultTokenDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'defaultWeekStartDay',
+            0,
+            'int',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'deferPublicRegistrationPassword',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'devMode',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'disableGraphqlTransformDirective',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'disabledPlugins',
+            0,
+            'array|string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'disallowRobots',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'elevatedSessionDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableBasicHttpAuth',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableCsrfCookie',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableCsrfProtection',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableGql',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableGraphqlCaching',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableGraphqlIntrospection',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'enableTemplateCaching',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'errorTemplatePrefix',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'extraAllowedFileExtensions',
+            0,
+            'array|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'extraAppLocales',
+            0,
+            'array|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'extraFileKinds',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'filenameWordSeparator',
+            0,
+            'string|false',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'generateTransformsBeforePageLoad',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'gqlTypePrefix',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'handleCasing',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'headlessMode',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'httpProxy',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'imageDriver',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'imageEditorRatios',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'indexTemplateFilenames',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'invalidLoginWindowDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'invalidUserTokenPath',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'ipHeaders',
+            0,
+            'array|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'isSystemLive',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'limitAutoSlugsToAscii',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'loginPath',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'logoutPath',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxBackups',
+            0,
+            'int|false',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxCachedCloudImageSize',
+            0,
+            'int',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxGraphqlComplexity',
+            0,
+            'int',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxGraphqlDepth',
+            0,
+            'int',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxGraphqlResults',
+            0,
+            'int',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxInvalidLogins',
+            0,
+            'int|false',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxRevisions',
+            0,
+            'int|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxSlugIncrement',
+            0,
+            'int',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'maxUploadFileSize',
+            0,
+            'string|int',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'omitScriptNameInUrls',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'optimizeImageFilesize',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'pageTrigger',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'pathParam',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'permissionsPolicyHeader',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'phpMaxMemoryLimit',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'phpSessionName',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'postCpLoginRedirect',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'postLoginRedirect',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'postLogoutRedirect',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'prefixGqlRootTypes',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'preserveCmykColorspace',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'preserveExifData',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'preserveImageColorProfiles',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'preventUserEnumeration',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'previewIframeResizerOptions',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'previewTokenDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'privateTemplateTrigger',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'purgePendingUsersDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'purgeStaleUserSessionDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'purgeUnsavedDraftsDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'rasterizeSvgThumbs',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'rememberUsernameDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'rememberedUserSessionDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'requireMatchingUserAgentForSession',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'requireUserAgentAndIpForSession',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'resourceBasePath',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'resourceBaseUrl',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'restoreCommand',
+            0,
+            'string|false|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'revAssetUrls',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'rotateImagesOnUploadByExifData',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'runQueueAutomatically',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sameSiteCookieValue',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sanitizeCpImageUploads',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sanitizeSvgUploads',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'secureHeaders',
+            0,
+            'array|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'secureProtocolHeaders',
+            0,
+            'array|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'securityKey',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sendContentLengthHeader',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'sendPoweredByHeader',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'setGraphqlDatesToSystemTimeZone',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'setPasswordPath',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'setPasswordRequestPath',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'setPasswordSuccessPath',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'siteToken',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'slugWordSeparator',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'softDeleteDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'storeUserIps',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'testToEmailAddress',
+            0,
+            'array|string|false|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'timezone',
+            0,
+            'string|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'tokenParam',
+            0,
+            'string',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'transformGifs',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'transformSvgs',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'translationDebugOutput',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'trustedHosts',
+            0,
+            'array',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'upscaleImages',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useEmailAsUsername',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useFileLocks',
+            0,
+            'bool|null',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useIframeResizer',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'usePathInfo',
+            0,
+            'bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useSecureCookies',
+            0,
+            'string|bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'useSslOnTokenizedUrls',
+            0,
+            'string|bool',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'userSessionDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'verificationCodeDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'verifyEmailPath',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\config\\GeneralConfig',
+            'verifyEmailSuccessPath',
+            0,
+            'mixed',
+        ],
+        [
             'craft\\console\\Application',
             'setIsInstalled',
             0,
@@ -23552,6 +25745,18 @@ return [
             'mixed',
         ],
         [
+            'craft\\console\\controllers\\ElementsController',
+            'actionDelete',
+            0,
+            'int',
+        ],
+        [
+            'craft\\console\\controllers\\ElementsController',
+            'actionRestore',
+            0,
+            'int',
+        ],
+        [
             'craft\\console\\controllers\\IndexAssetsController',
             'actionOne',
             0,
@@ -23562,6 +25767,30 @@ return [
             'actionOne',
             1,
             'int',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'actionGet',
+            0,
+            'string',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'actionRemove',
+            0,
+            'string',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'actionSet',
+            0,
+            'string',
+        ],
+        [
+            'craft\\console\\controllers\\ProjectConfigController',
+            'actionSet',
+            1,
+            'string',
         ],
         [
             'craft\\controllers\\AddressesController',
@@ -23838,6 +26067,36 @@ return [
             'collect',
             0,
             'yii\\db\\Connection|null',
+        ],
+        [
+            'craft\\db\\Query',
+            'offsetExists',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\db\\Query',
+            'offsetGet',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\db\\Query',
+            'offsetSet',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\db\\Query',
+            'offsetSet',
+            1,
+            'mixed',
+        ],
+        [
+            'craft\\db\\Query',
+            'offsetUnset',
+            0,
+            'mixed',
         ],
         [
             'craft\\db\\TableSchema',
@@ -24639,6 +26898,12 @@ return [
         ],
         [
             'craft\\elements\\db\\ElementQuery',
+            'prepareSubquery',
+            0,
+            'yii\\db\\QueryBuilder|null',
+        ],
+        [
+            'craft\\elements\\db\\ElementQuery',
             'prevSiblingOf',
             0,
             'craft\\base\\ElementInterface|int|null',
@@ -25226,6 +27491,12 @@ return [
             'mixed',
         ],
         [
+            'craft\\fields\\BaseOptionsField',
+            'encodeValue',
+            0,
+            'craft\\fields\\data\\OptionData|craft\\fields\\data\\MultiOptionsFieldData|string|null',
+        ],
+        [
             'craft\\fields\\BaseRelationField',
             'getInputSources',
             0,
@@ -25269,6 +27540,24 @@ return [
         ],
         [
             'craft\\fields\\conditions\\DateFieldConditionRule',
+            'setFieldUid',
+            0,
+            'string',
+        ],
+        [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
+            'matchElement',
+            0,
+            'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
+            'modifyQuery',
+            0,
+            'yii\\db\\QueryInterface',
+        ],
+        [
+            'craft\\fields\\conditions\\EmptyFieldConditionRule',
             'setFieldUid',
             0,
             'string',
@@ -26067,6 +28356,12 @@ return [
         ],
         [
             'craft\\helpers\\ArrayHelper',
+            'removeValue',
+            2,
+            'bool',
+        ],
+        [
+            'craft\\helpers\\ArrayHelper',
             'rename',
             3,
             'mixed',
@@ -26172,6 +28467,18 @@ return [
             'parseSrcsetSize',
             0,
             'mixed',
+        ],
+        [
+            'craft\\helpers\\Assets',
+            'revParams',
+            0,
+            'craft\\elements\\Asset',
+        ],
+        [
+            'craft\\helpers\\Assets',
+            'revParams',
+            1,
+            'DateTime|null',
         ],
         [
             'craft\\helpers\\Assets',
@@ -26331,6 +28638,18 @@ return [
         ],
         [
             'craft\\helpers\\DateTimeHelper',
+            'humanDuration',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
+            'humanDuration',
+            1,
+            'bool|null',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
             'isInThePast',
             0,
             'mixed',
@@ -26386,6 +28705,24 @@ return [
         [
             'craft\\helpers\\DateTimeHelper',
             'isYesterday',
+            0,
+            'mixed',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
+            'now',
+            0,
+            'DateTimeZone|null',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
+            'pause',
+            0,
+            'DateTime|null',
+        ],
+        [
+            'craft\\helpers\\DateTimeHelper',
+            'toDateInterval',
             0,
             'mixed',
         ],
@@ -26805,6 +29142,12 @@ return [
         ],
         [
             'craft\\helpers\\Html',
+            'encodeSpaces',
+            0,
+            'string',
+        ],
+        [
+            'craft\\helpers\\Html',
             'explodeClass',
             0,
             'mixed',
@@ -26844,6 +29187,18 @@ return [
             'namespaceInputName',
             1,
             'string|null',
+        ],
+        [
+            'craft\\helpers\\Html',
+            'unwrapCondition',
+            0,
+            'string',
+        ],
+        [
+            'craft\\helpers\\Html',
+            'unwrapNoscript',
+            0,
+            'string',
         ],
         [
             'craft\\helpers\\Image',
@@ -27042,6 +29397,12 @@ return [
             'isInt',
             0,
             'string|int|float',
+        ],
+        [
+            'craft\\helpers\\Number',
+            'isIntOrFloat',
+            0,
+            'mixed',
         ],
         [
             'craft\\helpers\\Number',
@@ -27507,6 +29868,12 @@ return [
         ],
         [
             'craft\\log\\ContextProcessor',
+            'dumpVars',
+            0,
+            'array',
+        ],
+        [
+            'craft\\log\\ContextProcessor',
             'filterVars',
             0,
             'array',
@@ -27587,6 +29954,12 @@ return [
             'craft\\models\\FieldLayout',
             'getFirstVisibleElementByType',
             1,
+            'craft\\base\\ElementInterface',
+        ],
+        [
+            'craft\\models\\FieldLayout',
+            'getVisibleCustomFieldElements',
+            0,
             'craft\\base\\ElementInterface',
         ],
         [
@@ -28056,6 +30429,12 @@ return [
             'stopIndexingSession',
             0,
             'craft\\models\\AssetIndexingSession',
+        ],
+        [
+            'craft\\services\\AssetIndexer',
+            'storeIndexEntry',
+            0,
+            'craft\\models\\AssetIndexData',
         ],
         [
             'craft\\services\\AssetIndexer',
@@ -28570,7 +30949,7 @@ return [
         [
             'craft\\services\\Matrix',
             'duplicateBlocks',
-            4,
+            5,
             'bool',
         ],
         [
@@ -28947,6 +31326,12 @@ return [
         ],
         [
             'craft\\web\\Controller',
+            'asSuccess',
+            3,
+            'array',
+        ],
+        [
+            'craft\\web\\Controller',
             'getPostedRedirectUrl',
             0,
             'object|null',
@@ -28956,6 +31341,18 @@ return [
             'redirectToPostedUrl',
             0,
             'object|null',
+        ],
+        [
+            'craft\\web\\Controller',
+            'setFailFlash',
+            1,
+            'array',
+        ],
+        [
+            'craft\\web\\Controller',
+            'setSuccessFlash',
+            1,
+            'array',
         ],
         [
             'craft\\web\\CpScreenResponseBehavior',
@@ -29469,6 +31866,18 @@ return [
         ],
         [
             'craft\\web\\twig\\Extension',
+            'lengthFilter',
+            0,
+            'Twig\\Environment',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
+            'lengthFilter',
+            1,
+            'mixed',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
             'literalFilter',
             0,
             'mixed',
@@ -29676,6 +32085,12 @@ return [
             'withoutFilter',
             1,
             'mixed',
+        ],
+        [
+            'craft\\web\\twig\\Extension',
+            'withoutFilter',
+            2,
+            'bool',
         ],
         [
             'craft\\web\\twig\\Extension',
