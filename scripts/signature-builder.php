@@ -44,7 +44,7 @@ if ($namespaces) {
 
 $excludeNamespaces = getCliOption('exclude-namespaces', 'e');
 if ($excludeNamespaces) {
-    $excludeNamespaces = array_map(fn($namespace) => normalizeNamespace($excludeNamespaces), explode(',', $excludeNamespaces));
+    $excludeNamespaces = array_map(fn($namespace) => normalizeNamespace($namespace), explode(',', $excludeNamespaces));
 }
 
 $filterNamespace = function($class) use ($namespaces, $excludeNamespaces): bool {
