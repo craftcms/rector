@@ -16,7 +16,14 @@ use Rector\Transform\Rector\MethodCall\MethodCallToPropertyFetchRector;
 use Rector\Transform\ValueObject\MethodCallToPropertyFetch;
 
 return static function(RectorConfig $rectorConfig): void {
-    $rectorConfig->import(__DIR__ . '/craft-cms-40/*');
+    $rectorConfig->import(__DIR__ . '/craft-cms-40/assets.php');
+    $rectorConfig->import(__DIR__ . '/craft-cms-40/elements.php');
+    $rectorConfig->import(__DIR__ . '/craft-cms-40/events.php');
+    $rectorConfig->import(__DIR__ . '/craft-cms-40/field-layouts.php');
+    $rectorConfig->import(__DIR__ . '/craft-cms-40/fields.php');
+    $rectorConfig->import(__DIR__ . '/craft-cms-40/plugins.php');
+    $rectorConfig->import(__DIR__ . '/craft-cms-40/project-config.php');
+
     $rectorConfig
         ->ruleWithConfiguration(RenameMethodRector::class, [
             new MethodCallRename('craft\base\ApplicationTrait', 'getIsSystemOn', 'getIsLive'),
