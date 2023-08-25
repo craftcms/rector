@@ -226,10 +226,8 @@ final class SignatureBuilder
                 $parentHasProperty = $parentClass?->hasProperty($property->name);
                 $parentProperty = $parentHasProperty ? $parentClass->getProperty($property->name) : null;
 
-                if ($parentProperty instanceof ReflectionProperty) {
-                    if (!$parentHasProperty || $type !== $this->serializeType($parentProperty->getType(), $parentClass->name)) {
-                        $this->signatures['propertyTypes'][] = [$class->name, $property->name, $type];
-                    }
+                if (!$parentHasProperty || $type !== $this->serializeType($parentProperty->getType(), $parentClass->name)) {
+                    $this->signatures['propertyTypes'][] = [$class->name, $property->name, $type];
                 }
             }
         }

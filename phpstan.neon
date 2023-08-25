@@ -23,5 +23,9 @@ parameters:
             path:  scripts/signature-builder.php
 
         -
+            message: '#Cannot call method getType\(\) on ReflectionProperty\|null#'
+            path: scripts/signature-builder.php
+
+        -
             message: '#Cannot access property \$name on ReflectionClass\|null#'
             path: scripts/signature-builder.php
