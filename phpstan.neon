@@ -10,9 +10,6 @@ parameters:
         - src
         - tests
 
-#    bootstrapFiles:
-#        - vendor/rector/rector/vendor/scoper-autoload.php
-
     ignoreErrors:
         - '#expects string, ((.*?)string|string(.*?)) given#'
 
