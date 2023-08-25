@@ -122,6 +122,7 @@ echo 'Finding source classes … ';
 $classLoader = $autoloadClass::getLoader();
 $srcClasses = [];
 
+/** @var class-string $class */
 foreach ($classLoader->getClassMap() as $class => $file) {
     $file = realpath($file);
     // ignore everything in vendor/
@@ -161,7 +162,7 @@ final class SignatureBuilder
     }
 
     /**
-     * @param string[] $classes
+     * @param array<class-string> $classes
      * @return array{propertyTypes: mixed[], methodReturnTypes: mixed[], methodParamTypes: mixed[]}
      */
     public function build(array $classes): array
