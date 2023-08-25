@@ -76,7 +76,7 @@ final class SignatureConfigurator
 
     private static function type(string $type): Type
     {
-        if (!isset(self::$types[$type])) {
+        if (! isset(self::$types[$type])) {
             self::$types[$type] = self::createType($type);
         }
 
@@ -113,7 +113,7 @@ final class SignatureConfigurator
     {
         $normalizedTypes = array_map(fn(string $type) => self::type($type), $types);
 
-        if (count($types) === 2 && in_array('null', $types)) {
+        if (count($types) === 2 && in_array('null', $types, true)) {
             return new UnionType($normalizedTypes);
         }
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use craft\ecs\SetList;
+use craft\ecs\SetList as CraftSetList;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 return static function(ECSConfig $ecsConfig): void {
@@ -14,6 +14,7 @@ return static function(ECSConfig $ecsConfig): void {
     ]);
 
     $ecsConfig->sets([
-        SetList::CRAFT_CMS_4,
+        CraftSetList::CRAFT_CMS_4,
+        \Symplify\EasyCodingStandard\ValueObject\Set\SetList::COMMON,
     ]);
 };
