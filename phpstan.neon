@@ -1,5 +1,5 @@
 parameters:
-    level: 6
+    level: 8
 
     checkGenericClassInNonGenericObjectType: false
 
@@ -10,5 +10,18 @@ parameters:
         - src
         - tests
 
-    bootstrapFiles:
-        - vendor/rector/rector/vendor/scoper-autoload.php
+    ignoreErrors:
+        - '#expects string, ((.*?)string|string(.*?)) given#'
+
+        # false positives on static calls
+        -
+            message: '#Cannot call static method getLoader\(\) on class-string\|null#'
+            path: scripts/signature-builder.php
+
+        -
+            message: '#Cannot call method getReturnType\(\) on ReflectionMethod\|null#'
+            path:  scripts/signature-builder.php
+
+        -
+            message: '#Cannot access property \$name on ReflectionClass\|null#'
+            path: scripts/signature-builder.php

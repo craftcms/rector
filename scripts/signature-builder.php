@@ -122,6 +122,7 @@ echo 'Finding source classes … ';
 $classLoader = $autoloadClass::getLoader();
 $srcClasses = [];
 
+/** @var class-string $class */
 foreach ($classLoader->getClassMap() as $class => $file) {
     $file = realpath($file);
     // ignore everything in vendor/
@@ -161,7 +162,7 @@ final class SignatureBuilder
     }
 
     /**
-     * @param string[] $classes
+     * @param array<class-string> $classes
      * @return array{propertyTypes: mixed[], methodReturnTypes: mixed[], methodParamTypes: mixed[]}
      */
     public function build(array $classes): array
@@ -224,8 +225,11 @@ final class SignatureBuilder
             if ($type) {
                 $parentHasProperty = $parentClass?->hasProperty($property->name);
                 $parentProperty = $parentHasProperty ? $parentClass->getProperty($property->name) : null;
-                if (!$parentHasProperty || $type !== $this->serializeType($parentProperty->getType(), $parentClass->name)) {
-                    $this->signatures['propertyTypes'][] = [$class->name, $property->name, $type];
+
+                if ($parentProperty instanceof ReflectionProperty) {
+                    if (!$parentHasProperty || $type !== $this->serializeType($parentProperty->getType(), $parentClass->name)) {
+                        $this->signatures['propertyTypes'][] = [$class->name, $property->name, $type];
+                    }
                 }
             }
         }

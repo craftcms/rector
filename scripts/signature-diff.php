@@ -1,7 +1,5 @@
 <?php
 
-use Composer\Autoload\ClassLoader;
-
 @ini_set('memory_limit', '-1');
 
 function error(string $message): void
