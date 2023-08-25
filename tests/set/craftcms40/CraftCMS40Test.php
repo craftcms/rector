@@ -18,9 +18,6 @@ final class CraftCMS40Test extends AbstractRectorTestCase
         $this->doTestFile($filePath);
     }
 
-    /**
-     * @return Iterator<string>
-     */
     public function provideData(): Iterator
     {
         return $this->yieldFilesFromDirectory(__DIR__ . '/fixture');
