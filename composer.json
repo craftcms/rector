@@ -23,7 +23,7 @@
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan --ansi",
+        "phpstan": "vendor/bin/phpstan --ansi --memory-limit=1G",
         "check-cs": "ecs check --ansi",
         "fix-cs": "ecs check --fix --ansi"
     },
