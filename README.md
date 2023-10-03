@@ -1,6 +1,11 @@
 # Rector Rules for Craft CMS
 
-This package provides [Rector](https://github.com/rectorphp/rector) rules for updating plugins and modules to Craft 4.
+This package provides [Rector](https://github.com/rectorphp/rector) rules for updating Craft CMS plugins and modules for:
+
+- [Craft CMS 3 → 4](#craft-cms-3--4)
+- [Craft CMS 4 → 5](#craft-cms-4--5)
+
+## Craft CMS 3 → 4
 
 First, ensure Craft 3.7.35 or later is Composer-installed. (Prior versions of Craft weren’t compatible with Rector.)
 
@@ -30,22 +35,49 @@ composer require craftcms/rector:dev-main --dev
 vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-cms-40.php
 ```
 
-(Replace `src` with the path to your source directory, if not `src/`.)
-
-You can add `--dry-run` to the `vendor/bin/rector` command if you’d like to see what will happen without actually
-making any changes yet.
-
 If you have code that extends Craft Commerce classes, you can run the following command as well:
 
 ```sh
 vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-commerce-40.php
 ```
 
-Once the commands are complete, you’re ready to update `craftcms/cms` to Craft 4.
+Once Rector is complete, you’re ready to update `craftcms/cms`.
 
 ```sh
-composer require craftcms/cms:^4.0.0-alpha.1 -W
+composer require craftcms/cms:^4.0.0-alpha -W
 ```
+
+## Craft CMS 4 → 5
+
+Run the following commands:
+
+```sh
+composer require php:^8.2
+```
+
+```sh
+composer config minimum-stability dev
+```
+
+```sh
+composer config prefer-stable true
+```
+
+```sh
+composer require craftcms/rector:dev-main --dev
+```
+
+```sh
+vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-cms-50.php
+```
+
+Once Rector is complete, you’re ready to update `craftcms/cms`:
+
+```sh
+composer require craftcms/cms:^5.0.0-alpha -W
+```
+
+## Notes
 
 ## Advanced Configuration
 
