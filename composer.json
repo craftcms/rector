@@ -2,7 +2,6 @@
     "name": "craftcms/rector",
     "description": "Rector sets to automate Craft CMS upgrades",
     "require": {
-        "php": "^8.2.0",
         "rector/rector": "^0.18.4"
     },
     "require-dev": {
