@@ -35,6 +35,7 @@ return static function(RectorConfig $rectorConfig): void {
             new MethodCallRename('craft\base\Element', 'tableAttributeHtml', 'attributeHtml'),
             new MethodCallRename('craft\base\ElementInterface', 'getTableAttributeHtml', 'getAttributeHtml'),
             new MethodCallRename('craft\base\FieldInterface', 'valueType', 'phpType'),
+            new MethodCallRename('craft\base\FieldInterface', 'getContentColumnType', 'dbType'),
             new MethodCallRename('craft\base\PreviewableFieldInterface', 'getTableAttributeHtml', 'getPreviewHtml'),
             new MethodCallRename('craft\fields\BaseRelationField', 'tableAttributeHtml', 'previewHtml'),
             new MethodCallRename('craft\web\CpScreenResponseBehavior', 'additionalButtons', 'additionalButtonsHtml'),
