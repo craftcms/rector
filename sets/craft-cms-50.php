@@ -36,6 +36,7 @@ return static function(RectorConfig $rectorConfig): void {
             new MethodCallRename('craft\base\ElementInterface', 'getTableAttributeHtml', 'getAttributeHtml'),
             new MethodCallRename('craft\base\FieldInterface', 'valueType', 'phpType'),
             new MethodCallRename('craft\base\PreviewableFieldInterface', 'getTableAttributeHtml', 'getPreviewHtml'),
+            new MethodCallRename('craft\base\conditions\BaseCondition', 'conditionRuleTypes', 'selectableConditionRules'),
             new MethodCallRename('craft\fields\BaseRelationField', 'tableAttributeHtml', 'previewHtml'),
             new MethodCallRename('craft\web\CpScreenResponseBehavior', 'additionalButtons', 'additionalButtonsHtml'),
             new MethodCallRename('craft\web\CpScreenResponseBehavior', 'content', 'contentHtml'),
@@ -62,6 +63,7 @@ return static function(RectorConfig $rectorConfig): void {
     $rectorConfig
         ->ruleWithConfiguration(RenamePropertyRector::class, [
             new RenameProperty('yii\base\Application', 'sections', 'entries'),
+            new RenameProperty('craft\events\RegisterConditionRuleTypesEvent', 'conditionRuleTypes', 'conditionRules'),
             new RenameProperty('craft\fields\Matrix', 'minBlocks', 'minEntries'),
             new RenameProperty('craft\fields\Matrix', 'maxBlocks', 'maxEntries'),
             new RenameProperty('craft\web\CpScreenResponseBehavior', 'additionalButtons', 'additionalButtonsHtml'),
@@ -80,6 +82,7 @@ return static function(RectorConfig $rectorConfig): void {
 
     $rectorConfig
         ->ruleWithConfiguration(RenameClassRector::class, [
+            'craft\events\RegisterConditionRuleTypesEvent' => 'craft\events\RegisterConditionRulesEvent',
             'craft\services\Sections' => 'craft\services\Entries',
             'craft\base\BlockElementInterface' => 'craft\base\NestedElementInterface',
             'craft\events\SetElementTableAttributeHtmlEvent' => 'craft\events\DefineAttributeHtmlEvent',
@@ -88,6 +91,7 @@ return static function(RectorConfig $rectorConfig): void {
     $rectorConfig
         ->ruleWithConfiguration(RenameClassConstFetchRector::class, [
             new RenameClassConstFetch('craft\base\Element', 'EVENT_SET_TABLE_ATTRIBUTE_HTML', 'EVENT_DEFINE_ATTRIBUTE_HTML'),
+            new RenameClassConstFetch('craft\base\conditions\BaseCondition', 'EVENT_REGISTER_CONDITION_RULE_TYPES', 'EVENT_REGISTER_CONDITION_RULES'),
             new RenameClassAndConstFetch('craft\base\Element', 'ATTR_STATUS_MODIFIED', 'craft\enums\AttributeStatus', 'Modified'),
             new RenameClassAndConstFetch('craft\base\Element', 'ATTR_STATUS_OUTDATED', 'craft\enums\AttributeStatus', 'Outdated'),
             new RenameClassAndConstFetch('craft\fields\Matrix', 'PROPAGATION_METHOD_NONE', 'craft\enums\PropagationMethod', 'None'),
