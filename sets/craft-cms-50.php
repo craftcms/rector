@@ -93,6 +93,8 @@ return static function(RectorConfig $rectorConfig): void {
             new RenameClassConstFetch('craft\base\Element', 'EVENT_SET_TABLE_ATTRIBUTE_HTML', 'EVENT_DEFINE_ATTRIBUTE_HTML'),
             new RenameClassConstFetch('craft\base\conditions\BaseCondition', 'EVENT_REGISTER_CONDITION_RULE_TYPES', 'EVENT_REGISTER_CONDITION_RULES'),
             new RenameClassConstFetch('craft\generator\Command', 'EVENT_REGISTER_GENERATOR_TYPES', 'EVENT_REGISTER_GENERATORS'),
+            new RenameClassConstFetch('craft\helpers\MailerHelper', 'EVENT_REGISTER_MAILER_TRANSPORT_TYPES', 'EVENT_REGISTER_MAILER_TRANSPORTS'),
+            new RenameClassConstFetch('craft\services\Utilities', 'EVENT_REGISTER_UTILITY_TYPES', 'EVENT_REGISTER_UTILITIES'),
             new RenameClassAndConstFetch('craft\base\Element', 'ATTR_STATUS_MODIFIED', 'craft\enums\AttributeStatus', 'Modified'),
             new RenameClassAndConstFetch('craft\base\Element', 'ATTR_STATUS_OUTDATED', 'craft\enums\AttributeStatus', 'Outdated'),
             new RenameClassAndConstFetch('craft\fields\Matrix', 'PROPAGATION_METHOD_NONE', 'craft\enums\PropagationMethod', 'None'),
