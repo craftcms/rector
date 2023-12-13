@@ -82,10 +82,10 @@ return static function(RectorConfig $rectorConfig): void {
 
     $rectorConfig
         ->ruleWithConfiguration(RenameClassRector::class, [
-            'craft\events\RegisterConditionRuleTypesEvent' => 'craft\events\RegisterConditionRulesEvent',
-            'craft\services\Sections' => 'craft\services\Entries',
             'craft\base\BlockElementInterface' => 'craft\base\NestedElementInterface',
+            'craft\events\RegisterConditionRuleTypesEvent' => 'craft\events\RegisterConditionRulesEvent',
             'craft\events\SetElementTableAttributeHtmlEvent' => 'craft\events\DefineAttributeHtmlEvent',
+            'craft\services\Sections' => 'craft\services\Entries',
         ]);
 
     $rectorConfig
