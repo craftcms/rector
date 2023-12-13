@@ -83,6 +83,7 @@ return static function(RectorConfig $rectorConfig): void {
     $rectorConfig
         ->ruleWithConfiguration(RenameClassRector::class, [
             'craft\base\BlockElementInterface' => 'craft\base\NestedElementInterface',
+            'craft\events\BatchElementActionEvent' => 'craft\events\MultiElementActionEvent',
             'craft\events\RegisterConditionRuleTypesEvent' => 'craft\events\RegisterConditionRulesEvent',
             'craft\events\SetElementTableAttributeHtmlEvent' => 'craft\events\DefineAttributeHtmlEvent',
             'craft\services\Sections' => 'craft\services\Entries',
