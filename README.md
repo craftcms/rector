@@ -16,7 +16,7 @@ composer update craftcms/cms
 Then run the following commands:
 
 ```sh
-composer require php:^8.0.2
+composer require php:^8.0.2 --ignore-platform-reqs
 ```
 
 ```sh
@@ -28,7 +28,7 @@ composer config prefer-stable true
 ```
 
 ```sh
-composer require craftcms/rector:dev-main --dev
+composer require craftcms/rector:dev-main --dev --ignore-platform-reqs
 ```
 
 ```sh
@@ -44,7 +44,7 @@ vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-commerc
 Once Rector is complete, you’re ready to update `craftcms/cms`.
 
 ```sh
-composer require craftcms/cms:^4.0.0-alpha -W
+composer require craftcms/cms:^4.0.0-alpha -W --ignore-platform-reqs
 ```
 
 ## Craft CMS 4 → 5
@@ -52,7 +52,7 @@ composer require craftcms/cms:^4.0.0-alpha -W
 Run the following commands:
 
 ```sh
-composer require php:^8.2
+composer require php:^8.2 --ignore-platform-reqs
 ```
 
 ```sh
@@ -64,7 +64,7 @@ composer config prefer-stable true
 ```
 
 ```sh
-composer require craftcms/rector:dev-main --dev
+composer require craftcms/rector:dev-main --dev --ignore-platform-reqs
 ```
 
 ```sh
@@ -74,7 +74,7 @@ vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-cms-50.
 Once Rector is complete, you’re ready to update `craftcms/cms`:
 
 ```sh
-composer require craftcms/cms:^5.0.0-alpha -W
+composer require craftcms/cms:^5.0.0-beta.1 -W --ignore-platform-reqs
 ```
 
 ## Notes
