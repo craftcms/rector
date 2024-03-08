@@ -6,7 +6,7 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0",
-        "craftcms/cms": "^4.0.0-alpha",
+        "craftcms/cms": "^4.0.0",
         "craftcms/ecs": "dev-main",
         "phpstan/phpstan": "^1.10",
         "symfony/var-exporter": "^6.0"
@@ -22,7 +22,7 @@
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan --ansi --memory-limit=1G",
+        "phpstan": "phpstan --ansi --memory-limit=1G",
         "check-cs": "ecs check --ansi",
         "fix-cs": "ecs check --fix --ansi"
     },

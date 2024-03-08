@@ -6,6 +6,9 @@
     colors="true"
     executionOrder="defects"
 >
+    <php>
+        <ini name="memory_limit" value="1G" />
+    </php>
     <testsuites>
         <testsuite name="main">
             <directory>tests</directory>

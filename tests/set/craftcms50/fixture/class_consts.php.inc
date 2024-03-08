@@ -18,7 +18,7 @@
 
 ?>
 -----
-<?php
+<?php declare(strict_types=1);
 
 \craft\enums\AttributeStatus::Modified;
 \craft\enums\AttributeStatus::Outdated;

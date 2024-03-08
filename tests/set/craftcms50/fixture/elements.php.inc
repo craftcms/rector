@@ -21,15 +21,15 @@ class Foo extends \craft\base\Element
         return true;
     }
 
-    public function getThumbUrl(): ?string {
+    public function getThumbUrl(int $size): ?string {
         return true;
     }
 
-    public function getTableAttributeHtml(): string {
+    public function getTableAttributeHtml(string $attribute): string {
         return true;
     }
 
-    protected function tableAttributeHtml(): string {
+    protected function tableAttributeHtml(string $attribute): string {
         return true;
     }
 
@@ -100,15 +100,15 @@ class Foo extends \craft\base\Element
         return true;
     }
 
-    protected function thumbUrl(): ?string {
+    protected function thumbUrl(int $size): ?string {
         return true;
     }
 
-    public function getAttributeHtml(): string {
+    public function getAttributeHtml(string $attribute): string {
         return true;
     }
 
-    protected function attributeHtml(): string {
+    protected function attributeHtml(string $attribute): string {
         return true;
     }
 
