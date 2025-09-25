@@ -13,5 +13,14 @@
         <testsuite name="main">
             <directory>tests</directory>
         </testsuite>
+        <testsuite name="craftcms40">
+            <directory>tests/set/craftcms40</directory>
+        </testsuite>
+        <testsuite name="craftcms50">
+            <directory>tests/set/craftcms50</directory>
+        </testsuite>
+        <testsuite name="craftcms60">
+            <directory>tests/set/craftcms60</directory>
+        </testsuite>
     </testsuites>
 </phpunit>
