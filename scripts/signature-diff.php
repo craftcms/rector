@@ -119,7 +119,10 @@ final class SignatureDiffer
             return null;
         }
         if ($type instanceof ReflectionUnionType) {
-            return implode('|', array_map(function(ReflectionNamedType $type) use ($className) {
+            return implode('|', array_map(function(ReflectionNamedType|ReflectionIntersectionType $type) use ($className) {
+                if ($type instanceof ReflectionIntersectionType) {
+                    return implode('&', array_map(fn(ReflectionType $type) => $type instanceof ReflectionNamedType ? $type->getName() : (string)$type, $type->getTypes()));
+                }
                 $name = $type->getName();
                 return $name === 'self' ? $className : $name;
             }, $type->getTypes()));
